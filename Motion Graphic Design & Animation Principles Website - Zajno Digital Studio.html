@@ -160,7 +160,7 @@
             .logo-text-sections {
                 display: flex !important;
                 align-items: center !important;
-                justify-content: center !important; 
+                justify-content: center !important;
                 /* padding: 0.5rem !important; */
                 background: rgba(12, 11, 11, 0.8) !important;
                 /* border-radius: 8px !important; */
@@ -197,6 +197,22 @@
             .overlay-bg,
             .resources-overlay {
                 pointer-events: none;
+            }
+
+            /* SVG styling for career path illustration */
+            .section-slide-video img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: contain !important;
+                background: transparent !important;
+                border-radius: 8px !important;
+            }
+
+            /* Ensure SVG container maintains video dimensions */
+            .section-slide-img-wrap {
+                background: #f8f9fa !important;
+                border-radius: 8px !important;
+                overflow: hidden !important;
             }
 
             .footer,
@@ -375,13 +391,14 @@
                         <div class="logo-wrappers">
                             <div class="logo-sections-wrap"><a href="https://motion.zajno.com/" aria-current="page"
                                     class="sound_click w-inline-block w--current">
-                            
+
                                 </a><a href="https://motion.zajno.com/" aria-current="page"
                                     class="sound_click w-inline-block w--current">
                                     <div id="logo-wrap" class="logo-text-sections"
                                         style="color: rgb(253, 252, 250); background-color: rgb(12, 11, 11); border-color: rgb(253, 252, 250);">
                                         <!-- <div>Dreamdesk</div> -->
-                                        <img class="" style="width: 200px; height: auto;" src="./LOGO 22-01.png" alt="Logo"/>
+                                        <img class="" style="width: 200px; height: auto;" src="./LOGO 22-01.png"
+                                            alt="Logo" />
                                     </div>
                                 </a></div>
                         </div>
@@ -3583,18 +3600,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Desktop one -->
                     <div class="embed-path w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 503 3498"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="vrtx"
                                 d="M178.874 47.5C178.874 47.5 213.85 1 281.802 1C514.138 1 501.646 515 501.646 515C501.646 515 435.693 443.5 309.282 443.5C159.888 443.5 73.4488 595.5 73.4488 803C73.4488 1010.5 73.4488 1192.3 73.4488 1519.5C95.933 1480 132.907 1450 196.862 1450C339.761 1450 467.67 1685 467.67 2074C435.693 2030.5 353.251 1978 239.831 1978C65.9541 1978 4.49753 2145 4.49753 2304C4.49753 2585 1 3090.04 1 3498"
                                 stroke="white"></path>
                         </svg></div>
+
                     <div class="embed-path_tablet w-embed"><svg style="opacity:0; display: block;"
                             viewBox="0 0 289 2266" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="vrtx-tablet"
                                 d="M102.517 1C102.517 1 154.697 1 170.928 1C296.38 1 287.879 307.544 287.879 307.544C287.879 307.544 261.165 217.031 170.928 217.031C91.4618 217.031 44.4679 302.868 44.4679 417.17C44.4679 531.472 44.4679 681.884 44.4679 862.124C67.9717 813.117 106.199 783.613 144.439 783.613C226.905 783.613 262.889 926.882 262.889 1141.16C251.61 1124.91 218.408 1058.15 136.443 1058.15C54.4774 1058.15 6.50226 1118.96 6.50226 1206.54C6.50226 1361.33 1 2040.28 1 2265C10.9958 2215.32 57.4762 2213.32 66.4724 2265C73.9692 2235.82 103.457 2243.82 103.457 2265"
                                 stroke="white" stroke-width="0.550848"></path>
                         </svg></div>
+
                     <div class="embed-path_mobile w-embed"><svg style="opacity:0; display: block;"
                             viewBox="0 0 166 1405" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="vrtx-mobile"
@@ -3617,25 +3638,77 @@
                                         </div>
                                     </div>
                                     <div class="section-slider ui-slider" style="margin-left: 0px;">
+
                                         <div class="section-slide ui-slide"
                                             style="width: 25vw; transform: translate(0%, 0px);">
-                                            <div class="section-slide-wrap">
+                                            <div class="section-slide-wrap" style="flex-direction: row;">
+
+                                                <div class="section-slide-text" style="position: absolute; top: 30px; left: 20px; z-index: 10; width: 45%;">
+                                                    <div class="section-slide-title" style="font-size: 1.8rem; font-weight: bold; line-height: 1.1; color: #2c3e50; margin-bottom: 1rem; text-transform: uppercase; font-family: Arial, sans-serif;">
+                                                        WE'LL CREATE<br>
+                                                        YOUR PERFECT<br>
+                                                        DREAM
+                                                    </div>
+                                                    <div class="section-slide-subtitle" style="font-size: 0.8rem; color: #7f8c8d; line-height: 1.4; font-weight: normal;">
+                                                        Start achieving your career goals.<br>
+                                                        Join us today.
+                                                    </div>
+                                                </div>
+
+
                                                 <div class="section-slide-img-wrap">
-                                                    <div class="section-slide-video w-embed"><video widht="100%"
-                                                            height="100%" preload="none" loop="true" muted=""
-                                                            playsinline="">
-                                                            <source
-                                                                src="https://cdn.zajno.com/dev/motion/videos/slider/optimise/1_GYM+2x_H.264.mp4"
-                                                                type="video/mp4">
-                                                        </video></div>
+                                                    <div class="section-slide-video w-embed">
+                                                        <img src="./story_section_images/We’ll map your perfect career path-01.svg"
+                                                            alt="Career Path Illustration"
+                                                            style="width: 100%; height: 100%; object-fit: contain;">
+                                                    </div>
                                                 </div>
-                                                <div class="section-slide-text">
-                                                    <div class="p3">Here, animation gives a pumping vibe to a fitness
-                                                        website.</div>
-                                                </div>
+
                                             </div>
                                         </div>
+
                                         <div class="section-slide ui-slide"
+                                            style="width: 25vw; transform: translate(0%, 0px);">
+                                            <div class="section-slide-wrap" style="flex-direction: row;">
+
+                                                <div class="section-slide-text">
+                                                     <div class="p3" style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">From one moment of confusion... to endless clear paths.</div>
+                                                </div>
+
+
+                                                <div class="section-slide-img-wrap">
+                                                    <div class="section-slide-video w-embed">
+                                                        <img src="./story_section_images/unlock_your_future.svg"
+                                                            alt="Career Path Illustration"
+                                                            style="width: 100%; height: 100%; object-fit: contain;">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="section-slide ui-slide"
+                                            style="width: 25vw; transform: translate(0%, 0px);">
+                                            <div class="section-slide-wrap" style="flex-direction: row;">
+
+                                                <div class="section-slide-text">
+                                                    <div class="p3" style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;"> Dream college? This is your shot."</div>
+                                                </div>
+
+
+                                                <div class="section-slide-img-wrap">
+                                                    <div class="section-slide-video w-embed">
+                                                        <img src="./story_section_images/college_svg_one.svg"
+                                                            alt="Career Path Illustration"
+                                                            style="width: 100%; height: 100%; object-fit: contain;">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="section-slide ui-slide"
                                             style="width: 25vw; transform: translate(0%, 0px);">
                                             <div class="section-slide-wrap">
                                                 <div class="section-slide-img-wrap">
@@ -3653,6 +3726,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="section-slide ui-slide"
                                             style="width: 25vw; transform: translate(0%, 0px);">
                                             <div class="section-slide-wrap">
@@ -3670,7 +3744,8 @@
                                                         suite of complementary animation techniques.</div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
+
                                     </div>
                                 </div>
                             </div>
@@ -3773,7 +3848,8 @@
                                     <div class="h-item-content">
                                         <div class="p3-bold">There are two types of <br>interactive interfaces:</div>
                                         <div class="p3"><span class="p3-bold">Real-time</span> respond as users interact
-                                            <br>with them.</div>
+                                            <br>with them.
+                                        </div>
                                         <div class="p3"><span class="p3-bold">Not real-time</span> respond after the
                                             interaction has taken place.</div>
                                     </div>
@@ -4271,7 +4347,8 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg></div>
+                                    </svg>
+                                </div>
                                 <div class="bg-image is-star-xs is-right"></div>
                             </div>
                             <div class="hero-content">
@@ -4381,7 +4458,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="slide-lottie not-active"
                                                         data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8ce3"
                                                         data-animation-type="lottie"
@@ -4465,7 +4543,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="text1">With linear easing, the object travels at a
                                                         constant speed, without acceleration or deceleration.</div>
                                                 </div>
@@ -4556,7 +4635,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="slide-lottie not-active"
                                                         data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8cea"
                                                         data-animation-type="lottie"
@@ -4640,7 +4720,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="text1">Here the object accelerates slightly at the
                                                         beginning and decelerates slightly at the end</div>
                                                 </div>
@@ -4731,7 +4812,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="slide-lottie not-active"
                                                         data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8cf1"
                                                         data-animation-type="lottie"
@@ -4815,7 +4897,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="text1">Starts its movement slowly, but accelerates as it
                                                         continues.</div>
                                                 </div>
@@ -4905,7 +4988,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="slide-lottie not-active"
                                                         data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8cf8"
                                                         data-animation-type="lottie"
@@ -4989,7 +5073,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="text1">The opposite of ease-in - starts moving quickly
                                                         and then slows down smoothly at the end.</div>
                                                 </div>
@@ -5079,7 +5164,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="slide-lottie not-active"
                                                         data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8cff"
                                                         data-animation-type="lottie"
@@ -5163,7 +5249,8 @@
                                                                     </g>
                                                                 </g>
                                                             </g>
-                                                        </svg></div>
+                                                        </svg>
+                                                    </div>
                                                     <div class="text1">Cubic is similar to ease, but due to longer
                                                         periods of acceleration and deceleration, the middle part of the
                                                         path appears to pass more quickly.</div>
@@ -5543,7 +5630,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                             <div data-w-id="3919e4fd-38c2-4bc6-9904-10e4b58a8d69" class="overlay-bg"
                                 style="will-change: background; background-color: rgba(0, 0, 0, 0);"></div>
@@ -5671,7 +5759,8 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg></div>
+                                    </svg>
+                                </div>
                                 <div class="bg-image is-star-xs is-right"></div>
                             </div>
                             <div class="hero-content">
@@ -5809,7 +5898,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                             <div data-w-id="db80f9df-3c30-7adf-3291-cb4913ebc532" class="overlay-bg"
                                 style="will-change: background; background-color: rgba(0, 0, 0, 0);"></div>
@@ -6104,7 +6194,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6279,7 +6370,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6485,7 +6577,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6641,7 +6734,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6730,7 +6824,8 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg></div>
+                                    </svg>
+                                </div>
                                 <div class="bg-image is-star-xs is-right"></div>
                             </div>
                             <div class="hero-content">
@@ -6869,7 +6964,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -6992,7 +7088,8 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg></div>
+                                    </svg>
+                                </div>
                                 <div class="bg-image is-star-xs is-right"></div>
                             </div>
                             <div class="hero-content">
@@ -7129,7 +7226,8 @@
                                                     </svg></div>
                                             </div>
                                         </div>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
