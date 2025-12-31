@@ -8295,42 +8295,68 @@
 
     <!-- Airplane Transformation Animation -->
     <script>
-        // Simple airplane transformation - changes to red when reaching DREAMDESK 'A'
+        // Airplane transformation - changes to red when reaching DREAMDESK 'A', back to outline when exiting clouds
         (function () {
             function initAirplaneAnimation() {
                 const animBall = document.querySelector("#anim-ball");
                 const airplaneImg = document.getElementById("airplane-img");
                 const airplaneRedImg = document.getElementById("airplane-red-img");
                 const dreamdeskSpan = document.querySelector('.content-wrap.is-hero .h3.white span');
+                
+                // Get the clouds section - the bg-wrap with clouds at bottom of intro
+                const cloudsSection = document.querySelector('.bg-wrap.is-bottom');
+                // Also get the intro-wrap as fallback
+                const introWrap = document.querySelector('.intro-wrap');
 
                 if (!animBall || !airplaneImg || !airplaneRedImg || !dreamdeskSpan) {
                     setTimeout(initAirplaneAnimation, 100);
                     return;
                 }
 
-                let hasChanged = false;
+                let isRed = false;
 
                 function checkAlignment() {
                     const ballRect = animBall.getBoundingClientRect();
                     const textRect = dreamdeskSpan.getBoundingClientRect();
-
-                    // Get airplane bottom position
+                    
+                    // Get airplane position
                     const airplaneBottom = ballRect.bottom;
-
+                    const airplaneCenter = ballRect.top + (ballRect.height / 2);
+                    
                     // Get DREAMDESK text top position
                     const dreamdeskTop = textRect.top;
-
-                    // When airplane bottom reaches or passes DREAMDESK top, change to red
-                    if (airplaneBottom >= dreamdeskTop - 30 && !hasChanged) {
-                        // Change to red airplane with smooth transition
+                    
+                    // Get clouds section bottom position
+                    let cloudsBottom = window.innerHeight * 2; // default fallback
+                    if (cloudsSection) {
+                        const cloudsRect = cloudsSection.getBoundingClientRect();
+                        cloudsBottom = cloudsRect.bottom;
+                    } else if (introWrap) {
+                        const introRect = introWrap.getBoundingClientRect();
+                        cloudsBottom = introRect.bottom;
+                    }
+                    
+                    // Check if airplane has reached DREAMDESK 'A'
+                    const reachedDreamdesk = airplaneBottom >= dreamdeskTop - 30;
+                    
+                    // Check if airplane has exited the clouds section (plane center is below clouds bottom)
+                    const exitedClouds = airplaneCenter > cloudsBottom;
+                    
+                    if (reachedDreamdesk && !exitedClouds && !isRed) {
+                        // Change to red airplane when reaching DREAMDESK
                         airplaneImg.style.opacity = "0";
                         airplaneRedImg.style.opacity = "1";
-                        hasChanged = true;
-                    } else if (airplaneBottom < dreamdeskTop - 30 && hasChanged) {
-                        // Change back to outline airplane when scrolling back up
+                        isRed = true;
+                    } else if (exitedClouds && isRed) {
+                        // Change back to outline airplane when exiting clouds
                         airplaneImg.style.opacity = "1";
                         airplaneRedImg.style.opacity = "0";
-                        hasChanged = false;
+                        isRed = false;
+                    } else if (!reachedDreamdesk && isRed) {
+                        // Change back to outline when scrolling back up above DREAMDESK
+                        airplaneImg.style.opacity = "1";
+                        airplaneRedImg.style.opacity = "0";
+                        isRed = false;
                     }
                 }
 
