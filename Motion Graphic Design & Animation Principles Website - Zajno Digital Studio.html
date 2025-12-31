@@ -3540,8 +3540,10 @@
                         <div class="ball-divider is-left"></div>
                         <div class="anim-ball-border"></div>
                         <div id="anim-ball" class="anim-ball is-intro">
-                            <img src="airplane.png" alt="Airplane"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            <img id="airplane-img" src="airplane.png" alt="Airplane"
+                                style="width: 100%; height: 100%; object-fit: contain; transition: opacity 0.4s ease;">
+                            <img id="airplane-red-img" src="airplane1.png" alt="Red Airplane"
+                                style="width: 100%; height: 100%; object-fit: contain; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.4s ease;">
                         </div>
                         <div class="ball-divider is-right"></div>
                         <div class="ball-bg is-left"></div>
@@ -3643,20 +3645,39 @@
                                             style="width: 25vw; transform: translate(0%, 0px);">
                                             <div class="section-slide-wrap" style="flex-direction: row;">
 
-                                                <!-- <div class="section-slide-text" style="position: absolute; top: 30px; left: 20px; z-index: 10; width: 45%;">
-                                                    <div class="section-slide-title" style="font-size: 1.8rem; font-weight: bold; line-height: 1.1; color: #2c3e50; margin-bottom: 1rem; text-transform: uppercase; font-family: Arial, sans-serif;">
-                                                        WE'LL CREATE<br>
-                                                        YOUR PERFECT<br>
-                                                        DREAM
+                                                <div class="section-slide-text">
+                                                    <div class="p3"
+                                                        style="font-size: 0.80rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                        We’ll map your perfect career path
                                                     </div>
-                                                    <div class="section-slide-subtitle" style="font-size: 0.8rem; color: #7f8c8d; line-height: 1.4; font-weight: normal;">
-                                                        Start achieving your career goals.<br>
-                                                        Join us today.
+                                                    <div  style="padding-top:40px; font-size: 0.20rem; font-weight: 300; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                        <p>Start your carrear with Us</p>
+                                                        <p >choose your dream career
+                                                            </p>
                                                     </div>
-                                                </div> -->
+                                                </div>
 
-                                                 <div class="section-slide-text">
-                                                     <div class="p3" style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">We’ll map your perfect career path </div>
+
+                                                <div class="section-slide-img-wrap">
+                                                    <div class="section-slide-video w-embed">
+                                                        <img src="./story_section_images/We’ll map your perfect career path-01.svg"
+                                                            alt="Career Path Illustration"
+                                                            style="width: 100%; height: 100%; object-fit: contain;">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="section-slide ui-slide"
+                                            style="width: 25vw; transform: translate(0%, 0px);">
+                                            <div class="section-slide-wrap" style="flex-direction: row;">
+
+
+
+                                                <div class="section-slide-text">
+                                                    <div class="p3"
+                                                        style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                        We’ll map your perfect career path </div>
                                                 </div>
 
 
@@ -3676,7 +3697,9 @@
                                             <div class="section-slide-wrap" style="flex-direction: row;">
 
                                                 <div class="section-slide-text">
-                                                     <div class="p3" style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">From one moment of confusion... to endless clear paths.</div>
+                                                    <div class="p3"
+                                                        style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                        From one moment of confusion... to endless clear paths.</div>
                                                 </div>
 
 
@@ -3697,7 +3720,9 @@
                                             <div class="section-slide-wrap" style="flex-direction: row;">
 
                                                 <div class="section-slide-text">
-                                                    <div class="p3" style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;"> Dream college? This is your shot."</div>
+                                                    <div class="p3"
+                                                        style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                        Dream college? This is your shot."</div>
                                                 </div>
 
 
@@ -8187,8 +8212,64 @@
                 });
             }
         });
-    </script><img src="./Motion Graphic Design &amp; Animation Principles Website - Zajno Digital Studio_files/adsct"
-        height="1" width="1" style="display: none;"><img
+    </script>
+
+    <!-- Airplane Transformation Animation -->
+    <script>
+        // Simple airplane transformation - changes to red when reaching DREAMDESK 'A'
+        (function () {
+            function initAirplaneAnimation() {
+                const animBall = document.querySelector("#anim-ball");
+                const airplaneImg = document.getElementById("airplane-img");
+                const airplaneRedImg = document.getElementById("airplane-red-img");
+                const dreamdeskSpan = document.querySelector('.content-wrap.is-hero .h3.white span');
+
+                if (!animBall || !airplaneImg || !airplaneRedImg || !dreamdeskSpan) {
+                    setTimeout(initAirplaneAnimation, 100);
+                    return;
+                }
+
+                let hasChanged = false;
+
+                function checkAlignment() {
+                    const ballRect = animBall.getBoundingClientRect();
+                    const textRect = dreamdeskSpan.getBoundingClientRect();
+
+                    // Get airplane bottom position
+                    const airplaneBottom = ballRect.bottom;
+
+                    // Get DREAMDESK text top position
+                    const dreamdeskTop = textRect.top;
+
+                    // When airplane bottom reaches or passes DREAMDESK top, change to red
+                    if (airplaneBottom >= dreamdeskTop - 30 && !hasChanged) {
+                        // Change to red airplane with smooth transition
+                        airplaneImg.style.opacity = "0";
+                        airplaneRedImg.style.opacity = "1";
+                        hasChanged = true;
+                    } else if (airplaneBottom < dreamdeskTop - 30 && hasChanged) {
+                        // Change back to outline airplane when scrolling back up
+                        airplaneImg.style.opacity = "1";
+                        airplaneRedImg.style.opacity = "0";
+                        hasChanged = false;
+                    }
+                }
+
+                // Check continuously during scroll animations
+                setInterval(checkAlignment, 30);
+            }
+
+            // Start when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initAirplaneAnimation);
+            } else {
+                initAirplaneAnimation();
+            }
+        })();
+    </script>
+
+    <img src="./Motion Graphic Design &amp; Animation Principles Website - Zajno Digital Studio_files/adsct" height="1"
+        width="1" style="display: none;"><img
         src="./Motion Graphic Design &amp; Animation Principles Website - Zajno Digital Studio_files/adsct(1)"
         height="1" width="1" style="display: none;">
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
