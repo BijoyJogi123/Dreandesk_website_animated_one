@@ -3556,8 +3556,30 @@
                         style="max-width: 100%;  height: auto;width: 1811px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
                 </div>
                 <div class="content-wrap is-hero">
-                    <div class="h3 white">Welcome to <span
-                            style="padding-left:256px; color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DREAMDESK</span>
+                    <div class="h3 white">Welcome to</div>
+                    
+                    <!-- DREAMDESK Logo Animation Section -->
+                    <div id="dreamdesk-logo-section" style="position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 10px; margin: left 265px;;">
+                        <!-- Main DREAMDESK text with plane replacing A -->
+                        <div style="display: flex; align-items: center; justify-content: center; position: relative; margin-left: 256px;">
+                            <span id="dreamdesk-dre" class="h3" style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
+                            <span id="dreamdesk-a-container" style="position: relative; display: inline-flex; align-items: center; justify-content: center;">
+                                <span id="dreamdesk-a" class="h3" style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); transition: opacity 0.3s ease;">A</span>
+                                <span id="dreamdesk-plane-slot" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; opacity: 0; transition: opacity 0.3s ease;">
+                                    <img src="airplane1.png" alt="Plane" style="width: 100%; height: 100%; object-fit: contain;">
+                                </span>
+                            </span>
+                            <span id="dreamdesk-mdesk" class="h3" style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">MDESK</span>
+                        </div>
+                        
+                        <!-- Tagline section - animated -->
+                        <div id="tagline-section" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; opacity: 0; transition: opacity 0.5s ease;">
+                            <span id="tagline-left" style="color: #ffffff; font-size: 0.18rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you dream,</span>
+                            <span id="bulb-container" style="width: 35px; height: 35px; margin: 0 8px; transform: translateY(20px); opacity: 0; transition: all 0.5s ease 0.2s;">
+                                <img src="bulb.png" alt="Bulb" style="width: 100%; height: 100%; object-fit: contain;">
+                            </span>
+                            <span id="tagline-right" style="color: #ffffff; font-size: 0.18rem; font-weight: 400; transform: translateX(50px); opacity: 0; transition: all 0.5s ease;">we make it possible</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -8295,39 +8317,115 @@
 
     <!-- Airplane Transformation Animation -->
     <script>
-        // Airplane transformation - changes to red when reaching DREAMDESK 'A', back to outline when exiting clouds
+        // Airplane transformation and DREAMDESK logo animation
         (function () {
             function initAirplaneAnimation() {
                 const animBall = document.querySelector("#anim-ball");
                 const airplaneImg = document.getElementById("airplane-img");
                 const airplaneRedImg = document.getElementById("airplane-red-img");
-                const dreamdeskSpan = document.querySelector('.content-wrap.is-hero .h3.white span');
                 
-                // Get the clouds section - the bg-wrap with clouds at bottom of intro
+                // DREAMDESK logo elements
+                const dreamdeskA = document.getElementById("dreamdesk-a");
+                const dreamdeskPlaneSlot = document.getElementById("dreamdesk-plane-slot");
+                const taglineSection = document.getElementById("tagline-section");
+                const taglineLeft = document.getElementById("tagline-left");
+                const taglineRight = document.getElementById("tagline-right");
+                const bulbContainer = document.getElementById("bulb-container");
+                const dreamdeskLogoSection = document.getElementById("dreamdesk-logo-section");
+                
+                // Get the clouds section
                 const cloudsSection = document.querySelector('.bg-wrap.is-bottom');
-                // Also get the intro-wrap as fallback
                 const introWrap = document.querySelector('.intro-wrap');
 
-                if (!animBall || !airplaneImg || !airplaneRedImg || !dreamdeskSpan) {
+                if (!animBall || !airplaneImg || !airplaneRedImg || !dreamdeskLogoSection) {
                     setTimeout(initAirplaneAnimation, 100);
                     return;
                 }
 
                 let isRed = false;
+                let logoAnimationTriggered = false;
+
+                function triggerLogoAnimation() {
+                    if (logoAnimationTriggered) return;
+                    logoAnimationTriggered = true;
+                    
+                    // Step 1: Hide the "A" and show the plane in its place
+                    if (dreamdeskA) {
+                        dreamdeskA.style.opacity = "0";
+                    }
+                    if (dreamdeskPlaneSlot) {
+                        dreamdeskPlaneSlot.style.opacity = "1";
+                    }
+                    
+                    // Step 2: Show tagline section after a short delay
+                    setTimeout(() => {
+                        if (taglineSection) {
+                            taglineSection.style.opacity = "1";
+                        }
+                        
+                        // Step 3: Animate "you dream," from left
+                        if (taglineLeft) {
+                            taglineLeft.style.transform = "translateX(0)";
+                            taglineLeft.style.opacity = "1";
+                        }
+                        
+                        // Step 4: Animate "we make it possible" from right
+                        if (taglineRight) {
+                            taglineRight.style.transform = "translateX(0)";
+                            taglineRight.style.opacity = "1";
+                        }
+                        
+                        // Step 5: Animate bulb from bottom
+                        setTimeout(() => {
+                            if (bulbContainer) {
+                                bulbContainer.style.transform = "translateY(0)";
+                                bulbContainer.style.opacity = "1";
+                            }
+                        }, 200);
+                    }, 400);
+                }
+                
+                function resetLogoAnimation() {
+                    if (!logoAnimationTriggered) return;
+                    logoAnimationTriggered = false;
+                    
+                    // Reset all animations
+                    if (dreamdeskA) {
+                        dreamdeskA.style.opacity = "1";
+                    }
+                    if (dreamdeskPlaneSlot) {
+                        dreamdeskPlaneSlot.style.opacity = "0";
+                    }
+                    if (taglineSection) {
+                        taglineSection.style.opacity = "0";
+                    }
+                    if (taglineLeft) {
+                        taglineLeft.style.transform = "translateX(-50px)";
+                        taglineLeft.style.opacity = "0";
+                    }
+                    if (taglineRight) {
+                        taglineRight.style.transform = "translateX(50px)";
+                        taglineRight.style.opacity = "0";
+                    }
+                    if (bulbContainer) {
+                        bulbContainer.style.transform = "translateY(20px)";
+                        bulbContainer.style.opacity = "0";
+                    }
+                }
 
                 function checkAlignment() {
                     const ballRect = animBall.getBoundingClientRect();
-                    const textRect = dreamdeskSpan.getBoundingClientRect();
+                    const logoRect = dreamdeskLogoSection.getBoundingClientRect();
                     
                     // Get airplane position
                     const airplaneBottom = ballRect.bottom;
                     const airplaneCenter = ballRect.top + (ballRect.height / 2);
                     
-                    // Get DREAMDESK text top position
-                    const dreamdeskTop = textRect.top;
+                    // Get DREAMDESK logo section top position
+                    const dreamdeskTop = logoRect.top;
                     
                     // Get clouds section bottom position
-                    let cloudsBottom = window.innerHeight * 2; // default fallback
+                    let cloudsBottom = window.innerHeight * 2;
                     if (cloudsSection) {
                         const cloudsRect = cloudsSection.getBoundingClientRect();
                         cloudsBottom = cloudsRect.bottom;
@@ -8336,10 +8434,10 @@
                         cloudsBottom = introRect.bottom;
                     }
                     
-                    // Check if airplane has reached DREAMDESK 'A'
+                    // Check if airplane has reached DREAMDESK
                     const reachedDreamdesk = airplaneBottom >= dreamdeskTop - 30;
                     
-                    // Check if airplane has exited the clouds section (plane center is below clouds bottom)
+                    // Check if airplane has exited the clouds section
                     const exitedClouds = airplaneCenter > cloudsBottom;
                     
                     if (reachedDreamdesk && !exitedClouds && !isRed) {
@@ -8347,6 +8445,9 @@
                         airplaneImg.style.opacity = "0";
                         airplaneRedImg.style.opacity = "1";
                         isRed = true;
+                        
+                        // Trigger the logo animation
+                        triggerLogoAnimation();
                     } else if (exitedClouds && isRed) {
                         // Change back to outline airplane when exiting clouds
                         airplaneImg.style.opacity = "1";
@@ -8357,6 +8458,9 @@
                         airplaneImg.style.opacity = "1";
                         airplaneRedImg.style.opacity = "0";
                         isRed = false;
+                        
+                        // Reset the logo animation
+                        resetLogoAnimation();
                     }
                 }
 
