@@ -3978,21 +3978,87 @@
                                 </div>
                             </div>
                             <div class="section-slider ui-slider" style="margin-left: 0px;">
-                                <div class="section-slide ui-slide" style="width: 25vw; transform: translate(0%, 0px);">
-                                    <div class="section-slide-wrap">
-                                        <div class="section-slide-img-wrap">
-                                            <div class="section-slide-video w-embed"><video widht="100%" height="100%"
-                                                    preload="none" loop="true" muted="" playsinline="">
-                                                    <source
-                                                        src="https://cdn.zajno.com/dev/motion/videos/slider/optimise/4_Recycle_og_H.264.mp4"
-                                                        type="video/mp4">
-                                                </video></div>
-                                        </div>
-                                        <div class="section-slide-text">
-                                            <div class="p3">Animation lets us hint at how to use sliders and
-                                                other navigation elements.</div>
+                                <!-- Counselors Slide - Simple with carousel -->
+                                <div class="section-slide ui-slide" style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                                    <div style="margin: 120px; padding-bottom: 40px;">
+                                        <div class="section-slide-wrap" style="border: 2px solid #0c0b0b; border-radius: 12px; background: #f8f8f6; position: relative;">
+                                            <!-- Top bar decoration -->
+                                            <div style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: transparent; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                                <div style="display: flex; gap: 6px;">
+                                                    <span style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Title Section -->
+                                            <div class="section-slide-text" style="padding: 60px 20px 20px 20px;">
+                                                <div class="p3" style="font-size: 0.40rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
+                                                    Meet Our Counselors.
+                                                </div>
+                                                <div style="padding-top: 20px; font-size: 0.18rem; font-weight: 300; line-height: 1.3; text-transform: uppercase;">
+                                                    <p style="margin: 0;">Your personal guides to success</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Scrolling Carousel -->
+                                            <div style="padding: 20px; overflow: hidden;">
+                                                <div class="counselors-carousel" style="display: flex; gap: 20px; animation: counselorCarousel 12s linear infinite;">
+                                                    <!-- Counselor 1 -->
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor1.png" alt="Career Expert" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">Career Expert</p>
+                                                    </div>
+                                                    <!-- Counselor 2 -->
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor2.png" alt="College Advisor" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">College Advisor</p>
+                                                    </div>
+                                                    <!-- Counselor 3 -->
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor3.png" alt="Mentor" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">Mentor</p>
+                                                    </div>
+                                                    <!-- Counselor 4 -->
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor4.png" alt="Study Guide" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">Study Guide</p>
+                                                    </div>
+                                                    <!-- Duplicates for seamless loop -->
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor1.png" alt="Career Expert" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">Career Expert</p>
+                                                    </div>
+                                                    <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="width: 180px; height: 240px; border: 2px solid #0c0b0b; border-radius: 100px; overflow: hidden; background: #fff;">
+                                                            <img src="./story_section_images/counselor2.png" alt="College Advisor" style="width: 100%; height: 100%; object-fit: cover;">
+                                                        </div>
+                                                        <p style="margin-top: 12px; font-size: 13px; font-weight: 600; color: #0c0b0b;">College Advisor</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    
+                                    <style>
+                                        @keyframes counselorCarousel {
+                                            0% { transform: translateX(0); }
+                                            100% { transform: translateX(-800px); }
+                                        }
+                                        .counselors-carousel:hover {
+                                            animation-play-state: paused;
+                                        }
+                                    </style>
                                 </div>
                                 <div class="section-slide ui-slide" style="width: 25vw; transform: translate(0%, 0px);">
                                     <div class="section-slide-wrap">
