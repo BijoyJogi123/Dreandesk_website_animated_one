@@ -4078,7 +4078,8 @@
                                                         <div style="flex-shrink: 0; text-align: center;">
                                                             <div
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff;">
-                                                                <img src="./counselor_images/kalyani (2).png" alt="Mentor"
+                                                                <img src="./counselor_images/kalyani (2).png"
+                                                                    alt="Mentor"
                                                                     style="width: 100%; height: 100%; object-fit: cover; background-color:black">
                                                             </div>
                                                             <p
@@ -4121,7 +4122,7 @@
                                                                 College Advisor</p>
                                                         </div>
 
-                                                         <div style="flex-shrink: 0; text-align: center;">
+                                                        <div style="flex-shrink: 0; text-align: center;">
                                                             <div
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff;">
                                                                 <img src="./counselor_images/Satyaki.png"
@@ -5041,11 +5042,11 @@
                                     <div class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
-                                        <div style="margin: 120px; padding-bottom: 40px;">
+                                        <!-- <div style="margin: 120px; padding-bottom: 40px;">
                                             <div class="section-slide-wrap"
                                                 style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 20px; background: #f8f8f6; position: relative;">
 
-                                                
+
                                                 <div
                                                     style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: transparent; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
                                                     <div style="display: flex; gap: 6px;">
@@ -5077,7 +5078,325 @@
 
 
                                             </div>
+                                        </div> -->
+
+
+                                        <div id="spinny-flipz-section" class="spinny-container">
+                                            <style>
+                                                /* Import fonts - scoped to this section only */
+                                                /* @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap"); */
+
+                                                /* @font-face {
+                                                    font-family: "spinny-custom-font";
+                                                    src: url("https://assets.codepen.io/756881/Longline+Quart+FREE.ttf") format("truetype");
+                                                    font-weight: normal;
+                                                    font-style: normal;
+                                                } */
+
+                                                /* Main container - everything is scoped to .spinny-container */
+                                                #spinny-flipz-section.spinny-container {
+                                                    position: relative;
+                                                    width: 100%;
+                                                    height: 100vh;
+                                                    min-height: 600px;
+                                                    overflow: hidden;
+                                                    background-color: #1d1e22;
+                                                    font-family: "Nunito", sans-serif;
+                                                    color: white;
+                                                    isolation: isolate;
+                                                    /* Creates isolated stacking context */
+                                                }
+
+                                                /* Scroll spacer for scroll effect */
+                                                #spinny-flipz-section .spinny-scroll-space {
+                                                    height: 600vh;
+                                                    width: 100%;
+                                                    position: relative;
+                                                }
+
+                                                /* Sticky viewport */
+                                                #spinny-flipz-section .spinny-view {
+                                                    position: sticky;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 100vh;
+                                                    overflow: hidden;
+                                                }
+
+                                                /* Header area */
+                                                #spinny-flipz-section .spinny-top {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 60vh;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    cursor: pointer;
+                                                    z-index: 10;
+                                                }
+
+                                                #spinny-flipz-section .spinny-top img {
+                                                    width: 40vw;
+                                                    height: 40vw;
+                                                    max-height: 350px;
+                                                    max-width: 350px;
+                                                    position: relative;
+                                                }
+
+                                                #spinny-flipz-section .spinny-top h1 {
+                                                    font-family: "spinny-custom-font";
+                                                    font-size: 10vw;
+                                                    margin: 0;
+                                                }
+
+                                                /* Bottom slider section */
+                                                #spinny-flipz-section .spinny-bottom {
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 22vh;
+                                                    pointer-events: none;
+                                                }
+
+                                                /* Rotating wheel */
+                                                #spinny-flipz-section .spinny-circle {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    width: 300vw;
+                                                    height: 300vw;
+                                                    max-width: 2000px;
+                                                    max-height: 2000px;
+                                                }
+
+                                                /* Individual image cards */
+                                                #spinny-flipz-section .spinny-item {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 6%;
+                                                    max-width: 200px;
+                                                    aspect-ratio: 1 / 1;
+                                                    cursor: pointer;
+                                                    pointer-events: auto;
+                                                }
+
+                                                #spinny-flipz-section .spinny-item img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                    pointer-events: none;
+                                                    cursor: pointer;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    will-change: transform;
+                                                }
+
+                                                /* Scroll indicator */
+                                                #spinny-flipz-section .spinny-hint {
+                                                    position: absolute;
+                                                    bottom: 20px;
+                                                    left: 50%;
+                                                    transform: translate(-50%, 0);
+                                                    color: white;
+                                                    font-weight: 400;
+                                                    text-transform: uppercase;
+                                                    font-size: 14px;
+                                                    z-index: 5;
+                                                    text-align: center;
+                                                }
+
+                                                #spinny-flipz-section .spinny-hint-arrow {
+                                                    position: relative;
+                                                    margin: 5px auto 0;
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    filter: invert(1);
+                                                    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+                                                    background-size: contain;
+                                                    background-repeat: no-repeat;
+                                                }
+                                            </style>
+
+                                            <!-- Content Structure -->
+                                            <div class="spinny-scroll-space">
+                                                <div class="spinny-view">
+                                                    <!-- Top header area for enlarged images -->
+                                                    <div class="spinny-top">
+                                                        <!-- You can add a title here: <h1>Spinny Flipz</h1> -->
+                                                        <img src="https://assets.codepen.io/756881/amys-1.jpg"
+                                                            alt="Image 1" data-flip-id="auto-1" style="">
+                                                    </div>
+
+                                                    <!-- Bottom carousel section -->
+                                                    <div class="spinny-bottom">
+                                                        <div class="spinny-circle"
+                                                            style="translate: none; rotate: none; scale: none; transform: translate(-50%, 0%) translate3d(0px, 0px, 0px) rotate(-23.0137deg);">
+                                                            <!-- Image cards -->
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1000px, 0px);">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1222.52px, 25.0721px) rotate(12.8571deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-2.jpg"
+                                                                    alt="Image 2">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1433.88px, 99.0311px) rotate(25.7143deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-3.jpg"
+                                                                    alt="Image 3">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1623.49px, 218.168px) rotate(38.5714deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-4.jpg"
+                                                                    alt="Image 4">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1781.83px, 376.51px) rotate(51.4286deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-5.jpg"
+                                                                    alt="Image 5">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1900.97px, 566.116px) rotate(64.2857deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-6.jpg"
+                                                                    alt="Image 6">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1974.93px, 777.479px) rotate(77.1429deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-7.jpg"
+                                                                    alt="Image 7">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(2000px, 1000px) rotate(90deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-1.jpg"
+                                                                    alt="Image 1">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1974.93px, 1222.52px) rotate(102.857deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-2.jpg"
+                                                                    alt="Image 2">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1900.97px, 1433.88px) rotate(115.714deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-3.jpg"
+                                                                    alt="Image 3">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1781.83px, 1623.49px) rotate(128.571deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-4.jpg"
+                                                                    alt="Image 4">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1623.49px, 1781.83px) rotate(141.429deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-5.jpg"
+                                                                    alt="Image 5">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1433.88px, 1900.97px) rotate(154.286deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-6.jpg"
+                                                                    alt="Image 6">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1222.52px, 1974.93px) rotate(167.143deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-7.jpg"
+                                                                    alt="Image 7">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1000px, 2000px) rotate(180deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-1.jpg"
+                                                                    alt="Image 1">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(777.479px, 1974.93px) rotate(192.857deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-2.jpg"
+                                                                    alt="Image 2">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(566.116px, 1900.97px) rotate(205.714deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-3.jpg"
+                                                                    alt="Image 3">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(376.51px, 1781.83px) rotate(218.571deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-4.jpg"
+                                                                    alt="Image 4">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(218.168px, 1623.49px) rotate(231.429deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-5.jpg"
+                                                                    alt="Image 5">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(99.0311px, 1433.88px) rotate(244.286deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-6.jpg"
+                                                                    alt="Image 6">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(25.0721px, 1222.52px) rotate(257.143deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-7.jpg"
+                                                                    alt="Image 7">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(0px, 1000px) rotate(270deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-1.jpg"
+                                                                    alt="Image 1">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(25.0721px, 777.479px) rotate(282.857deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-2.jpg"
+                                                                    alt="Image 2">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(99.0311px, 566.116px) rotate(295.714deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-3.jpg"
+                                                                    alt="Image 3">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(218.168px, 376.51px) rotate(308.571deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-4.jpg"
+                                                                    alt="Image 4">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(376.51px, 218.168px) rotate(321.429deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-5.jpg"
+                                                                    alt="Image 5">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(566.116px, 99.0311px) rotate(334.286deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-6.jpg"
+                                                                    alt="Image 6">
+                                                            </div>
+                                                            <div class="spinny-item"
+                                                                style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(777.479px, 25.0721px) rotate(347.143deg);">
+                                                                <img src="https://assets.codepen.io/756881/amys-7.jpg"
+                                                                    alt="Image 7">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Scroll hint -->
+                                                    <div class="spinny-hint">
+                                                        Scroll down
+                                                        <div class="spinny-hint-arrow"
+                                                            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.4592px, 0px);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+
+
+
                                     </div>
 
 
@@ -9526,6 +9845,154 @@
             }
         })();
     </script>
+
+
+    <!-- GSAP Libraries - Include these ONCE in your page before closing </body> tag -->
+    <!-- If you already have GSAP loaded, you can skip these script tags -->
+    <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script> -->
+    <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+
+    <!-- Spinny Flipz JavaScript - Completely Isolated --> 
+    <script>
+        (function () {
+            'use strict';
+
+            // Check if GSAP is loaded
+            if (typeof gsap === 'undefined') {
+                console.error('Spinny Flipz: GSAP library not found. Please include GSAP scripts.');
+                return;
+            }
+
+            // Get the specific section
+            var section = document.getElementById('spinny-flipz-section');
+            if (!section) {
+                console.error('Spinny Flipz: Section not found');
+                return;
+            }
+
+            // Register GSAP plugins
+            gsap.registerPlugin(ScrollTrigger, Flip);
+
+            // Get all elements within this section only
+            var circle = section.querySelector('.spinny-circle');
+            var items = gsap.utils.toArray(section.querySelectorAll('.spinny-item'));
+            var topArea = section.querySelector('.spinny-top');
+            var hintArrow = section.querySelector('.spinny-hint-arrow');
+            var activeItem = null;
+
+            // Animate the scroll hint arrow
+            if (hintArrow) {
+                gsap.to(hintArrow, {
+                    y: 5,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true
+                });
+            }
+
+            // Position items in a circle
+            function positionItems() {
+                if (!circle || items.length === 0) return;
+
+                var radius = circle.offsetWidth / 2;
+                var center = radius;
+                var angleStep = 360 / items.length;
+                var DEG_TO_RAD = Math.PI / 180;
+
+                gsap.set(items, {
+                    x: function (index) {
+                        return center + radius * Math.sin(index * angleStep * DEG_TO_RAD);
+                    },
+                    y: function (index) {
+                        return center - radius * Math.cos(index * angleStep * DEG_TO_RAD);
+                    },
+                    rotation: function (index) {
+                        return index * angleStep;
+                    },
+                    xPercent: -50,
+                    yPercent: -50
+                });
+            }
+
+            // Initial setup
+            positionItems();
+
+            // Reposition on window resize
+            window.addEventListener('resize', positionItems);
+
+            // Rotate circle on scroll
+            gsap.to(circle, {
+                rotation: -360,
+                ease: "none",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            // Handle item clicks
+            items.forEach(function (item) {
+                item.addEventListener('click', handleItemClick);
+            });
+
+            // Handle top area clicks
+            if (topArea) {
+                topArea.addEventListener('click', closeActiveItem);
+            }
+
+            // Close the currently active/enlarged item
+            function closeActiveItem() {
+                if (activeItem && topArea) {
+                    var img = topArea.querySelector('img');
+                    if (img) {
+                        var state = Flip.getState(img);
+                        activeItem.appendChild(img);
+                        Flip.from(state, {
+                            ease: "power1.inOut",
+                            scale: true,
+                            duration: 0.4
+                        });
+                    }
+                    activeItem = null;
+                }
+            }
+
+            // Handle clicking on an item
+            function handleItemClick(event) {
+                var clickedItem = event.currentTarget;
+                var img = clickedItem.querySelector('img');
+
+                if (!img || !topArea) return;
+
+                if (clickedItem !== activeItem) {
+                    // Close any currently active item
+                    closeActiveItem();
+
+                    // Open this item
+                    activeItem = clickedItem;
+                    var state = Flip.getState(img);
+                    topArea.appendChild(img);
+                    Flip.from(state, {
+                        duration: 0.6,
+                        scale: true,
+                        ease: "power1.inOut"
+                    });
+                } else {
+                    // Close if clicking the same item
+                    closeActiveItem();
+                }
+            }
+
+        })();
+    </script>
+
+
 
     <img src="./Motion Graphic Design &amp; Animation Principles Website - Zajno Digital Studio_files/adsct" height="1"
         width="1" style="display: none;"><img
