@@ -550,6 +550,85 @@
                     font-size: 0.65rem;
                 }
             }
+
+            /* Sound Button Styles - Make it visible and functional */
+            .fixed-bottom {
+                position: fixed;
+                bottom: 0rem;
+                right: 0.20rem;
+                z-index: 9999;
+            }
+
+            .sound-btn-wrap {
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: block !important;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .sound-btn-wrap:hover {
+                transform: scale(1.1) !important;
+            }
+
+            .sound-icon-wrap {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border: 2px solid;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .sound-icon-wrap:hover {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .sound-btn-icon {
+                width: 24px;
+                height: 24px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .sound-btn-mute {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 3;
+            }
+
+            .sound-btn-mute.is-active {
+                opacity: 1 !important;
+            }
+
+            /* Mobile responsive for sound button */
+            @media (max-width: 768px) {
+                .fixed-bottom {
+                    bottom: 1rem;
+                    right: 1rem;
+                }
+
+                .sound-icon-wrap {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .sound-btn-icon,
+                .sound-btn-mute {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
         </style>
     </div>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
@@ -3728,8 +3807,8 @@
                 </div>
                 <div class="content-wrap is-hero"
                     style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0 !important; grid-row-gap: 0 !important;">
-                    <div class="h3 white" style="text-align: center; margin-bottom: 5px !important; padding-bottom: 0;">
-                        Welcome to</div>
+                    <!-- <div class="h3 white" style="text-align: center; margin-bottom: 5px !important; padding-bottom: 0;">
+                        Welcome to</div> -->
 
                     <!-- DREAMDESK Logo Animation Section -->
                     <div id="dreamdesk-logo-section"
@@ -3737,7 +3816,7 @@
                     </div>
                     <!-- Main DREAMDESK text with A that vanishes -->
                     <div
-                        style="width: 100%; margin-left: 256px; display: flex; align-items: center; justify-content: center; position: relative;">
+                        style="width: 100%;  display: flex; align-items: center; justify-content: center; position: relative;">
                         <span id="dreamdesk-dre" class="h3"
                             style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
                         <span id="dreamdesk-a" class="h3"
@@ -3748,7 +3827,7 @@
 
                     <!-- Tagline section - animated -->
                     <div id="tagline-section"
-                        style="margin-left:238px; display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
+                        style=" display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
                         <span id="tagline-left"
                             style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you
                             dream,</span>
@@ -4208,7 +4287,7 @@
                                                 <div class="section-slide-text" style="padding: 60px 20px 20px 20px;">
                                                     <div class="p3"
                                                         style="font-size: 0.40rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
-                                                        Meet Our Counselors.
+                                                        Meet Our Team.
                                                     </div>
                                                     <div
                                                         style="padding-top: 20px; font-size: 0.18rem; font-weight: 300; line-height: 1.3; text-transform: uppercase;">
@@ -6563,7 +6642,7 @@
         </div>
     </div> -->
 
-    <!-- <div class="fixed-bottom">
+    <div class="fixed-bottom">
         <div>
             <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                 class="sound-btn-wrap">
@@ -6590,7 +6669,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 
@@ -6688,8 +6767,11 @@
         jQuery.event.special.touchstart = { setup: function (e, t, n) { this.addEventListener("touchstart", n, { passive: !t.includes("noPreventDefault") }) } }, jQuery.event.special.touchmove = { setup: function (e, t, n) { this.addEventListener("touchmove", n, { passive: !t.includes("noPreventDefault") }) } };
     </script>
     <!-- audio -->
-    <audio id="audio" loop="">
+    <audio id="audio" loop="" preload="auto">
         <source src="https://cdn.zajno.com/dev/motion/sounds/motion_bg_low_vol.mp3" type="audio/mp3">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <!-- Fallback for browsers that don't support audio -->
+        Your browser does not support the audio element.
     </audio>
     <audio id="audioClick2">
         <source src="https://cdn.zajno.com/dev/motion/sounds/perc_click.mp3" type="audio/mp3">
@@ -6728,37 +6810,203 @@
         <source src="https://cdn.zajno.com/dev/motion/sounds/1_NOT_REAL_TIME.mp3" type="audio/mp3">
     </audio>
     <script>
-        const audioElement = document.getElementById("audio"), PlayButton = document.querySelector(".sound-btn-wrap"); let playing = !1; $(document).ready(function () { $(".sound-btn-wrap").click(function () { playing ? (audio.pause(), playing = !1, $(this).querySelector(".sound-btn-wrap")) : (audio.play(), playing = !0, $(this).querySelector(".sound-btn-wrap")) }) });
-        const audioElement3 = document.getElementById("audioClick2"), soundLinks = document.querySelectorAll(".sound_click"); soundLinks.forEach(e => { e.addEventListener("click", function () { playing && (audioElement3.currentTime = 0, audioElement3.play()) }) });
-        const audioElement4 = document.getElementById("audioHover"), playSun3 = document.getElementById("link1"); playSun3.addEventListener("mouseenter", function () { playing && audioElement4.play() });
-        const audioElement5 = document.getElementById("audioHover2"), playSun4 = document.getElementById("link2"); playSun4.addEventListener("mouseenter", function () { playing && audioElement5.play() });
-        const audioElement6 = document.getElementById("audioHover3"), playSun5 = document.getElementById("link3"); playSun5.addEventListener("mouseenter", function () { playing && audioElement6.play() });
-        const audioElement7 = document.getElementById("audioHover4"), playSun6 = document.getElementById("link4"); playSun6.addEventListener("mouseenter", function () { playing && audioElement7.play() });
-        const audioElement8 = document.getElementById("audioHover5"), playSun7 = document.getElementById("link5"); playSun7.addEventListener("mouseenter", function () { playing && audioElement8.play() });
-        const audioElement9 = document.getElementById("audioHover6"), playSun8 = document.getElementById("link6"); playSun8.addEventListener("mouseenter", function () { playing && audioElement9.play() });
-        const audioElement10 = document.getElementById("audioHover7"), playSun9 = document.getElementById("link7"); playSun9.addEventListener("mouseenter", function () { playing && audioElement10.play() });
-        const audioElement11 = document.getElementById("audioHover8"), playSun10 = document.getElementById("link8"); playSun10.addEventListener("mouseenter", function () { playing && audioElement11.play() });
-        const audioElement12 = document.getElementById("audioHover9"), playSun11 = document.getElementById("link9"); playSun11.addEventListener("mouseenter", function () { playing && audioElement12.play() });
-        const audioElement13 = document.getElementById("audioHover10"), playSun12 = document.getElementById("link10"); playSun12.addEventListener("mouseenter", function () { playing && audioElement13.play() });
-        const audioElement14 = document.getElementById("audioHover11"), playSun13 = document.getElementById("notrealtime"); playSun13.addEventListener("mouseenter", function () { playing && audioElement14.play() });
+        // Audio System - Fixed and Enhanced
+        let isPlaying = false;
+        let backgroundAudio = null;
+        
+        // Initialize audio system
+        function initAudioSystem() {
+            backgroundAudio = document.getElementById("audio");
+            const soundButton = document.querySelector(".sound-btn-wrap");
+            const soundMuteIcon = document.querySelector(".sound-btn-mute");
+            
+            console.log("Initializing audio system...");
+            console.log("Background audio element:", backgroundAudio);
+            console.log("Sound button:", soundButton);
+            
+            if (!backgroundAudio) {
+                console.error("Audio element not found!");
+                return;
+            }
+            
+            if (!soundButton) {
+                console.error("Sound button not found!");
+                return;
+            }
+            
+            // Set initial state - muted
+            backgroundAudio.volume = 0.3; // Set a reasonable volume
+            backgroundAudio.loop = true;
+            backgroundAudio.preload = "auto";
+            isPlaying = false;
+            
+            // Set initial visual state
+            if (soundMuteIcon) {
+                soundMuteIcon.classList.add("is-active");
+            }
+            
+            // Make sure the button is visible
+            soundButton.style.opacity = "1";
+            soundButton.style.visibility = "visible";
+            soundButton.style.display = "block";
+            
+            // Sound button click handler
+            soundButton.addEventListener("click", function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("Sound button clicked!");
+                toggleAudio();
+            });
+            
+            // Handle audio loading
+            backgroundAudio.addEventListener('canplaythrough', function() {
+                console.log("Background audio loaded successfully");
+            });
+            
+            backgroundAudio.addEventListener('loadstart', function() {
+                console.log("Audio loading started");
+            });
+            
+            backgroundAudio.addEventListener('error', function(e) {
+                console.error("Audio loading error:", e);
+            });
+            
+            console.log("Audio system initialized successfully");
+        }
+        
+        // Toggle audio function
+        function toggleAudio() {
+            const soundMuteIcon = document.querySelector(".sound-btn-mute");
+            const soundIconWrap = document.querySelector(".sound-icon-wrap");
+            
+            if (isPlaying) {
+                // Pause audio
+                backgroundAudio.pause();
+                isPlaying = false;
+                
+                // Update visual state
+                if (soundMuteIcon) {
+                    soundMuteIcon.classList.add("is-active");
+                }
+                if (soundIconWrap) {
+                    soundIconWrap.classList.remove("is-active");
+                }
+                
+                console.log("Audio paused");
+            } else {
+                // Play audio
+                const playPromise = backgroundAudio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        isPlaying = true;
+                        
+                        // Update visual state
+                        if (soundMuteIcon) {
+                            soundMuteIcon.classList.remove("is-active");
+                        }
+                        if (soundIconWrap) {
+                            soundIconWrap.classList.add("is-active");
+                        }
+                        
+                        console.log("Audio playing");
+                    }).catch(error => {
+                        console.log("Audio play failed:", error);
+                        // Browser might require user interaction first
+                    });
+                }
+            }
+        }
+        
+        // Sound effects for interactions
+        function playClickSound() {
+            if (isPlaying) {
+                const clickAudio = document.getElementById("audioClick2");
+                if (clickAudio) {
+                    clickAudio.currentTime = 0;
+                    clickAudio.volume = 0.4;
+                    clickAudio.play().catch(e => console.log("Click sound failed:", e));
+                }
+            }
+        }
+        
+        function playHoverSound(audioId) {
+            if (isPlaying) {
+                const hoverAudio = document.getElementById(audioId);
+                if (hoverAudio) {
+                    hoverAudio.currentTime = 0;
+                    hoverAudio.volume = 0.3;
+                    hoverAudio.play().catch(e => console.log("Hover sound failed:", e));
+                }
+            }
+        }
+        
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initAudioSystem();
+            
+            // Add click sounds to interactive elements
+            const clickElements = document.querySelectorAll(".sound_click, .nav-link, .suggestion-item, .send-button");
+            clickElements.forEach(element => {
+                element.addEventListener("click", playClickSound);
+            });
+            
+            // Add hover sounds to navigation links
+            const navLinks = [
+                { element: "#link1", audio: "audioHover" },
+                { element: "#link2", audio: "audioHover2" },
+                { element: "#link3", audio: "audioHover3" },
+                { element: "#link4", audio: "audioHover4" },
+                { element: "#link5", audio: "audioHover5" },
+                { element: "#link6", audio: "audioHover6" },
+                { element: "#link7", audio: "audioHover7" },
+                { element: "#link8", audio: "audioHover8" },
+                { element: "#link9", audio: "audioHover9" },
+                { element: "#link10", audio: "audioHover10" }
+            ];
+            
+            navLinks.forEach(link => {
+                const element = document.querySelector(link.element);
+                if (element) {
+                    element.addEventListener("mouseenter", () => playHoverSound(link.audio));
+                }
+            });
+            
+            // Special hover sound for notrealtime element
+            const notRealTimeElement = document.getElementById("notrealtime");
+            if (notRealTimeElement) {
+                notRealTimeElement.addEventListener("mouseenter", () => playHoverSound("audioHover11"));
+            }
+        });
     </script>
     <!--  -->
     <script>
-        $(".sound-btn-mute").addClass("is-active");
-        $(".sound-btn-wrap").on("click", function () {
-            $(".sound-btn-mute").toggleClass("is-active")
+        // Analytics tracking for sound events
+        $(document).ready(function() {
+            // Ensure mute icon is visible initially
+            $(".sound-btn-mute").addClass("is-active");
+            
+            $(".sound-btn-wrap").on("click", function () {
+                $(".sound-btn-mute").toggleClass("is-active");
 
-            if ($(".sound-btn-mute").hasClass("is-active")) {
-                gtag('event', 'sound_off', {
-                    'event_category': 'Sound',
-                    'event_label': 'Sound Off',
-                });
-            } else {
-                gtag('event', 'sound_on', {
-                    'event_category': 'Sound',
-                    'event_label': 'Sound On',
-                });
-            }
+                if ($(".sound-btn-mute").hasClass("is-active")) {
+                    // Sound turned off
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'sound_off', {
+                            'event_category': 'Sound',
+                            'event_label': 'Sound Off',
+                        });
+                    }
+                } else {
+                    // Sound turned on
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'sound_on', {
+                            'event_category': 'Sound',
+                            'event_label': 'Sound On',
+                        });
+                    }
+                }
+            });
         });
     </script>
 

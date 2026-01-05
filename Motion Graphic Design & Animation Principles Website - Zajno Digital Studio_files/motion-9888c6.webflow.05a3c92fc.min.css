@@ -4683,7 +4683,8 @@ textarea.w-select {
 .anim-ball-sticky {
   z-index: 1;
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
+    height: 1vh;  /* Here is the  */
   justify-content: center;
   align-items: flex-end;
   display: flex;
