@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Counter Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0c0b0b;
+            color: #fdfcfa;
+            margin: 0;
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+
+        /* Animated Counter Styles */
+        .stats-counter-section {
+            width: 100%;
+            padding: 2rem 0;
+            background: rgba(12, 11, 11, 0.9);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #fdfcfa;
+            position: relative;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fdfcfa, #c8cfe8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .stat-suffix {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #c8cfe8;
+            display: inline-block;
+            margin-left: 0.2rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fdfcfa;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* Animation for counter */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-item {
+            animation: countUp 0.8s ease-out forwards;
+        }
+
+        .stat-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .stat-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .stat-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .stats-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-suffix {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .stats-counter-section {
+                padding: 1.5rem 0;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-suffix {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+
+        .demo-content {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .demo-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-content p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-content">
+        <h1>Animated Counter Demo</h1>
+        <p>Scroll down to see the animated counters in action!</p>
+    </div>
+
+    <div style="height: 100vh;"></div>
+
+    <div class="stats-counter-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <div class="stat-number" data-target="150000">0</div>
+                    <div class="stat-suffix">+</div>
+                </div>
+                <div class="stat-label">Students</div>
+                <div class="stat-description">Empowered through our programs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-suffix">Years</div>
+                </div>
+                <div class="stat-label">Experience</div>
+                <div class="stat-description">Of educational excellence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-suffix">+</div>
+                </div>
+                <div class="stat-label">Partner Colleges</div>
+                <div class="stat-description">Collaborative network</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 100vh;"></div>
+
+    <!-- Animated Counter JavaScript -->
+    <script>
+        // Animated Counter Function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Initialize counters when they come into view
+        function initCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        
+                        // Reset counter
+                        counter.textContent = '0';
+                        
+                        // Start animation with delay based on position
+                        const delay = Array.from(counters).indexOf(counter) * 200;
+                        setTimeout(() => {
+                            animateCounter(counter, target, 2000);
+                        }, delay);
+                        
+                        // Stop observing this element
+                        observer.unobserve(counter);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initCounters);
+    </script>
+</body>
+</html>
