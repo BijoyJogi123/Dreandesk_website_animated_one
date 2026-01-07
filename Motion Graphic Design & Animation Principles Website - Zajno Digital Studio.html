@@ -4011,28 +4011,41 @@
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        overflow: hidden;
-                        z-index: 1;
+                        overflow: visible;
+                        z-index: 100;
+                        pointer-events: none;
                     }
                     .scroll-photo {
                         position: absolute;
-                        width: 160px;
-                        height: 160px;
-                        border-radius: 12px;
-                        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 0;
+                        box-shadow: none;
                         object-fit: cover;
-                        border: 4px solid rgba(255,255,255,0.25);
+                        border: none;
                         opacity: 0;
                         will-change: transform, opacity;
+                        z-index: 100;
+                    }
+                    .scroll-photo.size-sm {
+                        width: 120px;
+                        height: 120px;
+                    }
+                    .scroll-photo.size-md {
+                        width: 160px;
+                        height: 160px;
+                    }
+                    .scroll-photo.size-lg {
+                        width: 200px;
+                        height: 200px;
                     }
                     .scroll-photo:hover {
                         filter: brightness(1.1);
-                        z-index: 100;
                     }
                     
                     .dreamdesk-content-layer {
                         position: relative;
-                        z-index: 50;
+                        z-index: 10;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -4045,41 +4058,84 @@
                     <div class="dreamdesk-sticky-content">
                         <!-- Student Photos Scroll Animation Container -->
                         <div class="student-scroll-container" id="student-scroll-container">
-                            <!-- Row 1 - Top -->
-                            <img class="scroll-photo" src="Students_images/1a.png" data-end-x="2%" data-end-y="3%" data-rotate="-15">
-                            <img class="scroll-photo" src="Students_images/2a.png" data-end-x="18%" data-end-y="5%" data-rotate="10">
-                            <img class="scroll-photo" src="Students_images/3a.png" data-end-x="35%" data-end-y="2%" data-rotate="-8">
-                            <img class="scroll-photo" src="Students_images/4a.png" data-end-x="52%" data-end-y="4%" data-rotate="12">
-                            <img class="scroll-photo" src="Students_images/5a.png" data-end-x="70%" data-end-y="3%" data-rotate="-5">
-                            <img class="scroll-photo" src="Students_images/6a.png" data-end-x="85%" data-end-y="5%" data-rotate="8">
+                            <!-- Images go to ALL SIDES from the very beginning -->
+                            <!-- First batch - spread to all 4 corners and edges -->
+                            <img class="scroll-photo size-md" src="Students_images/1a.png" data-end-x="-30%" data-end-y="-25%">
+                            <img class="scroll-photo size-lg" src="Students_images/2a.png" data-end-x="130%" data-end-y="-30%">
+                            <img class="scroll-photo size-sm" src="Students_images/3a.png" data-end-x="-25%" data-end-y="120%">
+                            <img class="scroll-photo size-md" src="Students_images/4a.png" data-end-x="125%" data-end-y="115%">
+                            <img class="scroll-photo size-lg" src="Students_images/5a.png" data-end-x="50%" data-end-y="-35%">
+                            <img class="scroll-photo size-sm" src="Students_images/6a.png" data-end-x="50%" data-end-y="130%">
+                            <img class="scroll-photo size-md" src="Students_images/7a.png" data-end-x="-35%" data-end-y="50%">
+                            <img class="scroll-photo size-lg" src="Students_images/8a.png" data-end-x="135%" data-end-y="50%">
                             
-                            <!-- Row 2 - Upper Middle -->
-                            <img class="scroll-photo" src="Students_images/7a.png" data-end-x="5%" data-end-y="22%" data-rotate="7">
-                            <img class="scroll-photo" src="Students_images/8a.png" data-end-x="88%" data-end-y="20%" data-rotate="-12">
+                            <!-- Second batch - more spread -->
+                            <img class="scroll-photo size-sm" src="Students_images/9a.png" data-end-x="20%" data-end-y="-40%">
+                            <img class="scroll-photo size-md" src="Students_images/10a.png" data-end-x="80%" data-end-y="-35%">
+                            <img class="scroll-photo size-lg" src="Students_images/11a.png" data-end-x="-40%" data-end-y="25%">
+                            <img class="scroll-photo size-sm" src="Students_images/12a.png" data-end-x="140%" data-end-y="30%">
+                            <img class="scroll-photo size-md" src="Students_images/13a.png" data-end-x="-30%" data-end-y="75%">
+                            <img class="scroll-photo size-lg" src="Students_images/14a.png" data-end-x="130%" data-end-y="70%">
+                            <img class="scroll-photo size-sm" src="Students_images/15a.png" data-end-x="25%" data-end-y="125%">
+                            <img class="scroll-photo size-md" src="Students_images/16a.png" data-end-x="75%" data-end-y="130%">
                             
-                            <!-- Row 3 - Middle (sides only - DREAMDESK area) -->
-                            <img class="scroll-photo" src="Students_images/9a.png" data-end-x="1%" data-end-y="40%" data-rotate="-10">
-                            <img class="scroll-photo" src="Students_images/10a.png" data-end-x="90%" data-end-y="42%" data-rotate="15">
+                            <!-- Third batch -->
+                            <img class="scroll-photo size-lg" src="Students_images/18a.png" data-end-x="-20%" data-end-y="-35%">
+                            <img class="scroll-photo size-sm" src="Students_images/19a.png" data-end-x="120%" data-end-y="-25%">
+                            <img class="scroll-photo size-md" src="Students_images/20a.png" data-end-x="-35%" data-end-y="100%">
+                            <img class="scroll-photo size-lg" src="Students_images/21a.png" data-end-x="135%" data-end-y="95%">
+                            <img class="scroll-photo size-sm" src="Students_images/22a.png" data-end-x="35%" data-end-y="-30%">
+                            <img class="scroll-photo size-md" src="Students_images/23a.png" data-end-x="65%" data-end-y="-38%">
+                            <img class="scroll-photo size-lg" src="Students_images/24a.png" data-end-x="-28%" data-end-y="40%">
+                            <img class="scroll-photo size-sm" src="Students_images/25a.png" data-end-x="128%" data-end-y="45%">
                             
-                            <!-- Row 4 - Lower Middle -->
-                            <img class="scroll-photo" src="Students_images/11a.png" data-end-x="3%" data-end-y="60%" data-rotate="6">
-                            <img class="scroll-photo" src="Students_images/12a.png" data-end-x="87%" data-end-y="62%" data-rotate="-8">
+                            <!-- Fourth batch -->
+                            <img class="scroll-photo size-md" src="Students_images/1a.png" data-end-x="-40%" data-end-y="60%">
+                            <img class="scroll-photo size-lg" src="Students_images/2a.png" data-end-x="140%" data-end-y="65%">
+                            <img class="scroll-photo size-sm" src="Students_images/3a.png" data-end-x="40%" data-end-y="135%">
+                            <img class="scroll-photo size-md" src="Students_images/4a.png" data-end-x="60%" data-end-y="128%">
+                            <img class="scroll-photo size-lg" src="Students_images/5a.png" data-end-x="-15%" data-end-y="-20%">
+                            <img class="scroll-photo size-sm" src="Students_images/6a.png" data-end-x="115%" data-end-y="-18%">
+                            <img class="scroll-photo size-md" src="Students_images/7a.png" data-end-x="-32%" data-end-y="85%">
+                            <img class="scroll-photo size-lg" src="Students_images/8a.png" data-end-x="132%" data-end-y="80%">
                             
-                            <!-- Row 5 - Bottom -->
-                            <img class="scroll-photo" src="Students_images/13a.png" data-end-x="2%" data-end-y="78%" data-rotate="-14">
-                            <img class="scroll-photo" src="Students_images/14a.png" data-end-x="16%" data-end-y="80%" data-rotate="9">
-                            <img class="scroll-photo" src="Students_images/15a.png" data-end-x="32%" data-end-y="82%" data-rotate="-6">
-                            <img class="scroll-photo" src="Students_images/16a.png" data-end-x="48%" data-end-y="78%" data-rotate="11">
-                            <img class="scroll-photo" src="Students_images/18a.png" data-end-x="65%" data-end-y="80%" data-rotate="-9">
-                            <img class="scroll-photo" src="Students_images/19a.png" data-end-x="82%" data-end-y="78%" data-rotate="7">
+                            <!-- Fifth batch -->
+                            <img class="scroll-photo size-sm" src="Students_images/9a.png" data-end-x="10%" data-end-y="-45%">
+                            <img class="scroll-photo size-md" src="Students_images/10a.png" data-end-x="90%" data-end-y="-42%">
+                            <img class="scroll-photo size-lg" src="Students_images/11a.png" data-end-x="-45%" data-end-y="35%">
+                            <img class="scroll-photo size-sm" src="Students_images/12a.png" data-end-x="145%" data-end-y="40%">
+                            <img class="scroll-photo size-md" src="Students_images/13a.png" data-end-x="-38%" data-end-y="90%">
+                            <img class="scroll-photo size-lg" src="Students_images/14a.png" data-end-x="138%" data-end-y="85%">
+                            <img class="scroll-photo size-sm" src="Students_images/15a.png" data-end-x="15%" data-end-y="140%">
+                            <img class="scroll-photo size-md" src="Students_images/16a.png" data-end-x="85%" data-end-y="135%">
                             
-                            <!-- Extra scattered photos -->
-                            <img class="scroll-photo" src="Students_images/20a.png" data-end-x="25%" data-end-y="18%" data-rotate="13">
-                            <img class="scroll-photo" src="Students_images/21a.png" data-end-x="72%" data-end-y="20%" data-rotate="-11">
-                            <img class="scroll-photo" src="Students_images/22a.png" data-end-x="12%" data-end-y="88%" data-rotate="5">
-                            <img class="scroll-photo" src="Students_images/23a.png" data-end-x="75%" data-end-y="88%" data-rotate="-7">
-                            <img class="scroll-photo" src="Students_images/24a.png" data-end-x="92%" data-end-y="85%" data-rotate="10">
-                            <img class="scroll-photo" src="Students_images/25a.png" data-end-x="55%" data-end-y="90%" data-rotate="-13">
+                            <!-- Sixth batch -->
+                            <img class="scroll-photo size-lg" src="Students_images/18a.png" data-end-x="-25%" data-end-y="15%">
+                            <img class="scroll-photo size-sm" src="Students_images/19a.png" data-end-x="125%" data-end-y="20%">
+                            <img class="scroll-photo size-md" src="Students_images/20a.png" data-end-x="55%" data-end-y="-32%">
+                            <img class="scroll-photo size-lg" src="Students_images/21a.png" data-end-x="45%" data-end-y="138%">
+                            <img class="scroll-photo size-sm" src="Students_images/22a.png" data-end-x="-42%" data-end-y="55%">
+                            <img class="scroll-photo size-md" src="Students_images/23a.png" data-end-x="142%" data-end-y="58%">
+                            <img class="scroll-photo size-lg" src="Students_images/24a.png" data-end-x="30%" data-end-y="-48%">
+                            <img class="scroll-photo size-sm" src="Students_images/25a.png" data-end-x="70%" data-end-y="-45%">
+                            
+                            <!-- Seventh batch -->
+                            <img class="scroll-photo size-md" src="Students_images/1a.png" data-end-x="-48%" data-end-y="70%">
+                            <img class="scroll-photo size-lg" src="Students_images/2a.png" data-end-x="148%" data-end-y="75%">
+                            <img class="scroll-photo size-sm" src="Students_images/3a.png" data-end-x="5%" data-end-y="145%">
+                            <img class="scroll-photo size-md" src="Students_images/4a.png" data-end-x="95%" data-end-y="142%">
+                            <img class="scroll-photo size-lg" src="Students_images/5a.png" data-end-x="-18%" data-end-y="-42%">
+                            <img class="scroll-photo size-sm" src="Students_images/6a.png" data-end-x="118%" data-end-y="-40%">
+                            <img class="scroll-photo size-md" src="Students_images/7a.png" data-end-x="-50%" data-end-y="45%">
+                            <img class="scroll-photo size-lg" src="Students_images/8a.png" data-end-x="150%" data-end-y="50%">
+                            
+                            <!-- Eighth batch -->
+                            <img class="scroll-photo size-sm" src="Students_images/9a.png" data-end-x="22%" data-end-y="148%">
+                            <img class="scroll-photo size-md" src="Students_images/10a.png" data-end-x="78%" data-end-y="145%">
+                            <img class="scroll-photo size-lg" src="Students_images/11a.png" data-end-x="-22%" data-end-y="110%">
+                            <img class="scroll-photo size-sm" src="Students_images/12a.png" data-end-x="122%" data-end-y="105%">
+                            <img class="scroll-photo size-md" src="Students_images/13a.png" data-end-x="42%" data-end-y="-50%">
+                            <img class="scroll-photo size-lg" src="Students_images/14a.png" data-end-x="58%" data-end-y="-48%">
                         </div>
                         
                         <div class="dreamdesk-content-layer">
@@ -4127,46 +4183,43 @@
                     const photos = document.querySelectorAll('.scroll-photo');
                     const tl = gsap.timeline();
                     
-                    // Create tunnel effect - photos come FROM the center/background
+                    // 3D tunnel effect - VERY SLOW, smooth, continuous flow
                     photos.forEach((photo, index) => {
                         const endX = photo.dataset.endX || '50%';
                         const endY = photo.dataset.endY || '50%';
-                        const rotate = photo.dataset.rotate || 0;
                         
-                        // Set initial state - start from CENTER (like coming from tunnel/background)
+                        // Set initial state - start from CENTER very small (far away in background)
                         gsap.set(photo, {
                             left: '50%',
                             top: '50%',
                             xPercent: -50,
                             yPercent: -50,
-                            scale: 0.05,
+                            scale: 0.01,
                             opacity: 0,
-                            rotation: 0,
-                            zIndex: 1
+                            zIndex: 100
                         });
                         
-                        // Animate FROM center TO final position (tunnel effect)
+                        // Very slow smooth animation
                         tl.to(photo, {
-                            duration: 1.2,
+                            duration: 3,
                             left: endX,
                             top: endY,
                             xPercent: 0,
                             yPercent: 0,
-                            scale: 1,
+                            scale: 2.5,
                             opacity: 1,
-                            rotation: parseFloat(rotate),
-                            zIndex: 10,
-                            ease: "power1.out"
-                        }, index * 0.06);
+                            zIndex: 100,
+                            ease: "none"
+                        }, '-=2.85');
                     });
                     
-                    // Create ScrollTrigger
+                    // Create ScrollTrigger - very slow scrub
                     ScrollTrigger.create({
                         animation: tl,
                         trigger: ".dreamdesk-scroll-section",
                         start: "top top",
                         end: "bottom bottom",
-                        scrub: 2,
+                        scrub: 5,
                         anticipatePin: 1
                     });
                 })();
