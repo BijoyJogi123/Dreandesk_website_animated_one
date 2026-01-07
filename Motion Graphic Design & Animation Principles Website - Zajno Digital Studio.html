@@ -3815,7 +3815,8 @@
                     }
                     .student-img-box {
                         width: 900px;
-                        height: 650px;
+                        /* height: 650px; */
+                        height: 700px;
                         flex-shrink: 0;
                         display: flex;
                         align-items: center;
@@ -3946,11 +3947,19 @@
                 })();
                 </script>
                 
-                <!-- Scroll Stoppage Wrapper for DREAMDESK Section -->
+                <!-- Scroll Stoppage Wrapper for DREAMDESK Section with GSAP Scroll Animation -->
                 <style>
-                    .dreamdesk-sticky-wrapper {
-                        height: 250vh;
+                    .dreamdesk-scroll-section {
                         position: relative;
+                        height: 400vh;
+                    }
+                    .dreamdesk-scroll-trigger {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 400vh;
+                        pointer-events: none;
                     }
                     .dreamdesk-sticky-content {
                         position: sticky;
@@ -3960,6 +3969,7 @@
                         align-items: center;
                         justify-content: center;
                         background: #0c0b0b;
+                        overflow: hidden;
                     }
                     
                     /* DRE and MDESK slide-in animations */
@@ -3981,47 +3991,174 @@
                         0% { opacity: 0; transform: translateX(200px); }
                         100% { opacity: 1; transform: translateX(0); }
                     }
+                    
+                    /* Student Images Scroll Animation Container */
+                    .student-scroll-container {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        z-index: 1;
+                    }
+                    .scroll-photo {
+                        position: absolute;
+                        width: 160px;
+                        height: 160px;
+                        border-radius: 12px;
+                        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+                        object-fit: cover;
+                        border: 4px solid rgba(255,255,255,0.25);
+                        opacity: 0;
+                        will-change: transform, opacity;
+                    }
+                    .scroll-photo:hover {
+                        filter: brightness(1.1);
+                        z-index: 100;
+                    }
+                    
+                    .dreamdesk-content-layer {
+                        position: relative;
+                        z-index: 50;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 </style>
                 
-                <div class="dreamdesk-sticky-wrapper">
+                <div class="dreamdesk-scroll-section">
+                    <div class="dreamdesk-scroll-trigger" id="scroll-trigger-area"></div>
                     <div class="dreamdesk-sticky-content">
-                        <div class="content-wrap is-hero"
-                            style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0 !important; grid-row-gap: 0 !important;">
-                            <!-- <div class="h3 white" style="text-align: center; margin-bottom: 5px !important; padding-bottom: 0;">
-                                Welcome to</div> -->
+                        <!-- Student Photos Scroll Animation Container -->
+                        <div class="student-scroll-container" id="student-scroll-container">
+                            <!-- Row 1 - Top -->
+                            <img class="scroll-photo" src="Students_images/1a.png" data-end-x="2%" data-end-y="3%" data-rotate="-15">
+                            <img class="scroll-photo" src="Students_images/2a.png" data-end-x="18%" data-end-y="5%" data-rotate="10">
+                            <img class="scroll-photo" src="Students_images/3a.png" data-end-x="35%" data-end-y="2%" data-rotate="-8">
+                            <img class="scroll-photo" src="Students_images/4a.png" data-end-x="52%" data-end-y="4%" data-rotate="12">
+                            <img class="scroll-photo" src="Students_images/5a.png" data-end-x="70%" data-end-y="3%" data-rotate="-5">
+                            <img class="scroll-photo" src="Students_images/6a.png" data-end-x="85%" data-end-y="5%" data-rotate="8">
+                            
+                            <!-- Row 2 - Upper Middle -->
+                            <img class="scroll-photo" src="Students_images/7a.png" data-end-x="5%" data-end-y="22%" data-rotate="7">
+                            <img class="scroll-photo" src="Students_images/8a.png" data-end-x="88%" data-end-y="20%" data-rotate="-12">
+                            
+                            <!-- Row 3 - Middle (sides only - DREAMDESK area) -->
+                            <img class="scroll-photo" src="Students_images/9a.png" data-end-x="1%" data-end-y="40%" data-rotate="-10">
+                            <img class="scroll-photo" src="Students_images/10a.png" data-end-x="90%" data-end-y="42%" data-rotate="15">
+                            
+                            <!-- Row 4 - Lower Middle -->
+                            <img class="scroll-photo" src="Students_images/11a.png" data-end-x="3%" data-end-y="60%" data-rotate="6">
+                            <img class="scroll-photo" src="Students_images/12a.png" data-end-x="87%" data-end-y="62%" data-rotate="-8">
+                            
+                            <!-- Row 5 - Bottom -->
+                            <img class="scroll-photo" src="Students_images/13a.png" data-end-x="2%" data-end-y="78%" data-rotate="-14">
+                            <img class="scroll-photo" src="Students_images/14a.png" data-end-x="16%" data-end-y="80%" data-rotate="9">
+                            <img class="scroll-photo" src="Students_images/15a.png" data-end-x="32%" data-end-y="82%" data-rotate="-6">
+                            <img class="scroll-photo" src="Students_images/16a.png" data-end-x="48%" data-end-y="78%" data-rotate="11">
+                            <img class="scroll-photo" src="Students_images/18a.png" data-end-x="65%" data-end-y="80%" data-rotate="-9">
+                            <img class="scroll-photo" src="Students_images/19a.png" data-end-x="82%" data-end-y="78%" data-rotate="7">
+                            
+                            <!-- Extra scattered photos -->
+                            <img class="scroll-photo" src="Students_images/20a.png" data-end-x="25%" data-end-y="18%" data-rotate="13">
+                            <img class="scroll-photo" src="Students_images/21a.png" data-end-x="72%" data-end-y="20%" data-rotate="-11">
+                            <img class="scroll-photo" src="Students_images/22a.png" data-end-x="12%" data-end-y="88%" data-rotate="5">
+                            <img class="scroll-photo" src="Students_images/23a.png" data-end-x="75%" data-end-y="88%" data-rotate="-7">
+                            <img class="scroll-photo" src="Students_images/24a.png" data-end-x="92%" data-end-y="85%" data-rotate="10">
+                            <img class="scroll-photo" src="Students_images/25a.png" data-end-x="55%" data-end-y="90%" data-rotate="-13">
+                        </div>
+                        
+                        <div class="dreamdesk-content-layer">
+                            <div class="content-wrap is-hero"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0 !important; grid-row-gap: 0 !important;">
+                                
+                                <div id="dreamdesk-logo-section"
+                                    style="margin-left: 256px; position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 5px !important; padding-top: 0;">
+                                </div>
+                                
+                                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
+                                    <span id="dreamdesk-dre" class="h3"
+                                        style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
+                                    <span id="dreamdesk-a" class="h3"
+                                        style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); transition: opacity 0.3s ease;">A</span>
+                                    <span id="dreamdesk-mdesk" class="h3"
+                                        style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">MDESK</span>
+                                </div>
 
-                            <!-- DREAMDESK Logo Animation Section -->
-                            <div id="dreamdesk-logo-section"
-                                style="margin-left: 256px; position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 5px !important; padding-top: 0;">
-                            </div>
-                            <!-- Main DREAMDESK text with A that vanishes -->
-                            <div
-                                style="width: 100%;  display: flex; align-items: center; justify-content: center; position: relative;">
-                                <span id="dreamdesk-dre" class="h3"
-                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
-                                <span id="dreamdesk-a" class="h3"
-                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); transition: opacity 0.3s ease;">A</span>
-                                <span id="dreamdesk-mdesk" class="h3"
-                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">MDESK</span>
-                            </div>
-
-                            <!-- Tagline section - animated -->
-                            <div id="tagline-section"
-                                style=" display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
-                                <span id="tagline-left"
-                                    style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you
-                                    dream,</span>
-                                <span id="bulb-container"
-                                    style="width: 150px; height: 150px;  transform: translateY(20px); opacity: 0; transition: all 0.5s ease 0.2s;">
-                                    <img src="bulb.png" alt="Bulb" style="width: 100%; height: 100%; object-fit: contain;">
-                                </span>
-                                <span id="tagline-right"
-                                    style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(50px); opacity: 0; transition: all 0.5s ease;">we
-                                    make it possible</span>
+                                <div id="tagline-section"
+                                    style="display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
+                                    <span id="tagline-left"
+                                        style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you
+                                        dream,</span>
+                                    <span id="bulb-container"
+                                        style="width: 150px; height: 150px; transform: translateY(20px); opacity: 0; transition: all 0.5s ease 0.2s;">
+                                        <img src="bulb.png" alt="Bulb" style="width: 100%; height: 100%; object-fit: contain;">
+                                    </span>
+                                    <span id="tagline-right"
+                                        style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(50px); opacity: 0; transition: all 0.5s ease;">we
+                                        make it possible</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- GSAP ScrollTrigger for Student Photos -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+                <script>
+                (function() {
+                    gsap.registerPlugin(ScrollTrigger);
+                    
+                    const photos = document.querySelectorAll('.scroll-photo');
+                    const tl = gsap.timeline();
+                    
+                    // Create tunnel effect - photos come FROM the center/background
+                    photos.forEach((photo, index) => {
+                        const endX = photo.dataset.endX || '50%';
+                        const endY = photo.dataset.endY || '50%';
+                        const rotate = photo.dataset.rotate || 0;
+                        
+                        // Set initial state - start from CENTER (like coming from tunnel/background)
+                        gsap.set(photo, {
+                            left: '50%',
+                            top: '50%',
+                            xPercent: -50,
+                            yPercent: -50,
+                            scale: 0.05,
+                            opacity: 0,
+                            rotation: 0,
+                            zIndex: 1
+                        });
+                        
+                        // Animate FROM center TO final position (tunnel effect)
+                        tl.to(photo, {
+                            duration: 1.2,
+                            left: endX,
+                            top: endY,
+                            xPercent: 0,
+                            yPercent: 0,
+                            scale: 1,
+                            opacity: 1,
+                            rotation: parseFloat(rotate),
+                            zIndex: 10,
+                            ease: "power1.out"
+                        }, index * 0.06);
+                    });
+                    
+                    // Create ScrollTrigger
+                    ScrollTrigger.create({
+                        animation: tl,
+                        trigger: ".dreamdesk-scroll-section",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 2,
+                        anticipatePin: 1
+                    });
+                })();
+                </script>
         </div>
         </section>
     </div>
@@ -4100,7 +4237,7 @@
                                 <div class="ui-text"
                                     style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
                                     <div class="text-wrap is-animation">
-                                        <div class="h6 white">DreamDesk: Your vibe, your goals, your future—real
+                                        <div class="h6 white">Your vibe, ,<br>your goals, <br> your future, <br>real
                                             advice, real results</div>
                                     </div>
                                 </div>
