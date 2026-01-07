@@ -3961,6 +3961,26 @@
                         justify-content: center;
                         background: #0c0b0b;
                     }
+                    
+                    /* DRE and MDESK slide-in animations */
+                    #dreamdesk-dre {
+                        opacity: 0;
+                        transform: translateX(-200px);
+                        animation: slideFromLeft 1.2s ease-out 2s forwards;
+                    }
+                    #dreamdesk-mdesk {
+                        opacity: 0;
+                        transform: translateX(200px);
+                        animation: slideFromRight 1.2s ease-out 2s forwards;
+                    }
+                    @keyframes slideFromLeft {
+                        0% { opacity: 0; transform: translateX(-200px); }
+                        100% { opacity: 1; transform: translateX(0); }
+                    }
+                    @keyframes slideFromRight {
+                        0% { opacity: 0; transform: translateX(200px); }
+                        100% { opacity: 1; transform: translateX(0); }
+                    }
                 </style>
                 
                 <div class="dreamdesk-sticky-wrapper">
