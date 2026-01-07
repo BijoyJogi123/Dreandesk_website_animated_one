@@ -3784,7 +3784,7 @@
         <div class="nav nav-dark">
             <section id="hero" class="section is-hero">
                 <div class="anim-ball-sticky">
-                    <div class="anim-ball-wrap" style="transform: translate(0px, 70.6641px);">
+                    <div class="anim-ball-wrap" style="transform: translate(-124px, 70.6641px);">
                         <div class="ball-divider is-left"></div>
                         <div class="anim-ball-border"></div>
                         <div class="ball-divider is-left"></div>
@@ -3801,43 +3801,205 @@
                         <div class="ball-bg is-left"></div>
                     </div>
                 </div>
-                <div class="student-images-section" style="text-align: center; margin-bottom: 2rem;">
-                    <img src="student_images.png" alt="Students"
-                        style="max-width: 100%;  height: auto;width: 80%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                <!-- Student Image with Animated Quotations Section -->
+                <style>
+                    .student-quote-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 95%;
+                        max-width: 1900px;
+                        margin: 140px auto 120px auto;
+                        padding: 0 70px;
+                        box-sizing: border-box;
+                    }
+                    .student-img-box {
+                        width: 900px;
+                        height: 650px;
+                        flex-shrink: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .student-img-box img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 22px;
+                        box-shadow: 0 18px 70px rgba(0,0,0,0.5);
+                    }
+                    .quote-box {
+                        width: 850px;
+                        height: 650px;
+                        flex-shrink: 0;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 30px;
+                    }
+                    .quote-slide {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        padding: 40px;
+                        box-sizing: border-box;
+                        opacity: 0;
+                        transition: opacity 0.6s ease;
+                    }
+                    .quote-slide.active {
+                        opacity: 1;
+                    }
+                    .quote-mark {
+                        font-size: 140px;
+                        color: #ffdd00;
+                        line-height: 1;
+                        font-family: Georgia, serif;
+                        margin-bottom: 25px;
+                    }
+                    .quote-text {
+                        font-size: 44px;
+                        color: #ffffff;
+                        font-style: italic;
+                        line-height: 1.6;
+                        margin: 30px 0;
+                    }
+                    .quote-author {
+                        font-size: 32px;
+                        color: #ffdd00;
+                        font-weight: 600;
+                        margin-top: 25px;
+                    }
+                    @media (max-width: 1600px) {
+                        .student-quote-wrapper {
+                            flex-direction: column;
+                            gap: 70px;
+                        }
+                        .student-img-box, .quote-box {
+                            width: 100%;
+                            max-width: 800px;
+                            height: 550px;
+                            margin-left: 0;
+                        }
+                        .quote-text {
+                            font-size: 34px;
+                        }
+                    }
+                </style>
+                
+                <div class="student-quote-wrapper">
+                    <!-- Left - Fixed Student Image -->
+                    <div class="student-img-box">
+                        <img src="student_images.png" alt="Students">
+                    </div>
+                    
+                    <!-- Right - Animated Quotes -->
+                    <div class="quote-box">
+                        <div class="quote-slide active">
+                            <span class="quote-mark">"</span>
+                            <p class="quote-text">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+                            <span class="quote-author">— Malcolm X</span>
+                        </div>
+                        <div class="quote-slide">
+                            <span class="quote-mark">"</span>
+                            <p class="quote-text">The beautiful thing about learning is that no one can take it away from you.</p>
+                            <span class="quote-author">— B.B. King</span>
+                        </div>
+                        <div class="quote-slide">
+                            <span class="quote-mark">"</span>
+                            <p class="quote-text">Your dream doesn't have an expiration date. Take a deep breath and try again.</p>
+                            <span class="quote-author">— KT Witten</span>
+                        </div>
+                        <div class="quote-slide">
+                            <span class="quote-mark">"</span>
+                            <p class="quote-text">Success is not final, failure is not fatal: it is the courage to continue that counts.</p>
+                            <span class="quote-author">— Winston Churchill</span>
+                        </div>
+                        <div class="quote-slide">
+                            <span class="quote-mark">"</span>
+                            <p class="quote-text">The only way to do great work is to love what you do.</p>
+                            <span class="quote-author">— Steve Jobs</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="content-wrap is-hero"
-                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0 !important; grid-row-gap: 0 !important;">
-                    <!-- <div class="h3 white" style="text-align: center; margin-bottom: 5px !important; padding-bottom: 0;">
-                        Welcome to</div> -->
+                
+                <script>
+                (function() {
+                    var slides = document.querySelectorAll('.quote-slide');
+                    var current = 0;
+                    var total = slides.length;
+                    
+                    function nextQuote() {
+                        slides[current].classList.remove('active');
+                        current = (current + 1) % total;
+                        slides[current].classList.add('active');
+                    }
+                    
+                    setInterval(nextQuote, 4000);
+                })();
+                </script>
+                
+                <!-- Scroll Stoppage Wrapper for DREAMDESK Section -->
+                <style>
+                    .dreamdesk-sticky-wrapper {
+                        height: 250vh;
+                        position: relative;
+                    }
+                    .dreamdesk-sticky-content {
+                        position: sticky;
+                        top: 0;
+                        height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #0c0b0b;
+                    }
+                </style>
+                
+                <div class="dreamdesk-sticky-wrapper">
+                    <div class="dreamdesk-sticky-content">
+                        <div class="content-wrap is-hero"
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0 !important; grid-row-gap: 0 !important;">
+                            <!-- <div class="h3 white" style="text-align: center; margin-bottom: 5px !important; padding-bottom: 0;">
+                                Welcome to</div> -->
 
-                    <!-- DREAMDESK Logo Animation Section -->
-                    <div id="dreamdesk-logo-section"
-                        style="margin-left: 256px; position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 5px !important; padding-top: 0;">
-                    </div>
-                    <!-- Main DREAMDESK text with A that vanishes -->
-                    <div
-                        style="width: 100%;  display: flex; align-items: center; justify-content: center; position: relative;">
-                        <span id="dreamdesk-dre" class="h3"
-                            style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
-                        <span id="dreamdesk-a" class="h3"
-                            style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); transition: opacity 0.3s ease;">A</span>
-                        <span id="dreamdesk-mdesk" class="h3"
-                            style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">MDESK</span>
-                    </div>
+                            <!-- DREAMDESK Logo Animation Section -->
+                            <div id="dreamdesk-logo-section"
+                                style="margin-left: 256px; position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 5px !important; padding-top: 0;">
+                            </div>
+                            <!-- Main DREAMDESK text with A that vanishes -->
+                            <div
+                                style="width: 100%;  display: flex; align-items: center; justify-content: center; position: relative;">
+                                <span id="dreamdesk-dre" class="h3"
+                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">DRE</span>
+                                <span id="dreamdesk-a" class="h3"
+                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); transition: opacity 0.3s ease;">A</span>
+                                <span id="dreamdesk-mdesk" class="h3"
+                                    style="color: #ffdd00; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">MDESK</span>
+                            </div>
 
-                    <!-- Tagline section - animated -->
-                    <div id="tagline-section"
-                        style=" display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
-                        <span id="tagline-left"
-                            style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you
-                            dream,</span>
-                        <span id="bulb-container"
-                            style="width: 150px; height: 150px;  transform: translateY(20px); opacity: 0; transition: all 0.5s ease 0.2s;">
-                            <img src="bulb.png" alt="Bulb" style="width: 100%; height: 100%; object-fit: contain;">
-                        </span>
-                        <span id="tagline-right"
-                            style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(50px); opacity: 0; transition: all 0.5s ease;">we
-                            make it possible</span>
+                            <!-- Tagline section - animated -->
+                            <div id="tagline-section"
+                                style=" display: flex; align-items: center; justify-content: center; margin-top: -50px; opacity: 0; transition: opacity 0.5s ease;">
+                                <span id="tagline-left"
+                                    style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(-50px); opacity: 0; transition: all 0.5s ease;">you
+                                    dream,</span>
+                                <span id="bulb-container"
+                                    style="width: 150px; height: 150px;  transform: translateY(20px); opacity: 0; transition: all 0.5s ease 0.2s;">
+                                    <img src="bulb.png" alt="Bulb" style="width: 100%; height: 100%; object-fit: contain;">
+                                </span>
+                                <span id="tagline-right"
+                                    style="color: #ffffff; font-size: 0.40rem; font-weight: 400; transform: translateX(50px); opacity: 0; transition: all 0.5s ease;">we
+                                    make it possible</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -3865,22 +4027,23 @@
                     <div class="anim-shape is-also">
                         <div class="anim-text-wrap">
                             <!-- <div class="anim-text">Where Dreams</div> -->
-                               <div class="anim-text">Your Dreams</div>
+                               <div class="anim-text">You Dream</div>
                         </div>
                     </div>
                     <div class="anim-shape is-your">
                         <div class="anim-text-wrap">
-                            <div class="anim-text">we</div>
+                          <div class="anim-text">Make it</div>
                         </div>
                     </div>
                     <div class="anim-shape is-controls">
                         <div class="anim-text-wrap">
-                            <div class="anim-text">Make it</div>
+                            
+                              <div class="anim-text">We</div>
                         </div>
                     </div>
                     <div class="anim-shape is-attention">
                         <div class="anim-text-wrap">
-                            <div class="anim-text">possible</div>
+                            <div class="anim-text">Possible</div>
                         </div>
                     </div>
                 </div>

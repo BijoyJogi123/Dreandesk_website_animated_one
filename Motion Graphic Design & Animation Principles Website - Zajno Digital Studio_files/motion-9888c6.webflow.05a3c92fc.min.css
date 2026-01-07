@@ -2742,8 +2742,8 @@ textarea.w-select {
 }
 
 .anim-shape.is-your {
-  top: 17.3rem;
-  left: 4.5rem;
+  top: 17.0rem;
+  left: 3.2rem;
   transform: rotate(30deg)
 }
 
@@ -4683,14 +4683,14 @@ textarea.w-select {
 .anim-ball-sticky {
   z-index: 1;
   width: 100%;
-  /* height: 50vh; */
+  
     height: 1vh;  /* Here is the  */
   justify-content: center;
   align-items: flex-end;
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: -20vh
+  top: 50vh
 }
 
 .resources-overlay {
