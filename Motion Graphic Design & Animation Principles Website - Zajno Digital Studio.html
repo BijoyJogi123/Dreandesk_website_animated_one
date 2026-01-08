@@ -700,7 +700,7 @@
                                 </a></div>
                         </div>
                         <!-- Nav options positioned at RIGHT edge of white section -->
-                        <nav id="hero-nav-options" style="display: flex; align-items: center; gap: 35px; opacity: 0; position: fixed; left: 680px; top: 28px; z-index: 9999;">
+                        <nav id="hero-nav-options" style="display: flex; align-items: center; gap: 35px; opacity: 0; position: fixed; left: 880px; top: 28px; z-index: 9999;">
                             <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">Home</a>
                             <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;">About</a>
                             <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;">Services</a>
@@ -4423,7 +4423,7 @@
                                         </div> -->
 
 
-                                    <div class="section-slide ui-slide"
+                                    <div class="section-slide ui-slide" id="one-tap-section"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
                                         <div style=" padding-bottom: 40px;">
@@ -8058,84 +8058,100 @@
     <!-- Hero Section Animation - Main logo changes to black when white section is visible -->
     <script>
         (function() {
-            // Wait for DOM to be ready
             document.addEventListener('DOMContentLoaded', function() {
                 const whiteHeroSection = document.getElementById('white-hero-section');
+                const oneTapSection = document.getElementById('one-tap-section');
                 const mainLogo = document.querySelector('#logo-wrap img');
                 const heroNavOptions = document.getElementById('hero-nav-options');
                 const navItems = document.querySelectorAll('.nav-option-item');
                 
-                if (!whiteHeroSection || !mainLogo) {
-                    console.log('Elements not found');
-                    return;
-                }
+                if (!mainLogo) return;
                 
-                // Store original logo src
                 const originalLogoSrc = mainLogo.src;
                 const blackLogoSrc = './logo_black.png';
+                let isBlackLogo = false;
                 
-                // Create Intersection Observer to detect when white section is visible
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-                            // White section is fully visible - change to black logo
-                            mainLogo.style.transition = 'all 0.4s ease';
-                            mainLogo.style.opacity = '0';
-                            mainLogo.style.transform = 'scale(0.9)';
-                            
-                            setTimeout(() => {
-                                mainLogo.src = blackLogoSrc;
-                                mainLogo.style.opacity = '1';
-                                mainLogo.style.transform = 'scale(1)';
-                            }, 400);
-                            
-                            // Show nav container
-                            if (heroNavOptions) {
-                                heroNavOptions.style.opacity = '1';
-                            }
-                            
-                            // Animate each nav item with stagger effect - drop down one by one
-                            navItems.forEach((item, index) => {
-                                setTimeout(() => {
-                                    item.style.opacity = '1';
-                                    item.style.transform = 'translateY(0)';
-                                }, 500 + (index * 120));
-                            });
-                            
-                        } else {
-                            // White section is not visible - change back to original logo
-                            mainLogo.style.transition = 'all 0.4s ease';
-                            mainLogo.style.opacity = '0';
-                            mainLogo.style.transform = 'scale(0.9)';
-                            
-                            setTimeout(() => {
-                                mainLogo.src = originalLogoSrc;
-                                mainLogo.style.opacity = '1';
-                                mainLogo.style.transform = 'scale(1)';
-                            }, 400);
-                            
-                            // Hide nav items with reverse stagger - go up one by one
-                            navItems.forEach((item, index) => {
-                                setTimeout(() => {
-                                    item.style.opacity = '0';
-                                    item.style.transform = 'translateY(-15px)';
-                                }, (navItems.length - 1 - index) * 80);
-                            });
-                            
-                            // Hide nav container after items are hidden
-                            setTimeout(() => {
-                                if (heroNavOptions) {
-                                    heroNavOptions.style.opacity = '0';
-                                }
-                            }, 400);
-                        }
+                function isSectionVisible(section) {
+                    if (!section) return false;
+                    const rect = section.getBoundingClientRect();
+                    const vw = window.innerWidth;
+                    // Section must be significantly visible (between 20% and 70% of viewport)
+                    return rect.left < vw * 0.6 && rect.right > vw * 0.25 && rect.width > 0;
+                }
+                
+                function showBlackLogoAndNav() {
+                    if (isBlackLogo) return;
+                    isBlackLogo = true;
+                    
+                    mainLogo.style.transition = 'all 0.4s ease';
+                    mainLogo.style.opacity = '0';
+                    mainLogo.style.transform = 'scale(0.9)';
+                    
+                    setTimeout(() => {
+                        mainLogo.src = blackLogoSrc;
+                        mainLogo.style.opacity = '1';
+                        mainLogo.style.transform = 'scale(1)';
+                    }, 400);
+                    
+                    if (heroNavOptions) {
+                        heroNavOptions.style.opacity = '1';
+                    }
+                    
+                    navItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 500 + (index * 120));
                     });
-                }, {
-                    threshold: [0.5, 0.7],
-                    rootMargin: '0px'
-                });
+                }
                 
-                observer.observe(whiteHeroSection);
+                function hideBlackLogoAndNav() {
+                    if (!isBlackLogo) return;
+                    isBlackLogo = false;
+                    
+                    // Hide nav items first
+                    navItems.forEach((item, index) => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(-15px)';
+                    });
+                    
+                    // Hide nav container
+                    if (heroNavOptions) {
+                        heroNavOptions.style.opacity = '0';
+                    }
+                    
+                    // Change logo back
+                    mainLogo.style.transition = 'all 0.4s ease';
+                    mainLogo.style.opacity = '0';
+                    mainLogo.style.transform = 'scale(0.9)';
+                    
+                    setTimeout(() => {
+                        mainLogo.src = originalLogoSrc;
+                        mainLogo.style.opacity = '1';
+                        mainLogo.style.transform = 'scale(1)';
+                    }, 400);
+                }
+                
+                function checkSections() {
+                    // Check if EITHER of the two specific sections is visible
+                    const heroVisible = isSectionVisible(whiteHeroSection);
+                    const oneTapVisible = isSectionVisible(oneTapSection);
+                    
+                    if (heroVisible || oneTapVisible) {
+                        showBlackLogoAndNav();
+                    } else {
+                        hideBlackLogoAndNav();
+                    }
+                }
+                
+                // Check on scroll
+                window.addEventListener('scroll', checkSections, { passive: true });
+                
+                // Check on resize
+                window.addEventListener('resize', checkSections);
+                
+                // Initial check
+                setTimeout(checkSections, 200);
             });
         })();
     </script>
