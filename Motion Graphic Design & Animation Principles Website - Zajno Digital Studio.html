@@ -5828,6 +5828,144 @@
                                                     border-radius: 12px;
                                                 }
 
+                                                /* Gallery display container - left image, right description */
+                                                #spinny-flipz-section .gallery-display {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%, -50%);
+                                                    width: 75%;
+                                                    max-width: 900px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: space-between;
+                                                    gap: 40px;
+                                                    opacity: 0;
+                                                    pointer-events: none;
+                                                    font-size: 16px !important;
+                                                }
+
+                                                #spinny-flipz-section .gallery-display.active {
+                                                    opacity: 1;
+                                                    pointer-events: auto;
+                                                }
+
+                                                #spinny-flipz-section .gallery-image-container {
+                                                    flex: 0 0 40%;
+                                                    position: relative;
+                                                }
+
+                                                #spinny-flipz-section .gallery-image {
+                                                    width: 100%;
+                                                    max-width: 280px;
+                                                    aspect-ratio: 1/1;
+                                                    object-fit: cover;
+                                                    border-radius: 12px;
+                                                    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.1);
+                                                }
+
+                                                #spinny-flipz-section .gallery-description {
+                                                    flex: 0 0 55%;
+                                                    color: #fff;
+                                                    text-align: left;
+                                                    max-width: 400px;
+                                                    overflow: hidden;
+                                                }
+
+                                                #spinny-flipz-section .gallery-description .student-name,
+                                                #spinny-flipz-section #student-name {
+                                                    font-size: 24px !important;
+                                                    font-weight: 700 !important;
+                                                    margin-bottom: 8px !important;
+                                                    color: #fff !important;
+                                                    line-height: 1.2 !important;
+                                                }
+
+                                                #spinny-flipz-section .gallery-description .student-course,
+                                                #spinny-flipz-section #student-course {
+                                                    font-size: 12px !important;
+                                                    color: #f5c518 !important;
+                                                    margin-bottom: 12px !important;
+                                                    font-weight: 600 !important;
+                                                    text-transform: uppercase !important;
+                                                    letter-spacing: 1.5px !important;
+                                                }
+
+                                                #spinny-flipz-section .gallery-description .student-quote,
+                                                #spinny-flipz-section #student-quote {
+                                                    font-size: 14px !important;
+                                                    line-height: 1.6 !important;
+                                                    color: rgba(255,255,255,0.85) !important;
+                                                    font-style: italic !important;
+                                                    position: relative;
+                                                    padding-left: 15px;
+                                                    border-left: 2px solid #f5c518;
+                                                }
+
+                                                #spinny-flipz-section .gallery-close-btn {
+                                                    position: absolute;
+                                                    top: -40px;
+                                                    right: 0;
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    background: rgba(255,255,255,0.1);
+                                                    border: none;
+                                                    border-radius: 50%;
+                                                    color: #fff;
+                                                    font-size: 24px;
+                                                    cursor: pointer;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    transition: all 0.3s ease;
+                                                }
+
+                                                #spinny-flipz-section .gallery-close-btn:hover {
+                                                    background: rgba(255,255,255,0.2);
+                                                    transform: rotate(90deg);
+                                                }
+
+                                                /* Responsive for gallery display */
+                                                @media (max-width: 768px) {
+                                                    #spinny-flipz-section .gallery-display {
+                                                        flex-direction: column;
+                                                        gap: 20px;
+                                                        width: 90%;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-image-container {
+                                                        flex: none;
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-image {
+                                                        max-width: 200px;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-description {
+                                                        flex: none;
+                                                        text-align: center;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-description .student-name {
+                                                        font-size: 1.2rem;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-description .student-course {
+                                                        font-size: 0.75rem;
+                                                    }
+
+                                                    #spinny-flipz-section .gallery-description .student-quote {
+                                                        font-size: 0.85rem;
+                                                        border-left: none;
+                                                        padding-left: 0;
+                                                        border-top: 2px solid #f5c518;
+                                                        padding-top: 12px;
+                                                    }
+                                                }
+
                                                 #spinny-flipz-section .spinny-top h1 {
                                                     font-family: "spinny-custom-font";
                                                     font-size: 10vw;
@@ -5928,7 +6066,18 @@
                                                 <div class="spinny-view">
                                                     <!-- Top header area for enlarged images -->
                                                     <div class="spinny-top">
-                                                        <!-- Selected colorful image will appear here -->
+                                                        <!-- Gallery display - image left, description right -->
+                                                        <div class="gallery-display" id="gallery-display">
+                                                            <div class="gallery-image-container">
+                                                                <img class="gallery-image" id="gallery-image" src="" alt="Student">
+                                                            </div>
+                                                            <div class="gallery-description">
+                                                                <div class="student-name" id="student-name"></div>
+                                                                <div class="student-course" id="student-course"></div>
+                                                                <div class="student-quote" id="student-quote"></div>
+                                                            </div>
+                                                            <button class="gallery-close-btn" id="gallery-close-btn">×</button>
+                                                        </div>
                                                     </div>
 
                                                     <!-- Bottom carousel section -->
@@ -5936,103 +6085,178 @@
                                                         <div class="spinny-circle">
                                                             <!-- Student Image cards - B&W in carousel, Color on click -->
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/1a.png">
+                                                                data-color-src="./Students_images/1a.png"
+                                                                data-name="Priya Sharma"
+                                                                data-course="Computer Science"
+                                                                data-quote="This platform helped me discover my true passion for coding. The career guidance was exceptional!">
                                                                 <img src="./Students_images/1b.png" alt="Student 1">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/2a.png">
+                                                                data-color-src="./Students_images/2a.png"
+                                                                data-name="Rahul Verma"
+                                                                data-course="Engineering"
+                                                                data-quote="I found the perfect engineering path thanks to the personalized recommendations.">
                                                                 <img src="./Students_images/2b.png" alt="Student 2">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/3a.png">
+                                                                data-color-src="./Students_images/3a.png"
+                                                                data-name="Ananya Patel"
+                                                                data-course="Design"
+                                                                data-quote="The creative career options opened up a whole new world for me. Absolutely life-changing!">
                                                                 <img src="./Students_images/3b.png" alt="Student 3">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/4a.png">
+                                                                data-color-src="./Students_images/4a.png"
+                                                                data-name="Vikram Singh"
+                                                                data-course="Business Management"
+                                                                data-quote="From confused to confident - this platform transformed my career outlook completely.">
                                                                 <img src="./Students_images/4b.png" alt="Student 4">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/5a.png">
+                                                                data-color-src="./Students_images/5a.png"
+                                                                data-name="Sneha Reddy"
+                                                                data-course="Medicine"
+                                                                data-quote="The guidance helped me realize my dream of becoming a doctor was achievable.">
                                                                 <img src="./Students_images/5b.png" alt="Student 5">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/6a.png">
+                                                                data-color-src="./Students_images/6a.png"
+                                                                data-name="Arjun Kumar"
+                                                                data-course="Aviation"
+                                                                data-quote="Flying high towards my dreams! The aviation career path was exactly what I needed.">
                                                                 <img src="./Students_images/6b.png" alt="Student 6">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/7a.png">
+                                                                data-color-src="./Students_images/7a.png"
+                                                                data-name="Meera Joshi"
+                                                                data-course="Allied Health"
+                                                                data-quote="Healthcare was my calling, and this platform helped me find the right specialization.">
                                                                 <img src="./Students_images/7b.png" alt="Student 7">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/8a.png">
+                                                                data-color-src="./Students_images/8a.png"
+                                                                data-name="Karthik Nair"
+                                                                data-course="Data Science"
+                                                                data-quote="The future is data, and I'm ready for it thanks to the amazing career mapping!">
                                                                 <img src="./Students_images/8b.png" alt="Student 8">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/9a.png">
+                                                                data-color-src="./Students_images/9a.png"
+                                                                data-name="Divya Menon"
+                                                                data-course="Architecture"
+                                                                data-quote="Building dreams into reality - the perfect career choice for my creative mind.">
                                                                 <img src="./Students_images/9b.png" alt="Student 9">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/10a.png">
+                                                                data-color-src="./Students_images/10a.png"
+                                                                data-name="Aditya Gupta"
+                                                                data-course="Finance"
+                                                                data-quote="Numbers make sense now! The finance track was the best decision of my life.">
                                                                 <img src="./Students_images/10b.png" alt="Student 10">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/11a.png">
+                                                                data-color-src="./Students_images/11a.png"
+                                                                data-name="Pooja Iyer"
+                                                                data-course="Psychology"
+                                                                data-quote="Understanding minds is my passion. This platform showed me the way.">
                                                                 <img src="./Students_images/11b.png" alt="Student 11">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/12a.png">
+                                                                data-color-src="./Students_images/12a.png"
+                                                                data-name="Rohan Desai"
+                                                                data-course="Marketing"
+                                                                data-quote="Creative marketing strategies are my forte now. Thank you for the guidance!">
                                                                 <img src="./Students_images/12b.png" alt="Student 12">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/13a.png">
+                                                                data-color-src="./Students_images/13a.png"
+                                                                data-name="Kavya Rao"
+                                                                data-course="Journalism"
+                                                                data-quote="Telling stories that matter - journalism was my hidden calling.">
                                                                 <img src="./Students_images/13b.png" alt="Student 13">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/14a.png">
+                                                                data-color-src="./Students_images/14a.png"
+                                                                data-name="Sanjay Pillai"
+                                                                data-course="Law"
+                                                                data-quote="Justice and advocacy - the legal path was meant for me.">
                                                                 <img src="./Students_images/14b.png" alt="Student 14">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/15a.png">
+                                                                data-color-src="./Students_images/15a.png"
+                                                                data-name="Nisha Kapoor"
+                                                                data-course="Nursing"
+                                                                data-quote="Caring for others is my purpose. Nursing is where I belong.">
                                                                 <img src="./Students_images/15b.png" alt="Student 15">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/16a.png">
+                                                                data-color-src="./Students_images/16a.png"
+                                                                data-name="Amit Saxena"
+                                                                data-course="Mechanical Engineering"
+                                                                data-quote="Building machines that change the world - engineering excellence!">
                                                                 <img src="./Students_images/16b.png" alt="Student 16">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/18a.png">
+                                                                data-color-src="./Students_images/18a.png"
+                                                                data-name="Lakshmi Venkat"
+                                                                data-course="Biotechnology"
+                                                                data-quote="Science meets innovation - biotech is the future I'm creating.">
                                                                 <img src="./Students_images/18b.png" alt="Student 18">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/19a.png">
+                                                                data-color-src="./Students_images/19a.png"
+                                                                data-name="Harsh Malhotra"
+                                                                data-course="Film Making"
+                                                                data-quote="Lights, camera, action! My creative journey in cinema begins.">
                                                                 <img src="./Students_images/19b.png" alt="Student 19">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/20a.png">
+                                                                data-color-src="./Students_images/20a.png"
+                                                                data-name="Ritu Agarwal"
+                                                                data-course="Environmental Science"
+                                                                data-quote="Saving the planet one step at a time - my green career path.">
                                                                 <img src="./Students_images/20b.png" alt="Student 20">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/21a.png">
+                                                                data-color-src="./Students_images/21a.png"
+                                                                data-name="Varun Choudhary"
+                                                                data-course="Sports Management"
+                                                                data-quote="Passion for sports turned into a career. Dreams do come true!">
                                                                 <img src="./Students_images/21b.png" alt="Student 21">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/22a.png">
+                                                                data-color-src="./Students_images/22a.png"
+                                                                data-name="Swati Bhatt"
+                                                                data-course="Fashion Design"
+                                                                data-quote="Creating trends, not following them. Fashion is my canvas.">
                                                                 <img src="./Students_images/22b.png" alt="Student 22">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/23a.png">
+                                                                data-color-src="./Students_images/23a.png"
+                                                                data-name="Nikhil Sharma"
+                                                                data-course="Cyber Security"
+                                                                data-quote="Protecting the digital world - cyber security is my mission.">
                                                                 <img src="./Students_images/23b.png" alt="Student 23">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/24a.png">
+                                                                data-color-src="./Students_images/24a.png"
+                                                                data-name="Anjali Mishra"
+                                                                data-course="Hotel Management"
+                                                                data-quote="Hospitality is an art, and I'm mastering it every day.">
                                                                 <img src="./Students_images/24b.png" alt="Student 24">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/25a.png">
+                                                                data-color-src="./Students_images/25a.png"
+                                                                data-name="Deepak Jain"
+                                                                data-course="Artificial Intelligence"
+                                                                data-quote="AI is reshaping the world, and I'm part of that revolution.">
                                                                 <img src="./Students_images/25b.png" alt="Student 25">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/26a.png">
+                                                                data-color-src="./Students_images/26a.png"
+                                                                data-name="Tanvi Kulkarni"
+                                                                data-course="Pharmacy"
+                                                                data-quote="Healing through medicine - pharmacy is my path to helping others.">
                                                                 <img src="./Students_images/26b.png" alt="Student 26">
                                                             </div>
                                                         </div>
@@ -7641,7 +7865,6 @@
             var activeItem = null;
             var autoRotateTween = null;
             var isPaused = false;
-            var colorImage = null; // The colorful image shown in center
 
             // Configuration
             var AUTO_ROTATE_DURATION = 45; // seconds for full rotation
@@ -7740,31 +7963,68 @@
                 item.addEventListener('click', handleItemClick);
             });
 
-            // Handle top area clicks
+            // Get gallery display elements
+            var galleryDisplay = section.querySelector('#gallery-display');
+            var galleryImage = section.querySelector('#gallery-image');
+            var studentName = section.querySelector('#student-name');
+            var studentCourse = section.querySelector('#student-course');
+            var studentQuote = section.querySelector('#student-quote');
+            var galleryCloseBtn = section.querySelector('#gallery-close-btn');
+
+            // Handle close button click
+            if (galleryCloseBtn) {
+                galleryCloseBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeActiveItem();
+                });
+            }
+
+            // Handle top area clicks (but not on gallery display)
             if (topArea) {
-                topArea.addEventListener('click', closeActiveItem);
+                topArea.addEventListener('click', function(e) {
+                    if (e.target === topArea || !galleryDisplay.contains(e.target)) {
+                        closeActiveItem();
+                    }
+                });
             }
 
             // Close the currently active/enlarged item
             function closeActiveItem() {
-                if (activeItem && topArea && colorImage) {
-                    // Animate the color image out
-                    gsap.to(colorImage, {
-                        scale: 0,
-                        rotation: -180,
-                        opacity: 0,
-                        duration: 0.5,
-                        ease: "back.in(1.7)",
-                        onComplete: function () {
-                            if (colorImage && colorImage.parentNode) {
-                                colorImage.parentNode.removeChild(colorImage);
+                if (activeItem && galleryDisplay) {
+                    // Animate out - image slides left, description slides right
+                    var imageContainer = galleryDisplay.querySelector('.gallery-image-container');
+                    var descContainer = galleryDisplay.querySelector('.gallery-description');
+                    var closeBtn = galleryDisplay.querySelector('.gallery-close-btn');
+
+                    gsap.timeline()
+                        .to(imageContainer, {
+                            x: -100,
+                            opacity: 0,
+                            duration: 0.4,
+                            ease: "power2.in"
+                        }, 0)
+                        .to(descContainer, {
+                            x: 100,
+                            opacity: 0,
+                            duration: 0.4,
+                            ease: "power2.in"
+                        }, 0)
+                        .to(closeBtn, {
+                            scale: 0,
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.in"
+                        }, 0)
+                        .to(galleryDisplay, {
+                            opacity: 0,
+                            duration: 0.2,
+                            onComplete: function() {
+                                galleryDisplay.classList.remove('active');
+                                activeItem = null;
+                                isPaused = false;
+                                resumeAutoRotation();
                             }
-                            colorImage = null;
-                            activeItem = null;
-                            isPaused = false;
-                            resumeAutoRotation();
-                        }
-                    });
+                        }, 0.3);
                 } else {
                     activeItem = null;
                     isPaused = false;
@@ -7772,105 +8032,101 @@
                 }
             }
 
-            // Handle clicking on an item - show colorful version in center
+            // Handle clicking on an item - show image on left, description on right
             function handleItemClick(event) {
                 event.stopPropagation();
                 var clickedItem = event.currentTarget;
                 var bwImg = clickedItem.querySelector('img');
                 var colorSrc = clickedItem.getAttribute('data-color-src');
+                var name = clickedItem.getAttribute('data-name') || 'Student';
+                var course = clickedItem.getAttribute('data-course') || 'Career Path';
+                var quote = clickedItem.getAttribute('data-quote') || 'My journey with this platform has been amazing!';
 
-                if (!bwImg || !topArea || !colorSrc) return;
+                if (!bwImg || !galleryDisplay || !colorSrc) return;
 
                 // Pause auto-rotation when item is clicked
                 pauseAutoRotation();
 
                 if (clickedItem !== activeItem) {
-                    // Close any currently active item first
-                    if (activeItem && colorImage) {
-                        gsap.to(colorImage, {
-                            scale: 0,
-                            opacity: 0,
-                            duration: 0.3,
-                            ease: "power2.in",
-                            onComplete: function () {
-                                if (colorImage && colorImage.parentNode) {
-                                    colorImage.parentNode.removeChild(colorImage);
-                                }
-                            }
-                        });
-                    }
-
                     // Set this as active item
                     activeItem = clickedItem;
 
-                    // Get position of the B&W image for animation start point
-                    var bwRect = bwImg.getBoundingClientRect();
-                    var topRect = topArea.getBoundingClientRect();
+                    // Update gallery content
+                    galleryImage.src = colorSrc;
+                    galleryImage.alt = name;
+                    studentName.textContent = name;
+                    studentCourse.textContent = course;
+                    studentQuote.textContent = '"' + quote + '"';
 
-                    // Create new colorful image
-                    colorImage = document.createElement('img');
-                    colorImage.src = colorSrc;
-                    colorImage.alt = bwImg.alt + ' (Color)';
-                    colorImage.style.cssText = `
-                        position: absolute;
-                        width: 40vw;
-                        height: 40vw;
-                        max-width: 400px;
-                        max-height: 400px;
-                        object-fit: cover;
-                        border-radius: 12px;
-                        box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 4px rgba(255,255,255,0.1);
-                        cursor: pointer;
-                        z-index: 100;
-                    `;
+                    // Get elements for animation
+                    var imageContainer = galleryDisplay.querySelector('.gallery-image-container');
+                    var descContainer = galleryDisplay.querySelector('.gallery-description');
+                    var closeBtn = galleryDisplay.querySelector('.gallery-close-btn');
 
-                    // Add to top area
-                    topArea.appendChild(colorImage);
+                    // Set initial states
+                    gsap.set(galleryDisplay, { opacity: 0 });
+                    gsap.set(imageContainer, { x: -100, opacity: 0 });
+                    gsap.set(descContainer, { x: 100, opacity: 0 });
+                    gsap.set(closeBtn, { scale: 0, opacity: 0 });
+                    gsap.set(studentName, { y: 30, opacity: 0 });
+                    gsap.set(studentCourse, { y: 20, opacity: 0 });
+                    gsap.set(studentQuote, { y: 20, opacity: 0 });
 
-                    // Calculate start position (from B&W image location)
-                    var startX = bwRect.left + bwRect.width / 2 - topRect.left - topRect.width / 2;
-                    var startY = bwRect.top + bwRect.height / 2 - topRect.top - topRect.height / 2;
+                    // Show gallery display
+                    galleryDisplay.classList.add('active');
 
-                    // Set initial state (at B&W image position, small and rotated)
-                    gsap.set(colorImage, {
-                        x: startX,
-                        y: startY,
-                        scale: 0.1,
-                        rotation: 180,
-                        opacity: 0,
-                        filter: 'grayscale(100%) brightness(0.8)'
-                    });
-
-                    // Animate to center with beautiful effects
+                    // Animate in - image from left, description from right
                     gsap.timeline()
-                        .to(colorImage, {
-                            x: 0,
-                            y: 0,
-                            scale: 1,
-                            rotation: 0,
+                        .to(galleryDisplay, {
                             opacity: 1,
-                            duration: CLICK_ANIMATION_DURATION,
-                            ease: "back.out(1.4)"
-                        })
-                        .to(colorImage, {
-                            filter: 'grayscale(0%) brightness(1)',
-                            duration: 0.4,
-                            ease: "power2.out"
-                        }, "-=0.3")
-                        .to(colorImage, {
-                            boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 0 4px rgba(255,255,255,0.2), 0 0 40px rgba(255,220,100,0.3)',
                             duration: 0.3,
-                            ease: "power1.out"
-                        }, "-=0.2");
+                            ease: "power2.out"
+                        })
+                        .to(imageContainer, {
+                            x: 0,
+                            opacity: 1,
+                            duration: 0.6,
+                            ease: "back.out(1.2)"
+                        }, 0.1)
+                        .to(descContainer, {
+                            x: 0,
+                            opacity: 1,
+                            duration: 0.6,
+                            ease: "back.out(1.2)"
+                        }, 0.2)
+                        .to(studentName, {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        }, 0.4)
+                        .to(studentCourse, {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        }, 0.5)
+                        .to(studentQuote, {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        }, 0.6)
+                        .to(closeBtn, {
+                            scale: 1,
+                            opacity: 1,
+                            duration: 0.4,
+                            ease: "back.out(1.7)"
+                        }, 0.5);
 
-                    // Add pulse animation
-                    gsap.to(colorImage, {
-                        scale: 1.02,
-                        duration: 1.5,
+                    // Add subtle floating animation to image
+                    gsap.to(galleryImage, {
+                        y: -5,
+                        duration: 2,
                         ease: "sine.inOut",
                         repeat: -1,
                         yoyo: true,
-                        delay: CLICK_ANIMATION_DURATION
+                        delay: 0.8
                     });
 
                 } else {
