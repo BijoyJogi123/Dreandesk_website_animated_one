@@ -174,7 +174,7 @@
                 align-items: center !important;
                 justify-content: center !important;
                 /* padding: 0.5rem !important; */
-                background: rgba(12, 11, 11, 0.8) !important;
+                /* background: rgba(12, 11, 11, 0.8) !important; */
                 /* border-radius: 8px !important; */
             }
 
@@ -649,7 +649,7 @@
             <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                 class="nav-panels">
                 <div class="nav-panel">
-                    <div class="nav-logo">
+                    <div class="nav-logo" style="display: flex; align-items: center; gap: 30px;">
                         <div class="logo-wrappers">
                             <div class="logo-sections-wrap"><a href="https://motion.zajno.com/" aria-current="page"
                                     class="sound_click w-inline-block w--current">
@@ -657,13 +657,19 @@
                                 </a><a href="https://motion.zajno.com/" aria-current="page"
                                     class="sound_click w-inline-block w--current">
                                     <div id="logo-wrap" class="logo-text-sections"
-                                        style="color: rgb(253, 252, 250); background-color: rgb(12, 11, 11); border-color: rgb(253, 252, 250);">
-                                        <!-- <div>Dreamdesk</div> -->
+                                        style="">
                                         <img class="" style="width: 200px; height: auto;" src="./LOGO 22-01.png"
                                             alt="Logo" />
                                     </div>
                                 </a></div>
                         </div>
+                        <!-- Nav options positioned at RIGHT edge of white section -->
+                        <nav id="hero-nav-options" style="display: flex; align-items: center; gap: 35px; opacity: 0; position: fixed; left: 480px; top: 28px; z-index: 9999;">
+                            <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">Home</a>
+                            <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;">About</a>
+                            <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;">Services</a>
+                            <a href="#" class="nav-option-item" style="color: #0c0b0b; text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0; transform: translateY(-15px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;">Contact</a>
+                        </nav>
                         <div id="breadcrumbs-wrap" class="breadcrumbs-wrap" style="opacity: 0;">
                             <div class="breadcrumb-item is-easing">
                                 <div>The Basics of easing</div>
@@ -4308,7 +4314,7 @@
                                 </div>
                                 <div class="section-slider ui-slider" style="margin-left: 0px;">
 
-                                    <div class="section-slide ui-slide"
+                                    <div class="section-slide ui-slide" id="white-hero-section"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
                                         <div style=" padding-bottom: 40px;">
@@ -4317,7 +4323,7 @@
 
                                                 <!-- Top bar decoration -->
                                                 <div
-                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: transparent; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: transparent; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; justify-content: space-between; padding-left: 15px; padding-right: 15px;">
                                                     <div style="display: flex; gap: 6px;">
                                                         <span
                                                             style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
@@ -4328,7 +4334,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="section-slide-text" style="padding-top: 50px;">
+
+                                                                                                <div class="section-slide-text" style="padding-top: 50px;">
                                                     <div class="p3"
                                                         style="font-size: 0.40rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
                                                         We’ll map your perfect career path
@@ -8010,6 +8017,91 @@
                 item.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
             });
         });
+    </script>
+
+    <!-- Hero Section Animation - Main logo changes to black when white section is visible -->
+    <script>
+        (function() {
+            // Wait for DOM to be ready
+            document.addEventListener('DOMContentLoaded', function() {
+                const whiteHeroSection = document.getElementById('white-hero-section');
+                const mainLogo = document.querySelector('#logo-wrap img');
+                const heroNavOptions = document.getElementById('hero-nav-options');
+                const navItems = document.querySelectorAll('.nav-option-item');
+                
+                if (!whiteHeroSection || !mainLogo) {
+                    console.log('Elements not found');
+                    return;
+                }
+                
+                // Store original logo src
+                const originalLogoSrc = mainLogo.src;
+                const blackLogoSrc = './logo_black.png';
+                
+                // Create Intersection Observer to detect when white section is visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            // White section is fully visible - change to black logo
+                            mainLogo.style.transition = 'all 0.4s ease';
+                            mainLogo.style.opacity = '0';
+                            mainLogo.style.transform = 'scale(0.9)';
+                            
+                            setTimeout(() => {
+                                mainLogo.src = blackLogoSrc;
+                                mainLogo.style.opacity = '1';
+                                mainLogo.style.transform = 'scale(1)';
+                            }, 400);
+                            
+                            // Show nav container
+                            if (heroNavOptions) {
+                                heroNavOptions.style.opacity = '1';
+                            }
+                            
+                            // Animate each nav item with stagger effect - drop down one by one
+                            navItems.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'translateY(0)';
+                                }, 500 + (index * 120));
+                            });
+                            
+                        } else {
+                            // White section is not visible - change back to original logo
+                            mainLogo.style.transition = 'all 0.4s ease';
+                            mainLogo.style.opacity = '0';
+                            mainLogo.style.transform = 'scale(0.9)';
+                            
+                            setTimeout(() => {
+                                mainLogo.src = originalLogoSrc;
+                                mainLogo.style.opacity = '1';
+                                mainLogo.style.transform = 'scale(1)';
+                            }, 400);
+                            
+                            // Hide nav items with reverse stagger - go up one by one
+                            navItems.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.style.opacity = '0';
+                                    item.style.transform = 'translateY(-15px)';
+                                }, (navItems.length - 1 - index) * 80);
+                            });
+                            
+                            // Hide nav container after items are hidden
+                            setTimeout(() => {
+                                if (heroNavOptions) {
+                                    heroNavOptions.style.opacity = '0';
+                                }
+                            }, 400);
+                        }
+                    });
+                }, {
+                    threshold: [0.5, 0.7],
+                    rootMargin: '0px'
+                });
+                
+                observer.observe(whiteHeroSection);
+            });
+        })();
     </script>
 
 </body>
