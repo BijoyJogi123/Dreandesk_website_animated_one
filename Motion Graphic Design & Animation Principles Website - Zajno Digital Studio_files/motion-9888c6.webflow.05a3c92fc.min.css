@@ -3375,7 +3375,7 @@ textarea.w-select {
 .lesson {
   color: #0c0b0b;
   border-top: .01rem solid #000;
-  padding-top: .88rem
+  /* padding-top: .88rem */
 }
 
 .lesson.is-easing {
@@ -3384,7 +3384,7 @@ textarea.w-select {
   -webkit-text-fill-color: inherit;
   background-color: #c8cfe8;
   background-clip: border-box;
-  padding-top: 1.18rem;
+  /* padding-top: 1.18rem; */
   position: relative
 }
 
@@ -3486,7 +3486,8 @@ textarea.w-select {
 }
 
 .hero-animation {
-  height: 2.78rem;
+  /* height: 2.78rem; */
+  height: 3.5rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
