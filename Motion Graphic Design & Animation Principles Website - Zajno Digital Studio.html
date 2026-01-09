@@ -3883,68 +3883,86 @@
                         border-radius: 22px;
                         box-shadow: 0 18px 70px rgba(0,0,0,0.5);
                     }
-                    .quote-box {
+                    .welcome-box {
                         width: 850px;
                         height: 650px;
                         flex-shrink: 0;
                         position: relative;
                         display: flex;
-                        align-items: center;
+                        flex-direction: column;
+                        align-items: flex-end;
                         justify-content: center;
                         margin-left: 30px;
+                        text-align: right;
+                        padding-right: 40px;
                     }
-                    .quote-slide {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
+                    .welcome-to {
+                        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+                        font-size: 52px !important;
+                        font-weight: 200 !important;
+                        /* font-style: italic !important; */
+                        color: #ffffff !important;
+                        margin: 0 0 15px 0 !important;
+                        padding: 0 !important;
+                        letter-spacing: 6px !important;
+                        text-transform: uppercase !important;
+                    }
+                    .dreamdesk-title {
+                        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+                        font-size: 100px !important;
+                        font-weight: 800 !important;
+                        color: #ffffff !important;
+                        margin: 0 0 25px 0 !important;
+                        padding: 0 !important;
+                        letter-spacing: -2px !important;
+                        line-height: 1 !important;
+                    }
+                    .tagline-text {
+                        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+                        font-size: 32px !important;
+                        font-weight: 400 !important;
+                        color: #ffffff !important;
+                        margin: 0 0 55px 0 !important;
+                        padding: 0 !important;
+                        letter-spacing: 2px !important;
+                        opacity: 0.9;
+                    }
+                    .know-us-btn {
+                        display: inline-flex;
                         align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                        padding: 40px;
-                        box-sizing: border-box;
-                        opacity: 0;
-                        transition: opacity 0.6s ease;
-                    }
-                    .quote-slide.active {
-                        opacity: 1;
-                    }
-                    .quote-mark {
-                        font-size: 100px;
-                        color: #ffdd00;
-                        line-height: 0.5;
-                        font-family: Georgia, serif;
-                        margin-bottom: 5px;
-                    }
-                    .quote-text {
-                        font-size: 44px;
-                        color: #ffffff;
-                        font-style: italic;
-                        line-height: 1.6;
-                        margin: 30px 0;
-                    }
-                    .quote-author {
-                        font-size: 32px;
-                        color: #ffdd00;
+                        gap: 12px;
+                        background: #ffdd00;
+                        color: #000000;
+                        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+                        font-size: 18px;
                         font-weight: 600;
-                        margin-top: 25px;
+                        padding: 16px 32px;
+                        border: none;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+                    .know-us-btn:hover {
+                        background: #ffffff;
+                        color: #000000;
+                    }
+                    .know-us-btn svg {
+                        width: 20px;
+                        height: 20px;
                     }
                     @media (max-width: 1600px) {
                         .student-quote-wrapper {
                             flex-direction: column;
                             gap: 70px;
                         }
-                        .student-img-box, .quote-box {
+                        .student-img-box, .welcome-box {
                             width: 100%;
                             max-width: 800px;
                             height: 550px;
                             margin-left: 0;
                         }
-                        .quote-text {
-                            font-size: 34px;
+                        .dreamdesk-title {
+                            font-size: 80px !important;
                         }
                     }
                 </style>
@@ -3955,51 +3973,19 @@
                         <img src="student_images.png" alt="Students">
                     </div>
                     
-                    <!-- Right - Animated Quotes -->
-                    <div class="quote-box">
-                        <div class="quote-slide active">
-                            <span class="quote-mark">"</span>
-                            <p class="quote-text">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
-                            <span class="quote-author">— Malcolm X</span>
-                        </div>
-                        <div class="quote-slide">
-                            <span class="quote-mark">"</span>
-                            <p class="quote-text">The beautiful thing about learning is that no one can take it away from you.</p>
-                            <span class="quote-author">— B.B. King</span>
-                        </div>
-                        <div class="quote-slide">
-                            <span class="quote-mark">"</span>
-                            <p class="quote-text">Your dream doesn't have an expiration date. Take a deep breath and try again.</p>
-                            <span class="quote-author">— KT Witten</span>
-                        </div>
-                        <div class="quote-slide">
-                            <span class="quote-mark">"</span>
-                            <p class="quote-text">Success is not final, failure is not fatal: it is the courage to continue that counts.</p>
-                            <span class="quote-author">— Winston Churchill</span>
-                        </div>
-                        <div class="quote-slide">
-                            <span class="quote-mark">"</span>
-                            <p class="quote-text">The only way to do great work is to love what you do.</p>
-                            <span class="quote-author">— Steve Jobs</span>
-                        </div>
+                    <!-- Right - Welcome to DreamDesk -->
+                    <div class="welcome-box">
+                        <div class="welcome-to">WELCOME TO</div>
+                        <div class="dreamdesk-title">DreamDesk</div>
+                        <div class="tagline-text">You Dream, We make it possible</div>
+                        <a href="#" class="know-us-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            Know us in 60 seconds
+                        </a>
                     </div>
                 </div>
-                
-                <script>
-                (function() {
-                    var slides = document.querySelectorAll('.quote-slide');
-                    var current = 0;
-                    var total = slides.length;
-                    
-                    function nextQuote() {
-                        slides[current].classList.remove('active');
-                        current = (current + 1) % total;
-                        slides[current].classList.add('active');
-                    }
-                    
-                    setInterval(nextQuote, 4000);
-                })();
-                </script>
                 
                 <!-- GSAP Libraries for other animations -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
