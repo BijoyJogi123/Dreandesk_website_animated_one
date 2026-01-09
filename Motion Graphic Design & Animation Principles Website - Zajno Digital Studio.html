@@ -3976,7 +3976,8 @@
                         align-items: center;
                         justify-content: center;
                     }
-                    .student-img-box img {
+                    .student-img-box img,
+                    .student-img-box video {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -4068,9 +4069,11 @@
                 </style>
                 
                 <div class="student-quote-wrapper">
-                    <!-- Left - Fixed Student Image -->
+                    <!-- Left - Student Video -->
                     <div class="student-img-box">
-                        <img src="student_images.png" alt="Students">
+                        <video autoplay muted loop playsinline>
+                            <source src="student_images.mp4" type="video/mp4">
+                        </video>
                     </div>
                     
                     <!-- Right - Welcome to DreamDesk -->
