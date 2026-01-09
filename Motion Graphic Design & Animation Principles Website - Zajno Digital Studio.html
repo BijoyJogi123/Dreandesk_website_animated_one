@@ -437,6 +437,17 @@
                 position: relative;
                 overflow: hidden;
             }
+            
+            .stats-counter-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
 
             .stats-container {
                 display: flex;
@@ -451,7 +462,7 @@
 
             .stat-item {
                 text-align: center;
-                color: #0c0b0b;
+                color: #ffdd00;
                 position: relative;
                 padding: 0.2rem;
                 transition: all 0.3s ease;
@@ -472,29 +483,29 @@
                 font-size: 1rem;
                 font-weight: 900;
                 line-height: 1;
-                /* color: #0c0b0b; */
-                color: #f0d20c;
+                color: #ffdd00;
                 display: inline-block;
                 position: relative;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             }
 
             .stat-suffix {
                 font-size: 1.2rem;
                 font-weight: bold;
-                /* color: #0c0b0b; */
-                color: #f0d20c;
+                color: #ffdd00;
                 display: inline-block;
                 margin-left: 0.2rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             }
 
             .stat-label {
                 font-size: 0.60rem;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                /* color: #0c0b0b; */
-                color: #f0d20c;
+                color: #ffdd00;
                 font-weight: 600;
                 margin-bottom: 0.2rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             }
 
             .stat-description {
@@ -4004,7 +4015,7 @@
                     .welcome-to {
                         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
                         font-size: 52px !important;
-                        font-weight: 200 !important;
+                        /* font-weight: 200 !important; */
                         /* font-style: italic !important; */
                         color: #ffffff !important;
                         margin: 0 0 15px 0 !important;
@@ -6155,7 +6166,7 @@
                 </div> -->
 
 
-                <div class="kid-finding-container" style="margin-bottom: 8rem; text-align: center;">
+                <div class="kid-finding-container" style="margin-bottom: 8rem; text-align: center; z-index: 10;">
                     <video autoplay muted loop playsinline style="width: 80%; height: auto;">
                         <source src="kid_finding.mp4" type="video/mp4">
                     </video>
