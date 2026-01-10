@@ -4567,7 +4567,7 @@
                                 </div>
                                 <div class="section-slider ui-slider" style="margin-left: 0px;">
                                     <!-- Counselors Slide - Simple with carousel -->
-                                    <div class="section-slide ui-slide"
+                                    <div id="team-section" class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
                                         <div style=" padding-bottom: 40px;">
                                             <div class="section-slide-wrap"
@@ -4748,7 +4748,7 @@
                                     </div>
 
 
-                                    <div class="section-slide ui-slide "
+                                    <div id="career-launch-section" class="section-slide ui-slide "
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
                                         <div style=" padding-bottom: 40px;">
@@ -8470,6 +8470,8 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const whiteHeroSection = document.getElementById('white-hero-section');
                 const oneTapSection = document.getElementById('one-tap-section');
+                const teamSection = document.getElementById('team-section');
+                const careerLaunchSection = document.getElementById('career-launch-section');
                 const mainLogo = document.querySelector('#logo-wrap img');
                 const heroNavOptions = document.getElementById('hero-nav-options');
                 const navItems = document.querySelectorAll('.nav-option-item');
@@ -8542,11 +8544,13 @@
                 }
 
                 function checkSections() {
-                    // Check if EITHER of the two specific sections is visible
+                    // Check if ANY of the four specific sections is visible
                     const heroVisible = isSectionVisible(whiteHeroSection);
                     const oneTapVisible = isSectionVisible(oneTapSection);
+                    const teamVisible = isSectionVisible(teamSection);
+                    const careerVisible = isSectionVisible(careerLaunchSection);
 
-                    if (heroVisible || oneTapVisible) {
+                    if (heroVisible || oneTapVisible || teamVisible || careerVisible) {
                         showBlackLogoAndNav();
                     } else {
                         hideBlackLogoAndNav();
