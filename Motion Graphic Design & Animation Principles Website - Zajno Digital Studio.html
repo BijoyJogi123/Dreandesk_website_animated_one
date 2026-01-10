@@ -5646,6 +5646,157 @@
                                                     overflow: hidden;
                                                 }
 
+                                                /* Decorative pencil sketch elements in background */
+                                                #spinny-flipz-section .spinny-view::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 15%;
+                                                    left: 5%;
+                                                    width: 200px;
+                                                    height: 200px;
+                                                    background-image: 
+                                                        radial-gradient(circle, transparent 40%, rgba(245, 197, 24, 0.1) 40%, rgba(245, 197, 24, 0.1) 42%, transparent 42%),
+                                                        radial-gradient(circle, transparent 40%, rgba(245, 197, 24, 0.1) 40%, rgba(245, 197, 24, 0.1) 42%, transparent 42%);
+                                                    background-size: 30px 30px;
+                                                    background-position: 0 0, 15px 15px;
+                                                    border: 3px dashed rgba(245, 197, 24, 0.3);
+                                                    border-radius: 50%;
+                                                    transform: rotate(-15deg);
+                                                    animation: floatSketch1 8s ease-in-out infinite;
+                                                    z-index: 1;
+                                                }
+
+                                                #spinny-flipz-section .spinny-view::after {
+                                                    content: '★ ✦ ◆ ○';
+                                                    position: absolute;
+                                                    top: 20%;
+                                                    right: 8%;
+                                                    font-size: 40px;
+                                                    color: rgba(255, 107, 53, 0.2);
+                                                    letter-spacing: 20px;
+                                                    transform: rotate(25deg);
+                                                    animation: floatSketch2 10s ease-in-out infinite;
+                                                    z-index: 1;
+                                                }
+
+                                                @keyframes floatSketch1 {
+                                                    0%, 100% {
+                                                        transform: rotate(-15deg) translateY(0px);
+                                                    }
+                                                    50% {
+                                                        transform: rotate(-10deg) translateY(-20px);
+                                                    }
+                                                }
+
+                                                @keyframes floatSketch2 {
+                                                    0%, 100% {
+                                                        transform: rotate(25deg) translateY(0px);
+                                                        opacity: 0.2;
+                                                    }
+                                                    50% {
+                                                        transform: rotate(20deg) translateY(-15px);
+                                                        opacity: 0.4;
+                                                    }
+                                                }
+
+                                                /* Additional sketch decorations */
+                                                #spinny-flipz-section .sketch-doodle-1,
+                                                #spinny-flipz-section .sketch-doodle-2,
+                                                #spinny-flipz-section .sketch-doodle-3,
+                                                #spinny-flipz-section .sketch-doodle-4 {
+                                                    position: absolute;
+                                                    z-index: 1;
+                                                    pointer-events: none;
+                                                }
+
+                                                #spinny-flipz-section .sketch-doodle-1 {
+                                                    top: 60%;
+                                                    left: 10%;
+                                                    width: 150px;
+                                                    height: 150px;
+                                                    border: 4px dashed rgba(245, 197, 24, 0.25);
+                                                    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                                                    transform: rotate(45deg);
+                                                    animation: morphShape1 12s ease-in-out infinite;
+                                                }
+
+                                                #spinny-flipz-section .sketch-doodle-2 {
+                                                    top: 65%;
+                                                    right: 12%;
+                                                    width: 120px;
+                                                    height: 120px;
+                                                    border: 3px dotted rgba(255, 107, 53, 0.3);
+                                                    border-radius: 50%;
+                                                    animation: morphShape2 10s ease-in-out infinite reverse;
+                                                }
+
+                                                #spinny-flipz-section .sketch-doodle-3 {
+                                                    top: 10%;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    font-size: 100px;
+                                                    color: rgba(245, 197, 24, 0.15);
+                                                    animation: rotateSketch 20s linear infinite;
+                                                }
+
+                                                #spinny-flipz-section .sketch-doodle-3::before {
+                                                    content: '◇';
+                                                }
+
+                                                #spinny-flipz-section .sketch-doodle-4 {
+                                                    bottom: 15%;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    width: 300px;
+                                                    height: 2px;
+                                                    background: repeating-linear-gradient(
+                                                        90deg,
+                                                        rgba(245, 197, 24, 0.3) 0px,
+                                                        rgba(245, 197, 24, 0.3) 10px,
+                                                        transparent 10px,
+                                                        transparent 20px
+                                                    );
+                                                    animation: dashMove 3s linear infinite;
+                                                }
+
+                                                @keyframes morphShape1 {
+                                                    0%, 100% {
+                                                        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                                                        transform: rotate(45deg) scale(1);
+                                                    }
+                                                    50% {
+                                                        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+                                                        transform: rotate(60deg) scale(1.1);
+                                                    }
+                                                }
+
+                                                @keyframes morphShape2 {
+                                                    0%, 100% {
+                                                        transform: scale(1) rotate(0deg);
+                                                    }
+                                                    50% {
+                                                        transform: scale(1.15) rotate(180deg);
+                                                    }
+                                                }
+
+                                                @keyframes rotateSketch {
+                                                    from {
+                                                        transform: translateX(-50%) rotate(0deg);
+                                                    }
+                                                    to {
+                                                        transform: translateX(-50%) rotate(360deg);
+                                                    }
+                                                }
+
+                                                @keyframes dashMove {
+                                                    from {
+                                                        background-position: 0 0;
+                                                    }
+                                                    to {
+                                                        background-position: 20px 0;
+                                                    }
+                                                }
+
                                                 /* Header area */
                                                 #spinny-flipz-section .spinny-top {
                                                     position: absolute;
@@ -6010,6 +6161,12 @@
                                             <!-- Content Structure -->
                                             <div class="spinny-scroll-space">
                                                 <div class="spinny-view">
+                                                    <!-- Decorative sketch doodles in background -->
+                                                    <div class="sketch-doodle-1"></div>
+                                                    <div class="sketch-doodle-2"></div>
+                                                    <div class="sketch-doodle-3"></div>
+                                                    <div class="sketch-doodle-4"></div>
+                                                    
                                                     <!-- Top header area for enlarged images -->
                                                     <div class="spinny-top">
                                                         <!-- Gallery display - image left, description right -->
