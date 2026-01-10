@@ -7821,7 +7821,7 @@
 
     <!-- Airplane Transformation Animation -->
     <script>
-        // Airplane transformation - turns red on first bounce (viewport middle)
+        // Airplane transformation - turns red on first bounce
         (function () {
             function initAirplaneAnimation() {
                 const animBall = document.querySelector("#anim-ball");
@@ -7839,31 +7839,40 @@
 
                 let isRed = false;
                 let hasBouncedOnce = false;
-                let lastY = 0;
-                let direction = 'down'; // Track direction of movement
+                let lastY = null;
+                let movingDown = true;
+                let bounceCount = 0;
 
                 function checkAlignment() {
                     const ballRect = animBall.getBoundingClientRect();
-                    const airplaneCenter = ballRect.top + (ballRect.height / 2);
-                    const viewportMiddle = window.innerHeight / 2;
+                    const currentY = ballRect.top + (ballRect.height / 2);
 
-                    // Detect direction change (bounce)
-                    if (airplaneCenter > lastY) {
-                        if (direction === 'up') {
-                            // Direction changed from up to down - this is a bounce
-                            if (!hasBouncedOnce && airplaneCenter >= viewportMiddle - 100 && airplaneCenter <= viewportMiddle + 100) {
-                                // First bounce near viewport middle - turn red
-                                hasBouncedOnce = true;
-                                airplaneImg.style.opacity = "0";
-                                airplaneRedImg.style.opacity = "1";
-                                isRed = true;
-                            }
-                        }
-                        direction = 'down';
-                    } else if (airplaneCenter < lastY) {
-                        direction = 'up';
+                    // Initialize lastY on first run
+                    if (lastY === null) {
+                        lastY = currentY;
+                        return;
                     }
-                    lastY = airplaneCenter;
+
+                    // Detect direction change
+                    const wasMovingDown = movingDown;
+                    movingDown = currentY > lastY;
+
+                    // Bounce detected: was moving down, now moving up
+                    if (wasMovingDown && !movingDown && Math.abs(currentY - lastY) > 2) {
+                        bounceCount++;
+                        console.log('Bounce detected! Count:', bounceCount);
+                        
+                        // On first bounce, change to red
+                        if (bounceCount === 1 && !hasBouncedOnce) {
+                            console.log('First bounce! Changing to red airplane');
+                            hasBouncedOnce = true;
+                            airplaneImg.style.opacity = "0";
+                            airplaneRedImg.style.opacity = "1";
+                            isRed = true;
+                        }
+                    }
+
+                    lastY = currentY;
 
                     // Get clouds section bottom position
                     let cloudsBottom = window.innerHeight * 2;
@@ -7876,7 +7885,7 @@
                     }
 
                     // Check if airplane has exited the clouds section
-                    const exitedClouds = airplaneCenter > cloudsBottom;
+                    const exitedClouds = currentY > cloudsBottom;
 
                     if (exitedClouds && isRed) {
                         // Change back to outline airplane when exiting clouds
@@ -7887,7 +7896,10 @@
                 }
 
                 // Check continuously during scroll animations
-                setInterval(checkAlignment, 30);
+                const checkInterval = setInterval(checkAlignment, 16); // ~60fps
+
+                // Cleanup after 30 seconds
+                setTimeout(() => clearInterval(checkInterval), 30000);
             }
 
             // Start when DOM is ready
