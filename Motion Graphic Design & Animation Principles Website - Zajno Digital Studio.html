@@ -5628,16 +5628,16 @@
                                                     /* Creates isolated stacking context */
                                                 }
 
-                                                /* Scroll spacer for scroll effect */
+                                                /* Scroll spacer for scroll effect - REDUCED for normal scrolling */
                                                 #spinny-flipz-section .spinny-scroll-space {
-                                                    height: 600vh;
+                                                    height: 100vh;
                                                     width: 100%;
                                                     position: relative;
                                                 }
 
-                                                /* Sticky viewport */
+                                                /* Sticky viewport - REMOVED: Changed to relative for normal scroll */
                                                 #spinny-flipz-section .spinny-view {
-                                                    position: sticky;
+                                                    position: relative;
                                                     top: 0;
                                                     left: 0;
                                                     width: 100%;
@@ -7624,9 +7624,12 @@
             var activeItem = null;
             var autoRotateTween = null;
             var isPaused = false;
+            var autoCycleInterval = null;
+            var currentIndex = 0;
 
             // Configuration
             var AUTO_ROTATE_DURATION = 45; // seconds for full rotation
+            var AUTO_CYCLE_DURATION = 3000; // 3 seconds per student
             var CLICK_ANIMATION_DURATION = 0.8;
 
             // Animate the scroll hint arrow
@@ -7707,19 +7710,44 @@
             // Start auto-rotation when page loads
             startAutoRotation();
 
-            // Pause on hover over the carousel area
-            if (circle) {
-                circle.addEventListener('mouseenter', pauseAutoRotation);
-                circle.addEventListener('mouseleave', function () {
-                    if (!activeItem) {
-                        resumeAutoRotation();
+            // Auto-cycle through students in the gallery display
+            function startAutoCycle() {
+                if (autoCycleInterval) {
+                    clearInterval(autoCycleInterval);
+                }
+                
+                autoCycleInterval = setInterval(function() {
+                    if (!activeItem && items.length > 0) {
+                        // Show next student
+                        currentIndex = (currentIndex + 1) % items.length;
+                        showStudentAtIndex(currentIndex);
                     }
-                });
+                }, AUTO_CYCLE_DURATION);
             }
 
-            // Handle item clicks
+            // Stop auto-cycle
+            function stopAutoCycle() {
+                if (autoCycleInterval) {
+                    clearInterval(autoCycleInterval);
+                    autoCycleInterval = null;
+                }
+            }
+
+            // Pause on hover over the carousel area - REMOVED, carousel never stops!
+            // Carousel rotates continuously
+            // if (circle) {
+            //     circle.addEventListener('mouseenter', pauseAutoRotation);
+            //     circle.addEventListener('mouseleave', function () {
+            //         if (!activeItem) {
+            //             resumeAutoRotation();
+            //         }
+            //     });
+            // }
+
+            // Handle item hover instead of click
             items.forEach(function (item) {
-                item.addEventListener('click', handleItemClick);
+                item.addEventListener('mouseenter', handleItemHover);
+                item.addEventListener('mouseleave', handleItemLeave);
             });
 
             // Get gallery display elements
@@ -7729,6 +7757,48 @@
             var studentCourse = section.querySelector('#student-course');
             var studentQuote = section.querySelector('#student-quote');
             var galleryCloseBtn = section.querySelector('#gallery-close-btn');
+
+            // Show student at specific index
+            function showStudentAtIndex(index) {
+                var item = items[index];
+                if (!item || !galleryDisplay) return;
+                
+                var colorSrc = item.getAttribute('data-color-src');
+                var name = item.getAttribute('data-name') || 'Student';
+                var course = item.getAttribute('data-course') || 'Career Path';
+                var quote = item.getAttribute('data-quote') || 'My journey with this platform has been amazing!';
+
+                if (!colorSrc) return;
+
+                // Update gallery content with smooth transition
+                gsap.to(galleryDisplay, {
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: function() {
+                        galleryImage.src = colorSrc;
+                        galleryImage.alt = name;
+                        studentName.textContent = name;
+                        studentCourse.textContent = course;
+                        studentQuote.textContent = '"' + quote + '"';
+                        
+                        // Show gallery if not already visible
+                        if (!galleryDisplay.classList.contains('active')) {
+                            galleryDisplay.classList.add('active');
+                        }
+                        
+                        gsap.to(galleryDisplay, { opacity: 1, duration: 0.5 });
+                    }
+                });
+            }
+
+            // Start auto-cycling immediately
+            startAutoCycle();
+            // Show first student immediately
+            if (items.length > 0) {
+                setTimeout(function() {
+                    showStudentAtIndex(0);
+                }, 500);
+            }
 
             // Handle close button click
             if (galleryCloseBtn) {
@@ -7791,42 +7861,40 @@
                 }
             }
 
-            // Handle clicking on an item - show image on left, description on right
-            function handleItemClick(event) {
-                event.stopPropagation();
-                var clickedItem = event.currentTarget;
-                var bwImg = clickedItem.querySelector('img');
-                var colorSrc = clickedItem.getAttribute('data-color-src');
-                var name = clickedItem.getAttribute('data-name') || 'Student';
-                var course = clickedItem.getAttribute('data-course') || 'Career Path';
-                var quote = clickedItem.getAttribute('data-quote') || 'My journey with this platform has been amazing!';
+            // Handle hovering on an item - show image on left, description on right
+            function handleItemHover(event) {
+                var hoveredItem = event.currentTarget;
+                var bwImg = hoveredItem.querySelector('img');
+                var colorSrc = hoveredItem.getAttribute('data-color-src');
+                var name = hoveredItem.getAttribute('data-name') || 'Student';
+                var course = hoveredItem.getAttribute('data-course') || 'Career Path';
+                var quote = hoveredItem.getAttribute('data-quote') || 'My journey with this platform has been amazing!';
 
                 if (!bwImg || !galleryDisplay || !colorSrc) return;
 
-                // Pause auto-rotation when item is clicked
-                pauseAutoRotation();
+                // Stop auto-cycling when hovering
+                stopAutoCycle();
+                
+                // Set this as active item
+                activeItem = hoveredItem;
 
-                if (clickedItem !== activeItem) {
-                    // Set this as active item
-                    activeItem = clickedItem;
+                // Update gallery content
+                galleryImage.src = colorSrc;
+                galleryImage.alt = name;
+                studentName.textContent = name;
+                studentCourse.textContent = course;
+                studentQuote.textContent = '"' + quote + '"';
 
-                    // Update gallery content
-                    galleryImage.src = colorSrc;
-                    galleryImage.alt = name;
-                    studentName.textContent = name;
-                    studentCourse.textContent = course;
-                    studentQuote.textContent = '"' + quote + '"';
+                // Get elements for animation
+                var imageContainer = galleryDisplay.querySelector('.gallery-image-container');
+                var descContainer = galleryDisplay.querySelector('.gallery-description');
+                var closeBtn = galleryDisplay.querySelector('.gallery-close-btn');
 
-                    // Get elements for animation
-                    var imageContainer = galleryDisplay.querySelector('.gallery-image-container');
-                    var descContainer = galleryDisplay.querySelector('.gallery-description');
-                    var closeBtn = galleryDisplay.querySelector('.gallery-close-btn');
-
-                    // Set initial states
-                    gsap.set(galleryDisplay, { opacity: 0 });
-                    gsap.set(imageContainer, { x: -100, opacity: 0 });
-                    gsap.set(descContainer, { x: 100, opacity: 0 });
-                    gsap.set(closeBtn, { scale: 0, opacity: 0 });
+                // Set initial states
+                gsap.set(galleryDisplay, { opacity: 0 });
+                gsap.set(imageContainer, { x: -100, opacity: 0 });
+                gsap.set(descContainer, { x: 100, opacity: 0 });
+                gsap.set(closeBtn, { scale: 0, opacity: 0 });
                     gsap.set(studentName, { y: 30, opacity: 0 });
                     gsap.set(studentCourse, { y: 20, opacity: 0 });
                     gsap.set(studentQuote, { y: 20, opacity: 0 });
@@ -7887,11 +7955,13 @@
                         yoyo: true,
                         delay: 0.8
                     });
+            }
 
-                } else {
-                    // Close if clicking the same item
-                    closeActiveItem();
-                }
+            // Handle mouse leave - keep gallery visible and restart auto-cycle
+            function handleItemLeave(event) {
+                activeItem = null;
+                // Restart auto-cycling immediately
+                startAutoCycle();
             }
 
             // Also add scroll-based rotation as an enhancement
