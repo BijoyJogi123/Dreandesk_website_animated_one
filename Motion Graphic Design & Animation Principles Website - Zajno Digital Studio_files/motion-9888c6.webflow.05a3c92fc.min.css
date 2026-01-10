@@ -3487,7 +3487,8 @@ textarea.w-select {
 
 .hero-animation {
   /* height: 2.78rem; */
-  height: 3.5rem;
+  /* height: 3.5rem; */
+  height: 5.0rem;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -4684,7 +4685,8 @@ textarea.w-select {
 .anim-ball-sticky {
   z-index: 1;
   width: 100%;
-    height: 1vh;  /* Here is the  */
+  height: 1vh;
+  /* Here is the  */
   justify-content: center;
   align-items: flex-end;
   display: flex;
