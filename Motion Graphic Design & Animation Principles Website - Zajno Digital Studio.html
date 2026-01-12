@@ -694,6 +694,23 @@
                     height: 20px;
                 }
             }
+
+            /* Hide navigation and logo for team section */
+            .team-section-active .top-yellow-stripe,
+            .team-section-active .navigation.w-nav {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+                transition: all 0.3s ease !important;
+            }
+
+            /* Alternative approach - hide when team section is in viewport */
+            body:has(#team-section:target) .top-yellow-stripe,
+            body:has(#team-section:target) .navigation.w-nav {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+            }
         </style>
     </div>
 
@@ -8550,7 +8567,16 @@
                     const teamVisible = isSectionVisible(teamSection);
                     const careerVisible = isSectionVisible(careerLaunchSection);
 
-                    if (heroVisible || oneTapVisible || teamVisible || careerVisible) {
+                    // Special handling for team section - hide navigation completely
+                    if (teamVisible) {
+                        document.body.classList.add('team-section-active');
+                        hideBlackLogoAndNav();
+                        return;
+                    } else {
+                        document.body.classList.remove('team-section-active');
+                    }
+
+                    if (heroVisible || oneTapVisible || careerVisible) {
                         showBlackLogoAndNav();
                     } else {
                         hideBlackLogoAndNav();
