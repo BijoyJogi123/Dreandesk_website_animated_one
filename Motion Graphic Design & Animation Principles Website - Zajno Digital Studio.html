@@ -6576,97 +6576,232 @@
                             <div class="example-video-padding">
                                 <div class="example-videos-desktop">
                                   <!-- Preerna AI Chatbot Section -->
-                <section id="preerna-ai-chatbot" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0;">
+                <section id="preerna-ai-chatbot" style="background: #0c0b0b; position: relative;">
                     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                        
+                        <!-- Section Header -->
                         <div style="text-align: center; margin-bottom: 60px;">
-                            <h2 style="font-size: 2.5rem; font-weight: 800; color: #0c0b0b; margin: 0 0 15px 0;">
+                            <h2 style="font-size: 0.2rem; font-weight: 800; color: #ffffff; margin: 0 0 15px 0; line-height: 1.2;">
                                 Meet <span style="color: #ffdd00;">Preerna AI</span>
                             </h2>
-                            <p style="font-size: 1.1rem; color: #666;">Your personal career guidance assistant</p>
+                            <p style="font-size: 20px; color: #cccccc; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                                Your personal career guidance assistant. Ask me anything about courses and careers!
+                            </p>
                         </div>
 
-                        <div style="max-width: 800px; margin: 0 auto;">
-                            <div style="background: #ffffff; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); overflow: hidden;">
-                                <div style="background: linear-gradient(135deg, #ffdd00 0%, #f0c419 100%); padding: 20px 25px; display: flex; align-items: center; gap: 15px;">
-                                    <div style="width: 50px; height: 50px; background: #0c0b0b; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                        <span style="color: #ffdd00; font-size: 20px; font-weight: bold;">P</span>
+                        <!-- Chatbot Interface -->
+                        <div style="max-width: 900px; margin: 0 auto;">
+                            <div style="background: #1a1a1a; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; border: 1px solid #333;">
+                                
+                                <!-- Chat Header -->
+                                <div style="background: linear-gradient(135deg, #ffdd00 0%, #f0c419 100%); padding: 25px 30px; display: flex; align-items: center; gap: 20px;">
+                                    <div style="width: 60px; height: 60px; background: #0c0b0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
+                                        <span style="color: #ffdd00; font-size: 24px; font-weight: bold;">P</span>
+                                        <div style="position: absolute; bottom: 4px; right: 4px; width: 16px; height: 16px; background: #28a745; border: 3px solid #fff; border-radius: 50%;"></div>
                                     </div>
                                     <div>
-                                        <h3 style="margin: 0; color: #0c0b0b; font-size: 18px;">Preerna AI</h3>
-                                        <p style="margin: 0; color: #0c0b0b; font-size: 14px; opacity: 0.8;">Career Assistant</p>
+                                        <h3 style="margin: 0; color: #0c0b0b; font-size: 20px; font-weight: 700;">Preerna AI</h3>
+                                        <p style="margin: 0; color: #0c0b0b; font-size: 16px; opacity: 0.8;">Career Guidance Assistant • Online</p>
                                     </div>
                                 </div>
 
-                                <div id="chat-messages" style="height: 400px; overflow-y: auto; padding: 25px; background: #f8f9fa;">
-                                    <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-                                        <div style="width: 35px; height: 35px; background: #ffdd00; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                            <span style="color: #0c0b0b; font-weight: bold;">P</span>
-                                        </div>
-                                        <div style="background: #ffffff; padding: 15px 18px; border-radius: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                                            <p style="margin: 0; color: #333;">Hi! I'm Preerna, your AI career assistant. Ask me about courses, careers, or admissions!</p>
-                                        </div>
-                                    </div>
+                                <!-- Chat Messages -->
+                                <div id="chat-messages" style="height: 450px; overflow-y: auto; padding: 30px; background: #1a1a1a;">
                                     
-                                    <div style="margin-left: 47px; display: flex; flex-wrap: wrap; gap: 8px;">
-                                        <button onclick="askQuestion('What courses do you offer?')" style="background: #fff; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; cursor: pointer;">Courses</button>
-                                        <button onclick="askQuestion('Career guidance')" style="background: #fff; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; cursor: pointer;">Career Help</button>
-                                        <button onclick="askQuestion('Admission process')" style="background: #fff; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; cursor: pointer;">Admissions</button>
+                                    <!-- Welcome Message -->
+                                    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                                        <div style="width: 40px; height: 40px; background: #ffdd00; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <span style="color: #0c0b0b; font-weight: bold; font-size: 16px;">P</span>
+                                        </div>
+                                        <div style="background: #2a2a2a; padding: 20px 24px; border-radius: 20px 20px 20px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 75%; border: 1px solid #333;">
+                                            <p style="margin: 0; color: #ffffff; font-size: 16px; line-height: 1.6;">
+                                                Hi there! 👋 I'm Preerna, your AI career guidance assistant. I'm here to help you with:
+                                            </p>
+                                            <ul style="margin: 15px 0 0 0; padding-left: 20px; color: #cccccc; font-size: 15px; line-height: 1.5;">
+                                                <li>Course recommendations</li>
+                                                <li>Career path guidance</li>
+                                                <li>College selection & admissions</li>
+                                                <li>Scholarship opportunities</li>
+                                            </ul>
+                                            <p style="margin: 15px 0 0 0; color: #ffffff; font-size: 16px;">
+                                                What would you like to know? 😊
+                                            </p>
+                                        </div>
                                     </div>
+
+                                    <!-- Quick Questions -->
+                                    <div style="margin-bottom: 25px;">
+                                        <p style="color: #888; font-size: 14px; margin: 0 0 15px 55px; font-weight: 500;">Quick questions:</p>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-left: 55px;">
+                                            <button onclick="askQuestion('What courses do you offer?')" style="background: #2a2a2a; border: 1px solid #444; padding: 12px 20px; border-radius: 25px; font-size: 14px; color: #ffffff; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#ffdd00'; this.style.color='#0c0b0b'; this.style.borderColor='#ffdd00'" onmouseout="this.style.background='#2a2a2a'; this.style.color='#ffffff'; this.style.borderColor='#444'">
+                                                What courses do you offer?
+                                            </button>
+                                            <button onclick="askQuestion('How to choose a career?')" style="background: #2a2a2a; border: 1px solid #444; padding: 12px 20px; border-radius: 25px; font-size: 14px; color: #ffffff; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#ffdd00'; this.style.color='#0c0b0b'; this.style.borderColor='#ffdd00'" onmouseout="this.style.background='#2a2a2a'; this.style.color='#ffffff'; this.style.borderColor='#444'">
+                                                How to choose a career?
+                                            </button>
+                                            <button onclick="askQuestion('College admission process')" style="background: #2a2a2a; border: 1px solid #444; padding: 12px 20px; border-radius: 25px; font-size: 14px; color: #ffffff; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#ffdd00'; this.style.color='#0c0b0b'; this.style.borderColor='#ffdd00'" onmouseout="this.style.background='#2a2a2a'; this.style.color='#ffffff'; this.style.borderColor='#444'">
+                                                Admission process
+                                            </button>
+                                            <button onclick="askQuestion('Scholarship opportunities')" style="background: #2a2a2a; border: 1px solid #444; padding: 12px 20px; border-radius: 25px; font-size: 14px; color: #ffffff; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#ffdd00'; this.style.color='#0c0b0b'; this.style.borderColor='#ffdd00'" onmouseout="this.style.background='#2a2a2a'; this.style.color='#ffffff'; this.style.borderColor='#444'">
+                                                Scholarships
+                                            </button>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div style="padding: 20px 25px; background: #ffffff;">
-                                    <div style="display: flex; gap: 12px;">
-                                        <input type="text" id="chat-input" placeholder="Ask me anything..." style="flex: 1; padding: 15px 20px; border: 2px solid #e9ecef; border-radius: 25px; outline: none;">
-                                        <button onclick="sendMessage()" style="width: 50px; height: 50px; background: #ffdd00; border: none; border-radius: 50%; cursor: pointer;">→</button>
+                                <!-- Chat Input -->
+                                <div style="padding: 25px 30px; background: #1a1a1a; border-top: 1px solid #333;">
+                                    <div style="display: flex; gap: 15px; align-items: center;">
+                                        <div style="flex: 1; position: relative;">
+                                            <input type="text" id="chat-input" placeholder="Type your question here..." style="width: 100%; padding: 18px 60px 18px 25px; border: 2px solid #444; border-radius: 30px; font-size: 16px; outline: none; transition: all 0.3s ease; box-sizing: border-box; background: #2a2a2a; color: #ffffff;" onfocus="this.style.borderColor='#ffdd00'" onblur="this.style.borderColor='#444'" onkeypress="if(event.key==='Enter') sendMessage()">
+                                            <button onclick="sendMessage()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: #ffdd00; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.background='#f0c419'" onmouseout="this.style.background='#ffdd00'">
+                                                <span style="color: #0c0b0b; font-size: 18px; font-weight: bold;">→</span>
+                                            </button>
+                                        </div>
                                     </div>
+                                    <p style="margin: 12px 0 0 0; font-size: 13px; color: #666; text-align: center;">
+                                        Preerna AI can make mistakes. Please verify important information.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Enhanced JavaScript -->
                     <script>
-                        function askQuestion(q) {
-                            document.getElementById('chat-input').value = q;
+                        const responses = {
+                            "what courses do you offer": "We offer comprehensive programs in:\n\n🎓 **Engineering**: Computer Science, Mechanical, Electrical, Civil\n💼 **Business**: MBA, BBA, Marketing, Finance, Management\n🏥 **Healthcare**: Medicine, Nursing, Pharmacy, Allied Health\n🎨 **Creative Arts**: Design, Animation, Fine Arts, Media\n✈️ **Aviation**: Pilot Training, Aircraft Maintenance, Air Traffic Control\n📊 **Data Science**: Analytics, Machine Learning, AI, Big Data\n🔬 **Sciences**: Physics, Chemistry, Biology, Mathematics\n\nWhich field interests you the most?",
+                            
+                            "how to choose a career": "Great question! Here's my step-by-step career guidance:\n\n1️⃣ **Self-Discovery**: Identify your interests, strengths, and values\n2️⃣ **Explore Options**: Research different career paths and industries\n3️⃣ **Skills Assessment**: Understand what skills you need to develop\n4️⃣ **Market Research**: Check job market trends and salary expectations\n5️⃣ **Education Planning**: Map out your educational journey\n6️⃣ **Networking**: Connect with professionals in your field of interest\n\nWould you like me to help you with any specific step?",
+                            
+                            "college admission process": "Here's a complete guide to college admissions:\n\n📝 **Application Process**:\n• Research and shortlist colleges\n• Fill online application forms\n• Submit required documents\n\n📊 **Entrance Exams**:\n• JEE (Engineering), NEET (Medical), CAT (Management)\n• Prepare well in advance\n• Multiple attempt opportunities\n\n📄 **Required Documents**:\n• Academic transcripts and certificates\n• ID proof and photographs\n• Category certificates (if applicable)\n\n💰 **Fees & Deadlines**:\n• Application fees vary by institution\n• Keep track of important dates\n• Early applications often preferred\n\n🎯 **Counseling Process**:\n• Merit-based seat allocation\n• Choice filling and locking\n• Document verification\n\nWhich specific aspect would you like to know more about?",
+                            
+                            "scholarship opportunities": "There are numerous scholarship opportunities available:\n\n🏛️ **Government Scholarships**:\n• Merit-based scholarships for top performers\n• Need-based financial aid for economically weaker sections\n• Minority scholarships for SC/ST/OBC students\n• State government scholarships\n\n🏫 **Institutional Scholarships**:\n• College-specific merit scholarships\n• Academic excellence awards\n• Sports and cultural scholarships\n• Alumni-funded scholarships\n\n🌍 **Private & International**:\n• Corporate scholarships (TCS, Infosys, etc.)\n• Foundation grants and trusts\n• International scholarships for study abroad\n• Research fellowships\n\n💡 **Tips for Success**:\n• Maintain good academic records\n• Participate in extracurricular activities\n• Apply early and to multiple scholarships\n• Prepare strong application essays\n\nWhat's your academic background? I can suggest specific scholarships for you!",
+                            
+                            "default": "That's an interesting question! 🤔\n\nI'm here to help you with:\n• **Course Information** - Detailed program descriptions\n• **Career Guidance** - Finding your perfect career path\n• **Admission Process** - Step-by-step application guidance\n• **Scholarships** - Financial aid and funding opportunities\n• **College Selection** - Choosing the right institution\n• **Study Tips** - Academic success strategies\n\nCould you please ask about any of these topics? I'm excited to help you succeed! 🚀"
+                        };
+
+                        function askQuestion(question) {
+                            document.getElementById('chat-input').value = question;
                             sendMessage();
                         }
 
                         function sendMessage() {
                             const input = document.getElementById('chat-input');
-                            const msg = input.value.trim();
-                            if (!msg) return;
+                            const message = input.value.trim();
                             
-                            addMessage(msg, 'user');
+                            if (!message) return;
+                            
+                            addMessage(message, 'user');
                             input.value = '';
                             
+                            showTypingIndicator();
+                            
                             setTimeout(() => {
-                                addMessage(getResponse(msg), 'ai');
-                            }, 1000);
+                                hideTypingIndicator();
+                                const response = getAIResponse(message);
+                                addMessage(response, 'ai');
+                            }, 1500);
                         }
 
-                        function addMessage(msg, sender) {
-                            const chat = document.getElementById('chat-messages');
-                            const div = document.createElement('div');
+                        function addMessage(message, sender) {
+                            const chatMessages = document.getElementById('chat-messages');
+                            const messageDiv = document.createElement('div');
                             
                             if (sender === 'user') {
-                                div.innerHTML = `<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;"><div style="background: #ffdd00; color: #0c0b0b; padding: 15px; border-radius: 18px; max-width: 80%;">${msg}</div></div>`;
+                                messageDiv.innerHTML = `
+                                    <div style="display: flex; justify-content: flex-end; margin-bottom: 25px;">
+                                        <div style="background: #ffdd00; color: #0c0b0b; padding: 18px 24px; border-radius: 20px 20px 8px 20px; max-width: 75%; box-shadow: 0 4px 15px rgba(255,221,0,0.3); font-size: 16px; line-height: 1.5;">
+                                            ${message}
+                                        </div>
+                                    </div>
+                                `;
                             } else {
-                                div.innerHTML = `<div style="display: flex; gap: 12px; margin-bottom: 20px;"><div style="width: 35px; height: 35px; background: #ffdd00; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><span style="color: #0c0b0b; font-weight: bold;">P</span></div><div style="background: #fff; padding: 15px; border-radius: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 80%;">${msg}</div></div>`;
+                                messageDiv.innerHTML = `
+                                    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                                        <div style="width: 40px; height: 40px; background: #ffdd00; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <span style="color: #0c0b0b; font-weight: bold; font-size: 16px;">P</span>
+                                        </div>
+                                        <div style="background: #2a2a2a; padding: 20px 24px; border-radius: 20px 20px 20px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 75%; border: 1px solid #333;">
+                                            <p style="margin: 0; color: #ffffff; font-size: 16px; line-height: 1.6; white-space: pre-line;">${message}</p>
+                                        </div>
+                                    </div>
+                                `;
                             }
                             
-                            chat.appendChild(div);
-                            chat.scrollTop = chat.scrollHeight;
+                            chatMessages.appendChild(messageDiv);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
                         }
 
-                        function getResponse(msg) {
-                            if (msg.toLowerCase().includes('course')) return "We offer Engineering, Business, Healthcare, Design, Aviation, and Data Science. Which interests you?";
-                            if (msg.toLowerCase().includes('career')) return "I can help you find the perfect career path! What are your interests and strengths?";
-                            if (msg.toLowerCase().includes('admission')) return "Our admission process includes applications, entrance exams, and counseling. Need specific details?";
-                            return "Great question! I can help with courses, career guidance, admissions, and scholarships. What would you like to know?";
+                        function showTypingIndicator() {
+                            const chatMessages = document.getElementById('chat-messages');
+                            const typingDiv = document.createElement('div');
+                            typingDiv.id = 'typing-indicator';
+                            typingDiv.innerHTML = `
+                                <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                                    <div style="width: 40px; height: 40px; background: #ffdd00; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                        <span style="color: #0c0b0b; font-weight: bold; font-size: 16px;">P</span>
+                                    </div>
+                                    <div style="background: #2a2a2a; padding: 20px 24px; border-radius: 20px 20px 20px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid #333;">
+                                        <div style="display: flex; gap: 6px; align-items: center;">
+                                            <div style="width: 10px; height: 10px; background: #666; border-radius: 50%; animation: typing 1.4s infinite ease-in-out;"></div>
+                                            <div style="width: 10px; height: 10px; background: #666; border-radius: 50%; animation: typing 1.4s infinite ease-in-out 0.2s;"></div>
+                                            <div style="width: 10px; height: 10px; background: #666; border-radius: 50%; animation: typing 1.4s infinite ease-in-out 0.4s;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            chatMessages.appendChild(typingDiv);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
                         }
 
-                        document.getElementById('chat-input').addEventListener('keypress', (e) => {
-                            if (e.key === 'Enter') sendMessage();
-                        });
+                        function hideTypingIndicator() {
+                            const typingIndicator = document.getElementById('typing-indicator');
+                            if (typingIndicator) {
+                                typingIndicator.remove();
+                            }
+                        }
+
+                        function getAIResponse(message) {
+                            const lowerMessage = message.toLowerCase();
+                            
+                            for (const [key, response] of Object.entries(responses)) {
+                                if (key !== 'default' && lowerMessage.includes(key.replace(/[^a-z\s]/g, ''))) {
+                                    return response;
+                                }
+                            }
+                            
+                            return responses.default;
+                        }
+
+                        // Add CSS animations
+                        const style = document.createElement('style');
+                        style.textContent = `
+                            @keyframes typing {
+                                0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+                                30% { transform: translateY(-8px); opacity: 1; }
+                            }
+                            
+                            #chat-messages::-webkit-scrollbar {
+                                width: 8px;
+                            }
+                            
+                            #chat-messages::-webkit-scrollbar-track {
+                                background: #1a1a1a;
+                                border-radius: 4px;
+                            }
+                            
+                            #chat-messages::-webkit-scrollbar-thumb {
+                                background: #ffdd00;
+                                border-radius: 4px;
+                            }
+                            
+                            #chat-messages::-webkit-scrollbar-thumb:hover {
+                                background: #f0c419;
+                            }
+                        `;
+                        document.head.appendChild(style);
                     </script>
                 </section>
                                 </div>
