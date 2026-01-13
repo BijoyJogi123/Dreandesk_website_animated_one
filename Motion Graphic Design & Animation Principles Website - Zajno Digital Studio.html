@@ -882,22 +882,404 @@
                                 <div>zoom</div>
                             </div>
                         </div>
-                    </div><a href="#" class="sound_click w-inline-block">
-                        <div id="menu-toggle" data-w-id="72062d36-1cc9-8384-1290-b9cc4e917a67" class="nav-toggle"
-                            style="color: rgb(253, 252, 250); background-color: rgb(12, 11, 11); border-color: rgb(253, 252, 250);">
-                            <div class="toggle-label-wrap">
-                                <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                                    class="toggle-label">menu</div>
-                                <div class="toggle-label is-active"
-                                    style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                                    close</div>
-                            </div>
-                            <div class="toggle-icon-wrap">
-                                <div class="toggle-span is-top" style="background-color: rgb(253, 252, 250);"></div>
-                                <div class="toggle-span is-bottom" style="background-color: rgb(253, 252, 250);"></div>
+                    </div>
+                    
+                    <!-- Beautiful Full Screen Overlay Menu -->
+                    <div id="toggle-btn" class="btn">
+                        <div class="btn-outline btn-outline-1"></div>
+                        <div class="btn-outline btn-outline-2"></div>
+                        <div id="hamburger">
+                            <span class="line line-1"></span>
+                            <span class="line line-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="overlay">
+                        <svg viewBox="0 0 1000 1000">
+                            <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="menu">
+                        <div class="primary-menu">
+                            <div class="menu-container">
+                                <div class="wrapper">
+                                    <div class="menu-item">
+                                        <a href="#"><span>I</span>Home</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"><span>II</span>About</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#"><span>III</span>Services</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                        <div class="secondary-menu">
+                            <div class="menu-container">
+                                <div class="wrapper">
+                                    <div class="menu-item">
+                                        <a href="#">Courses</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Career Guidance</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Contact</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#">Blog</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Styles -->
+                    <style>
+                        @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Playfair+Display&display=swap");
+                        
+                        :root {
+                            --clr-bg: #e5e3dc;
+                            --clr-overlay-bg: #141414;
+                            --clr-link: #e5e3dc;
+                        }
+
+                        svg path {
+                            fill: var(--clr-overlay-bg);
+                        }
+
+                        #toggle-btn {
+                            position: fixed;
+                            top: 57px;
+                            right: 6px;
+                            width: 100px;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            z-index: 99999;
+                            cursor: pointer;
+                            transform: translateY(-50%);
+                        }
+
+                        .btn-outline {
+                            position: absolute;
+                            width: 100px;
+                            height: 100px;
+                            border: 2px solid #ffffff;
+                        }
+
+                        .btn-outline-1 {
+                            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                            animation: morph 4s linear infinite;
+                        }
+
+                        .btn-outline-2 {
+                            border-radius: 53% 47% 43% 58% / 51% 39% 61% 49%;
+                        }
+
+                        @keyframes morph {
+                            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+                            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+                            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+                        }
+
+                        #hamburger {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 2;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        #hamburger .line-1 {
+                            position: relative;
+                            width: 20px;
+                            transform: translate(14px, -2.5px);
+                            height: 2px;
+                            background: #ffffff;
+                            transition: transform 0.25s;
+                        }
+
+                        #hamburger .line-2 {
+                            position: relative;
+                            width: 24px;
+                            height: 2px;
+                            right: 0;
+                            transform: translate(-6px, 2.5px);
+                            background: #ffffff;
+                            transition: transform 0.25s;
+                        }
+
+                        #hamburger.active .line-1 {
+                            left: 12px;
+                            width: 24px;
+                            transform: rotate(45deg);
+                        }
+
+                        #hamburger.active .line-2 {
+                            right: 12px;
+                            transform: rotate(-45deg);
+                        }
+
+                        .overlay {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100vw;
+                            height: 100vh;
+                            z-index: 9998;
+                            pointer-events: none;
+                        }
+
+                        .overlay svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .menu {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100vw;
+                            height: 100vh;
+                            display: flex;
+                            z-index: 9997;
+                            visibility: hidden;
+                        }
+
+                        .menu > div {
+                            height: 100%;
+                            display: flex;
+                        }
+
+                        .menu a {
+                            position: relative;
+                            top: 100vh;
+                            line-height: 50%;
+                            text-decoration: none;
+                            color: var(--clr-link);
+                            transition: color 0.3s ease;
+                        }
+
+                        .menu a:hover {
+                            color: #ffdd00;
+                        }
+
+                        .menu a span {
+                            font-size: 20px;
+                            margin-right: 2em;
+                            opacity: 0.7;
+                        }
+
+                        .menu-item {
+                            position: relative;
+                        }
+
+                        .menu-container {
+                            width: 70%;
+                            height: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        .primary-menu {
+                            flex: 3;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .primary-menu .menu-container .wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+
+                        .primary-menu a {
+                            text-transform: uppercase;
+                            font-size: 125px;
+                            font-weight: 500;
+                            font-family: "Playfair Display", serif;
+                        }
+
+                        .secondary-menu {
+                            position: relative;
+                            flex: 2;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+
+                        .secondary-menu .menu-item a {
+                            font-family: "Instrument Sans", sans-serif;
+                            font-size: 36px;
+                            font-weight: 400;
+                        }
+
+                        .secondary-menu .menu-container .wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px;
+                        }
+
+                        /* Mobile Responsive */
+                        @media (max-width: 768px) {
+                            #toggle-btn {
+                                width: 80px;
+                                height: 80px;
+                                top: 70px;
+                                right: 1.5rem;
+                            }
+
+                            .btn-outline {
+                                width: 80px;
+                                height: 80px;
+                            }
+
+                            .primary-menu a {
+                                font-size: 60px;
+                            }
+
+                            .secondary-menu .menu-item a {
+                                font-size: 24px;
+                            }
+
+                            .menu {
+                                flex-direction: column;
+                            }
+
+                            .primary-menu {
+                                flex: 2;
+                            }
+
+                            .secondary-menu {
+                                flex: 1;
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            #toggle-btn {
+                                width: 60px;
+                                height: 60px;
+                                top: 65px;
+                                right: 1rem;
+                            }
+
+                            .btn-outline {
+                                width: 60px;
+                                height: 60px;
+                            }
+
+                            .primary-menu a {
+                                font-size: 40px;
+                            }
+
+                            .secondary-menu .menu-item a {
+                                font-size: 20px;
+                            }
+
+                            .menu a span {
+                                font-size: 16px;
+                                margin-right: 1em;
+                            }
+                        }
+                    </style>
+
+                    <!-- GSAP Scripts -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
+
+                    <!-- Menu Animation Script -->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const tl = gsap.timeline({ paused: true });
+                            let path = document.querySelector("path");
+                            let spanBefore = CSSRulePlugin.getRule("#hamburger .line-2");
+                            
+                            gsap.set(spanBefore, { background: "#fff" });
+                            gsap.set(".menu", { visibility: "hidden" });
+
+                            function revealMenu() {
+                                revealMenuItems();
+                                const hamburger = document.getElementById("hamburger");
+                                const toggleBtn = document.getElementById("toggle-btn");
+                                
+                                toggleBtn.onclick = (e) => {
+                                    hamburger.classList.toggle("active");
+                                    tl.reversed(!tl.reversed());
+                                };
+                            }
+
+                            revealMenu();
+
+                            function revealMenuItems() {
+                                const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+                                const end = "M0, 1005S175, 995, 500, 995s500, 5, 500, 5V0H0Z";
+                                const power2 = "power2.inOut";
+
+                                tl.to("#hamburger", 1.25, {
+                                    marginTop: "-5px",
+                                    x: -40,
+                                    y: 40,
+                                    ease: power2
+                                });
+
+                                tl.to("#hamburger .line", 1, {
+                                    background: "#fff",
+                                    ease: power2
+                                }, "<");
+
+                                tl.to(spanBefore, 1, {
+                                    background: "#fff",
+                                    ease: power2
+                                }, "<");
+
+                                tl.to(".btn .btn-outline", 1.25, {
+                                    x: -40,
+                                    y: 40,
+                                    width: "140px",
+                                    height: "140px",
+                                    border: "2px solid #ffdd00",
+                                    ease: power2
+                                }, "<");
+
+                                tl.to(path, 0.8, {
+                                    attr: { d: start },
+                                    ease: power2
+                                }, "<").to(path, 0.8, {
+                                    attr: { d: end },
+                                    ease: power2
+                                }, "-=0.5");
+
+                                tl.to(".menu", 0.5, {
+                                    visibility: "visible"
+                                }, "-=0.5");
+
+                                tl.to(".menu-item>a", 0.5, {
+                                    top: 0,
+                                    ease: "power3.in",
+                                    stagger: { amount: 0.5 }
+                                }, "-=1").reverse();
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
@@ -6450,8 +6832,6 @@
                                         </div>
 
 
-
-
                                     </div>
 
 
@@ -6487,7 +6867,7 @@
     </div>
 
     <!-- <div class="nav nav-dark" style="margin-top: 300px;"> -->
-        <div class="nav nav-dark" style="margin-top: 0px;">
+    <div class="nav nav-dark" style="margin-top: 0px;">
         <section id="techniques" data-w-id="7a61b557-4dcd-92ad-1f18-47267d83163a" class="section is-techniques">
             <div class="list-wrap is-techniques">
 
