@@ -4743,11 +4743,14 @@ textarea.w-select {
   overflow: visible
 }
 
+/* This is the desktop part , pleaes fix this  */
+
 .resources-cloud-item.first {
   z-index: 4;
   width: 100%;
   height: 6.59rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64244dea6bdb2a6ece723e65_Resources_desktop.svg);
+  /* background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64244dea6bdb2a6ece723e65_Resources_desktop.svg); */
+    background-image: url(../footer_cloudes/Resources_desktop_all_black.svg);
   background-position: 50% 0;
   background-size: cover;
   position: absolute;
@@ -4866,8 +4869,9 @@ textarea.w-select {
 
 .example-videos-desktop {
   width: 10.14rem;
-  height: 5rem;
-  max-height: 71vh;
+  height: 8rem;
+  /* max-height: 71vh; */
+  max-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   display: block;
