@@ -273,11 +273,149 @@
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                /* padding: 0.5rem !important; */
-                /* background: rgba(12, 11, 11, 0.8) !important; */
-                /* border-radius: 8px !important; */
             }
 
+            /* Responsive Navigation - All Screen Sizes */
+            @media (max-width: 1600px) {
+                #logo-wrap img {
+                    max-width: 180px !important;
+                }
+            }
+
+            @media (max-width: 1366px) {
+                #logo-wrap img {
+                    max-width: 160px !important;
+                }
+                
+                .top-yellow-stripe {
+                    height: 38px;
+                    padding: 0 20px;
+                }
+                
+                .stripe-left {
+                    font-size: 12px;
+                }
+                
+                .iso-certified img {
+                    height: 28px;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                #logo-wrap img {
+                    max-width: 140px !important;
+                }
+                
+                .top-yellow-stripe {
+                    height: 35px;
+                    padding: 0 15px;
+                }
+                
+                .stripe-left {
+                    font-size: 11px;
+                }
+                
+                .stripe-social-icons svg {
+                    width: 14px;
+                    height: 14px;
+                }
+                
+                .iso-certified img {
+                    height: 26px;
+                }
+                
+                .navigation.w-nav {
+                    margin-top: 33px !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #logo-wrap img {
+                    max-width: 120px !important;
+                }
+                
+                .top-yellow-stripe {
+                    height: 32px;
+                    padding: 0 12px;
+                }
+                
+                .stripe-left {
+                    font-size: 10px;
+                    gap: 6px;
+                }
+                
+                .stripe-social-icons {
+                    gap: 10px;
+                }
+                
+                .stripe-social-icons svg {
+                    width: 13px;
+                    height: 13px;
+                }
+                
+                .iso-certified img {
+                    height: 24px;
+                }
+                
+                .navigation.w-nav {
+                    margin-top: 30px !important;
+                    padding: 15px 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                #logo-wrap img {
+                    max-width: 100px !important;
+                }
+                
+                .top-yellow-stripe {
+                    height: 28px;
+                    padding: 0 10px;
+                }
+                
+                .stripe-left {
+                    font-size: 8px;
+                    gap: 4px;
+                }
+                
+                .stripe-social-icons {
+                    gap: 8px;
+                }
+                
+                .stripe-social-icons svg {
+                    width: 11px;
+                    height: 11px;
+                }
+                
+                .iso-certified {
+                    display: none;
+                }
+                
+                .navigation.w-nav {
+                    margin-top: 26px !important;
+                    padding: 12px 15px;
+                }
+            }
+
+            @media (max-width: 375px) {
+                #logo-wrap img {
+                    max-width: 90px !important;
+                }
+                
+                .top-yellow-stripe {
+                    height: 26px;
+                    padding: 0 8px;
+                }
+                
+                .stripe-left {
+                    font-size: 7px;
+                }
+                
+                .stripe-social-icons svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
             /* Hide only visual circular elements but keep their DOM structure for animations */
             .ball-divider {
                 opacity: 0 !important;

@@ -2753,7 +2753,8 @@ textarea.w-select {
   top: 23.44rem;
   bottom: auto;
   left: auto;
-  right: 1.56rem
+  /* right: 1.56rem */
+    right: 0.90rem
 }
 
 .splide.slider1 {
