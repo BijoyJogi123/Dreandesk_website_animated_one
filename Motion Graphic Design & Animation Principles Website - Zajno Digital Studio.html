@@ -116,7 +116,7 @@
 </head>
 
 <body data-scroll-time="0" class="body-wrap" style="" data-new-gr-c-s-check-loaded="14.1267.0" data-gr-ext-installed="">
-    
+
     <!-- Loader Screen -->
     <div id="loader-screen">
         <img src="wellcom.gif" alt="Loading..." id="loader-gif">
@@ -167,10 +167,10 @@
 
         // Get the GIF duration and hide loader after it plays once
         const loaderGif = document.getElementById('loader-gif');
-        
+
         // Hide loader after GIF plays once (adjust timing to match your GIF duration)
         // If your GIF is 3 seconds long, use 3000
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById('loader-screen').classList.add('hidden');
             document.body.classList.remove('loading');
         }, 3000); // Adjust this to match your GIF duration in milliseconds
@@ -286,16 +286,16 @@
                 #logo-wrap img {
                     max-width: 160px !important;
                 }
-                
+
                 .top-yellow-stripe {
                     height: 38px;
                     padding: 0 20px;
                 }
-                
+
                 .stripe-left {
                     font-size: 12px;
                 }
-                
+
                 .iso-certified img {
                     height: 28px;
                 }
@@ -305,25 +305,25 @@
                 #logo-wrap img {
                     max-width: 140px !important;
                 }
-                
+
                 .top-yellow-stripe {
                     height: 35px;
                     padding: 0 15px;
                 }
-                
+
                 .stripe-left {
                     font-size: 11px;
                 }
-                
+
                 .stripe-social-icons svg {
                     width: 14px;
                     height: 14px;
                 }
-                
+
                 .iso-certified img {
                     height: 26px;
                 }
-                
+
                 .navigation.w-nav {
                     margin-top: 33px !important;
                 }
@@ -333,30 +333,30 @@
                 #logo-wrap img {
                     max-width: 120px !important;
                 }
-                
+
                 .top-yellow-stripe {
                     height: 32px;
                     padding: 0 12px;
                 }
-                
+
                 .stripe-left {
                     font-size: 10px;
                     gap: 6px;
                 }
-                
+
                 .stripe-social-icons {
                     gap: 10px;
                 }
-                
+
                 .stripe-social-icons svg {
                     width: 13px;
                     height: 13px;
                 }
-                
+
                 .iso-certified img {
                     height: 24px;
                 }
-                
+
                 .navigation.w-nav {
                     margin-top: 30px !important;
                     padding: 15px 20px;
@@ -367,30 +367,30 @@
                 #logo-wrap img {
                     max-width: 100px !important;
                 }
-                
+
                 .top-yellow-stripe {
                     height: 28px;
                     padding: 0 10px;
                 }
-                
+
                 .stripe-left {
                     font-size: 8px;
                     gap: 4px;
                 }
-                
+
                 .stripe-social-icons {
                     gap: 8px;
                 }
-                
+
                 .stripe-social-icons svg {
                     width: 11px;
                     height: 11px;
                 }
-                
+
                 .iso-certified {
                     display: none;
                 }
-                
+
                 .navigation.w-nav {
                     margin-top: 26px !important;
                     padding: 12px 15px;
@@ -401,21 +401,22 @@
                 #logo-wrap img {
                     max-width: 90px !important;
                 }
-                
+
                 .top-yellow-stripe {
                     height: 26px;
                     padding: 0 8px;
                 }
-                
+
                 .stripe-left {
                     font-size: 7px;
                 }
-                
+
                 .stripe-social-icons svg {
                     width: 10px;
                     height: 10px;
                 }
             }
+
             /* Hide only visual circular elements but keep their DOM structure for animations */
             .ball-divider {
                 opacity: 0 !important;
@@ -4652,7 +4653,7 @@
                         margin-left: 30px;
                         text-align: right;
                         padding-right: 40px;
-                        padding-top:100px;
+                        padding-top: 100px;
                         z-index: 2;
                     }
 
@@ -4813,19 +4814,37 @@
                 </div>
 
                 <!-- Desktop one -->
-                <div class="embed-path w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 503 3498"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="embed-path w-embed">
+
+                    <svg style="opacity:0; display: block;" viewBox="0 0 503 3498" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path id="vrtx"
                             d="M178.874 47.5C178.874 47.5 213.85 1 281.802 1C514.138 1 501.646 515 501.646 515C501.646 515 435.693 443.5 309.282 443.5C159.888 443.5 73.4488 595.5 73.4488 803C73.4488 1010.5 73.4488 1192.3 73.4488 1519.5C95.933 1480 132.907 1450 196.862 1450C339.761 1450 467.67 1685 467.67 2074C435.693 2030.5 353.251 1978 239.831 1978C65.9541 1978 4.49753 2145 4.49753 2304C4.49753 2585 1 3090.04 1 3498"
                             stroke="white"></path>
-                    </svg></div>
+                    </svg>
 
-                <div class="embed-path_tablet w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 289 2266"
+
+                    <!-- <svg style="opacity:0; display: block;" viewBox="0 0 503 3498" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path id="vrtx"
+                            d="M -876 -441 C -727 -1514 25 -1446 357 -364 C 457 -44 501.646 515 501.646 515 C 501.646 515 435.693 443.5 309.282 443.5 C 159.888 443.5 73.4488 595.5 73.4488 803 C 73.4488 1010.5 73.4488 1192.3 73.4488 1519.5 C 95.933 1480 132.907 1450 196.862 1450 C 339.761 1450 467.67 1685 467.67 2074 C 435.693 2030.5 353.251 1978 239.831 1978 C 65.9541 1978 4.4975 2145 4.4975 2304 C 4.4975 2585 1 3090.04 1 3498"
+                            stroke="white"></path>
+                    </svg> -->
+
+                </div>
+
+                <div class="embed-path_tablet w-embed">
+
+                    <svg style="opacity:0; display: block;" viewBox="0 0 289 2266"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path id="vrtx-tablet"
                             d="M102.517 1C102.517 1 154.697 1 170.928 1C296.38 1 287.879 307.544 287.879 307.544C287.879 307.544 261.165 217.031 170.928 217.031C91.4618 217.031 44.4679 302.868 44.4679 417.17C44.4679 531.472 44.4679 681.884 44.4679 862.124C67.9717 813.117 106.199 783.613 144.439 783.613C226.905 783.613 262.889 926.882 262.889 1141.16C251.61 1124.91 218.408 1058.15 136.443 1058.15C54.4774 1058.15 6.50226 1118.96 6.50226 1206.54C6.50226 1361.33 1 2040.28 1 2265C10.9958 2215.32 57.4762 2213.32 66.4724 2265C73.9692 2235.82 103.457 2243.82 103.457 2265"
                             stroke="white" stroke-width="0.550848"></path>
-                    </svg></div>
+                    </svg>
+
+
+                
+                </div>
 
                 <div class="embed-path_mobile w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 166 1405"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
