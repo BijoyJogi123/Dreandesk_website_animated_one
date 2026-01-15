@@ -2742,8 +2742,8 @@ textarea.w-select {
 }
 
 .anim-shape.is-your {
-  top: 17.0rem;
-  left: 3.2rem;
+  top: 17.1rem;
+  left: 3.6rem;
   transform: rotate(30deg)
 }
 
@@ -2955,7 +2955,8 @@ textarea.w-select {
 }
 
 .section.is-hero {
-  background-color: #0c0b0b;
+  /* background-color: #0c0b0b; */
+  background-color: #000000;
   padding-top: 0;
   padding-bottom: 0
 }
