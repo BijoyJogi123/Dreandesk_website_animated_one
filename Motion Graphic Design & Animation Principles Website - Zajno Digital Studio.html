@@ -4404,6 +4404,19 @@
                         margin: 100px auto 40px auto;
                         padding: 0 70px;
                         box-sizing: border-box;
+                        position: relative;
+                    }
+
+                    .student-quote-wrapper::before {
+                        top: 79%;
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100vw;
+                        height: 1px;
+                        background: #ffffff;
+                        z-index: 0;
                     }
 
                     .student-img-box {
@@ -4415,6 +4428,8 @@
                         justify-content: center;
                         border-bottom: white;
                         border-width: 2px;
+                        position: relative;
+                        z-index: 2;
                     }
 
                     .student-img-box img,
@@ -4439,6 +4454,7 @@
                         text-align: right;
                         padding-right: 40px;
                         padding-top:100px;
+                        z-index: 2;
                     }
 
                     .welcome-to {
