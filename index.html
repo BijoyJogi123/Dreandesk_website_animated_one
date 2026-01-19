@@ -2147,6 +2147,90 @@
                         * {
                             box-sizing: border-box !important;
                         }
+
+                        /* Force Menu Button to Black in Course Depth Section */
+                        body:has(#course-depth-section) #toggle-btn,
+                        #course-depth-section ~ * #toggle-btn,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #toggle-btn {
+                            border: 2px solid #000000 !important;
+                            background: rgba(255, 255, 255, 0.95) !important;
+                        }
+
+                        body:has(#course-depth-section) .menu-text,
+                        #course-depth-section ~ * .menu-text,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * .menu-text {
+                            color: #000000 !important;
+                        }
+
+                        body:has(#course-depth-section) #hamburger .line-1,
+                        body:has(#course-depth-section) #hamburger .line-2,
+                        #course-depth-section ~ * #hamburger .line-1,
+                        #course-depth-section ~ * #hamburger .line-2,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #hamburger .line-1,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #hamburger .line-2 {
+                            background: #000000 !important;
+                        }
+
+                        /* Alternative approach - Global override when in light sections */
+                        html[data-current-section="course-depth"] #toggle-btn {
+                            border: 2px solid #000000 !important;
+                            background: rgba(255, 255, 255, 0.95) !important;
+                        }
+
+                        html[data-current-section="course-depth"] .menu-text {
+                            color: #000000 !important;
+                        }
+
+                        html[data-current-section="course-depth"] #hamburger .line-1,
+                        html[data-current-section="course-depth"] #hamburger .line-2 {
+                            background: #000000 !important;
+                        }
+
+                        /* Menu Button Color Adaptation for Light Background Sections */
+                        #course-depth-section #toggle-btn,
+                        #white-hero-section #toggle-btn,
+                        #one-tap-section #toggle-btn {
+                            border: 2px solid #000000 !important;
+                            background: rgba(255, 255, 255, 0.1) !important;
+                        }
+
+                        #course-depth-section .menu-text,
+                        #white-hero-section .menu-text,
+                        #one-tap-section .menu-text {
+                            color: #000000 !important;
+                        }
+
+                        #course-depth-section #hamburger .line-1,
+                        #course-depth-section #hamburger .line-2,
+                        #white-hero-section #hamburger .line-1,
+                        #white-hero-section #hamburger .line-2,
+                        #one-tap-section #hamburger .line-1,
+                        #one-tap-section #hamburger .line-2 {
+                            background: #000000 !important;
+                        }
+
+                        /* Hover effects for light background sections */
+                        #course-depth-section #toggle-btn:hover,
+                        #white-hero-section #toggle-btn:hover,
+                        #one-tap-section #toggle-btn:hover {
+                            border-color: #f2d803 !important;
+                            background: rgba(242, 216, 3, 0.1) !important;
+                        }
+
+                        #course-depth-section #toggle-btn:hover .menu-text,
+                        #white-hero-section #toggle-btn:hover .menu-text,
+                        #one-tap-section #toggle-btn:hover .menu-text {
+                            color: #f2d803 !important;
+                        }
+
+                        #course-depth-section #toggle-btn:hover #hamburger .line-1,
+                        #course-depth-section #toggle-btn:hover #hamburger .line-2,
+                        #white-hero-section #toggle-btn:hover #hamburger .line-1,
+                        #white-hero-section #toggle-btn:hover #hamburger .line-2,
+                        #one-tap-section #toggle-btn:hover #hamburger .line-1,
+                        #one-tap-section #toggle-btn:hover #hamburger .line-2 {
+                            background: #f2d803 !important;
+                        }
                     </style>
 
                     <!-- GSAP Scripts -->
@@ -7473,7 +7557,7 @@
                                         })();
                                     </script>
 
-                                    <!-- Yellow Stripe Hide/Show Script for All Sections -->
+                                    <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
                                     <script>
                                         document.addEventListener('DOMContentLoaded', function() {
                                             // Get all section elements that should hide the yellow stripe
@@ -7486,7 +7570,17 @@
                                                 // Add more sections by their IDs as needed
                                             ].filter(Boolean); // Remove null elements
                                             
+                                            // Get sections that should change menu button to black
+                                            const lightBackgroundSections = [
+                                                document.getElementById('course-depth-section'), // Course depth section
+                                                document.getElementById('white-hero-section'), // Career section
+                                                document.getElementById('one-tap-section'), // One tap section
+                                            ].filter(Boolean);
+                                            
                                             const yellowStripe = document.querySelector('.top-yellow-stripe');
+                                            const toggleBtn = document.getElementById('toggle-btn');
+                                            const menuText = document.querySelector('.menu-text');
+                                            const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
                                             
                                             if (yellowStripe && sectionsToHide.length > 0) {
                                                 // Add smooth transition to yellow stripe
@@ -7494,6 +7588,7 @@
                                                 
                                                 // Track if any section is currently visible
                                                 let visibleSections = new Set();
+                                                let visibleLightSections = new Set();
                                                 
                                                 // Function to update yellow stripe visibility
                                                 function updateYellowStripe() {
@@ -7507,6 +7602,40 @@
                                                         yellowStripe.style.opacity = '1';
                                                         yellowStripe.style.visibility = 'visible';
                                                         yellowStripe.style.transform = 'translateY(0)';
+                                                    }
+                                                }
+                                                
+                                                // Function to update menu button color
+                                                function updateMenuButtonColor() {
+                                                    const htmlElement = document.documentElement;
+                                                    
+                                                    if (toggleBtn && menuText && hamburgerLines.length > 0) {
+                                                        // Add smooth transition
+                                                        toggleBtn.style.transition = 'all 0.3s ease';
+                                                        menuText.style.transition = 'all 0.3s ease';
+                                                        hamburgerLines.forEach(line => {
+                                                            line.style.transition = 'all 0.3s ease';
+                                                        });
+                                                        
+                                                        if (visibleLightSections.size > 0) {
+                                                            // Light background section is visible - make menu button black
+                                                            htmlElement.setAttribute('data-current-section', 'course-depth');
+                                                            toggleBtn.style.setProperty('border-color', '#000000', 'important');
+                                                            toggleBtn.style.setProperty('background-color', 'rgba(255, 255, 255, 0.95)', 'important');
+                                                            menuText.style.setProperty('color', '#000000', 'important');
+                                                            hamburgerLines.forEach(line => {
+                                                                line.style.setProperty('background-color', '#000000', 'important');
+                                                            });
+                                                        } else {
+                                                            // Dark background - make menu button white (default)
+                                                            htmlElement.removeAttribute('data-current-section');
+                                                            toggleBtn.style.setProperty('border-color', '#ffffff', 'important');
+                                                            toggleBtn.style.setProperty('background-color', 'transparent', 'important');
+                                                            menuText.style.setProperty('color', '#ffffff', 'important');
+                                                            hamburgerLines.forEach(line => {
+                                                                line.style.setProperty('background-color', '#ffffff', 'important');
+                                                            });
+                                                        }
                                                     }
                                                 }
                                                 
@@ -7530,6 +7659,29 @@
                                                     });
                                                     
                                                     // Start observing the section
+                                                    observer.observe(section);
+                                                });
+                                                
+                                                // Create intersection observer for light background sections
+                                                lightBackgroundSections.forEach((section, index) => {
+                                                    const observer = new IntersectionObserver((entries) => {
+                                                        entries.forEach(entry => {
+                                                            const sectionId = `light-section-${index}`;
+                                                            if (entry.isIntersecting) {
+                                                                visibleLightSections.add(sectionId);
+                                                            } else {
+                                                                visibleLightSections.delete(sectionId);
+                                                            }
+                                                            updateMenuButtonColor();
+                                                        });
+                                                    }, {
+                                                        // Trigger when 30% of the section is visible
+                                                        threshold: 0.3,
+                                                        // Add some margin to trigger earlier
+                                                        rootMargin: '-10% 0px -10% 0px'
+                                                    });
+                                                    
+                                                    // Start observing the light background section
                                                     observer.observe(section);
                                                 });
                                             }
