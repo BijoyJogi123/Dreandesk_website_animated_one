@@ -326,7 +326,7 @@
                 }
 
                 .navigation.w-nav {
-                    margin-top: 33px !important;
+                    /* margin-top: 33px !important; */
                 }
             }
 
@@ -359,7 +359,7 @@
                 }
 
                 .navigation.w-nav {
-                    margin-top: 30px !important;
+                    /* margin-top: 30px !important; */
                     padding: 15px 20px;
                 }
             }
@@ -393,7 +393,7 @@
                 }
 
                 .navigation.w-nav {
-                    margin-top: 26px !important;
+                    /* margin-top: 26px !important; */
                     padding: 12px 15px;
                 }
             }
@@ -1360,7 +1360,7 @@
 
         /* Enhanced Navigation Responsiveness */
         .navigation.w-nav {
-            margin-top: clamp(26px, 4vw, 50px) !important;
+            /* margin-top: clamp(26px, 4vw, 50px) !important; */
             padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 25px);
         }
 
@@ -1425,7 +1425,6 @@
         role="banner" class="navigation w-nav">
 
         <!-- Header section  -->
-
 
         <div class="nav-header">
             <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
@@ -1754,7 +1753,7 @@
                             #toggle-btn {
                                 min-width: 150px;
                                 height: 60px;
-                                top: 70px;
+                                /* top: 70px; */
                                 right: 1.5rem;
                                 padding: 0 20px;
                                 gap: 15px;
@@ -1799,7 +1798,7 @@
                             #toggle-btn {
                                 min-width: 130px;
                                 height: 50px;
-                                top: 65px;
+                                /* top: 65px; */
                                 right: 1rem;
                                 padding: 0 15px;
                                 gap: 12px;
@@ -1831,6 +1830,322 @@
                                 font-size: 16px;
                                 margin-right: 1em;
                             }
+                        }
+                    </style>
+
+                    <!-- Mobile-First Responsive Navigation Fix -->
+                    <style>
+                        /* Force Override All Navigation Styles for Mobile Compatibility */
+                        
+                        /* Base Navigation Container Fixes */
+                        .nav-header {
+                            position: relative !important;
+                            z-index: 99998 !important;
+                            width: 100% !important;
+                            overflow: visible !important;
+                        }
+
+                        .nav-panels {
+                            position: relative !important;
+                            z-index: 99998 !important;
+                            width: 100% !important;
+                            overflow: visible !important;
+                        }
+
+                        .nav-panel {
+                            position: relative !important;
+                            z-index: 99998 !important;
+                            width: 100% !important;
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: space-between !important;
+                            padding: 0 20px !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        .nav-logo {
+                            display: flex !important;
+                            align-items: center !important;
+                            gap: 30px !important;
+                            position: relative !important;
+                            z-index: 99998 !important;
+                            flex-shrink: 0 !important;
+                        }
+
+                        .logo-wrappers,
+                        .logo-sections-wrap {
+                            display: flex !important;
+                            align-items: center !important;
+                            position: relative !important;
+                        }
+
+                        /* Logo Responsive Sizing - Force Override */
+                        #logo-wrap img {
+                            width: clamp(90px, 12vw, 200px) !important;
+                            height: auto !important;
+                            transition: all 0.3s ease !important;
+                            display: block !important;
+                            max-width: none !important;
+                        }
+
+                        /* Hide Desktop Navigation on Mobile */
+                        #hero-nav-options {
+                            display: flex !important;
+                            align-items: center !important;
+                            gap: 35px !important;
+                            opacity: 0 !important;
+                            position: fixed !important;
+                            left: 880px !important;
+                            top: 28px !important;
+                            z-index: 9999 !important;
+                            transition: all 0.3s ease !important;
+                        }
+
+                        /* Breadcrumbs - Hide on Mobile */
+                        #breadcrumbs-wrap {
+                            opacity: 0 !important;
+                            pointer-events: none !important;
+                        }
+
+                        /* Enhanced Toggle Button - Force Override All Styles */
+                        #toggle-btn {
+                            position: fixed !important;
+                            /* top: 120px !important; */
+                            right: 40px !important;
+                            width: auto !important;
+                            min-width: 80px !important;
+                            height: 50px !important;
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: center !important;
+                            gap: 20px !important;
+                            padding: 0 30px !important;
+                            z-index: 99999 !important;
+                            cursor: pointer !important;
+                            border: 2px solid #ffffff !important;
+                            border-radius: 50px !important;
+                            background: transparent !important;
+                            transition: all 0.3s ease !important;
+                            transform: none !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        /* Menu Text Styling */
+                        .menu-text {
+                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+                            font-size: 24px !important;
+                            font-weight: 700 !important;
+                            color: #ffffff !important;
+                            text-transform: lowercase !important;
+                            letter-spacing: 2px !important;
+                            transition: color 0.3s ease !important;
+                            white-space: nowrap !important;
+                        }
+
+                        /* Hamburger Styling */
+                        #hamburger {
+                            position: relative !important;
+                            width: auto !important;
+                            height: auto !important;
+                            z-index: 2 !important;
+                            display: flex !important;
+                            flex-direction: column !important;
+                            justify-content: center !important;
+                            align-items: center !important;
+                            gap: 6px !important;
+                        }
+
+                        #hamburger .line-1,
+                        #hamburger .line-2 {
+                            position: relative !important;
+                            width: 30px !important;
+                            height: 3px !important;
+                            background: #ffffff !important;
+                            transition: all 0.3s ease !important;
+                            transform: none !important;
+                            display: block !important;
+                        }
+
+                        /* Mobile Responsive Breakpoints */
+                        
+                        /* Tablet Landscape (769px-1024px) */
+                        @media (max-width: 1024px) and (min-width: 769px) {
+                            .nav-panel {
+                                padding: 0 20px !important;
+                            }
+                            
+                            #logo-wrap img {
+                                width: 120px !important;
+                            }
+                            
+                            #hero-nav-options {
+                                display: none !important;
+                            }
+                            
+                            #breadcrumbs-wrap {
+                                display: none !important;
+                            }
+                            
+                            #toggle-btn {
+                                right: 20px !important;
+                                /* top: 90px !important; */
+                                min-width: 120px !important;
+                                height: 50px !important;
+                                gap: 10px !important;
+                                padding: 0 16px !important;
+                            }
+                            
+                            .menu-text {
+                                font-size: 16px !important;
+                            }
+                            
+                            #hamburger .line-1,
+                            #hamburger .line-2 {
+                                width: 20px !important;
+                                height: 2px !important;
+                            }
+                        }
+
+                        /* Tablet Portrait (481px-768px) */
+                        @media (max-width: 768px) and (min-width: 481px) {
+                            .nav-panel {
+                                padding: 0 15px !important;
+                            }
+                            
+                            #logo-wrap img {
+                                width: 110px !important;
+                            }
+                            
+                            #hero-nav-options {
+                                display: none !important;
+                            }
+                            
+                            #breadcrumbs-wrap {
+                                display: none !important;
+                            }
+                            
+                            #toggle-btn {
+                                right: 15px !important;
+                                /* top: 85px !important; */
+                                min-width: 110px !important;
+                                height: 45px !important;
+                                gap: 8px !important;
+                                padding: 0 14px !important;
+                            }
+                            
+                            .menu-text {
+                                font-size: 14px !important;
+                            }
+                            
+                            #hamburger .line-1,
+                            #hamburger .line-2 {
+                                width: 18px !important;
+                                height: 2px !important;
+                            }
+                        }
+
+                        /* Mobile Large (376px-480px) */
+                        @media (max-width: 480px) and (min-width: 376px) {
+                            .nav-panel {
+                                padding: 0 12px !important;
+                            }
+                            
+                            #logo-wrap img {
+                                width: 100px !important;
+                            }
+                            
+                            #hero-nav-options {
+                                display: none !important;
+                            }
+                            
+                            #breadcrumbs-wrap {
+                                display: none !important;
+                            }
+                            
+                            #toggle-btn {
+                                right: 12px !important;
+                                /* top: 80px !important; */
+                                min-width: 100px !important;
+                                height: 40px !important;
+                                gap: 6px !important;
+                                padding: 0 12px !important;
+                            }
+                            
+                            .menu-text {
+                                font-size: 12px !important;
+                            }
+                            
+                            #hamburger .line-1,
+                            #hamburger .line-2 {
+                                width: 16px !important;
+                                height: 1.5px !important;
+                            }
+                        }
+
+                        /* Mobile Small (≤375px) */
+                        @media (max-width: 375px) {
+                            .nav-panel {
+                                padding: 0 10px !important;
+                            }
+                            
+                            #logo-wrap img {
+                                width: 90px !important;
+                            }
+                            
+                            #hero-nav-options {
+                                display: none !important;
+                            }
+                            
+                            #breadcrumbs-wrap {
+                                display: none !important;
+                            }
+                            
+                            #toggle-btn {
+                                right: 10px !important;
+                                /* top: 75px !important; */
+                                min-width: 90px !important;
+                                height: 35px !important;
+                                gap: 5px !important;
+                                padding: 0 10px !important;
+                            }
+                            
+                            .menu-text {
+                                font-size: 10px !important;
+                            }
+                            
+                            #hamburger .line-1,
+                            #hamburger .line-2 {
+                                width: 14px !important;
+                                height: 1.5px !important;
+                            }
+                        }
+
+                        /* Fix for Mobile Layout Issues */
+                        @media (max-width: 1024px) {
+                            .nav-header {
+                                overflow: visible !important;
+                                position: relative !important;
+                            }
+                            
+                            .nav-panels {
+                                overflow: visible !important;
+                                position: relative !important;
+                            }
+                            
+                            .nav-panel {
+                                flex-wrap: nowrap !important;
+                                overflow: visible !important;
+                            }
+                            
+                            .nav-logo {
+                                flex-shrink: 0 !important;
+                                min-width: 0 !important;
+                            }
+                        }
+
+                        /* Prevent Layout Shifts */
+                        * {
+                            box-sizing: border-box !important;
                         }
                     </style>
 
@@ -1890,8 +2205,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <div style="display: none; opacity: 0;" class="nav-menu">
