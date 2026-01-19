@@ -265,7 +265,7 @@
             /* Logo styling */
             #logo-wrap img {
                 /* max-width: 200px !important; */
-                 max-width: clamp(80px, 15vw, 150px) !important;
+                max-width: clamp(80px, 15vw, 150px) !important;
                 height: auto !important;
                 display: block !important;
             }
@@ -593,7 +593,7 @@
                 height: 24px !important;
             }
 
-           
+
 
             .ui-text {
                 margin-top: 0.18rem;
@@ -982,36 +982,409 @@
             width: auto;
         }
 
-        /* Enhanced Navigation Responsiveness */
-        .navigation.w-nav {
-            margin-top: clamp(26px, 4vw, 40px) !important;
-            padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 25px);
-        
+        /* Comprehensive Yellow Stripe Responsive Design */
+
+        /* Ultra Wide Desktop (2560px+) */
+        @media (min-width: 2560px) {
+            .top-yellow-stripe {
+                height: 50px;
+                padding: 0 60px;
+            }
+
+            .stripe-left {
+                font-size: 16px;
+                gap: 12px;
+                padding-left: 2%;
+            }
+
+            .stripe-right {
+                gap: 25px;
+            }
+
+            .stripe-social-icons {
+                gap: 20px;
+            }
+
+            .stripe-social-icons svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .iso-certified img {
+                height: 36px;
+            }
         }
 
-        /* Logo responsiveness - Much smaller for proper scaling */
+        /* Large Desktop (1920px-2559px) */
+        @media (max-width: 2559px) and (min-width: 1920px) {
+            .top-yellow-stripe {
+                height: 45px;
+                padding: 0 50px;
+            }
+
+            .stripe-left {
+                font-size: 15px;
+                gap: 10px;
+                padding-left: 2.5%;
+            }
+
+            .stripe-right {
+                gap: 22px;
+            }
+
+            .stripe-social-icons {
+                gap: 18px;
+            }
+
+            .stripe-social-icons svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .iso-certified img {
+                height: 34px;
+            }
+        }
+
+        /* Standard Desktop (1600px-1919px) */
+        @media (max-width: 1919px) and (min-width: 1600px) {
+            .top-yellow-stripe {
+                height: 42px;
+                padding: 0 40px;
+            }
+
+            .stripe-left {
+                font-size: 14px;
+                gap: 9px;
+                padding-left: 3%;
+            }
+
+            .stripe-right {
+                gap: 20px;
+            }
+
+            .stripe-social-icons {
+                gap: 16px;
+            }
+
+            .stripe-social-icons svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            .iso-certified img {
+                height: 32px;
+            }
+        }
+
+        /* Medium Desktop (1440px-1599px) */
+        @media (max-width: 1599px) and (min-width: 1440px) {
+            .top-yellow-stripe {
+                height: 40px;
+                padding: 0 35px;
+            }
+
+            .stripe-left {
+                font-size: 13px;
+                gap: 8px;
+                padding-left: 3%;
+            }
+
+            .stripe-right {
+                gap: 18px;
+            }
+
+            .stripe-social-icons {
+                gap: 15px;
+            }
+
+            .stripe-social-icons svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .iso-certified img {
+                height: 30px;
+            }
+        }
+
+        /* Small Desktop (1366px-1439px) */
+        @media (max-width: 1439px) and (min-width: 1366px) {
+            .top-yellow-stripe {
+                height: 38px;
+                padding: 0 30px;
+            }
+
+            .stripe-left {
+                font-size: 12px;
+                gap: 7px;
+                padding-left: 3%;
+            }
+
+            .stripe-right {
+                gap: 16px;
+            }
+
+            .stripe-social-icons {
+                gap: 14px;
+            }
+
+            .stripe-social-icons svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            .iso-certified img {
+                height: 28px;
+            }
+        }
+
+        /* Laptop Large (1280px-1365px) */
+        @media (max-width: 1365px) and (min-width: 1280px) {
+            .top-yellow-stripe {
+                height: 36px;
+                padding: 0 25px;
+            }
+
+            .stripe-left {
+                font-size: 11px;
+                gap: 6px;
+                padding-left: 3%;
+            }
+
+            .stripe-right {
+                gap: 15px;
+            }
+
+            .stripe-social-icons {
+                gap: 13px;
+            }
+
+            .stripe-social-icons svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .iso-certified img {
+                height: 26px;
+            }
+        }
+
+        /* Laptop Medium (1200px-1279px) */
+        @media (max-width: 1279px) and (min-width: 1200px) {
+            .top-yellow-stripe {
+                height: 35px;
+                padding: 0 22px;
+            }
+
+            .stripe-left {
+                font-size: 10px;
+                gap: 6px;
+                padding-left: 2.5%;
+            }
+
+            .stripe-right {
+                gap: 14px;
+            }
+
+            .stripe-social-icons {
+                gap: 12px;
+            }
+
+            .stripe-social-icons svg {
+                width: 13px;
+                height: 13px;
+            }
+
+            .iso-certified img {
+                height: 25px;
+            }
+        }
+
+        /* Laptop Small (1025px-1199px) */
+        @media (max-width: 1199px) and (min-width: 1025px) {
+            .top-yellow-stripe {
+                height: 34px;
+                padding: 0 20px;
+            }
+
+            .stripe-left {
+                font-size: 10px;
+                gap: 5px;
+                padding-left: 2%;
+            }
+
+            .stripe-right {
+                gap: 13px;
+            }
+
+            .stripe-social-icons {
+                gap: 11px;
+            }
+
+            .stripe-social-icons svg {
+                width: 12px;
+                height: 12px;
+            }
+
+            .iso-certified img {
+                height: 24px;
+            }
+        }
+
+        /* Tablet Landscape (769px-1024px) */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .top-yellow-stripe {
+                height: 32px;
+                padding: 0 18px;
+            }
+
+            .stripe-left {
+                font-size: 9px;
+                gap: 4px;
+                padding-left: 1.5%;
+            }
+
+            .stripe-right {
+                gap: 12px;
+            }
+
+            .stripe-social-icons {
+                gap: 10px;
+            }
+
+            .stripe-social-icons svg {
+                width: 11px;
+                height: 11px;
+            }
+
+            .iso-certified img {
+                height: 22px;
+            }
+        }
+
+        /* Tablet Portrait (481px-768px) */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .top-yellow-stripe {
+                height: 30px;
+                padding: 0 15px;
+            }
+
+            .stripe-left {
+                font-size: 8px;
+                gap: 3px;
+                padding-left: 1%;
+            }
+
+            .stripe-right {
+                gap: 10px;
+            }
+
+            .stripe-social-icons {
+                gap: 8px;
+            }
+
+            .stripe-social-icons svg {
+                width: 10px;
+                height: 10px;
+            }
+
+            .iso-certified img {
+                height: 20px;
+            }
+        }
+
+        /* Mobile Large (376px-480px) */
+        @media (max-width: 480px) and (min-width: 376px) {
+            .top-yellow-stripe {
+                height: 28px;
+                padding: 0 12px;
+            }
+
+            .stripe-left {
+                font-size: 7px;
+                gap: 2px;
+                padding-left: 0.5%;
+            }
+
+            .stripe-right {
+                gap: 8px;
+            }
+
+            .stripe-social-icons {
+                gap: 6px;
+            }
+
+            .stripe-social-icons svg {
+                width: 9px;
+                height: 9px;
+            }
+
+            .iso-certified {
+                display: none;
+                /* Hide ISO on small mobile */
+            }
+        }
+
+        /* Mobile Small (≤375px) */
+        @media (max-width: 375px) {
+            .top-yellow-stripe {
+                height: 26px;
+                padding: 0 10px;
+            }
+
+            .stripe-left {
+                font-size: 6px;
+                gap: 2px;
+                padding-left: 0%;
+            }
+
+            .stripe-right {
+                gap: 6px;
+            }
+
+            .stripe-social-icons {
+                gap: 5px;
+            }
+
+            .stripe-social-icons svg {
+                width: 8px;
+                height: 8px;
+            }
+
+            .iso-certified {
+                display: none;
+                /* Hide ISO on small mobile */
+            }
+        }
+
+        /* Enhanced Navigation Responsiveness */
+        .navigation.w-nav {
+            margin-top: clamp(26px, 4vw, 50px) !important;
+            padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 25px);
+        }
+
+        /* Logo responsiveness */
         #logo-wrap img {
-            max-width: 150px !important;
+            max-width: clamp(90px, 12vw, 150px) !important;
             height: auto !important;
             display: block !important;
         }
 
-        /* Menu button - Make it smaller */
+        /* Menu button responsiveness */
         #toggle-btn {
-            transform: scale(0.7) !important;
+            transform: scale(clamp(0.6, 1vw, 0.8)) !important;
             transform-origin: center right !important;
         }
 
         #toggle-btn .menu-text {
-            font-size: 12px !important;
+            font-size: clamp(10px, 1.2vw, 12px) !important;
         }
 
         #hamburger {
-            width: 20px !important;
-            height: 16px !important;
+            width: clamp(16px, 2vw, 20px) !important;
+            height: clamp(14px, 1.8vw, 16px) !important;
         }
-
-
     </style>
 
     <div class="top-yellow-stripe">
@@ -1050,6 +1423,10 @@
 
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
         role="banner" class="navigation w-nav">
+
+        <!-- Header section  -->
+
+
         <div class="nav-header">
             <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                 class="nav-panels">
@@ -1513,6 +1890,10 @@
                 </div>
             </div>
         </div>
+
+
+
+
         <div style="display: none; opacity: 0;" class="nav-menu">
             <div class="height-container is-nav-links">
                 <div class="sticky-container is-nav-links">
@@ -4643,7 +5024,7 @@
                         height: 1.5px;
                         background: #ffffff;
                         z-index: 0;
-                    
+
                     }
 
                     .student-img-box {
@@ -4757,7 +5138,7 @@
                             max-width: 1800px;
                             gap: 100px;
                         }
-                        
+
                         .student-img-box {
                             height: 500px;
                             max-width: 650px;
@@ -4786,7 +5167,7 @@
                             gap: 60px;
                             padding: 0 40px;
                         }
-                        
+
                         .student-img-box {
                             height: 400px;
                             max-width: 550px;
@@ -4803,7 +5184,7 @@
                             gap: 40px;
                             padding: 0 30px;
                         }
-                        
+
                         .student-img-box {
                             height: 350px;
                             max-width: 450px;
@@ -4954,7 +5335,7 @@
                     /* Large Desktop (1920px-2559px) */
                     @media (max-width: 2559px) and (min-width: 1920px) {
                         .student-quote-wrapper::before {
-                          top: calc(100% - 30.5vh);
+                            top: calc(100% - 30.5vh);
                         }
                     }
 
@@ -5006,7 +5387,7 @@
                             display: none;
                         }
                     }
-                     
+
 
                     /* Desktop Large Screens */
                     @media (min-width: 1600px) {
@@ -5014,7 +5395,7 @@
                             max-width: 1800px;
                             gap: 100px;
                         }
-                        
+
                         .student-img-box {
                             height: 600px;
                             max-width: 800px;
@@ -5031,7 +5412,7 @@
                             gap: 60px;
                             padding: 0 40px;
                         }
-                        
+
                         .student-img-box {
                             height: 500px;
                             max-width: 600px;
@@ -5048,7 +5429,7 @@
                             gap: 40px;
                             padding: 0 30px;
                         }
-                        
+
                         .student-img-box {
                             height: 450px;
                             max-width: 500px;
@@ -5162,7 +5543,7 @@
                             max-width: 1600px;
                             gap: 80px;
                         }
-                        
+
                         .student-img-box {
                             height: 600px;
                         }
@@ -5174,7 +5555,7 @@
                             gap: 40px;
                             padding: 0 30px;
                         }
-                        
+
                         .student-img-box {
                             height: 450px;
                         }
@@ -5269,7 +5650,6 @@
                             height: 250px;
                         }
                     }
-                
                 </style>
 
                 <div class="student-quote-wrapper">
@@ -5377,15 +5757,15 @@
 
                 <div class="embed-path_tablet w-embed">
 
-                    <svg style="opacity:0; display: block;" viewBox="0 0 289 2266"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style="opacity:0; display: block;" viewBox="0 0 289 2266" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path id="vrtx-tablet"
                             d="M102.517 1C102.517 1 154.697 1 170.928 1C296.38 1 287.879 307.544 287.879 307.544C287.879 307.544 261.165 217.031 170.928 217.031C91.4618 217.031 44.4679 302.868 44.4679 417.17C44.4679 531.472 44.4679 681.884 44.4679 862.124C67.9717 813.117 106.199 783.613 144.439 783.613C226.905 783.613 262.889 926.882 262.889 1141.16C251.61 1124.91 218.408 1058.15 136.443 1058.15C54.4774 1058.15 6.50226 1118.96 6.50226 1206.54C6.50226 1361.33 1 2040.28 1 2265C10.9958 2215.32 57.4762 2213.32 66.4724 2265C73.9692 2235.82 103.457 2243.82 103.457 2265"
                             stroke="white" stroke-width="0.550848"></path>
                     </svg>
 
 
-                
+
                 </div>
 
                 <div class="embed-path_mobile w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 166 1405"
@@ -5738,6 +6118,7 @@
                     <div class="ui-ball"></div>
                 </div>
             </div>
+            <!-- <div class="ui-wrap" style="margin-top: 342px;"> -->
             <div class="ui-wrap" style="margin-top: 342px;">
                 <div class="pin-spacer"
                     style="order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 10031px; padding: 0px 0px 9120px;">
