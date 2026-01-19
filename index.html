@@ -4622,39 +4622,42 @@
                     .student-quote-wrapper {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        width: 95%;
-                        max-width: 1900px;
-                        margin: 100px auto auto auto;
-                        padding: 0 70px;
+                        justify-content: space-between;
+                        width: 100%;
+                        max-width: 1600px;
+                        margin: 80px auto 0 auto;
+                        padding: 0 50px;
                         box-sizing: border-box;
                         position: relative;
-                        min-height: 80vh;
+                        min-height: 85vh;
+                        gap: 80px;
                     }
 
                     .student-quote-wrapper::before {
-                        top: 79%;
+                        top: 76.6%;
                         content: '';
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
                         width: 100vw;
-                        height: 1px;
+                        height: 1.5px;
                         background: #ffffff;
                         z-index: 0;
+                    
                     }
 
                     .student-img-box {
-                        width: 1100px;
-                        height: 850px;
-                        flex-shrink: 0;
+                        flex: 1;
+                        max-width: 800px;
+                        height: 600px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border-bottom: white;
-                        border-width: 2px;
                         position: relative;
                         z-index: 2;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
                     }
 
                     .student-img-box img,
@@ -4662,106 +4665,421 @@
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
+                        border-radius: 8px;
                     }
 
                     .welcome-box {
-                        width: 850px;
-                        height: 650px;
-                        flex-shrink: 0;
-                        position: relative;
+                        flex: 1;
+                        max-width: 550px;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
                         justify-content: center;
-                        margin-left: 30px;
                         text-align: right;
-                        padding-right: 40px;
-                        padding-top: 100px;
                         z-index: 2;
+                        padding-right: 20px;
                     }
 
                     .welcome-to {
                         font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
-                        font-size: 2.5vw !important;
+                        font-size: 1.7vw !important;
                         font-weight: 400 !important;
                         color: #ffffff !important;
-                        margin: 0 0 15px 0 !important;
+                        margin: 0 0 10px 0 !important;
                         padding: 0 !important;
-                        letter-spacing: 6px !important;
+                        letter-spacing: 4px !important;
                         text-transform: uppercase !important;
+                        opacity: 0.9;
                     }
 
                     .dreamdesk-title {
                         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-                        font-size: clamp(60px, 8vw, 120px) !important;
+                        font-size: clamp(40px, 5.4vw, 80px) !important;
                         font-weight: 800 !important;
                         color: #ffffff !important;
-                        margin: 0 0 25px 0 !important;
+                        margin: 0 0 15px 0 !important;
                         padding: 0 !important;
-                        letter-spacing: -2px !important;
+                        letter-spacing: -1px !important;
                         line-height: 1 !important;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                     }
 
                     .tagline-text {
                         font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
-                        font-size: clamp(20px, 2.5vw, 32px) !important;
+                        font-size: clamp(14px, 1.7vw, 22px) !important;
                         font-weight: 400 !important;
                         color: #ffffff !important;
-                        margin: 0 0 55px 0 !important;
+                        margin: 0 0 35px 0 !important;
                         padding: 0 !important;
-                        letter-spacing: 2px !important;
+                        letter-spacing: 1.5px !important;
                         opacity: 0.9;
+                        line-height: 1.4;
                     }
 
                     .know-us-btn {
                         display: inline-flex;
                         align-items: center;
-                        gap: 12px;
+                        gap: 10px;
                         background: #f2d803;
                         color: #000000;
                         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-                        font-size: clamp(16px, 1.5vw, 18px);
+                        font-size: clamp(12px, 1vw, 14px);
                         font-weight: 600;
-                        padding: clamp(12px, 1.5vw, 16px) clamp(24px, 3vw, 32px);
+                        padding: clamp(10px, 1.2vw, 12px) clamp(20px, 2.5vw, 26px);
                         border: none;
                         text-decoration: none;
                         cursor: pointer;
                         transition: all 0.3s ease;
                         border-radius: 4px;
+                        box-shadow: 0 4px 15px rgba(242, 216, 3, 0.3);
                     }
 
                     .know-us-btn:hover {
                         background: #ffffff;
                         color: #000000;
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
                     }
 
                     .know-us-btn svg {
-                        width: 20px;
-                        height: 20px;
+                        width: 16px;
+                        height: 16px;
+                        transition: transform 0.3s ease;
                     }
 
-                    /* Enhanced Responsive Design */
-                    @media (max-width: 1600px) {
+                    .know-us-btn:hover svg {
+                        transform: translateX(3px);
+                    }
+
+                    /* Desktop Large Screens */
+                    @media (min-width: 1600px) {
+                        .student-quote-wrapper {
+                            max-width: 1800px;
+                            gap: 100px;
+                        }
+                        
+                        .student-img-box {
+                            height: 500px;
+                            max-width: 650px;
+                        }
+
+                        .welcome-box {
+                            max-width: 600px;
+                        }
+
+                        .welcome-to {
+                            font-size: 1.8vw !important;
+                        }
+
+                        .dreamdesk-title {
+                            font-size: clamp(45px, 5.8vw, 85px) !important;
+                        }
+
+                        .tagline-text {
+                            font-size: clamp(16px, 1.8vw, 24px) !important;
+                        }
+                    }
+
+                    /* Laptop/Desktop */
+                    @media (max-width: 1400px) {
+                        .student-quote-wrapper {
+                            gap: 60px;
+                            padding: 0 40px;
+                        }
+                        
+                        .student-img-box {
+                            height: 400px;
+                            max-width: 550px;
+                        }
+
+                        .welcome-box {
+                            max-width: 500px;
+                        }
+                    }
+
+                    /* Medium Desktop */
+                    @media (max-width: 1200px) {
+                        .student-quote-wrapper {
+                            gap: 40px;
+                            padding: 0 30px;
+                        }
+                        
+                        .student-img-box {
+                            height: 350px;
+                            max-width: 450px;
+                        }
+
+                        .welcome-box {
+                            max-width: 450px;
+                        }
+
+                        .welcome-to {
+                            font-size: 1.5vw !important;
+                        }
+
+                        .dreamdesk-title {
+                            font-size: clamp(35px, 4.8vw, 65px) !important;
+                        }
+
+                        .tagline-text {
+                            font-size: clamp(12px, 1.5vw, 18px) !important;
+                        }
+                    }
+
+                    /* Tablet Landscape */
+                    @media (max-width: 1024px) {
                         .student-quote-wrapper {
                             flex-direction: column;
-                            gap: 50px;
-                            padding: 0 40px;
-                            margin: 80px auto auto auto;
+                            gap: 40px;
+                            padding: 0 30px;
+                            margin: 60px auto 0 auto;
                         }
 
-                        .student-img-box,
-                        .welcome-box {
-                            width: 100%;
-                            max-width: 800px;
-                            height: auto;
-                            margin-left: 0;
+                        .student-img-box {
+                            max-width: 100%;
+                            height: 320px;
+                            order: 1;
                         }
 
                         .welcome-box {
+                            max-width: 100%;
                             align-items: center;
                             text-align: center;
                             padding-right: 0;
-                            padding-top: 40px;
+                            order: 2;
+                        }
+
+                        .welcome-to {
+                            font-size: clamp(14px, 2.5vw, 18px) !important;
+                        }
+
+                        .dreamdesk-title {
+                            font-size: clamp(30px, 6vw, 50px) !important;
+                        }
+
+                        .tagline-text {
+                            font-size: clamp(11px, 2vw, 16px) !important;
+                        }
+                    }
+
+                    /* Tablet Portrait */
+                    @media (max-width: 768px) {
+                        .student-quote-wrapper {
+                            gap: 30px;
+                            padding: 0 25px;
+                            margin: 50px auto 0 auto;
+                            min-height: 75vh;
+                        }
+
+                        .student-img-box {
+                            height: 280px;
+                        }
+
+                        .welcome-to {
+                            font-size: 12px !important;
+                            letter-spacing: 2px !important;
+                        }
+
+                        .dreamdesk-title {
+                            font-size: clamp(26px, 5vw, 40px) !important;
+                        }
+
+                        .tagline-text {
+                            font-size: clamp(10px, 1.8vw, 14px) !important;
+                        }
+
+                        .know-us-btn {
+                            font-size: 11px;
+                            padding: 8px 18px;
+                        }
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 480px) {
+                        .student-quote-wrapper {
+                            gap: 25px;
+                            padding: 0 20px;
+                            margin: 40px auto 0 auto;
+                            min-height: 70vh;
+                        }
+
+                        .student-img-box {
+                            height: 240px;
+                        }
+
+                        .welcome-to {
+                            font-size: 10px !important;
+                            letter-spacing: 1.5px !important;
+                        }
+
+                        .dreamdesk-title {
+                            font-size: clamp(22px, 4.5vw, 32px) !important;
+                        }
+
+                        .tagline-text {
+                            font-size: clamp(9px, 1.5vw, 12px) !important;
+                        }
+
+                        .know-us-btn {
+                            font-size: 10px;
+                            padding: 7px 15px;
+                        }
+
+                        .know-us-btn svg {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+
+                    /* Small Mobile */
+                    @media (max-width: 375px) {
+                        .student-quote-wrapper {
+                            gap: 20px;
+                            padding: 0 15px;
+                        }
+
+                        .student-img-box {
+                            height: 200px;
+                        }
+                    }
+
+                    /* Comprehensive Desktop White Line Positioning */
+                    /* Ultra Wide Desktop (2560px+) */
+                    @media (min-width: 2560px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 31.2vh);
+                        }
+                    }
+
+                    /* Large Desktop (1920px-2559px) */
+                    @media (max-width: 2559px) and (min-width: 1920px) {
+                        .student-quote-wrapper::before {
+                          top: calc(100% - 30.5vh);
+                        }
+                    }
+
+                    /* Standard Desktop (1600px-1919px) */
+                    @media (max-width: 1919px) and (min-width: 1600px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 26.5vh);
+                        }
+                    }
+
+                    /* Medium Desktop (1440px-1599px) */
+                    @media (max-width: 1599px) and (min-width: 1440px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 19vh);
+                        }
+                    }
+
+                    /* Small Desktop (1366px-1439px) */
+                    @media (max-width: 1439px) and (min-width: 1366px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 20vh);
+                        }
+                    }
+
+                    /* Laptop Large (1280px-1365px) */
+                    @media (max-width: 1365px) and (min-width: 1280px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 26.6vh);
+                        }
+                    }
+
+                    /* Laptop Medium (1200px-1279px) */
+                    @media (max-width: 1279px) and (min-width: 1200px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 16vh);
+                        }
+                    }
+
+                    /* Laptop Small (1025px-1199px) */
+                    @media (max-width: 1199px) and (min-width: 1025px) {
+                        .student-quote-wrapper::before {
+                            top: calc(100% - 17vh);
+                        }
+                    }
+
+                    /* Hide white line on tablet and mobile (stacked layout) */
+                    @media (max-width: 1024px) {
+                        .student-quote-wrapper::before {
+                            display: none;
+                        }
+                    }
+                     
+
+                    /* Desktop Large Screens */
+                    @media (min-width: 1600px) {
+                        .student-quote-wrapper {
+                            max-width: 1800px;
+                            gap: 100px;
+                        }
+                        
+                        .student-img-box {
+                            height: 600px;
+                            max-width: 800px;
+                        }
+
+                        .welcome-box {
+                            max-width: 700px;
+                        }
+                    }
+
+                    /* Laptop/Desktop */
+                    @media (max-width: 1400px) {
+                        .student-quote-wrapper {
+                            gap: 60px;
+                            padding: 0 40px;
+                        }
+                        
+                        .student-img-box {
+                            height: 500px;
+                            max-width: 600px;
+                        }
+
+                        .welcome-box {
+                            max-width: 550px;
+                        }
+                    }
+
+                    /* Medium Desktop */
+                    @media (max-width: 1200px) {
+                        .student-quote-wrapper {
+                            gap: 40px;
+                            padding: 0 30px;
+                        }
+                        
+                        .student-img-box {
+                            height: 450px;
+                            max-width: 500px;
+                        }
+
+                        .welcome-box {
+                            max-width: 500px;
+                        }
+                    }
+
+                    /* Tablet Landscape */
+                    @media (max-width: 1024px) {
+                        .student-quote-wrapper {
+                            flex-direction: column;
+                            gap: 50px;
+                            padding: 0 30px;
+                            margin: 60px auto 0 auto;
+                        }
+
+                        .student-img-box {
+                            max-width: 100%;
+                            height: 400px;
+                            order: 1;
+                        }
+
+                        .welcome-box {
+                            max-width: 100%;
+                            align-items: center;
+                            text-align: center;
+                            padding-right: 0;
+                            order: 2;
                         }
 
                         .welcome-to {
@@ -4769,40 +5087,17 @@
                         }
                     }
 
-                    @media (max-width: 1200px) {
-                        .student-quote-wrapper {
-                            gap: 40px;
-                            padding: 0 30px;
-                            margin: 60px auto auto auto;
-                        }
-
-                        .student-img-box {
-                            max-width: 600px;
-                            height: 400px;
-                        }
-
-                        .welcome-box {
-                            max-width: 600px;
-                            padding-top: 20px;
-                        }
-                    }
-
+                    /* Tablet Portrait */
                     @media (max-width: 768px) {
                         .student-quote-wrapper {
-                            gap: 30px;
-                            padding: 0 20px;
-                            margin: 40px auto auto auto;
-                            min-height: 70vh;
+                            gap: 40px;
+                            padding: 0 25px;
+                            margin: 50px auto 0 auto;
+                            min-height: 75vh;
                         }
 
                         .student-img-box {
-                            max-width: 100%;
-                            height: 300px;
-                        }
-
-                        .welcome-box {
-                            max-width: 100%;
-                            padding-top: 10px;
+                            height: 350px;
                         }
 
                         .welcome-to {
@@ -4816,16 +5111,17 @@
                         }
                     }
 
+                    /* Mobile */
                     @media (max-width: 480px) {
                         .student-quote-wrapper {
-                            gap: 20px;
-                            padding: 0 15px;
-                            margin: 30px auto auto auto;
-                            min-height: 60vh;
+                            gap: 30px;
+                            padding: 0 20px;
+                            margin: 40px auto 0 auto;
+                            min-height: 70vh;
                         }
 
                         .student-img-box {
-                            height: 250px;
+                            height: 280px;
                         }
 
                         .welcome-to {
@@ -4837,7 +5133,143 @@
                             font-size: 12px;
                             padding: 10px 20px;
                         }
+
+                        .know-us-btn svg {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
+
+                    /* Small Mobile */
+                    @media (max-width: 375px) {
+                        .student-quote-wrapper {
+                            gap: 25px;
+                            padding: 0 15px;
+                        }
+
+                        .student-img-box {
+                            height: 250px;
+                        }
+                    }
+
+                    .know-us-btn:hover svg {
+                        transform: translateX(3px);
+                    }
+
+                    /* Desktop Large Screens */
+                    @media (min-width: 1600px) {
+                        .student-quote-wrapper {
+                            max-width: 1600px;
+                            gap: 80px;
+                        }
+                        
+                        .student-img-box {
+                            height: 600px;
+                        }
+                    }
+
+                    /* Laptop/Desktop */
+                    @media (max-width: 1400px) {
+                        .student-quote-wrapper {
+                            gap: 40px;
+                            padding: 0 30px;
+                        }
+                        
+                        .student-img-box {
+                            height: 450px;
+                        }
+                    }
+
+                    /* Tablet Landscape */
+                    @media (max-width: 1024px) {
+                        .student-quote-wrapper {
+                            flex-direction: column;
+                            gap: 50px;
+                            padding: 0 30px;
+                            margin: 60px auto 0 auto;
+                            text-align: center;
+                        }
+
+                        .student-img-box {
+                            max-width: 100%;
+                            height: 400px;
+                            order: 1;
+                        }
+
+                        .welcome-box {
+                            max-width: 100%;
+                            align-items: center;
+                            text-align: center;
+                            padding-left: 0;
+                            order: 2;
+                        }
+                    }
+
+                    /* Tablet Portrait */
+                    @media (max-width: 768px) {
+                        .student-quote-wrapper {
+                            gap: 40px;
+                            padding: 0 25px;
+                            margin: 50px auto 0 auto;
+                            min-height: 75vh;
+                        }
+
+                        .student-img-box {
+                            height: 350px;
+                        }
+
+                        .welcome-to {
+                            font-size: 14px !important;
+                            letter-spacing: 3px !important;
+                        }
+
+                        .know-us-btn {
+                            font-size: 14px;
+                            padding: 12px 24px;
+                        }
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 480px) {
+                        .student-quote-wrapper {
+                            gap: 30px;
+                            padding: 0 20px;
+                            margin: 40px auto 0 auto;
+                            min-height: 70vh;
+                        }
+
+                        .student-img-box {
+                            height: 280px;
+                        }
+
+                        .welcome-to {
+                            font-size: 12px !important;
+                            letter-spacing: 2px !important;
+                        }
+
+                        .know-us-btn {
+                            font-size: 12px;
+                            padding: 10px 20px;
+                        }
+
+                        .know-us-btn svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+
+                    /* Small Mobile */
+                    @media (max-width: 375px) {
+                        .student-quote-wrapper {
+                            gap: 25px;
+                            padding: 0 15px;
+                        }
+
+                        .student-img-box {
+                            height: 250px;
+                        }
+                    }
+                
                 </style>
 
                 <div class="student-quote-wrapper">
