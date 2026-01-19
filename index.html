@@ -6316,7 +6316,7 @@
 
                                 <!-- Animated Course Section - Multiple Images with Changing Content -->
 
-                                <div class="section-slide ui-slide"
+                                <div class="section-slide ui-slide" id="course-depth-section"
                                     style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
                                     <div style=" padding-bottom: 40px;">
@@ -7471,6 +7471,69 @@
                                                 });
                                             });
                                         })();
+                                    </script>
+
+                                    <!-- Yellow Stripe Hide/Show Script for All Sections -->
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            // Get all section elements that should hide the yellow stripe
+                                            const sectionsToHide = [
+                                                document.getElementById('white-hero-section'), // Career section
+                                                document.getElementById('one-tap-section'), // One tap section
+                                                document.getElementById('course-depth-section'), // Course depth section
+                                                document.getElementById('team-section'), // Team section
+                                                document.getElementById('career-launch-section'), // Career launch section
+                                                // Add more sections by their IDs as needed
+                                            ].filter(Boolean); // Remove null elements
+                                            
+                                            const yellowStripe = document.querySelector('.top-yellow-stripe');
+                                            
+                                            if (yellowStripe && sectionsToHide.length > 0) {
+                                                // Add smooth transition to yellow stripe
+                                                yellowStripe.style.transition = 'all 0.5s ease-in-out';
+                                                
+                                                // Track if any section is currently visible
+                                                let visibleSections = new Set();
+                                                
+                                                // Function to update yellow stripe visibility
+                                                function updateYellowStripe() {
+                                                    if (visibleSections.size > 0) {
+                                                        // At least one section is visible - hide yellow stripe
+                                                        yellowStripe.style.opacity = '0';
+                                                        yellowStripe.style.visibility = 'hidden';
+                                                        yellowStripe.style.transform = 'translateY(-100%)';
+                                                    } else {
+                                                        // No sections are visible - show yellow stripe
+                                                        yellowStripe.style.opacity = '1';
+                                                        yellowStripe.style.visibility = 'visible';
+                                                        yellowStripe.style.transform = 'translateY(0)';
+                                                    }
+                                                }
+                                                
+                                                // Create intersection observer for each section
+                                                sectionsToHide.forEach((section, index) => {
+                                                    const observer = new IntersectionObserver((entries) => {
+                                                        entries.forEach(entry => {
+                                                            const sectionId = `section-${index}`;
+                                                            if (entry.isIntersecting) {
+                                                                visibleSections.add(sectionId);
+                                                            } else {
+                                                                visibleSections.delete(sectionId);
+                                                            }
+                                                            updateYellowStripe();
+                                                        });
+                                                    }, {
+                                                        // Trigger when 30% of the section is visible
+                                                        threshold: 0.3,
+                                                        // Add some margin to trigger earlier
+                                                        rootMargin: '-10% 0px -10% 0px'
+                                                    });
+                                                    
+                                                    // Start observing the section
+                                                    observer.observe(section);
+                                                });
+                                            }
+                                        });
                                     </script>
 
                                     <div class="section-slide ui-slide"
