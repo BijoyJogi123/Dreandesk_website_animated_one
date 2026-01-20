@@ -7120,14 +7120,28 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .section-slide-wrap {
+    font-size: 0.40rem !important;
     flex-direction: row !important;
     align-items: center !important;
     gap: 20px !important;
   }
 
-  .section-slide-text {
-    flex: 1 !important;
-    text-align: left !important;
+  .section-slide-text .p3 {
+    font-size: 0.40rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  .section-slide-text div[style*="font-size: 0.20rem"] {
+    font-size: 0.40rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
   }
 
   .section-slide-img-wrap {
@@ -7139,7 +7153,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
-   .section-slide-wrap {
+  .section-slide-wrap {
     flex-direction: row !important;
     align-items: center !important;
     gap: 15px !important;
@@ -7168,7 +7182,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   .section-slide-text div[style*="font-size: 0.20rem"] {
     font-size: 0.18rem !important;
   }
- 
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
