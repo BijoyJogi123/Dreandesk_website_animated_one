@@ -7120,7 +7120,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .section-slide-wrap {
-    font-size: 0.40rem !important;
+    font-size: 0.20rem !important;
     flex-direction: row !important;
     align-items: center !important;
     gap: 20px !important;
