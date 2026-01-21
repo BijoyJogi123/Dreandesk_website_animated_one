@@ -7495,4 +7495,124 @@ div[id="team"].section-slide-text {
   div[id="team"].section-slide-text {
     margin-left: 0 !important;
   }
+}/* MAKE C
+OUNSELOR IMAGES SLIGHTLY SMALLER AND HIDE DESIGNATIONS */
+
+/* Hide all designation text below counselor images */
+.counselors-carousel > div p {
+  display: none !important;
+}
+
+/* DESKTOP (1200px and up) - Slightly smaller images */
+@media only screen and (min-width: 1200px) {
+  .counselors-carousel > div > div {
+    width: 300px !important;
+    height: 420px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 22px !important;
+  }
+}
+
+/* LAPTOP (992px - 1199px) - Slightly smaller */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .counselors-carousel > div > div {
+    width: 250px !important;
+    height: 340px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 18px !important;
+  }
+}
+
+/* TABLET (768px - 991px) - Slightly smaller */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .counselors-carousel > div > div {
+    width: 210px !important;
+    height: 290px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 16px !important;
+  }
+}
+
+/* LARGE MOBILE (600px - 767px) - Slightly smaller */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .counselors-carousel > div > div {
+    width: 180px !important;
+    height: 240px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 14px !important;
+  }
+}
+
+/* MOBILE (480px - 599px) - Slightly smaller */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+  .counselors-carousel > div > div {
+    width: 140px !important;
+    height: 200px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 11px !important;
+  }
+}
+
+/* SMALL MOBILE (≤479px) - Slightly smaller */
+@media only screen and (max-width: 479px) {
+  .counselors-carousel > div > div {
+    width: 115px !important;
+    height: 160px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 9px !important;
+  }
+}
+
+/* VERY SMALL MOBILE (≤375px) - Slightly smaller */
+@media only screen and (max-width: 375px) {
+  .counselors-carousel > div > div {
+    width: 95px !important;
+    height: 135px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 7px !important;
+  }
+}
+
+/* ULTRA SMALL MOBILE (≤320px) - Slightly smaller */
+@media only screen and (max-width: 320px) {
+  .counselors-carousel > div > div {
+    width: 80px !important;
+    height: 110px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 5px !important;
+  }
+}
+
+/* LANDSCAPE ORIENTATION (Mobile) - Slightly smaller */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .counselors-carousel > div > div {
+    width: 70px !important;
+    height: 95px !important;
+  }
+  
+  .counselors-carousel {
+    gap: 4px !important;
+  }
+}
+
+/* ENSURE CLEAN LAYOUT WITHOUT TEXT */
+.counselors-carousel > div {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
