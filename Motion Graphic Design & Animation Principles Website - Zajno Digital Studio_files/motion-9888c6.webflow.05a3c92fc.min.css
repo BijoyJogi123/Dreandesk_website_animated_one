@@ -7125,12 +7125,24 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
     align-items: center !important;
     gap: 20px !important;
   }
-  .section-slide-wrap-team{
-      font-size: 0.20rem !important;
+
+  .section-slide-wrap-team {
+    font-size: 0.20rem !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 20px !important;
   }
+
+  /* #team .section-slide-text div[style*="font-size: 0.20rem"] {
+    font-size: 0.40rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-left:200px;
+
+  } */
 
   .section-slide-text .p3 {
     font-size: 0.40rem;
@@ -7140,7 +7152,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
     text-transform: uppercase;
     letter-spacing: -0.02em;
   }
-
+/* 
   .section-slide-text div[style*="font-size: 0.20rem"] {
     font-size: 0.40rem;
     font-weight: 800;
@@ -7148,7 +7160,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
     margin: 0;
     text-transform: uppercase;
     letter-spacing: -0.02em;
-  }
+  } */
 
   .section-slide-img-wrap {
     flex: 1 !important;
@@ -7390,7 +7402,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   }
 
   .section-slide-text {
-    padding-top: 25px !important;
+    padding-top: 46px !important;
   }
 
   .section-slide-text .p3 {
@@ -7443,5 +7455,44 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   .section-slide-img-wrap {
     flex: 1 !important;
     padding-top: 0 !important;
+  }
+}/* TEA
+M SECTION MARGIN-LEFT RESPONSIVE */
+
+/* Base - Remove margin-left for all screens */
+#team.section-slide-text,
+div[id="team"].section-slide-text {
+  margin-left: 0 !important;
+}
+
+/* DESKTOP (1200px and up) - Apply margin-left: 200px */
+@media only screen and (min-width: 1200px) {
+  #team.section-slide-text,
+  div[id="team"].section-slide-text {
+    margin-left: 200px !important;
+  }
+}
+
+/* LAPTOP (992px - 1199px) - No margin-left */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #team.section-slide-text,
+  div[id="team"].section-slide-text {
+    margin-left: 0 !important;
+  }
+}
+
+/* TABLET (768px - 991px) - No margin-left */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #team.section-slide-text,
+  div[id="team"].section-slide-text {
+    margin-left: 0 !important;
+  }
+}
+
+/* MOBILE (≤767px) - No margin-left */
+@media only screen and (max-width: 767px) {
+  #team.section-slide-text,
+  div[id="team"].section-slide-text {
+    margin-left: 0 !important;
   }
 }
