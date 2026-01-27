@@ -6061,7 +6061,7 @@ textarea.w-select {
 
   .bg-visual {
     height: 20.59rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/6441628eae504f81982de7d0_path_main_tablet.svg)
+    background-image: url(Home_bg_tablets.svg)
   }
 }
 
@@ -7068,7 +7068,7 @@ textarea.w-select {
 
   .bg-visual {
     height: 12.45rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64416361aa8004d7ec3a2b13_path_main_mobile.svg)
+    background-image: url(Home_bg)
   }
 }
 
@@ -7446,7 +7446,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
     gap: 15px !important;
   }
 
-  .section-slide-text {
+  .section-slide-text { 
     flex: 1 !important;
     text-align: left !important;
     padding-top: 20px !important;
