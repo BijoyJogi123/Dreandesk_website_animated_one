@@ -123,19 +123,20 @@
     </div>
 
     <style>
+        /* Responsive Loader Screen Styles - Full Coverage */
         #loader-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
             background: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block !important;
             z-index: 999999;
             transition: opacity 0.5s ease, visibility 0.5s ease;
             overflow: hidden;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
         #loader-screen.hidden {
@@ -143,21 +144,180 @@
             visibility: hidden;
         }
 
+        /* Responsive GIF sizing - Full Screen Coverage */
         #loader-screen img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            display: block !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
         }
 
+        /* Override all responsive sizing for full coverage */
+        @media (min-width: 1200px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 992px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 991px) and (min-width: 768px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 767px) and (min-width: 576px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 575px) and (orientation: landscape) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 575px) and (orientation: portrait) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 375px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        @media (max-width: 320px) {
+            #loader-screen img {
+                width: 100vw !important;
+                height: 100vh !important;
+                object-fit: cover !important;
+            }
+        }
+
+        /* Ensure proper aspect ratio maintenance - Full Screen */
+        #loader-gif {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Prevent scrolling during loading */
         body.loading {
             overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
         }
 
+        /* Hide other elements during loading */
         body.loading .top-yellow-stripe,
         body.loading .navigation,
         body.loading .main,
         body.loading .main-css {
             visibility: hidden !important;
+        }
+
+        /* Fallback for very wide screens */
+        @media (min-width: 1920px) {
+            #loader-screen img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        /* Fallback for very tall screens */
+        @media (min-height: 1080px) {
+            #loader-screen img {
+                max-height: 100vh;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+            #loader-screen img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Ensure loader covers everything */
+        #loader-screen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Smooth transitions - No Animation */
+        #loader-screen img {
+            transition: none !important;
+        }
+
+        /* Remove loading animation */
+        #loader-screen img {
+            animation: none !important;
+        }
+
+        /* Disable animation on reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            #loader-screen img {
+                animation: none;
+            }
+
+            #loader-screen {
+                transition: none;
+            }
         }
     </style>
 
@@ -1836,7 +1996,7 @@
                     <!-- Mobile-First Responsive Navigation Fix -->
                     <style>
                         /* Force Override All Navigation Styles for Mobile Compatibility */
-                        
+
                         /* Base Navigation Container Fixes */
                         .nav-header {
                             position: relative !important;
@@ -1861,7 +2021,7 @@
                             justify-content: space-between !important;
                             padding: 0 20px !important;
                             box-sizing: border-box !important;
-                            margin-top:20px;
+                            margin-top: 20px;
                         }
 
                         .nav-logo {
@@ -1968,26 +2128,26 @@
                         }
 
                         /* Mobile Responsive Breakpoints */
-                        
+
                         /* Tablet Landscape (769px-1024px) */
                         @media (max-width: 1024px) and (min-width: 769px) {
                             .nav-panel {
                                 padding: 0 20px !important;
-                                margin-top:20px;
+                                margin-top: 20px;
                             }
-                            
+
                             #logo-wrap img {
                                 width: 120px !important;
                             }
-                            
+
                             #hero-nav-options {
                                 display: none !important;
                             }
-                            
+
                             #breadcrumbs-wrap {
                                 display: none !important;
                             }
-                            
+
                             #toggle-btn {
                                 right: 20px !important;
                                 /* top: 90px !important; */
@@ -1996,11 +2156,11 @@
                                 gap: 10px !important;
                                 padding: 0 16px !important;
                             }
-                            
+
                             .menu-text {
                                 font-size: 16px !important;
                             }
-                            
+
                             #hamburger .line-1,
                             #hamburger .line-2 {
                                 width: 20px !important;
@@ -2012,21 +2172,21 @@
                         @media (max-width: 768px) and (min-width: 481px) {
                             .nav-panel {
                                 padding: 0 15px !important;
-                                margin-top:20px;
+                                margin-top: 20px;
                             }
-                            
+
                             #logo-wrap img {
                                 width: 110px !important;
                             }
-                            
+
                             #hero-nav-options {
                                 display: none !important;
                             }
-                            
+
                             #breadcrumbs-wrap {
                                 display: none !important;
                             }
-                            
+
                             #toggle-btn {
                                 right: 15px !important;
                                 /* top: 85px !important; */
@@ -2035,11 +2195,11 @@
                                 gap: 8px !important;
                                 padding: 0 14px !important;
                             }
-                            
+
                             .menu-text {
                                 font-size: 14px !important;
                             }
-                            
+
                             #hamburger .line-1,
                             #hamburger .line-2 {
                                 width: 18px !important;
@@ -2051,21 +2211,21 @@
                         @media (max-width: 480px) and (min-width: 376px) {
                             .nav-panel {
                                 padding: 0 12px !important;
-                                margin-top:20px;
+                                margin-top: 20px;
                             }
-                            
+
                             #logo-wrap img {
                                 width: 100px !important;
                             }
-                            
+
                             #hero-nav-options {
                                 display: none !important;
                             }
-                            
+
                             #breadcrumbs-wrap {
                                 display: none !important;
                             }
-                            
+
                             #toggle-btn {
                                 right: 12px !important;
                                 /* top: 80px !important; */
@@ -2074,11 +2234,11 @@
                                 gap: 6px !important;
                                 padding: 0 12px !important;
                             }
-                            
+
                             .menu-text {
                                 font-size: 12px !important;
                             }
-                            
+
                             #hamburger .line-1,
                             #hamburger .line-2 {
                                 width: 16px !important;
@@ -2091,19 +2251,19 @@
                             .nav-panel {
                                 padding: 0 10px !important;
                             }
-                            
+
                             #logo-wrap img {
                                 width: 90px !important;
                             }
-                            
+
                             #hero-nav-options {
                                 display: none !important;
                             }
-                            
+
                             #breadcrumbs-wrap {
                                 display: none !important;
                             }
-                            
+
                             #toggle-btn {
                                 right: 10px !important;
                                 /* top: 75px !important; */
@@ -2112,11 +2272,11 @@
                                 gap: 5px !important;
                                 padding: 0 10px !important;
                             }
-                            
+
                             .menu-text {
                                 font-size: 10px !important;
                             }
-                            
+
                             #hamburger .line-1,
                             #hamburger .line-2 {
                                 width: 14px !important;
@@ -2130,17 +2290,17 @@
                                 overflow: visible !important;
                                 position: relative !important;
                             }
-                            
+
                             .nav-panels {
                                 overflow: visible !important;
                                 position: relative !important;
                             }
-                            
+
                             .nav-panel {
                                 flex-wrap: nowrap !important;
                                 overflow: visible !important;
                             }
-                            
+
                             .nav-logo {
                                 flex-shrink: 0 !important;
                                 min-width: 0 !important;
@@ -2154,24 +2314,24 @@
 
                         /* Force Menu Button to Black in Course Depth Section */
                         body:has(#course-depth-section) #toggle-btn,
-                        #course-depth-section ~ * #toggle-btn,
-                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #toggle-btn {
+                        #course-depth-section~* #toggle-btn,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"])~* #toggle-btn {
                             border: 2px solid #000000 !important;
                             background: rgba(255, 255, 255, 0.95) !important;
                         }
 
                         body:has(#course-depth-section) .menu-text,
-                        #course-depth-section ~ * .menu-text,
-                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * .menu-text {
+                        #course-depth-section~* .menu-text,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"])~* .menu-text {
                             color: #000000 !important;
                         }
 
                         body:has(#course-depth-section) #hamburger .line-1,
                         body:has(#course-depth-section) #hamburger .line-2,
-                        #course-depth-section ~ * #hamburger .line-1,
-                        #course-depth-section ~ * #hamburger .line-2,
-                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #hamburger .line-1,
-                        .section-slide:has([style*="THIS SECTION PROVIDES"]) ~ * #hamburger .line-2 {
+                        #course-depth-section~* #hamburger .line-1,
+                        #course-depth-section~* #hamburger .line-2,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"])~* #hamburger .line-1,
+                        .section-slide:has([style*="THIS SECTION PROVIDES"])~* #hamburger .line-2 {
                             background: #000000 !important;
                         }
 
@@ -6169,12 +6329,16 @@
 
                 </div>
 
-                <div class="embed-path_mobile w-embed"><svg style="opacity:0; display: block;" viewBox="0 0 166 1405"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="embed-path_mobile w-embed">
+                    <svg style="opacity:0; display: block;" viewBox="0 0 166 1405" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path id="vrtx-mobile"
                             d="M57.6326 1C57.6326 1 81.0721 1 91 1C139.504 1 165 66 165 223C156.5 199 140.5 174 111 174C48.5 174 43.5 263 43.5 320.5C43.5 394.7 43.5 368.715 43.5 499.5C54.5 477.5 67.1106 456 90.5 456C147.207 456 156 564.239 156 695.5C151.5 669 122 625.5 79 625.5C36 625.5 1 659.5 1 741C1 822.5 1 1404 1 1404C5.5 1391 15.5 1383 29 1383C42.5 1383 54 1391 57 1404"
                             stroke="white"></path>
-                    </svg></div>
+                    </svg>
+                </div>
+
+
             </div>
             <div class="ui-wrap" style="margin-top: -242px;">
                 <div class="pin-spacer"
@@ -6214,12 +6378,10 @@
 
 
                                                 <div class="section-slide-text" style="padding-top: 50px;">
-                                                    <div class="p3"
-                                                        >
+                                                    <div class="p3">
                                                         We’ll map your perfect career path
                                                     </div>
-                                                    <div
-                                                        >
+                                                    <div>
                                                         <p>Start your carrear with Us</p>
                                                         <p>choose your dream career
                                                         </p>
@@ -6286,12 +6448,10 @@
                                                 </div>
 
                                                 <div class="section-slide-text" style="padding-top: 50px;">
-                                                    <div class="p3"
-                                                    >
+                                                    <div class="p3">
                                                         One tap unlocks your futures.
                                                     </div>
-                                                    <div
-                                                        >
+                                                    <div>
                                                         <p>Your Present → Your Perfect Career Paths.</p>
                                                         <p>Which Future Calls You?
                                                         </p>
@@ -6451,7 +6611,7 @@
 
 
 
-                               
+
 
                             </div>
                         </div>
@@ -6496,24 +6656,25 @@
                                                 </div>
 
                                                 <!-- Title Section -->
-                                                <div id="team" class="section-slide-text" style="padding: 60px 20px 20px 20px; margin-left: 200px;">
-                                                    <div class="p3"
-                                                        >
+                                                <div id="team" class="section-slide-text"
+                                                    style="padding: 60px 20px 20px 20px; margin-left: 200px;">
+                                                    <div class="p3">
                                                         Meet Our Team.
                                                     </div>
-                                                    <div
-                                                       >
+                                                    <div>
                                                         <p style="margin: 0;">Your personal guides to success</p>
                                                     </div>
                                                 </div>
 
                                                 <!-- Scrolling Carousel -->
                                                 <!-- Scrolling Carousel -->
-                                                <div style="padding: 20px; overflow: hidden; width:100%; flex: 1; display: flex; align-items: center;">
+                                                <div
+                                                    style="padding: 20px; overflow: hidden; width:100%; flex: 1; display: flex; align-items: center;">
                                                     <div class="counselors-carousel"
                                                         style="display: flex; gap: 25px; animation: counselorCarousel 15s linear infinite; height: 100%;">
                                                         <!-- Counselor 1 -->
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/deepsika.png"
@@ -6528,7 +6689,8 @@
                                                             </div>
                                                         </div>
                                                         <!-- Counselor 2 -->
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/Abhishek.png"
@@ -6543,7 +6705,8 @@
                                                             </div>
                                                         </div>
                                                         <!-- Counselor 3 -->
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/kalyani (2).png"
@@ -6558,7 +6721,8 @@
                                                             </div>
                                                         </div>
                                                         <!-- Counselor 4 -->
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/Priyashree.png"
@@ -6573,7 +6737,8 @@
                                                             </div>
                                                         </div>
                                                         <!-- Duplicates for seamless loop -->
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/Rishab.png"
@@ -6587,7 +6752,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/rubi.png"
@@ -6602,7 +6768,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/Satyaki.png"
@@ -6617,7 +6784,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/Shubo.png"
@@ -6632,7 +6800,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="counselor-item" style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                                                             <div class="counselor-image-container"
                                                                 style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
                                                                 <img src="./counselor_images/sr sir.png"
@@ -6685,7 +6854,8 @@
                                     </div>
 
 
-                                    <div id="career-launch-section" class="section-slide ui-slide career-section-responsive">
+                                    <div id="career-launch-section"
+                                        class="section-slide ui-slide career-section-responsive">
                                         <div class="career-inner-wrapper">
                                             <div class="section-slide-wrap career-slide-wrap">
 
@@ -7091,7 +7261,7 @@
 
                                     <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
                                     <script>
-                                        document.addEventListener('DOMContentLoaded', function() {
+                                        document.addEventListener('DOMContentLoaded', function () {
                                             // Get all section elements that should hide the yellow stripe
                                             const sectionsToHide = [
                                                 document.getElementById('white-hero-section'), // Career section
@@ -7101,27 +7271,27 @@
                                                 document.getElementById('career-launch-section'), // Career launch section
                                                 // Add more sections by their IDs as needed
                                             ].filter(Boolean); // Remove null elements
-                                            
+
                                             // Get sections that should change menu button to black
                                             const lightBackgroundSections = [
                                                 document.getElementById('course-depth-section'), // Course depth section
                                                 document.getElementById('white-hero-section'), // Career section
                                                 document.getElementById('one-tap-section'), // One tap section
                                             ].filter(Boolean);
-                                            
+
                                             const yellowStripe = document.querySelector('.top-yellow-stripe');
                                             const toggleBtn = document.getElementById('toggle-btn');
                                             const menuText = document.querySelector('.menu-text');
                                             const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
-                                            
+
                                             if (yellowStripe && sectionsToHide.length > 0) {
                                                 // Add smooth transition to yellow stripe
                                                 yellowStripe.style.transition = 'all 0.5s ease-in-out';
-                                                
+
                                                 // Track if any section is currently visible
                                                 let visibleSections = new Set();
                                                 let visibleLightSections = new Set();
-                                                
+
                                                 // Function to update yellow stripe visibility
                                                 function updateYellowStripe() {
                                                     if (visibleSections.size > 0) {
@@ -7136,11 +7306,11 @@
                                                         yellowStripe.style.transform = 'translateY(0)';
                                                     }
                                                 }
-                                                
+
                                                 // Function to update menu button color
                                                 function updateMenuButtonColor() {
                                                     const htmlElement = document.documentElement;
-                                                    
+
                                                     if (toggleBtn && menuText && hamburgerLines.length > 0) {
                                                         // Add smooth transition
                                                         toggleBtn.style.transition = 'all 0.3s ease';
@@ -7148,7 +7318,7 @@
                                                         hamburgerLines.forEach(line => {
                                                             line.style.transition = 'all 0.3s ease';
                                                         });
-                                                        
+
                                                         if (visibleLightSections.size > 0) {
                                                             // Light background section is visible - make menu button black
                                                             htmlElement.setAttribute('data-current-section', 'course-depth');
@@ -7170,7 +7340,7 @@
                                                         }
                                                     }
                                                 }
-                                                
+
                                                 // Create intersection observer for each section
                                                 sectionsToHide.forEach((section, index) => {
                                                     const observer = new IntersectionObserver((entries) => {
@@ -7189,11 +7359,11 @@
                                                         // Add some margin to trigger earlier
                                                         rootMargin: '-10% 0px -10% 0px'
                                                     });
-                                                    
+
                                                     // Start observing the section
                                                     observer.observe(section);
                                                 });
-                                                
+
                                                 // Create intersection observer for light background sections
                                                 lightBackgroundSections.forEach((section, index) => {
                                                     const observer = new IntersectionObserver((entries) => {
@@ -7212,7 +7382,7 @@
                                                         // Add some margin to trigger earlier
                                                         rootMargin: '-10% 0px -10% 0px'
                                                     });
-                                                    
+
                                                     // Start observing the light background section
                                                     observer.observe(section);
                                                 });
@@ -7697,7 +7867,7 @@
                                                         flex-direction: column;
                                                         gap: 20px;
                                                         width: 90%;
-                                                       
+
                                                     }
 
                                                     #spinny-flipz-section .gallery-image-container {
@@ -7747,7 +7917,7 @@
                                                     width: 100%;
                                                     height: 22vh;
                                                     pointer-events: none;
-                                                     visibility:hidden;
+                                                    visibility: hidden;
                                                 }
 
                                                 /* Rotating wheel */
@@ -7763,7 +7933,7 @@
                                                     height: 300vw;
                                                     max-width: 2000px;
                                                     max-height: 2000px;
-                                                     visibility:hidden;
+                                                    visibility: hidden;
                                                 }
 
                                                 /* Individual image cards */
@@ -7777,7 +7947,7 @@
                                                     cursor: pointer;
                                                     pointer-events: auto;
                                                     transition: transform 0.3s ease, filter 0.3s ease;
-                                                     visibility:hidden;
+                                                    visibility: hidden;
                                                 }
 
                                                 #spinny-flipz-section .spinny-item:hover {
@@ -7803,7 +7973,7 @@
                                                     border-radius: 8px;
                                                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                                                     transition: filter 0.3s ease, box-shadow 0.3s ease;
-                                                     visibility:hidden;
+                                                    visibility: hidden;
                                                 }
 
                                                 /* Scroll indicator */
