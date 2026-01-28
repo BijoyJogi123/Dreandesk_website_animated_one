@@ -1786,14 +1786,15 @@
                             transform: none;
                         }
 
-                        #hamburger.active .line-1 {
-                            transform: rotate(45deg) translateY(9px);
-                            background: #f2d803;
+                        /* Hamburger Cross Animation - Very Specific to avoid conflicts */
+                        #toggle-btn #hamburger.active .line.line-1 {
+                            transform: rotate(45deg) translateY(9px) !important;
+                            background: #f2d803 !important;
                         }
 
-                        #hamburger.active .line-2 {
-                            transform: rotate(-45deg) translateY(-9px);
-                            background: #f2d803;
+                        #toggle-btn #hamburger.active .line.line-2 {
+                            transform: rotate(-45deg) translateY(-9px) !important;
+                            background: #f2d803 !important;
                         }
 
                         #hamburger.active+.menu-text {
@@ -2417,7 +2418,9 @@
                                 const toggleBtn = document.getElementById("toggle-btn");
 
                                 toggleBtn.onclick = (e) => {
+                                    console.log("Menu button clicked"); // Debug
                                     hamburger.classList.toggle("active");
+                                    console.log("Hamburger active:", hamburger.classList.contains("active")); // Debug
                                     tl.reversed(!tl.reversed());
                                 };
                             }
