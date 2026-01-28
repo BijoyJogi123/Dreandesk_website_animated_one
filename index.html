@@ -1656,16 +1656,31 @@
                         <div class="primary-menu">
                             <div class="menu-container">
                                 <div class="wrapper">
-                                    <div class="menu-item">
-                                        <a href="#"><span>I</span>Home</a>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>01</span>Home</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                    <div class="menu-item">
-                                        <a href="#"><span>II</span>About</a>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>02</span>About</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                    <div class="menu-item">
-                                        <a href="#"><span>III</span>Services</a>
+                                    <div class="menu-item has-submenu" data-submenu="services">
+                                        <a href="#" class="services-toggle"><span>03</span>Services <span class="submenu-arrow">+</span></a>
+                                        <div class="menu-item-revealer"></div>
+                                        <div class="submenu">
+                                            <div class="submenu-item">
+                                                <a href="#">For Youth</a>
+                                            </div>
+                                            <div class="submenu-item">
+                                                <a href="#">For Educational Institutions</a>
+                                            </div>
+                                            <div class="submenu-item">
+                                                <a href="#">For Corporate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>04</span>Initiative</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
                                 </div>
@@ -1674,20 +1689,16 @@
                         <div class="secondary-menu">
                             <div class="menu-container">
                                 <div class="wrapper">
-                                    <div class="menu-item">
-                                        <a href="#">Courses</a>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>05</span>Blogs</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                    <div class="menu-item">
-                                        <a href="#">Career Guidance</a>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>06</span>Careers</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                    <div class="menu-item">
-                                        <a href="#">Contact</a>
-                                        <div class="menu-item-revealer"></div>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a href="#">Blog</a>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>07</span>Contact</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
                                 </div>
@@ -1881,10 +1892,52 @@
 
                         .primary-menu a {
                             text-transform: uppercase;
-                            font-size: 125px;
+                            font-size: 48px;
                             font-weight: 700;
                             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                            letter-spacing: -2px;
+                            letter-spacing: -1px;
+                            margin: 8px 0;
+                            line-height: 1.1;
+                        }
+
+                        .secondary-menu .menu-item a {
+                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                            font-size: 48px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            letter-spacing: -1px;
+                            margin: 8px 0;
+                            line-height: 1.1;
+                        }
+
+                        .menu a span {
+                            font-size: 16px;
+                            margin-right: 1.5em;
+                            opacity: 0.7;
+                        }
+
+                        /* Adjust menu container for better fit */
+                        .menu-container {
+                            width: 80%;
+                            height: 80%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+
+                        .primary-menu .menu-container .wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                        }
+
+                        .secondary-menu .menu-container .wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            gap: 15px;
                         }
 
                         .secondary-menu {
@@ -1896,17 +1949,91 @@
                             flex-direction: column;
                         }
 
-                        .secondary-menu .menu-item a {
-                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                            font-size: 36px;
-                            font-weight: 400;
-                            letter-spacing: 0.5px;
+                        /* Services Submenu Styles - Adjusted for smaller size */
+                        .has-submenu {
+                            position: relative;
                         }
 
-                        .secondary-menu .menu-container .wrapper {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 30px;
+                        .submenu-arrow {
+                            font-size: 20px;
+                            margin-left: 10px;
+                            transition: all 0.3s ease;
+                            display: inline-block;
+                            color: #ffffff;
+                        }
+
+                        .has-submenu.active .submenu-arrow {
+                            transform: rotate(45deg);
+                            color: #f2d803;
+                        }
+
+                        .submenu {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.4s ease, opacity 0.3s ease;
+                            opacity: 0;
+                            margin-top: 10px;
+                            padding-left: 30px;
+                        }
+
+                        .has-submenu.active .submenu {
+                            max-height: 180px;
+                            opacity: 1;
+                        }
+
+                        .submenu-item {
+                            margin-bottom: 8px;
+                            transform: translateX(-15px);
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                        }
+
+                        .has-submenu.active .submenu-item {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+
+                        .has-submenu.active .submenu-item:nth-child(1) {
+                            transition-delay: 0.1s;
+                        }
+
+                        .has-submenu.active .submenu-item:nth-child(2) {
+                            transition-delay: 0.2s;
+                        }
+
+                        .has-submenu.active .submenu-item:nth-child(3) {
+                            transition-delay: 0.3s;
+                        }
+
+                        .submenu-item a {
+                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                            font-size: 20px;
+                            font-weight: 400;
+                            color: var(--clr-link);
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            letter-spacing: 0.3px;
+                            position: relative;
+                            transition: color 0.3s ease;
+                            display: block;
+                            padding: 3px 0;
+                            top: 0;
+                            line-height: 1.2;
+                        }
+
+                        .submenu-item a:hover {
+                            color: #f2d803;
+                        }
+
+                        .submenu-item a::before {
+                            content: "→";
+                            margin-right: 8px;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                        }
+
+                        .submenu-item a:hover::before {
+                            opacity: 1;
                         }
 
                         /* Mobile Responsive */
@@ -1931,15 +2058,36 @@
                             }
 
                             .primary-menu a {
-                                font-size: 60px;
+                                font-size: 32px;
                                 font-weight: 700;
-                                letter-spacing: -1px;
+                                letter-spacing: -0.5px;
+                                margin: 6px 0;
                             }
 
                             .secondary-menu .menu-item a {
-                                font-size: 24px;
-                                font-weight: 400;
-                                letter-spacing: 0.3px;
+                                font-size: 32px;
+                                font-weight: 700;
+                                letter-spacing: -0.5px;
+                                margin: 6px 0;
+                            }
+
+                            /* Mobile Submenu Styles */
+                            .submenu {
+                                padding-left: 25px;
+                            }
+
+                            .submenu-item a {
+                                font-size: 16px;
+                            }
+
+                            .submenu-arrow {
+                                font-size: 18px;
+                                margin-left: 8px;
+                            }
+
+                            .menu a span {
+                                font-size: 14px;
+                                margin-right: 1.2em;
                             }
 
                             .menu {
@@ -1976,19 +2124,35 @@
                             }
 
                             .primary-menu a {
-                                font-size: 40px;
+                                font-size: 24px;
                                 font-weight: 700;
-                                letter-spacing: -0.5px;
+                                letter-spacing: -0.3px;
+                                margin: 4px 0;
                             }
 
                             .secondary-menu .menu-item a {
-                                font-size: 20px;
-                                font-weight: 400;
-                                letter-spacing: 0.2px;
+                                font-size: 24px;
+                                font-weight: 700;
+                                letter-spacing: -0.3px;
+                                margin: 4px 0;
+                            }
+
+                            /* Mobile Small Submenu Styles */
+                            .submenu {
+                                padding-left: 20px;
+                            }
+
+                            .submenu-item a {
+                                font-size: 14px;
+                            }
+
+                            .submenu-arrow {
+                                font-size: 16px;
+                                margin-left: 6px;
                             }
 
                             .menu a span {
-                                font-size: 16px;
+                                font-size: 12px;
                                 margin-right: 1em;
                             }
                         }
@@ -2423,6 +2587,25 @@
                                     console.log("Hamburger active:", hamburger.classList.contains("active")); // Debug
                                     tl.reversed(!tl.reversed());
                                 };
+
+                                // Services submenu functionality
+                                const servicesToggle = document.querySelector('.services-toggle');
+                                const hasSubmenu = document.querySelector('.has-submenu');
+
+                                if (servicesToggle && hasSubmenu) {
+                                    servicesToggle.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        hasSubmenu.classList.toggle('active');
+                                        
+                                        // Update arrow text
+                                        const arrow = servicesToggle.querySelector('.submenu-arrow');
+                                        if (hasSubmenu.classList.contains('active')) {
+                                            arrow.textContent = '×';
+                                        } else {
+                                            arrow.textContent = '+';
+                                        }
+                                    });
+                                }
                             }
 
                             revealMenu();
