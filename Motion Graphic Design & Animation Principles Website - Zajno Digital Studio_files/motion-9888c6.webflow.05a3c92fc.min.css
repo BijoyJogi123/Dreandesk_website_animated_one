@@ -6061,7 +6061,8 @@ textarea.w-select {
 
   .bg-visual {
     height: 20.59rem;
-    background-image: url(../Home_bg_tablet.svg)
+    background-image: url(../Home_bg_tablet.svg);
+    background-color:#000000
   }
 }
 
