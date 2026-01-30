@@ -7124,7 +7124,7 @@
 
                                         <div style=" padding-bottom: 40px;">
                                             <div class="section-slide-wrap"
-                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 20px; background: #f8f8f6; position: relative;">
+                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 60px 100px 20px 100px; background: #f8f8f6; position: relative;">
 
                                                 <!-- Top bar decoration -->
                                                 <div
@@ -7139,24 +7139,221 @@
                                                     </div>
                                                 </div>
 
+                                                <!-- Main Content Container -->
+                                                <div style="padding-top: 20px; display: flex; width: 100%; height: 400px; position: relative;">
+                                                    
+                                                    <!-- Left Content Section -->
+                                                    <div style="flex: 1; max-width: 55%; padding-right: 40px; display: flex; flex-direction: column; justify-content: center;">
+                                                        <!-- Main Heading -->
+                                                        <div style="margin-bottom: 20px;">
+                                                            <h1 style="font-size: 52px; font-weight: 900; color: #0c0b0b; line-height: 1.1; margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+                                                                Discover Your<br>
+                                                                <span style="color: #f2d803;">True Potential</span>
+                                                            </h1>
+                                                        </div>
 
-                                                <div class="section-slide-text" style="padding-top: 50px;">
-                                                    <div class="p3">
-                                                        We’ll map your perfect career path
+                                                        <!-- Description -->
+                                                        <div style="margin-bottom: 25px;">
+                                                            <p style="font-size: 15px; color: #666; line-height: 1.6; margin: 0; font-family: Arial, sans-serif; max-width: 95%;">
+                                                                Take the most accurate MBTI personality test to identify your natural tendencies, helping you make better decisions in your career, relationships, and personal growth.
+                                                            </p>
+                                                        </div>
+
+                                                        <!-- Start Test Button -->
+                                                        <div style="margin-bottom: 25px;">
+                                                            <button style="background: #f2d803; color: #0c0b0b; border: none; padding: 12px 25px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: Arial, sans-serif;">
+                                                                START TEST
+                                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+
+                                                      
+
                                                     </div>
-                                                    <div>
-                                                        <p>Start your carrear with Us</p>
-                                                        <p>choose your dream career
-                                                        </p>
-                                                    </div>
-                                                </div>
 
+                                                    <!-- Right Visual Section -->
+                                                    <div style="flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 45%; height: 100%; padding: 10px;">
+                                                        
+                                                        <!-- Top Circular Section -->
+                                                        <div style="position: relative; width: 240px; height: 240px; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+                                                            
+                                                            <!-- CSS Animation Styles -->
+                                                            <style>
+                                                                @keyframes glowPulse {
+                                                                    0%, 100% { 
+                                                                        box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.1);
+                                                                        opacity: 0.6;
+                                                                    }
+                                                                    50% { 
+                                                                        box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.3), 0 0 90px rgba(139, 92, 246, 0.2);
+                                                                        opacity: 0.8;
+                                                                    }
+                                                                }
+                                                                
+                                                                @keyframes switchPositions {
+                                                                    0%, 20% { transform: translate(0, 0) scale(1); }
+                                                                    25%, 45% { transform: translate(20px, 10px) scale(1.1); }
+                                                                    50%, 70% { transform: translate(-15px, -20px) scale(1); }
+                                                                    75%, 95% { transform: translate(-10px, 15px) scale(1.1); }
+                                                                    100% { transform: translate(0, 0) scale(1); }
+                                                                }
+                                                                
+                                                                @keyframes switchPositions2 {
+                                                                    0%, 20% { transform: translate(0, 0) scale(1); }
+                                                                    25%, 45% { transform: translate(-20px, -10px) scale(1.1); }
+                                                                    50%, 70% { transform: translate(15px, 20px) scale(1); }
+                                                                    75%, 95% { transform: translate(10px, -15px) scale(1.1); }
+                                                                    100% { transform: translate(0, 0) scale(1); }
+                                                                }
+                                                                
+                                                                @keyframes floatDots {
+                                                                    0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+                                                                    50% { transform: translateY(-3px) scale(1.1); opacity: 0.9; }
+                                                                }
+                                                                
+                                                                @keyframes characterPulse {
+                                                                    0%, 100% { 
+                                                                        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+                                                                        transform: scale(1);
+                                                                    }
+                                                                    50% { 
+                                                                        box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+                                                                        transform: scale(1.05);
+                                                                    }
+                                                                }
+                                                                
+                                                                .glow-ring-1 {
+                                                                    animation: glowPulse 3s ease-in-out infinite;
+                                                                }
+                                                                
+                                                                .glow-ring-2 {
+                                                                    animation: glowPulse 3s ease-in-out infinite 0.5s;
+                                                                }
+                                                                
+                                                                .glow-ring-3 {
+                                                                    animation: glowPulse 3s ease-in-out infinite 1s;
+                                                                }
+                                                                
+                                                                .character-circle {
+                                                                    width: 37px;
+                                                                    height: 37px;
+                                                                    background: white;
+                                                                    border-radius: 50%;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    font-size: 21px;
+                                                                    font-weight: bold;
+                                                                    color: #8B5CF6;
+                                                                    font-family: Arial, sans-serif;
+                                                                    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+                                                                    animation: characterPulse 2s ease-in-out infinite;
+                                                                    cursor: pointer;
+                                                                    transition: all 0.3s ease;
+                                                                }
+                                                                
+                                                                .character-circle:hover {
+                                                                    transform: scale(1.2);
+                                                                    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+                                                                }
+                                                                
+                                                                .switching-1 {
+                                                                    animation: switchPositions 8s ease-in-out infinite;
+                                                                }
+                                                                
+                                                                .switching-2 {
+                                                                    animation: switchPositions2 8s ease-in-out infinite;
+                                                                }
+                                                                
+                                                                .floating-dot {
+                                                                    animation: floatDots 2s ease-in-out infinite;
+                                                                }
+                                                            </style>
+                                                            
+                                                            <!-- Outermost Glowing Ring -->
+                                                            <div class="glow-ring-1" style="position: absolute; width: 240px; height: 240px; background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 30%, #DDD6FE 70%, #E0E7FF 100%); border-radius: 50%; opacity: 0.6;"></div>
+                                                            
+                                                            <!-- Middle Glowing Ring -->
+                                                            <div class="glow-ring-2" style="position: absolute; width: 200px; height: 200px; background: linear-gradient(135deg, #C7D2FE 0%, #B4C6FC 50%, #DDD6FE 100%); border-radius: 50%; opacity: 0.7;"></div>
+                                                            
+                                                            <!-- Inner Glowing Ring -->
+                                                            <div class="glow-ring-3" style="position: absolute; width: 160px; height: 160px; background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #FFFFFF 100%); border-radius: 50%; box-shadow: 0 4px 25px rgba(139, 92, 246, 0.2);"></div>
+                                                            
+                                                            <!-- YOU Circle - Center -->
+                                                            <div style="position: relative; width: 93px; height: 93px; background: linear-gradient(135deg, rgb(0, 0, 0)rgb(1, 0, 2)C3AED 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 21px; font-family: Arial, sans-serif; box-shadow: 0 8px 40px rgba(139, 92, 246, 0.5); z-index: 10;">
+                                                                YOU
+                                                            </div>
 
-                                                <div class="section-slide-img-wrap" style="padding-top: 50px;">
-                                                    <div class="section-slide-video w-embed">
-                                                        <img src="./story_section_images/We’ll map your perfect career path-01.svg"
-                                                            alt="Career Path Illustration"
-                                                            style="width: 100%; height: 100%; object-fit: contain;">
+                                                            <!-- Character Circles with Switching Animation -->
+                                                            
+                                                            <!-- Character Circles - Perfectly Positioned Around Circle -->
+                                                            
+                                                            <!-- F - Top (0°) -->
+                                                            <div class="character-circle switching-1" style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%); animation-delay: 0s;">F</div>
+                                                            
+                                                            <!-- N - Top Right (45°) -->
+                                                            <div class="character-circle switching-2" style="position: absolute; top: 15px; right: 15px; animation-delay: 1s;">N</div>
+                                                            
+                                                            <!-- I - Right (90°) -->
+                                                            <div class="character-circle switching-1" style="position: absolute; right: 0px; top: 50%; transform: translateY(-50%); animation-delay: 2s;">I</div>
+                                                            
+                                                            <!-- S - Bottom Right (135°) -->
+                                                            <div class="character-circle switching-2" style="position: absolute; bottom: 15px; right: 15px; animation-delay: 3s;">S</div>
+                                                            
+                                                            <!-- T - Bottom (180°) -->
+                                                            <div class="character-circle switching-1" style="position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%); animation-delay: 4s;">T</div>
+                                                            
+                                                            <!-- P - Bottom Left (225°) -->
+                                                            <div class="character-circle switching-2" style="position: absolute; bottom: 15px; left: 15px; animation-delay: 5s;">P</div>
+                                                            
+                                                            <!-- E - Left (270°) -->
+                                                            <div class="character-circle switching-1" style="position: absolute; left: 0px; top: 50%; transform: translateY(-50%); animation-delay: 6s;">E</div>
+                                                            
+                                                            <!-- J - Top Left (315°) -->
+                                                            <div class="character-circle switching-2" style="position: absolute; top: 15px; left: 15px; animation-delay: 7s;">J</div>
+
+                                                            <!-- Floating Decorative Dots -->
+                                                            <div class="floating-dot" style="position: absolute; top: 30px; left: 50px; width: 4px; height: 4px; background: #8B5CF6; border-radius: 50%; opacity: 0.7; animation-delay: 0s;"></div>
+                                                            <div class="floating-dot" style="position: absolute; top: 50px; right: 35px; width: 3px; height: 3px; background: #A855F7; border-radius: 50%; opacity: 0.6; animation-delay: 0.5s;"></div>
+                                                            <div class="floating-dot" style="position: absolute; bottom: 40px; right: 55px; width: 4px; height: 4px; background: #8B5CF6; border-radius: 50%; opacity: 0.7; animation-delay: 1s;"></div>
+                                                            <div class="floating-dot" style="position: absolute; bottom: 50px; left: 35px; width: 3px; height: 3px; background: #A855F7; border-radius: 50%; opacity: 0.6; animation-delay: 1.5s;"></div>
+                                                            <div class="floating-dot" style="position: absolute; top: 70px; left: 25px; width: 2px; height: 2px; background: #C084FC; border-radius: 50%; opacity: 0.5; animation-delay: 0.3s;"></div>
+                                                            <div class="floating-dot" style="position: absolute; top: 25px; right: 70px; width: 3px; height: 3px; background: #C084FC; border-radius: 50%; opacity: 0.6; animation-delay: 0.8s;"></div>
+                                                        </div>
+
+                                                        <!-- Bottom MBTI Cards Grid -->
+                                                        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; width: 100%; max-width: 400px; ">
+                                                            
+                                                            <!-- E - Extrovert -->
+                                                            <div style="background: white; padding: 12px 10px; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); text-align: center; border: 1px solid rgba(139, 92, 246, 0.1);">
+                                                                <div style="font-size: 32px; font-weight: bold; color: #8B5CF6; font-family: Arial, sans-serif; margin-bottom: 4px; line-height: 1;">E</div>
+                                                                <div style="font-size: 11px; color: #6B7280; font-family: Arial, sans-serif; margin-bottom: 8px; font-weight: 500;">Extrovert</div>
+                                                                <div style="width: 40px; height: 3px; background: linear-gradient(90deg, #8B5CF6 0%, #A855F7 100%); margin: 0 auto; border-radius: 2px;"></div>
+                                                            </div>
+
+                                                            <!-- N - Intuitive -->
+                                                            <div style="background: white; padding: 12px 10px; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); text-align: center; border: 1px solid rgba(139, 92, 246, 0.1);">
+                                                                <div style="font-size: 32px; font-weight: bold; color: #8B5CF6; font-family: Arial, sans-serif; margin-bottom: 4px; line-height: 1;">N</div>
+                                                                <div style="font-size: 11px; color: #6B7280; font-family: Arial, sans-serif; margin-bottom: 8px; font-weight: 500;">Intuitive</div>
+                                                                <div style="width: 40px; height: 3px; background: linear-gradient(90deg, #8B5CF6 0%, #A855F7 100%); margin: 0 auto; border-radius: 2px;"></div>
+                                                            </div>
+
+                                                            <!-- T - Thinking -->
+                                                            <div style="background: white; padding: 12px 10px; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); text-align: center; border: 1px solid rgba(139, 92, 246, 0.1);">
+                                                                <div style="font-size: 32px; font-weight: bold; color: #8B5CF6; font-family: Arial, sans-serif; margin-bottom: 4px; line-height: 1;">T</div>
+                                                                <div style="font-size: 11px; color: #6B7280; font-family: Arial, sans-serif; margin-bottom: 8px; font-weight: 500;">Thinking</div>
+                                                                <div style="width: 40px; height: 3px; background: linear-gradient(90deg, #8B5CF6 0%, #A855F7 100%); margin: 0 auto; border-radius: 2px;"></div>
+                                                            </div>
+
+                                                            <!-- P - Perceiving -->
+                                                            <div style="background: white; padding: 12px 10px; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); text-align: center; border: 1px solid rgba(139, 92, 246, 0.1);">
+                                                                <div style="font-size: 32px; font-weight: bold; color: #8B5CF6; font-family: Arial, sans-serif; margin-bottom: 4px; line-height: 1;">P</div>
+                                                                <div style="font-size: 11px; color: #6B7280; font-family: Arial, sans-serif; margin-bottom: 8px; font-weight: 500;">Perceiving</div>
+                                                                <div style="width: 40px; height: 3px; background: linear-gradient(90deg, #8B5CF6 0%, #A855F7 100%); margin: 0 auto; border-radius: 2px;"></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
