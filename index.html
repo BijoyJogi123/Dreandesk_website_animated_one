@@ -56,6 +56,189 @@
         }
     </style>
 
+    <!-- Alternating Hero Content Styles -->
+    <style>
+        /* Content Slide Animation */
+        .content-slide {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            display: none;
+            padding-bottom:25px;
+        }
+
+        .content-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+            display: block;
+        }
+
+        /* New Content Styles */
+        .new-content {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .main-heading {
+            margin-bottom: 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        .highlight-text {
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-size: clamp(18px, 2.2vw, 32px) !important;
+            font-weight: 900 !important;
+            color: #f2d803 !important;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .brand-text {
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-size: clamp(16px, 2vw, 28px) !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .feature-list {
+            /* margin: 20px 0; */
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .feature-item.animate {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        .bullet {
+            color: #f2d803;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 1px;
+            flex-shrink: 0;
+            line-height: 1.5;
+        }
+
+        .feature-text {
+            font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+            font-size: clamp(12px, 1.2vw, 16px) !important;
+            color: #ffffff !important;
+            line-height: 1.5;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .feature-text strong {
+            color: #f2d803;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            margin-top: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-section.animate {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .cta-text {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-size: clamp(14px, 1.6vw, 20px) !important;
+            font-weight: 700 !important;
+            color: #f5f5f5 !important;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .psychometric-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #f2d803, #e6c200);
+            color: #000000 !important;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+            font-size: clamp(12px, 1.3vw, 16px) !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(242, 216, 3, 0.3);
+        }
+
+        .psychometric-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(242, 216, 3, 0.4);
+            background: linear-gradient(135deg, #e6c200, #d4af00);
+        }
+
+        .psychometric-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Animation Keyframes */
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .highlight-text {
+                font-size: clamp(16px, 4vw, 24px) !important;
+            }
+            
+            .brand-text {
+                font-size: clamp(14px, 3.5vw, 20px) !important;
+            }
+            
+            .feature-text {
+                font-size: clamp(11px, 2.8vw, 14px) !important;
+            }
+
+            .cta-text {
+                font-size: clamp(12px, 3vw, 16px) !important;
+            }
+        }
+    </style>
+
     <style>
         .wf-force-outline-none[tabindex="-1"]:focus {
             outline: none;
@@ -831,6 +1014,338 @@
 
             .stat-item:hover {
                 transform: translateY(-3px);
+            }
+
+            /* Simple Yellow Circles - Exactly like the image */
+            /* Simple Yellow Circles with Continuous Loading Animation */
+            .simple-circle {
+                width: 260px;
+                height: 260px;
+                border: 13px solid #f2d803;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                position: relative;
+                margin: 0 auto;
+                background-color:#0000007a;
+            }
+
+            .simple-circle::before {
+                content: '';
+                position: absolute;
+                top: -13px;
+                left: -13px;
+                right: -13px;
+                bottom: -13px;
+                border-radius: 50%;
+                border: 13px solid transparent;
+                border-top: 13px solid #f2d803;
+                animation: continuousSpinner 6s linear infinite;
+            }
+
+            .stat-item:nth-child(1) .simple-circle::before {
+                animation-delay: 0s;
+            }
+
+            .stat-item:nth-child(2) .simple-circle::before {
+                animation-delay: 0.5s;
+            }
+
+            .stat-item:nth-child(3) .simple-circle::before {
+                animation-delay: 1s;
+            }
+
+            .stat-item:nth-child(4) .simple-circle::before {
+                animation-delay: 1.5s;
+            }
+
+            @keyframes continuousSpinner {
+                0%, 25% {
+                    transform: rotate(0deg);
+                    opacity: 0;
+                }
+                30% {
+                    opacity: 1;
+                }
+                50% {
+                    transform: rotate(360deg);
+                    opacity: 1;
+                }
+                55% {
+                    opacity: 0;
+                }
+                100% {
+                    transform: rotate(360deg);
+                    opacity: 0;
+                }
+            }
+
+            .circle-content {
+                font-size: 0.7rem;
+                font-weight: 900;
+                color: #ffffff;
+                text-align: center;
+                line-height: 1;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                transition: all 0.3s ease;
+                max-width: 70%;
+                word-wrap: break-word;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+
+            /* Section-specific Review Widget - Two separate circular buttons stacked vertically */
+            .section-review-widget {
+                position: fixed;
+                bottom: 0rem;
+                right: 0.20rem;
+                z-index: 1000;
+                font-family: 'Manrope', sans-serif;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .section-review-widget.show {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .review-btn {
+                background: linear-gradient(135deg, #f42222, #ff4444);
+                color: white;
+                padding: 0;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(244, 34, 34, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                width: 60px;
+                height: 60px;
+                border: 2px solid #fdfcfa;
+            }
+
+            .review-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(244, 34, 34, 0.4);
+            }
+
+            .review-logo {
+                border-radius: 2px;
+                transition: transform 0.2s ease;
+            }
+
+            .google-btn .review-logo {
+                width: 24px;
+                height: 24px;
+            }
+
+            .justdial-btn .review-logo {
+                width: 28px;
+                height: 18px;
+            }
+
+            .review-btn:hover .review-logo {
+                transform: scale(1.1);
+            }
+
+            .review-logo[alt="JustDial"] {
+                width: 16px;
+                height: 16px;
+            }
+
+            .section-review-btn span {
+                display: none; /* Hide text in circular button */
+            }
+
+            .section-review-popup {
+                position: absolute;
+                right: 0;
+                bottom: 70px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+                padding: 8px;
+                min-width: 160px;
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                pointer-events: none;
+                border: 1px solid #f0f0f0;
+            }
+
+            .section-review-popup.show {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                pointer-events: all;
+            }
+
+            .section-review-popup.hidden {
+                display: none;
+            }
+
+            .section-review-option {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                color: #333;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .section-review-option:hover {
+                background: #f8f9fa;
+                transform: translateX(-3px);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .section-review-option img {
+                border-radius: 3px;
+                transition: transform 0.2s ease;
+            }
+
+            .section-review-option:hover img {
+                transform: scale(1.1);
+            }
+
+            /* Smooth pulsing animation for attention */
+            @keyframes smoothPulse {
+                0%, 70%, 100% {
+                    transform: scale(1);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                }
+                35% {
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            .section-review-btn {
+                animation: smoothPulse 4s ease-in-out infinite;
+            }
+
+            /* Hide sound button when review widget is shown */
+            .fixed-bottom {
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .fixed-bottom.hide-sound {
+                opacity: 0;
+                pointer-events: none;
+                transform: scale(0.8);
+            }
+
+            /* Mobile responsive for review buttons */
+            @media (max-width: 768px) {
+                .section-review-widget {
+                    bottom: 1rem;
+                    right: 1rem;
+                    gap: 6px;
+                }
+                
+                .review-btn {
+                    width: 50px;
+                    height: 50px;
+                }
+                
+                .google-btn .review-logo {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .justdial-btn .review-logo {
+                    width: 24px;
+                    height: 15px;
+                }
+            }
+                
+                .section-review-popup {
+                    min-width: 140px;
+                    bottom: 60px;
+                }
+
+                .section-review-option {
+                    padding: 8px 12px;
+                    font-size: 12px;
+                }
+            }
+            .stat-item:nth-child(1) .circle-content {
+                font-size: 0.5rem; /* 96% */
+                /* Remove CSS animation - will be controlled by JavaScript */
+            }
+
+            /* Blinking animation for 96% text */
+            @keyframes blinkText {
+                0%, 50% {
+                    opacity: 1;
+                }
+                51%, 100% {
+                    opacity: 0.3;
+                }
+            }
+
+            .stat-item:nth-child(2) .circle-content {
+                font-size: 0.4rem; /* YOUTH/STUDENTS/PARENTS */
+                font-weight: 800;
+            }
+
+            .stat-item:nth-child(4) .circle-content {
+                font-size: 0.36rem; /* DREAMDESK */
+                letter-spacing: 0.5px;
+                font-weight: 800;
+            }
+
+            /* Icon styles for heart/like */
+            .heart-icon,
+            .like-icon {
+                color: #ffffff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.5s ease;
+                width: 80px;
+                height: 80px;
+            }
+
+            .heart-icon.active,
+            .like-icon.active {
+                opacity: 1;
+            }
+
+            /* Logo animation styles for 4th circle */
+            .logo-image,
+            .icon-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.8s ease-in-out;
+                border-radius: 8px;
+                object-fit: contain;
+                max-width: 80%;
+                max-height: 80%;
+            }
+
+            .logo-image.active,
+            .icon-image.active {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .stat-number-wrapper {
@@ -1717,7 +2232,8 @@
                         }
 
                         svg path {
-                            fill: var(--clr-overlay-bg);
+                            /* fill: var(--clr-overlay-bg); */
+                            fill: var(#ffffff);
                         }
 
                         #toggle-btn {
@@ -6412,17 +6928,68 @@
                         </video>
                     </div>
 
-                    <!-- Right - Welcome to DreamDesk -->
+                    <!-- Right - Alternating Content -->
                     <div class="welcome-box">
-                        <div class="welcome-to">WELCOME TO</div>
-                        <div class="dreamdesk-title">DreamDesk</div>
-                        <div class="tagline-text">You Dream, We make it possible</div>
-                        <a href="#" class="know-us-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                            Know us in 60 seconds
-                        </a>
+                        <!-- Original Welcome Content -->
+                        <div class="content-slide welcome-content active">
+                            <div class="welcome-to">WELCOME TO</div>
+                            <div class="dreamdesk-title">DreamDesk</div>
+                            <div class="tagline-text">You Dream, We make it possible</div>
+                            <a href="#" class="know-us-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                Know us in 60 seconds
+                            </a>
+                        </div>
+
+                        <!-- New Animated Content -->
+                        <div class="content-slide new-content">
+                            <div class="main-heading animated-text">
+                                <span class="highlight-text">#OVERTHINKING PRO MAX?</span>
+                                <span class="brand-text">DREAMDESK HAS YOUR BACK!</span>
+                            </div>
+                            
+                            <div class="feature-list">
+                                <div class="feature-item animated-item" style="animation-delay: 0.5s">
+                                    <span class="bullet">•</span>
+                                    <span class="feature-text">
+                                        <strong>Campus Chaos Got You Spiraling?</strong> DreamDesk Unlocks Your Calm!
+                                    </span>
+                                </div>
+                                
+                                <div class="feature-item animated-item" style="animation-delay: 1s">
+                                    <span class="bullet">•</span>
+                                    <span class="feature-text">
+                                        <strong>Solo in a new city? </strong> No worries—we’ve got you.
+                                    </span>
+                                </div>
+                                
+                                <div class="feature-item animated-item" style="animation-delay: 1.5s">
+                                    <span class="bullet">•</span>
+                                    <span class="feature-text">
+                                        <strong>Give parents peace of mind</strong> your success squad is just a tap away.
+                                    </span>
+                                </div>
+                                
+                                <div class="feature-item animated-item" style="animation-delay: 2s">
+                                    <span class="bullet">•</span>
+                                    <span class="feature-text">
+                                        <strong>Trusted by 5000+ students</strong> who choose right the first time.
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-section animated-item" style="animation-delay: 2.5s">
+                                <div class="cta-text" >#Don't stress take Psychometric test!!</div>
+                                <a href="#" class="psychometric-btn">
+                                    <!-- <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg> -->
+                                    Vibe check
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -8516,32 +9083,66 @@
                             <!-- Animated Counter Section -->
                             <div class="stats-counter-section">
                                 <div class="stats-container">
+                                    <!-- First Circle - 96% -->
                                     <div class="stat-item">
-                                        <div class="stat-number-wrapper">
-                                            <div class="stat-number" data-target="150000">0</div>
-                                            <div class="stat-suffix">+</div>
+                                        <div class="simple-circle">
+                                            <div class="circle-content">96%</div>
                                         </div>
-                                        <div class="stat-label">Students</div>
-
                                     </div>
-                                    <div class="stat-item">
-                                        <div class="stat-number-wrapper">
-                                            <div class="stat-number" data-target="12">0</div>
-                                            <div class="stat-label">Years</div>
-                                        </div>
-                                        <div class="stat-label">Experience</div>
 
+                                    <!-- Second Circle - Youth/Students/Parents -->
+                                    <div class="stat-item">
+                                        <div class="simple-circle">
+                                            <div class="circle-content" id="alternating-text">YOUTH</div>
+                                        </div>
                                     </div>
-                                    <div class="stat-item">
-                                        <div class="stat-number-wrapper">
-                                            <div class="stat-number" data-target="50">0</div>
-                                            <div class="stat-suffix">+</div>
-                                        </div>
-                                        <div class="stat-label">Colleges</div>
 
+                                    <!-- Third Circle - Heart/Like Icons -->
+                                    <div class="stat-item">
+                                        <div class="simple-circle">
+                                            <div class="circle-content" id="icon-container">
+                                                <svg class="heart-icon active" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                                </svg>
+                                                <svg class="like-icon" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                                                    <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fourth Circle - Logo Animation -->
+                                    <div class="stat-item">
+                                        <div class="simple-circle">
+                                            <div class="circle-content" id="logo-container">
+                                                <img class="logo-image active" src="./LOGO 22-01.png" alt="DreamDesk Logo" width="180" height="180">
+                                                <img class="icon-image" src="./ICON PNG.png" alt="DreamDesk Icon" width="160" height="160">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+    <!-- Review Widget - Sticking out from screen edge -->
+    <div class="section-review-widget" id="edge-review-widget">
+        <div id="section-review-trigger" class="section-review-btn">
+            <div class="review-logos">
+                <img class="review-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" onclick="openGoogleReviews()">
+                <img class="review-logo" src="./just_dial_logo.png" alt="JustDial" onclick="openJustDial()">
+            </div>
+        </div>
+        
+        <div id="section-review-popup" class="section-review-popup hidden">
+            <div class="section-review-option" onclick="openGoogleReviews()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="16" height="16">
+                <span>Google Reviews</span>
+            </div>
+            <div class="section-review-option" onclick="openJustDial()">
+                <img src="./just_dial_logo.png" alt="JustDial" width="16" height="16">
+                <span>JustDial</span>
+            </div>
+        </div>
+    </div>
 
 
                         </div>
@@ -10742,11 +11343,9 @@
                 rootMargin: '0px 0px -100px 0px'
             });
 
-            // Observe the container instead of individual counters
+            // Simple Circle Animations
             const container = document.querySelector('.stats-counter-section');
-            if (container) {
-                observer.observe(container);
-            }
+            // Removed old animation code - now using perfect synchronization system
         }
 
         // Optional sparkle effect for visual enhancement
@@ -10968,6 +11567,310 @@
                 setTimeout(checkSections, 200);
             });
         })();
+    </script>
+
+    <!-- Circle Loading Animation Script - PERFECTLY SYNCHRONIZED -->
+    <script>
+        // Perfect Synchronization System for All Four Circles
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsSection = document.querySelector('.stats-counter-section');
+            
+            if (statsSection) {
+                // Create intersection observer
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            console.log('Stats section is visible, starting synchronized animation...');
+                            entry.target.classList.add('animate');
+                            
+                            // Get all elements
+                            const percentText = document.querySelector('.stat-item:nth-child(1) .circle-content');
+                            const alternatingText = document.getElementById('alternating-text');
+                            const heartIcon = document.querySelector('.heart-icon');
+                            const likeIcon = document.querySelector('.like-icon');
+                            const logoImage = document.querySelector('.logo-image');
+                            const iconImage = document.querySelector('.icon-image');
+                            
+                            // Animation states
+                            const texts = ['YOUTH', 'STUDENTS', 'PARENTS'];
+                            let textIndex = 0;
+                            let heartActive = true;
+                            let logoActive = true;
+                            let percentVisible = true;
+                            
+                            // Master synchronization function
+                            function syncAllAnimations() {
+                                // 1. Toggle 96% text opacity
+                                if (percentText) {
+                                    percentVisible = !percentVisible;
+                                    percentText.style.transition = 'opacity 0.3s ease';
+                                    percentText.style.opacity = percentVisible ? '1' : '0.3';
+                                }
+                                
+                                // 2. Change alternating text
+                                if (alternatingText) {
+                                    alternatingText.style.transition = 'opacity 0.2s ease';
+                                    alternatingText.style.opacity = '0.5';
+                                    setTimeout(() => {
+                                        textIndex = (textIndex + 1) % texts.length;
+                                        alternatingText.textContent = texts[textIndex];
+                                        alternatingText.style.opacity = '1';
+                                    }, 200);
+                                }
+                                
+                                // 3. Toggle heart/like icons
+                                if (heartIcon && likeIcon) {
+                                    heartActive = !heartActive;
+                                    if (heartActive) {
+                                        heartIcon.classList.add('active');
+                                        likeIcon.classList.remove('active');
+                                    } else {
+                                        heartIcon.classList.remove('active');
+                                        likeIcon.classList.add('active');
+                                    }
+                                }
+                                
+                                // 4. Toggle logo/icon images
+                                if (logoImage && iconImage) {
+                                    logoActive = !logoActive;
+                                    if (logoActive) {
+                                        logoImage.classList.add('active');
+                                        iconImage.classList.remove('active');
+                                    } else {
+                                        logoImage.classList.remove('active');
+                                        iconImage.classList.add('active');
+                                    }
+                                }
+                            }
+                            
+                            // Start synchronized animation immediately
+                            syncAllAnimations();
+                            
+                            // Continue with perfect 3-second intervals
+                            setInterval(syncAllAnimations, 3000);
+                            
+                            // Stop observing after animation starts
+                            observer.disconnect();
+                        }
+                    });
+                }, {
+                    threshold: 0.5,
+                    rootMargin: '0px 0px -100px 0px'
+                });
+                
+                observer.observe(statsSection);
+                console.log('Perfect sync observer set up for stats section');
+            } else {
+                console.log('Stats section not found');
+            }
+        });
+    </script>
+                });
+                
+                observer.observe(statsSection);
+                console.log('Observer set up for stats section');
+            } else {
+                console.log('Stats section not found');
+            }
+        });
+    </script>
+
+    <!-- Alternating Hero Content Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeContent = document.querySelector('.welcome-content');
+            const newContent = document.querySelector('.new-content');
+            let isShowingWelcome = true;
+            
+            // Function to switch content
+            function switchContent() {
+                if (isShowingWelcome) {
+                    // Hide welcome, show new content
+                    welcomeContent.classList.remove('active');
+                    setTimeout(() => {
+                        newContent.classList.add('active');
+                        // Animate the new content items
+                        const animatedItems = newContent.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animate');
+                            }, index * 200);
+                        });
+                    }, 400);
+                } else {
+                    // Hide new content, show welcome
+                    newContent.classList.remove('active');
+                    // Remove animation classes
+                    const animatedItems = newContent.querySelectorAll('.animated-item');
+                    animatedItems.forEach(item => {
+                        item.classList.remove('animate');
+                    });
+                    setTimeout(() => {
+                        welcomeContent.classList.add('active');
+                    }, 400);
+                }
+                isShowingWelcome = !isShowingWelcome;
+            }
+            
+            // Start the alternating animation after 5 seconds, then every 8 seconds
+            setTimeout(() => {
+                switchContent();
+                setInterval(switchContent, 8000);
+            }, 5000);
+        });
+    </script>
+
+    <!-- Section Review Widget Script - Replaces Sound Button -->
+    <script>
+        // Review Widget that replaces Sound Button during stats section
+        document.addEventListener('DOMContentLoaded', function() {
+            const edgeWidget = document.getElementById('edge-review-widget');
+            const sectionTriggerBtn = document.getElementById('section-review-trigger');
+            const sectionPopup = document.getElementById('section-review-popup');
+            const statsSection = document.querySelector('.stats-counter-section');
+            const soundButton = document.querySelector('.fixed-bottom');
+            const googleLogo = document.querySelector('.google-logo');
+            const justdialLogo = document.querySelector('.justdial-logo');
+            
+            let isSectionPopupVisible = false;
+            let sectionAutoPopupShown = false;
+            let logoInterval;
+            let isGoogleActive = true;
+
+            if (sectionTriggerBtn && sectionPopup && edgeWidget && statsSection && soundButton) {
+                // Toggle popup on click
+                sectionTriggerBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleSectionPopup();
+                });
+
+                // Close popup when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.section-review-widget')) {
+                        hideSectionPopup();
+                    }
+                });
+
+                function toggleSectionPopup() {
+                    if (isSectionPopupVisible) {
+                        hideSectionPopup();
+                    } else {
+                        showSectionPopup();
+                    }
+                }
+
+                function showSectionPopup() {
+                    sectionPopup.classList.remove('hidden');
+                    setTimeout(() => {
+                        sectionPopup.classList.add('show');
+                    }, 10);
+                    isSectionPopupVisible = true;
+                }
+
+                function hideSectionPopup() {
+                    sectionPopup.classList.remove('show');
+                    setTimeout(() => {
+                        sectionPopup.classList.add('hidden');
+                    }, 300);
+                    isSectionPopupVisible = false;
+                }
+
+                // Smooth logo alternation function
+                function alternateLogo() {
+                    if (googleLogo && justdialLogo) {
+                        if (isGoogleActive) {
+                            // Switch to JustDial
+                            googleLogo.classList.remove('active');
+                            setTimeout(() => {
+                                justdialLogo.classList.add('active');
+                            }, 200);
+                        } else {
+                            // Switch to Google
+                            justdialLogo.classList.remove('active');
+                            setTimeout(() => {
+                                googleLogo.classList.add('active');
+                            }, 200);
+                        }
+                        isGoogleActive = !isGoogleActive;
+                    }
+                }
+
+                // Start logo alternation
+                function startLogoAlternation() {
+                    // Initial state - Google is active
+                    if (googleLogo) googleLogo.classList.add('active');
+                    if (justdialLogo) justdialLogo.classList.remove('active');
+                    isGoogleActive = true;
+                    
+                    // Start alternating every 3 seconds
+                    logoInterval = setInterval(alternateLogo, 3000);
+                }
+
+                // Stop logo alternation
+                function stopLogoAlternation() {
+                    if (logoInterval) {
+                        clearInterval(logoInterval);
+                        logoInterval = null;
+                    }
+                }
+
+                // Show/hide widget based on stats section visibility
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Hide sound button and show review widget with smooth transition
+                            soundButton.classList.add('hide-sound');
+                            setTimeout(() => {
+                                edgeWidget.classList.add('show');
+                                startLogoAlternation();
+                            }, 250);
+                            
+                            // Auto popup after 2 seconds (only once)
+                            if (!sectionAutoPopupShown) {
+                                setTimeout(() => {
+                                    if (!isSectionPopupVisible) {
+                                        showSectionPopup();
+                                        sectionAutoPopupShown = true;
+                                        
+                                        // Auto hide after 4 seconds
+                                        setTimeout(() => {
+                                            if (isSectionPopupVisible) {
+                                                hideSectionPopup();
+                                            }
+                                        }, 4000);
+                                    }
+                                }, 2500);
+                            }
+                        } else {
+                            // Show sound button and hide review widget with smooth transition
+                            stopLogoAlternation();
+                            edgeWidget.classList.remove('show');
+                            setTimeout(() => {
+                                soundButton.classList.remove('hide-sound');
+                            }, 250);
+                            hideSectionPopup();
+                        }
+                    });
+                }, {
+                    threshold: 0.3,
+                    rootMargin: '-50px 0px -50px 0px'
+                });
+                
+                observer.observe(statsSection);
+            }
+        });
+
+        // Open Google Reviews
+        function openGoogleReviews() {
+            // Replace with your actual Google Business profile URL
+            window.open('https://www.google.com/search?q=DreamDesk+reviews', '_blank');
+        }
+
+        // Open JustDial
+        function openJustDial() {
+            // Replace with your actual JustDial business URL
+            window.open('https://www.justdial.com/search/DreamDesk', '_blank');
+        }
     </script>
 
 </body>
