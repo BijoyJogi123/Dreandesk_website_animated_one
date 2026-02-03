@@ -1005,7 +1005,7 @@
             margin-right: 0 !important;
             min-width: 40px !important;
             text-align: right !important;
-            
+
         }
 
         /* Menu text content - align to left */
@@ -2927,7 +2927,7 @@
         /* Enhanced Navigation Responsiveness */
         .navigation.w-nav {
             /* margin-top: clamp(26px, 4vw, 50px) !important; */
-            padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 25px);
+            padding: clamp(10px, 2vw, 20px) clamp(0px, 3vw, 0px);
         }
 
         /* Logo responsiveness */
@@ -2941,10 +2941,58 @@
         #toggle-btn {
             transform: scale(clamp(0.6, 1vw, 0.8)) !important;
             transform-origin: center right !important;
+            transition: all 0.3s ease !important;
         }
 
         #toggle-btn .menu-text {
             font-size: clamp(10px, 1.2vw, 12px) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        /* Logo transition */
+        #logo-wrap img {
+            transition: all 0.3s ease !important;
+        }
+
+        /* Hamburger lines transition - synchronized with menu animation */
+        #hamburger .line-1,
+        #hamburger .line-2 {
+            transition: all 0.6s ease !important;
+        }
+
+        /* Menu active state styles - highest specificity to override all conflicts */
+        #toggle-btn.menu-active,
+        #toggle-btn.menu-active:hover,
+        #toggle-btn.menu-active.active {
+            border-color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            transition: all 0.4s ease !important;
+        }
+
+        #toggle-btn.menu-active .menu-text,
+        #toggle-btn.menu-active:hover .menu-text,
+        #toggle-btn.menu-active.active .menu-text {
+            color: #000000 !important;
+            transition: all 0.4s ease !important;
+        }
+
+        #toggle-btn.menu-active #hamburger .line-1,
+        #toggle-btn.menu-active #hamburger .line-2,
+        #toggle-btn.menu-active:hover #hamburger .line-1,
+        #toggle-btn.menu-active:hover #hamburger .line-2,
+        #toggle-btn.menu-active.active #hamburger .line-1,
+        #toggle-btn.menu-active.active #hamburger .line-2 {
+            background-color: #000000 !important;
+            transition: all 0.4s ease !important;
+        }
+
+        /* Default menu button transitions */
+        #toggle-btn {
+            transition: all 0.6s ease !important;
+        }
+
+        #toggle-btn .menu-text {
+            transition: all 0.6s ease !important;
         }
 
         #hamburger {
@@ -3058,10 +3106,11 @@
                     </div>
 
 
-                    <div class="menu"  style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
+                    <div class="menu"
+                        style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
                         <div class="primary-menu">
                             <div class="menu-container">
-                                <div class="wrapper" >
+                                <div class="wrapper">
                                     <div class="menu-item" data-submenu="none">
                                         <a href="#"><span>01</span>Home</a>
                                         <div class="menu-item-revealer"></div>
@@ -3090,7 +3139,7 @@
                                         <a href="#"><span>04</span>Initiative</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                     <div class="menu-item" data-submenu="none">
+                                    <div class="menu-item" data-submenu="none">
                                         <a href="#"><span>05</span>Blogs</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
@@ -3206,19 +3255,25 @@
                             transform: none;
                         }
 
-                        /* Hamburger Cross Animation - Very Specific to avoid conflicts */
+                        /* Hamburger Cross Animation - Transform only, color controlled by JavaScript */
                         #toggle-btn #hamburger.active .line.line-1 {
                             transform: rotate(45deg) translateY(9px) !important;
-                            background: #f2d803 !important;
+                            /* Color will be controlled by JavaScript timing */
                         }
 
                         #toggle-btn #hamburger.active .line.line-2 {
                             transform: rotate(-45deg) translateY(-9px) !important;
-                            background: #f2d803 !important;
+                            /* Color will be controlled by JavaScript timing */
                         }
 
-                        #hamburger.active+.menu-text {
-                            color: #f2d803;
+                        /* Black hamburger X when menu is visible */
+                        #toggle-btn #hamburger.active.menu-visible .line.line-1,
+                        #toggle-btn #hamburger.active.menu-visible .line.line-2 {
+                            background: #000000 !important;
+                        }
+
+                        #hamburger.active.menu-visible+.menu-text {
+                            color: #000000;
                         }
 
                         .overlay {
@@ -3259,7 +3314,7 @@
                             text-decoration: none;
                             color: var(--clr-link);
                             transition: color 0.3s ease;
-                            color:#000000;
+                            color: #000000;
                         }
 
                         .menu a:hover {
@@ -3270,12 +3325,12 @@
                             font-size: 20px;
                             margin-right: 2em;
                             opacity: 0.7;
-                            color:#000000;
+                            color: #000000;
                         }
 
                         .menu-item {
                             position: relative;
-                            
+
                         }
 
                         .menu-container {
@@ -3304,11 +3359,11 @@
 
                         .primary-menu a {
                             text-transform: uppercase;
-                            font-size: 48px;
+                            font-size: 35px;
                             font-weight: 500;
                             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                             letter-spacing: -1px;
-                            margin: 8px 0;
+                            margin: 8px 0 0px 0;
                             line-height: 1.1;
                         }
 
@@ -3431,7 +3486,7 @@
                             padding: 3px 0;
                             top: 0;
                             line-height: 1.2;
-                            color:#000000;
+                            color: #000000;
                         }
 
                         .submenu-item a:hover {
@@ -4000,6 +4055,106 @@
                                     console.log("Menu button clicked"); // Debug
                                     hamburger.classList.toggle("active");
                                     console.log("Hamburger active:", hamburger.classList.contains("active")); // Debug
+
+                                    // Toggle menu button and logo colors ONLY when menu is fully visible
+                                    const logoImg = document.querySelector('#logo-wrap img');
+
+                                    if (hamburger.classList.contains("active")) {
+                                        // Menu is opening - wait for menu to be fully visible before changing colors
+                                        // Total menu animation is ~1.1s, so wait 1.2s to be safe
+                                        setTimeout(() => {
+                                            console.log("Adding menu-active class"); // Debug
+                                            toggleBtn.classList.add('menu-active');
+                                            // Also add menu-visible class to hamburger for black X
+                                            hamburger.classList.add('menu-visible');
+
+                                            // Force styles as backup to ensure visibility
+                                            toggleBtn.style.setProperty('border-color', '#000000', 'important');
+                                            toggleBtn.style.setProperty('background-color', 'rgba(255, 255, 255, 0.95)', 'important');
+
+                                            const menuText = document.querySelector('.menu-text');
+                                            if (menuText) {
+                                                menuText.style.setProperty('color', '#000000', 'important');
+                                            }
+
+                                            const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
+                                            hamburgerLines.forEach(line => {
+                                                line.style.setProperty('background-color', '#000000', 'important');
+                                            });
+
+                                            console.log("Classes and styles applied"); // Debug
+                                        }, 1200); // Wait 1.2s for menu to be fully visible
+
+                                        // Change logo with fade effect after menu is visible
+                                        setTimeout(() => {
+                                            if (logoImg) {
+                                                gsap.to(logoImg, {
+                                                    opacity: 0,
+                                                    duration: 0.2,
+                                                    ease: "power2.inOut",
+                                                    onComplete: () => {
+                                                        logoImg.src = './logo_black.png';
+                                                        gsap.to(logoImg, {
+                                                            opacity: 1,
+                                                            duration: 0.2,
+                                                            ease: "power2.inOut"
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        }, 1200); // Same timing as menu button
+
+                                    } else {
+                                        // Menu is closing - restore original white outline styling immediately
+                                        console.log("Removing menu-active class and restoring white styling"); // Debug
+                                        toggleBtn.classList.remove('menu-active');
+                                        // Remove menu-visible class from hamburger
+                                        hamburger.classList.remove('menu-visible');
+
+                                        // Explicitly set original white outline styles
+                                        toggleBtn.style.setProperty('border-color', '#ffffff', 'important');
+                                        toggleBtn.style.setProperty('background-color', 'transparent', 'important');
+
+                                        const menuText = document.querySelector('.menu-text');
+                                        if (menuText) {
+                                            menuText.style.setProperty('color', '#ffffff', 'important');
+                                        }
+
+                                        const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
+                                        hamburgerLines.forEach(line => {
+                                            line.style.setProperty('background-color', '#ffffff', 'important');
+                                        });
+
+                                        // After a short delay, remove inline styles to let CSS take over
+                                        setTimeout(() => {
+                                            toggleBtn.style.removeProperty('border-color');
+                                            toggleBtn.style.removeProperty('background-color');
+                                            if (menuText) {
+                                                menuText.style.removeProperty('color');
+                                            }
+                                            hamburgerLines.forEach(line => {
+                                                line.style.removeProperty('background-color');
+                                            });
+                                        }, 100); // Small delay to ensure white styling is applied first
+
+                                        // Change logo back with fade effect
+                                        if (logoImg) {
+                                            gsap.to(logoImg, {
+                                                opacity: 0,
+                                                duration: 0.15,
+                                                ease: "power2.inOut",
+                                                onComplete: () => {
+                                                    logoImg.src = './LOGO 22-01.png';
+                                                    gsap.to(logoImg, {
+                                                        opacity: 1,
+                                                        duration: 0.15,
+                                                        ease: "power2.inOut"
+                                                    });
+                                                }
+                                            });
+                                        }
+                                    }
+
                                     tl.reversed(!tl.reversed());
                                 };
 
@@ -9371,7 +9526,7 @@
                                         });
                                     </script>
 
-                                     <div class="section-slide ui-slide"
+                                    <div class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px); ">
 
                                         <!-- <div style=" padding-bottom: 40px;">
@@ -9630,7 +9785,7 @@
                                                     cursor: pointer;
                                                     z-index: 10;
                                                     overflow: visible;
-                                                   
+
                                                 }
 
                                                 #spinny-flipz-section .spinny-top img {
@@ -10050,80 +10205,93 @@
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Priya Sharma" data-course="Computer Science"
                                                                 data-quote="This platform helped me discover my true passion for coding. The career guidance was exceptional!">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 1">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 1">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/2a.png"
                                                                 data-name="Rahul Verma" data-course="Engineering"
                                                                 data-quote="I found the perfect engineering path thanks to the personalized recommendations.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 2">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 2">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/3a.png"
                                                                 data-name="Ananya Patel" data-course="Design"
                                                                 data-quote="The creative career options opened up a whole new world for me. Absolutely life-changing!">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 3">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 3">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Vikram Singh"
                                                                 data-course="Business Management"
                                                                 data-quote="From confused to confident - this platform transformed my career outlook completely.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 4">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 4">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Sneha Reddy" data-course="Medicine"
                                                                 data-quote="The guidance helped me realize my dream of becoming a doctor was achievable.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 5">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 5">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Arjun Kumar" data-course="Aviation"
                                                                 data-quote="Flying high towards my dreams! The aviation career path was exactly what I needed.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 6">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 6">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Meera Joshi" data-course="Allied Health"
                                                                 data-quote="Healthcare was my calling, and this platform helped me find the right specialization.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 7">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 7">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Karthik Nair" data-course="Data Science"
                                                                 data-quote="The future is data, and I'm ready for it thanks to the amazing career mapping!">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 8">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 8">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Divya Menon" data-course="Architecture"
                                                                 data-quote="Building dreams into reality - the perfect career choice for my creative mind.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 9">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 9">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Aditya Gupta" data-course="Finance"
                                                                 data-quote="Numbers make sense now! The finance track was the best decision of my life.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 10">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 10">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Pooja Iyer" data-course="Psychology"
                                                                 data-quote="Understanding minds is my passion. This platform showed me the way.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 11">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 11">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Rohan Desai" data-course="Marketing"
                                                                 data-quote="Creative marketing strategies are my forte now. Thank you for the guidance!">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 12">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 12">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Kavya Rao" data-course="Journalism"
                                                                 data-quote="Telling stories that matter - journalism was my hidden calling.">
-                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 13">
+                                                                <img src="./Students_images/16b_with_thambail.png"
+                                                                    alt="Student 13">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/14a.png"
