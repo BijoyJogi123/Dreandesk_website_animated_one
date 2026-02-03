@@ -986,6 +986,137 @@
         }
     </style>
     <title>Motion Graphic Design &amp; Animation Principles Website - Zajno Digital Studio</title>
+
+    <!-- Fix for existing menu alignment -->
+    <style>
+        /* Perfect alignment for your existing menu structure */
+        .menu-item a {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+            text-decoration: none !important;
+        }
+
+        /* Numbers (01, 02, etc.) - align to right */
+        .menu-item a span {
+            order: 2 !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+            min-width: 40px !important;
+            text-align: right !important;
+            
+        }
+
+        /* Menu text content - align to left */
+        .menu-item a {
+            flex-direction: row !important;
+        }
+
+        /* CENTER THE MENU OPTIONS */
+        .wrapper {
+            max-width: 800px !important;
+            margin: 0 auto !important;
+            padding: 0 100px !important;
+        }
+
+        .menu-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .primary-menu {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        /* Specific targeting for your wrapper structure */
+        .wrapper .menu-item a {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .wrapper .menu-item a span {
+            order: 2 !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+            min-width: 40px !important;
+            text-align: right !important;
+        }
+
+        /* Primary menu specific fixes */
+        .primary-menu .wrapper .menu-item a {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .primary-menu .wrapper .menu-item a span {
+            order: 2 !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+            min-width: 40px !important;
+            text-align: right !important;
+        }
+
+        /* Menu container fixes */
+        .menu-container .wrapper .menu-item a {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .menu-container .wrapper .menu-item a span {
+            order: 2 !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+            min-width: 40px !important;
+            text-align: right !important;
+        }
+
+        /* Services submenu arrow fix */
+        .submenu-arrow {
+            order: 3 !important;
+            margin-left: 10px !important;
+        }
+
+        /* Ensure proper text alignment */
+        .menu-item a::after {
+            content: '';
+            flex: 1;
+        }
+
+        /* Additional centering for better positioning */
+        .primary-menu .menu-container {
+            max-width: 800px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Responsive centering */
+        @media (max-width: 1024px) {
+            .wrapper {
+                padding: 0 80px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 0 60px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                padding: 0 40px !important;
+            }
+        }
+    </style>
     <meta
         content="Motion is a website that showcases the power of UI/UX animation in conveying the mood and character of a brand."
         name="description">
@@ -2959,13 +3090,7 @@
                                         <a href="#"><span>04</span>Initiative</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="secondary-menu">
-                            <div class="menu-container">
-                                <div class="wrapper">
-                                    <div class="menu-item" data-submenu="none">
+                                     <div class="menu-item" data-submenu="none">
                                         <a href="#"><span>05</span>Blogs</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
@@ -2980,6 +3105,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="secondary-menu">
+                            <div class="menu-container">
+                                <div class="wrapper">
+                                   
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
 
                     <!-- Menu Styles -->
@@ -3173,7 +3305,7 @@
                         .primary-menu a {
                             text-transform: uppercase;
                             font-size: 48px;
-                            font-weight: 700;
+                            font-weight: 500;
                             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                             letter-spacing: -1px;
                             margin: 8px 0;
@@ -3299,6 +3431,7 @@
                             padding: 3px 0;
                             top: 0;
                             line-height: 1.2;
+                            color:#000000;
                         }
 
                         .submenu-item a:hover {
