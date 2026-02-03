@@ -2927,10 +2927,10 @@
                     </div>
 
 
-                    <div class="menu">
+                    <div class="menu"  style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
                         <div class="primary-menu">
                             <div class="menu-container">
-                                <div class="wrapper">
+                                <div class="wrapper" >
                                     <div class="menu-item" data-submenu="none">
                                         <a href="#"><span>01</span>Home</a>
                                         <div class="menu-item-revealer"></div>
@@ -3127,6 +3127,7 @@
                             text-decoration: none;
                             color: var(--clr-link);
                             transition: color 0.3s ease;
+                            color:#000000;
                         }
 
                         .menu a:hover {
@@ -3137,10 +3138,12 @@
                             font-size: 20px;
                             margin-right: 2em;
                             opacity: 0.7;
+                            color:#000000;
                         }
 
                         .menu-item {
                             position: relative;
+                            
                         }
 
                         .menu-container {
@@ -8206,13 +8209,50 @@
                                     <div class="section-slide ui-slide" id="one-tap-section"
                                         style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
-                                        <div style=" padding-bottom: 60px;">
-                                            <div class="section-slide-wrap world-map-breathing"
-                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/World_map.svg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+                                        <div style="padding-bottom: 60px;">
 
-                                                <!-- Top bar decoration -->
-                                                <div
-                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                            <div class="section-slide-wrap world-map-breathing" style="flex-direction: row;
+                   border: 2px solid #0c0b0b;
+                   border-radius: 12px;
+                   padding: 50px;
+                   background: #f8f8f6;
+                   position: relative;
+                   min-height: 450px;
+                   overflow: hidden;">
+
+                                                <!-- Background Video -->
+                                                <video autoplay muted loop playsinline style="position: absolute;
+                       top: 50%;
+                       left: 50%;
+                       width: 100%;
+                       height: 100%;
+                       object-fit: cover;
+                       transform: translate(-50%, -50%);
+                       z-index: 0;">
+                                                    <source
+                                                        src="./Sections_svgs/0_Global_Market_Financial_Data_3840x2160.mp4"
+                                                        type="video/mp4">
+                                                </video>
+
+                                                <!-- Light Overlay -->
+                                                <div style="position: absolute;
+                        inset: 0;
+                        background: rgba(248, 248, 246, 0.35);
+                        z-index: 1;"></div>
+
+                                                <!-- Top Bar -->
+                                                <div style="position: absolute;
+                       top: 0;
+                       left: 0;
+                       right: 0;
+                       height: 40px;
+                       background: #f8f8f6;
+                       border-bottom: 1px solid #0c0b0b;
+                       border-radius: 10px 10px 0 0;
+                       display: flex;
+                       align-items: center;
+                       padding-left: 15px;
+                       z-index: 2;">
                                                     <div style="display: flex; gap: 6px;">
                                                         <span
                                                             style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
@@ -8223,31 +8263,37 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- World Map Opacity Overlay -->
-                                                <!-- <div style="position: absolute; top: 40px; left: 0; right: 0; bottom: 0; background: rgba(248, 248, 246, 0.4); pointer-events: none;"></div> -->
-
                                                 <!-- Floating Content Box -->
-                                                <div
-                                                    style="position: absolute; bottom: 60px; left: 60px; width: 350px; background: white; border: 1px solid #000; border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); z-index: 10;">
-                                                    <h3
-                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 700; color: #333; margin: 0 0 15px 0; line-height: 1.2;">
+                                                <div style="position: absolute;
+                       bottom: 60px;
+                       left: 60px;
+                       width: 350px;
+                       background: white;
+                       border: 1px solid #000;
+                       border-radius: 20px;
+                       padding: 30px;
+                       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+                       z-index: 3;">
+
+                                                    <h3 style="font-family: 'Helvetica Neue', Arial, sans-serif;
+                           font-size: 20px;
+                           font-weight: 700;
+                           color: #333;
+                           margin: 0 0 15px 0;
+                           line-height: 1.2;">
                                                         Your Dream Future<br>
                                                         Starts Here<br>
                                                         Grab Your Seat NOW!
                                                     </h3>
-                                                    <p
-                                                        style="font-family: 'Open Sans', Arial, sans-serif; font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.4;">
+
+                                                    <p style="font-family: 'Open Sans', Arial, sans-serif;
+                           font-size: 14px;
+                           color: #666;
+                           margin: 0 0 20px 0;
+                           line-height: 1.4;">
                                                         Unlock admission to India's most prestigious<br>
                                                         colleges & leading universities!
                                                     </p>
-
-                                                    <!-- Search Bar -->
-                                                    <!-- <div style="background: #ba0806; padding: 12px; border-radius: 25px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                                                        <input type="text" placeholder="What do you want to study? and where?" style="flex: 1; border: none; background: transparent; color: #ffffff; font-size: 14px; outline: none; placeholder-color: ffffff;">
-                                                        <div style="background: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                                            <span style="color: #ba0806; font-size: 16px;">🔍</span>
-                                                        </div>
-                                                    </div> -->
 
                                                     <!-- Animated Search Bar -->
                                                     <div class="animated-search-bar">
@@ -8262,20 +8308,85 @@
                                                             </div>
                                                         </div>
                                                         <div class="search-icon">
-                                                            <img src="./Sections_svgs/search-icon-white.svg" alt="" />
+                                                            <img src="./Sections_svgs/search-icon-white.svg" alt="">
                                                         </div>
                                                     </div>
 
-                                                    <!-- Action Button -->
-                                                    <button
-                                                        style="width: 100%; background: #000; color: white; border: none; padding: 15px; border-radius: 25px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px;">
+                                                    <!-- CTA Button -->
+                                                    <button style="width: 100%;
+                           background: #000;
+                           color: white;
+                           border: none;
+                           padding: 15px;
+                           border-radius: 25px;
+                           font-family: 'Helvetica Neue', Arial, sans-serif;
+                           font-size: 16px;
+                           font-weight: 700;
+                           cursor: pointer;
+                           letter-spacing: 0.5px;">
                                                         Apply Now
                                                     </button>
+
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
+
+
+
+                                    <!-- <div class="section-slide ui-slide" id="one-tap-section"
+                                        style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                                        <div style=" padding-bottom: 60px;">
+                                            <div class="section-slide-wrap world-map-breathing"
+                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/World_map.svg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+                                               
+                                                <div
+                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                                    <div style="display: flex; gap: 6px;"> <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                        <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                        <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; bottom: 60px; left: 60px; width: 350px; background: white; border: 1px solid #000; border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); z-index: 10;">
+                                                    <h3
+                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; color: #333; margin: 0 0 15px 0; line-height: 1.2;">
+                                                        Your Dream Future<br> Starts Here<br> Grab Your Seat NOW! </h3>
+                                                    <p
+                                                        style="font-family: 'Open Sans', Arial, sans-serif; font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.4;">
+                                                        Unlock admission to India's most prestigious<br> colleges &
+                                                        leading universities! </p>
+                                                
+                                                    <div class="animated-search-bar">
+                                                        <div class="search-text-container">
+                                                            <div class="search-question active">What do you want to
+                                                                study?</div>
+                                                            <div class="search-question">Where do you want to study?
+                                                            </div>
+                                                            <div class="search-question">How will you get there?</div>
+                                                            <div class="search-question">What's your dream career?</div>
+                                                            <div class="search-question">Which path suits you best?
+                                                            </div>
+                                                        </div>
+                                                        <div class="search-icon"> <img
+                                                                src="./Sections_svgs/search-icon-white.svg" alt="" />
+                                                        </div>
+                                                    </div> <button
+                                                        style="width: 100%; background: #000; color: white; border: none; padding: 15px; border-radius: 25px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px;">
+                                                        Apply Now </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+
+
+
+
 
                                 </div>
 
@@ -8308,28 +8419,37 @@
                                                 <!-- Left side - Text Content -->
                                                 <div style="flex: 1; padding-right: 50px;">
                                                     <h2
-                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 48px; font-weight: 600; color: #333; margin: 0 0 30px 0; line-height: 1.0; text-align: left;">
-                                                        FLY YOUR<br>
-                                                        WAY TO <span
-                                                            style="color: #f2d803; display: inline-block;">HIGHER</span><br>
-                                                        <span
-                                                            style=" color:#000;  border-radius: 25px; display: inline-block; margin-top: 8px; font-weight: 700;">EDUCATION</span>
-                                                        WITH<br>
-                                                        <span
-                                                            style="background: #000; color: white; padding: 6px 18px; border-radius: 25px; font-size: 36px; display: inline-block; margin-top: 8px;">SCHOLARSHIP</span>
+                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 48px; font-weight: 600; color: #ffffff; margin: 0 0 12px 0; line-height: 1.0; text-align: left;">
+                                                        FROM AMBITION<br>
+                                                        TO <span
+                                                            style="color: #f2d803; display: inline-block;">ADMISSION</span><br>
                                                     </h2>
-                                                    <button
-                                                        style="margin-top: 35px; border: 2px solid #333; background: transparent; padding: 18px 36px; border-radius: 30px; font-size: 18px; font-weight: 700; color: #333; cursor: pointer; transition: all 0.3s ease; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px;">
-                                                        to know more about it - sign in
-                                                    </button>
+                                                    <h2
+                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 400; color: #ffffff; margin: 0 0 30px 0; line-height: 1.0; text-align: left;  white-space: nowrap;">
+                                                        SUPPORTED BY <span
+                                                            style="color: #f2d803; display: inline-block;"> SCHOLARSHIPS
+                                                        </span><br> AT EVERY STEPS
+                                                    </h2>
+                                                    <div
+                                                        style=" margin-top: 35px; display: flex; flex-direction: column;align-items: flex-start; gap: 8px; width: fit-content;">
+
+                                                        <div class="learn-more-text"
+                                                            style="color:white; padding-left:10px;">Learn More
+                                                        </div>
+                                                        <button
+                                                            style=" border: 2px solid #ffffff; background: transparent; padding: 18px 36px; border-radius: 30px; font-size: 18px; font-weight: 700; color: #ffffff; cursor: pointer; transition: all 0.3s ease; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px;">
+                                                            sign up
+                                                        </button>
+
+                                                    </div>
                                                 </div>
 
                                                 <!-- Right side - SVG Illustration -->
                                                 <div
                                                     style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                                                    <img src="./Sections_svgs/SVG1-01.svg"
+                                                    <img src="./Sections_svgs/SVG-01.png"
                                                         alt="Flying Pencil Illustration"
-                                                        style="max-width: 100%; height: auto; max-height: 320px;">
+                                                        style="max-width: 100%; height: auto; max-height: 520px; padding-bottom: 120px;">
                                                 </div>
                                             </div>
                                         </div>
@@ -9118,7 +9238,7 @@
                                         });
                                     </script>
 
-                                    <div class="section-slide ui-slide"
+                                     <div class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px); ">
 
                                         <!-- <div style=" padding-bottom: 40px;">
@@ -9377,6 +9497,7 @@
                                                     cursor: pointer;
                                                     z-index: 10;
                                                     overflow: visible;
+                                                   
                                                 }
 
                                                 #spinny-flipz-section .spinny-top img {
@@ -9400,7 +9521,7 @@
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: center;
-                                                    gap: 150px;
+                                                    gap: 80px;
                                                     opacity: 0;
                                                     pointer-events: none;
                                                     font-size: 16px !important;
@@ -9595,7 +9716,6 @@
                                                         flex-direction: column;
                                                         gap: 20px;
                                                         width: 90%;
-
                                                     }
 
                                                     #spinny-flipz-section .gallery-image-container {
@@ -9645,7 +9765,6 @@
                                                     width: 100%;
                                                     height: 22vh;
                                                     pointer-events: none;
-                                                    visibility: hidden;
                                                 }
 
                                                 /* Rotating wheel */
@@ -9661,7 +9780,6 @@
                                                     height: 300vw;
                                                     max-width: 2000px;
                                                     max-height: 2000px;
-                                                    visibility: hidden;
                                                 }
 
                                                 /* Individual image cards */
@@ -9670,12 +9788,11 @@
                                                     top: 0;
                                                     left: 0;
                                                     width: 8%;
-                                                    max-width: 180px;
+                                                    max-width: 160px;
                                                     aspect-ratio: 1 / 1;
                                                     cursor: pointer;
                                                     pointer-events: auto;
                                                     transition: transform 0.3s ease, filter 0.3s ease;
-                                                    visibility: hidden;
                                                 }
 
                                                 #spinny-flipz-section .spinny-item:hover {
@@ -9701,7 +9818,6 @@
                                                     border-radius: 8px;
                                                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                                                     transition: filter 0.3s ease, box-shadow 0.3s ease;
-                                                    visibility: hidden;
                                                 }
 
                                                 /* Scroll indicator */
@@ -9798,83 +9914,83 @@
                                                         <div class="spinny-circle">
                                                             <!-- Student Image cards - B&W in carousel, Color on click -->
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/1a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Priya Sharma" data-course="Computer Science"
                                                                 data-quote="This platform helped me discover my true passion for coding. The career guidance was exceptional!">
-                                                                <img src="./Students_images/1b.png" alt="Student 1">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 1">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/2a.png"
                                                                 data-name="Rahul Verma" data-course="Engineering"
                                                                 data-quote="I found the perfect engineering path thanks to the personalized recommendations.">
-                                                                <img src="./Students_images/2b.png" alt="Student 2">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 2">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/3a.png"
                                                                 data-name="Ananya Patel" data-course="Design"
                                                                 data-quote="The creative career options opened up a whole new world for me. Absolutely life-changing!">
-                                                                <img src="./Students_images/3b.png" alt="Student 3">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 3">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/4a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Vikram Singh"
                                                                 data-course="Business Management"
                                                                 data-quote="From confused to confident - this platform transformed my career outlook completely.">
-                                                                <img src="./Students_images/4b.png" alt="Student 4">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 4">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/5a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Sneha Reddy" data-course="Medicine"
                                                                 data-quote="The guidance helped me realize my dream of becoming a doctor was achievable.">
-                                                                <img src="./Students_images/5b.png" alt="Student 5">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 5">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/6a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Arjun Kumar" data-course="Aviation"
                                                                 data-quote="Flying high towards my dreams! The aviation career path was exactly what I needed.">
-                                                                <img src="./Students_images/6b.png" alt="Student 6">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 6">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/7a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Meera Joshi" data-course="Allied Health"
                                                                 data-quote="Healthcare was my calling, and this platform helped me find the right specialization.">
-                                                                <img src="./Students_images/7b.png" alt="Student 7">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 7">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/8a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Karthik Nair" data-course="Data Science"
                                                                 data-quote="The future is data, and I'm ready for it thanks to the amazing career mapping!">
-                                                                <img src="./Students_images/8b.png" alt="Student 8">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 8">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/9a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Divya Menon" data-course="Architecture"
                                                                 data-quote="Building dreams into reality - the perfect career choice for my creative mind.">
-                                                                <img src="./Students_images/9b.png" alt="Student 9">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 9">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/10a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Aditya Gupta" data-course="Finance"
                                                                 data-quote="Numbers make sense now! The finance track was the best decision of my life.">
-                                                                <img src="./Students_images/10b.png" alt="Student 10">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 10">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/11a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Pooja Iyer" data-course="Psychology"
                                                                 data-quote="Understanding minds is my passion. This platform showed me the way.">
-                                                                <img src="./Students_images/11b.png" alt="Student 11">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 11">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/12a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Rohan Desai" data-course="Marketing"
                                                                 data-quote="Creative marketing strategies are my forte now. Thank you for the guidance!">
-                                                                <img src="./Students_images/12b.png" alt="Student 12">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 12">
                                                             </div>
                                                             <div class="spinny-item"
-                                                                data-color-src="./Students_images/13a.png"
+                                                                data-color-src="./Students_images/16b_with_thambail.png"
                                                                 data-name="Kavya Rao" data-course="Journalism"
                                                                 data-quote="Telling stories that matter - journalism was my hidden calling.">
-                                                                <img src="./Students_images/13b.png" alt="Student 13">
+                                                                <img src="./Students_images/16b_with_thambail.png" alt="Student 13">
                                                             </div>
                                                             <div class="spinny-item"
                                                                 data-color-src="./Students_images/14a.png"
