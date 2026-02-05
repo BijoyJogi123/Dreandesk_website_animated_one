@@ -1116,6 +1116,258 @@
             }
         }
     </style>
+
+    <!-- Career Section Styles - Exact Copy Design -->
+    <style>
+        /* Career Section Container */
+        .career-inner-wrapper {
+            position: relative;
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 0;
+            margin: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 600px;
+        }
+
+        .career-slide-wrap {
+            padding: 0;
+            height: 100%;
+            position: relative;
+        }
+
+        /* Top Bar with Dots */
+        .career-top-bar {
+            background: #e8e8e8;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Main Content Area - Top Section */
+        .career-main-content {
+            display: flex;
+            align-items: center;
+            padding: 60px 40px;
+            background: #ffffff;
+            /* Leave space for bottom cards */
+            position: relative;
+        }
+
+        .career-left-section {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .career-right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Typography */
+        .career-main-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin: 0 0 16px 0;
+            line-height: 1.1;
+            max-width: 800px;
+        }
+
+        .career-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin: 0 0 32px 0;
+            line-height: 1.4;
+        }
+
+        /* CTA Button */
+        .career-cta-btn {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .career-cta-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        /* Illustration Placeholder */
+        .career-illustration-placeholder {
+            width: 400px;
+            height: 300px;
+            background: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .career-illustration-placeholder::before {
+            content: "Line art illustration placeholder";
+        }
+
+        /* Bottom Cards Section - Full width at bottom */
+        .career-bottom-cards {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            height: 240px;
+        }
+
+        .career-card {
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            border: 2px solid #000;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .career-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .career-card-content {
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .career-card-illustration {
+            width: 100%;
+            height: 120px;
+            background: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .career-card-illustration::before {
+            content: "Illustration";
+        }
+
+        .career-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin: 0;
+            line-height: 1.2;
+            margin-top: auto;
+        }
+
+        .career-card-arrow {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 24px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .career-inner-wrapper {
+                height: auto;
+                min-height: 500px;
+            }
+
+            .career-main-content {
+                flex-direction: column;
+                padding: 40px 20px;
+                text-align: center;
+                height: auto;
+            }
+
+            .career-left-section {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .career-main-title {
+                font-size: 36px;
+            }
+
+            .career-illustration-placeholder {
+                width: 100%;
+                max-width: 300px;
+                height: 200px;
+            }
+
+            .career-bottom-cards {
+                position: static;
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            .career-card {
+                width: 100%;
+                min-height: 150px;
+            }
+
+            .career-inner-wrapper {
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .career-main-title {
+                font-size: 28px;
+            }
+
+            .career-subtitle {
+                font-size: 16px;
+            }
+
+            .career-card-content {
+                padding: 16px;
+            }
+
+            .career-card-title {
+                font-size: 16px;
+            }
+
+            .career-bottom-cards {
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .career-main-content {
+                padding: 30px 15px;
+            }
+
+            .career-card-illustration {
+                height: 80px;
+            }
+        }
+    </style>
     
     <meta
         content="Motion is a website that showcases the power of UI/UX animation in conveying the mood and character of a brand."
@@ -1893,7 +2145,7 @@
             .simple-circle {
                 width: 260px;
                 height: 260px;
-                border: 13px solid #f2d803;
+                border: 13px solid rgba(242, 216, 3, 0.2);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -1914,7 +2166,23 @@
                 border-radius: 50%;
                 border: 13px solid transparent;
                 border-top: 13px solid #f2d803;
-                animation: continuousSpinner 6s linear infinite;
+                border-right: 13px solid #f2d803;
+                animation: continuousSpinner 2s linear infinite;
+                z-index: 1;
+            }
+
+            .simple-circle::after {
+                content: '';
+                position: absolute;
+                top: -6px;
+                left: -6px;
+                right: -6px;
+                bottom: -6px;
+                border-radius: 50%;
+                border: 6px solid transparent;
+                border-top: 6px solid rgba(242, 216, 3, 0.6);
+                animation: continuousSpinner 1.5s linear infinite reverse;
+                z-index: 2;
             }
 
             .stat-item:nth-child(1) .simple-circle::before {
@@ -1934,29 +2202,13 @@
             }
 
             @keyframes continuousSpinner {
-
-                0%,
-                25% {
+                0% {
                     transform: rotate(0deg);
-                    opacity: 0;
-                }
-
-                30% {
                     opacity: 1;
                 }
-
-                50% {
-                    transform: rotate(360deg);
-                    opacity: 1;
-                }
-
-                55% {
-                    opacity: 0;
-                }
-
                 100% {
                     transform: rotate(360deg);
-                    opacity: 0;
+                    opacity: 1;
                 }
             }
 
@@ -1974,6 +2226,8 @@
                 align-items: center;
                 justify-content: center;
                 height: 100%;
+                position: relative;
+                z-index: 10;
             }
 
             /* Section-specific Review Widget - Two separate circular buttons stacked vertically */
@@ -3144,7 +3398,7 @@
                                         <div class="menu-item-revealer"></div>
                                     </div>
                                     <div class="menu-item" data-submenu="none">
-                                        <a href="#"><span>06</span>Careers</a>
+                                        <a href="./career.html"><span>06</span>Careers</a>
                                         <div class="menu-item-revealer"></div>
                                     </div>
                                     <div class="menu-item" data-submenu="none">
@@ -8246,7 +8500,7 @@
 
                                         <div style=" padding-bottom: 40px;">
                                             <div class="section-slide-wrap"
-                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 60px 100px 20px 100px; background: #f8f8f6; position: relative;">
+                                                style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; background: #f8f8f6; position: relative;">
 
                                                 <!-- Top bar decoration -->
                                                 <div
@@ -9952,7 +10206,6 @@
                                         <div class="career-inner-wrapper">
                                             <div class="section-slide-wrap career-slide-wrap">
 
-
                                                 <div class="career-top-bar">
                                                     <div style="display: flex; gap: 6px;">
                                                         <span
@@ -9964,275 +10217,55 @@
                                                     </div>
                                                 </div>
 
-
-                                                <div class="career-content-grid">
-
-
+                                                <!-- Main Career Content -->
+                                                <div class="career-main-content" style="margin-bottom:20%;">
                                                     <div class="career-left-section">
+                                                        <h1 class="career-main-title">Create a profile and upload a document</h1>
+                                                        <p class="career-subtitle">Contribute ideas, information, art, and more</p>
+                                                        <button class="career-cta-btn">Become a contributor</button>
+                                                    </div>
+                                                    <div class="career-right-section">
+                                                        <!-- Placeholder for line art illustration -->
+                                                        <div class="career-illustration-placeholder">
 
-                                                        <div class="career-red-line"></div>
+                                                                <img src="./Sections_svgs/goal_table.png" alt=""/>
 
-
-                                                        <div class="career-heading-wrapper">
-                                                            <h2 class="career-main-heading">
-                                                                <span>Launch Your</span><br>
-                                                                <span>Dream Career</span><br>
-                                                                <span>in </span>
-                                                                <span class="career-animated-text">NURSING</span>
-                                                            </h2>
-                                                        </div>
-
-
-                                                        <div style="padding-left: 20px;">
-                                                            <div
-                                                                style="display: flex; flex-direction: column; gap: 28px;">
-
-                                                                <div
-                                                                    style="position: relative; display: flex; align-items: flex-start; gap: 18px;">
-                                                                    <div style="position: relative; min-width: 80px;">
-                                                                        <div
-                                                                            style="position: absolute; left: -28px; top: 10px; width: 14px; height: 14px; background-color: #fadc5d; border-radius: 50%;">
-                                                                        </div>
-                                                                        <h3
-                                                                            style="color: #000000; font-size: 0.30rem; font-weight: 700; line-height: 1; margin: 0 0 6px 0;">
-                                                                            200%</h3>
-                                                                        <p
-                                                                            style="color: #374151; font-size: 0.14rem; font-weight: 400; margin: 0;">
-                                                                            Placements</p>
-                                                                    </div>
-                                                                    <p
-                                                                        style="color: #111827; font-size: 0.12rem; line-height: 1.5; margin: 0; flex: 1; padding-top: 4px;">
-                                                                        Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy
-                                                                    </p>
-                                                                </div>
-
-
-                                                                <div
-                                                                    style="position: relative; display: flex; align-items: flex-start; gap: 18px;">
-                                                                    <div style="position: relative; min-width: 110px;">
-                                                                        <div
-                                                                            style="position: absolute; left: -28px; top: 10px; width: 14px; height: 14px; background-color: #fadc5d; border-radius: 50%;">
-                                                                        </div>
-                                                                        <h3
-                                                                            style="color:  #000000; font-size: 0.30rem; font-weight: 700; line-height: 1; margin: 0 0 6px 0;">
-                                                                            95%</h3>
-                                                                        <p
-                                                                            style="color: #374151; font-size: 0.14rem; font-weight: 400; margin: 0;">
-                                                                            Secured</p>
-                                                                    </div>
-                                                                    <p
-                                                                        style="color: #111827; font-size: 0.12rem; line-height: 1.5; margin: 0; flex: 1; padding-top: 4px;">
-                                                                        Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy
-                                                                    </p>
-                                                                </div>
-
-
-                                                                <div
-                                                                    style="position: relative; display: flex; align-items: flex-start; gap: 18px;">
-                                                                    <div style="position: relative; min-width: 110px;">
-                                                                        <div
-                                                                            style="position: absolute; left: -28px; top: 10px; width: 14px; height: 14px; background-color:#fadc5d; border-radius: 50%;">
-                                                                        </div>
-                                                                        <h3
-                                                                            style="color:  #d5ec03; font-size: 0.30rem; font-weight: 700; line-height: 1; margin: 0 0 6px 0;">
-                                                                            12+ Years</h3>
-                                                                        <p
-                                                                            style="color: #374151; font-size: 0.14rem; font-weight: 400; margin: 0;">
-                                                                            Experience</p>
-                                                                    </div>
-                                                                    <p
-                                                                        style="color: #111827; font-size: 0.12rem; line-height: 1.5; margin: 0; flex: 1; padding-top: 4px;">
-                                                                        Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy
-                                                                    </p>
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                     </div>
+                                                </div>
 
+                                                <!-- Bottom Cards Section -->
+                                                <div class="career-bottom-cards">
+                                                    <div class="career-card">
+                                                        <div class="career-card-content"">
+                                                            <!-- Placeholder for illustration -->
+                                                            <div class="career-card-illustration">
 
-                                                    <div style="flex: 0 0 550px;">
-                                                        <div style="position: relative;">
-                                                            <div class="career-img-container"
-                                                                style="position: relative; height: 650px;  overflow: hidden; ">
-
-                                                                <img class="career-slide-img active"
-                                                                    src="./carear_section/Nursing.png"
-                                                                    alt="Nursing Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.8s ease;">
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/Engenier.png"
-                                                                    alt="Engineering Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/bussiness.png"
-                                                                    alt="Business Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/computer_application.png"
-                                                                    alt="Technology Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/design.png" alt="Arts Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/aviation.png" alt="Aviation"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-
-
-                                                                <img class="career-slide-img"
-                                                                    src="./carear_section/allied_health.png"
-                                                                    alt="Arts Career"
-                                                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease;">
-
-
-
-                                                                <div class="career-dots"
-                                                                    style="position: absolute; bottom: 20px; left: 0; right: 0; display: flex; gap: 10px; justify-content: center; z-index: 2;">
-                                                                    <span class="career-dot active" data-index="0"
-                                                                        style="width: 40px; height: 5px; background: #f42222; border-radius: 3px; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(244,34,34,0.5);"></span>
-                                                                    <span class="career-dot" data-index="1"
-                                                                        style="width: 40px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 3px; cursor: pointer; transition: all 0.3s;"></span>
-                                                                    <span class="career-dot" data-index="2"
-                                                                        style="width: 40px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 3px; cursor: pointer; transition: all 0.3s;"></span>
-                                                                    <span class="career-dot" data-index="3"
-                                                                        style="width: 40px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 3px; cursor: pointer; transition: all 0.3s;"></span>
-                                                                    <span class="career-dot" data-index="4"
-                                                                        style="width: 40px; height: 5px; background: rgba(255,255,255,0.5); border-radius: 3px; cursor: pointer; transition: all 0.3s;"></span>
-                                                                </div>
+                                                                <img alt="" src="./Sections_svgs/medical.png">
                                                             </div>
+                                                            <h3 class="career-card-title">Healthcare</h3>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="career-card">
+                                                        <div class="career-card-content">
+                                                            <!-- Placeholder for illustration -->
+                                                            <div class="career-card-illustration"></div>
+                                                            <h3 class="career-card-title">Discover contributors</h3>
+                                                            <div class="career-card-arrow">→</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="career-card">
+                                                        <div class="career-card-content">
+                                                            <!-- Placeholder for illustration -->
+                                                            <div class="career-card-illustration"></div>
+                                                            <h3 class="career-card-title">Become a contributor</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
-                                        <script>
-                                            (function () {
-                                                let careerSlide = 0;
-                                                const careerNames = ['Nursing', 'Aviation', 'Business Management', 'Computer Applications', 'Allied Health Sciences', 'Design', 'Engeeniering'];
-                                                const totalCareerSlides = 5;
-                                                let careerInterval;
-
-                                                function changeCareerSlide() {
-                                                    const imgs = document.querySelectorAll('.career-slide-img');
-                                                    const dots = document.querySelectorAll('.career-dot');
-                                                    const textElement = document.querySelector('.career-animated-text');
-                                                    const labelElement = document.querySelector('.career-label');
-
-                                                    if (imgs.length === 0) return;
-
-
-                                                    imgs[careerSlide].style.opacity = '0';
-                                                    dots[careerSlide].style.background = 'rgba(255,255,255,0.5)';
-                                                    dots[careerSlide].style.width = '40px';
-                                                    dots[careerSlide].style.boxShadow = 'none';
-
-
-                                                    if (textElement) {
-                                                        textElement.style.opacity = '0';
-                                                        textElement.style.transform = 'translateY(-10px)';
-                                                    }
-                                                    if (labelElement) {
-                                                        labelElement.style.opacity = '0';
-                                                        labelElement.style.transform = 'translateY(10px)';
-                                                    }
-
-                                                    careerSlide = (careerSlide + 1) % totalCareerSlides;
-
-
-                                                    setTimeout(() => {
-                                                        imgs[careerSlide].style.opacity = '1';
-                                                        dots[careerSlide].style.background = '#f42222';
-                                                        dots[careerSlide].style.width = '50px';
-                                                        dots[careerSlide].style.boxShadow = '0 2px 8px rgba(244,34,34,0.5)';
-
-
-                                                        if (textElement) {
-                                                            textElement.textContent = careerNames[careerSlide];
-                                                            textElement.style.transition = 'all 0.5s ease';
-                                                            textElement.style.opacity = '1';
-                                                            textElement.style.transform = 'translateY(0)';
-                                                        }
-                                                        if (labelElement) {
-                                                            labelElement.textContent = careerNames[careerSlide];
-                                                            labelElement.style.transition = 'all 0.5s ease';
-                                                            labelElement.style.opacity = '1';
-                                                            labelElement.style.transform = 'translateY(0)';
-                                                        }
-                                                    }, 300);
-                                                }
-
-
-                                                careerInterval = setInterval(changeCareerSlide, 4000);
-
-
-                                                document.addEventListener('DOMContentLoaded', function () {
-                                                    const textElement = document.querySelector('.career-animated-text');
-                                                    const labelElement = document.querySelector('.career-label');
-
-
-                                                    if (textElement) {
-                                                        textElement.style.transition = 'all 0.5s ease';
-                                                    }
-                                                    if (labelElement) {
-                                                        labelElement.style.transition = 'all 0.5s ease';
-                                                    }
-
-                                                    document.querySelectorAll('.career-dot').forEach((dot, idx) => {
-                                                        dot.addEventListener('click', function () {
-                                                            const imgs = document.querySelectorAll('.career-slide-img');
-                                                            const dots = document.querySelectorAll('.career-dot');
-
-
-                                                            clearInterval(careerInterval);
-                                                            careerInterval = setInterval(changeCareerSlide, 4000);
-
-
-                                                            imgs[careerSlide].style.opacity = '0';
-                                                            dots[careerSlide].style.background = 'rgba(255,255,255,0.5)';
-                                                            dots[careerSlide].style.width = '40px';
-                                                            dots[careerSlide].style.boxShadow = 'none';
-
-
-                                                            if (textElement) {
-                                                                textElement.style.opacity = '0';
-                                                                textElement.style.transform = 'translateY(-10px)';
-                                                            }
-                                                            if (labelElement) {
-                                                                labelElement.style.opacity = '0';
-                                                                labelElement.style.transform = 'translateY(10px)';
-                                                            }
-
-
-                                                            setTimeout(() => {
-                                                                careerSlide = idx;
-                                                                imgs[careerSlide].style.opacity = '1';
-                                                                dots[careerSlide].style.background = '#f42222';
-                                                                dots[careerSlide].style.width = '50px';
-                                                                dots[careerSlide].style.boxShadow = '0 2px 8px rgba(244,34,34,0.5)';
-
-
-                                                                if (textElement) {
-                                                                    textElement.textContent = careerNames[careerSlide];
-                                                                    textElement.style.opacity = '1';
-                                                                    textElement.style.transform = 'translateY(0)';
-                                                                }
-                                                                if (labelElement) {
-                                                                    labelElement.textContent = careerNames[careerSlide];
-                                                                    labelElement.style.opacity = '1';
-                                                                    labelElement.style.transform = 'translateY(0)';
-                                                                }
-                                                            }, 300);
-                                                        });
-                                                    });
-                                                });
-                                            })();
-                                        </script>
                                     </div>
 
                                     <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
