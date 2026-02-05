@@ -3120,8 +3120,8 @@
                                         <div class="menu-item-revealer"></div>
                                     </div>
                                     <div class="menu-item has-submenu" data-submenu="services">
-                                        <a href="#" class="services-toggle"><span>03</span>Services <span
-                                                class="submenu-arrow">+</span></a>
+                                        <a href="#" class="services-toggle"><span>+</span>Services <span
+                                                class="submenu-arrow">03</span></a>
                                         <div class="menu-item-revealer"></div>
                                         <div class="submenu">
                                             <div class="submenu-item">
@@ -3430,7 +3430,7 @@
                         }
 
                         .has-submenu.active .submenu-arrow {
-                            transform: rotate(45deg);
+                            transform: rotate(360deg);
                             color: #f2d803;
                         }
 
@@ -4170,9 +4170,9 @@
                                         // Update arrow text
                                         const arrow = servicesToggle.querySelector('.submenu-arrow');
                                         if (hasSubmenu.classList.contains('active')) {
-                                            arrow.textContent = '×';
+                                            arrow.textContent = '03';
                                         } else {
-                                            arrow.textContent = '+';
+                                            arrow.textContent = '03';
                                         }
                                     });
                                 }
