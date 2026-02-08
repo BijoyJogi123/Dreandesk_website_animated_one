@@ -1,0 +1,38 @@
+INSTRUCTIONS TO REPLACE NAVBAR IN CAREER.HTML
+==============================================
+
+1. In Career.html, find this section (around line 10466):
+   <div class="ssr-variant hidden-121iadi hidden-zrt4nr">
+     <nav class="framer-hk7g5j" ...
+     
+2. Delete everything from that <nav> tag until its closing </nav> tag
+
+3. Replace it with the navbar from index.html
+
+The navbar from index.html is very large (over 1000 lines) and includes:
+- Logo section
+- Navigation menu with hamburger button
+- Full-screen overlay menu
+- GSAP animations
+- Responsive styles
+- Menu scripts
+
+RECOMMENDED APPROACH:
+====================
+
+Since the navbar is extremely large and complex, I recommend:
+
+1. Open index.html in a text editor
+2. Search for: <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
+3. Copy from that line down to the closing </div> of the navigation (around line 5200)
+4. In Career.html, find the <nav class="framer-hk7g5j" section
+5. Replace the entire <nav>...</nav> section with the copied navigation from index.html
+
+IMPORTANT NOTES:
+===============
+- The index.html navbar uses different CSS classes and structure than Career.html
+- You may need to adjust positioning/styling after pasting
+- Make sure all the GSAP scripts and menu animation scripts are included
+- Test the menu button functionality after replacement
+
+If you want me to do this automatically, I can create a new Career.html file with the navbar replaced, but it will be a large operation.

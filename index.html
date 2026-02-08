@@ -143,6 +143,7 @@
             position: absolute;
             top: calc(33.75% - 150px);
             left: 360px;
+            
         }
 
         .framer-1kfwg09 {
@@ -261,7 +262,7 @@
             padding: 0;
             display: flex;
             position: absolute;
-            top: 54%;
+            top: 58%;
             left: 100px;
             overflow: visible;
             /* transform: translateY(-50%); */
@@ -359,7 +360,7 @@
             .framer-3y1b7i {
                 width: 90%;
                 left: 5%;
-                top: 8%;
+                top: 12%;
             }
 
             .framer-1kfwg09 {
@@ -385,7 +386,8 @@
             }
 
             .framer-rqqsrm {
-                bottom: 8%;
+                bottom: 12%;
+                top: auto;
                 left: 50%;
                 transform: translate(-50%, 0) rotate(-4deg);
             }
@@ -394,13 +396,13 @@
                 width: 90%;
                 height: 281px;
                 left: 5%;
-                bottom: 8%;
+                bottom: 12%;
             }
         }
 
         @media (max-width: 768px) {
             .framer-3y1b7i {
-                top: 5%;
+                top: 25%;
                 width: 95%;
                 left: 2.5%;
             }
@@ -423,13 +425,13 @@
             }
 
             .framer-rqqsrm {
-                bottom: 5%;
+                bottom: 8%;
             }
         }
 
         @media (max-width: 480px) {
             .framer-3y1b7i {
-                top: 3%;
+                top: 8%;
             }
 
             .framer-dnb8d0 p {
@@ -449,7 +451,7 @@
             }
 
             .framer-rqqsrm {
-                bottom: 3%;
+                bottom: 5%;
             }
         }
 
@@ -2281,6 +2283,8 @@
                 }
 
                 .navigation.w-nav {
+                    position: fixed !important;
+                    /* top: 38px !important; */
                     /* margin-top: 33px !important; */
                 }
             }
@@ -2314,6 +2318,8 @@
                 }
 
                 .navigation.w-nav {
+                    position: fixed !important;
+                    /* top: 35px !important; */
                     /* margin-top: 30px !important; */
                     padding: 15px 20px;
                 }
@@ -2348,6 +2354,8 @@
                 }
 
                 .navigation.w-nav {
+                    position: fixed !important;
+                    /* top: 32px !important; */
                     /* margin-top: 26px !important; */
                     padding: 12px 15px;
                 }
@@ -3228,6 +3236,15 @@
             top: 0;
             left: 0;
             width: 100%;
+            z-index: 9999 !important;
+            background: #f2d803;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+            width: 100%;
             height: 40px;
             background: #f2d803;
             display: flex;
@@ -3669,8 +3686,15 @@
 
         /* Enhanced Navigation Responsiveness */
         .navigation.w-nav {
+            position: fixed !important;
+            /* top: 50px !important; */
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 9998 !important;
+            background: transparent !important;
             /* margin-top: clamp(26px, 4vw, 50px) !important; */
             padding: clamp(10px, 2vw, 20px) clamp(0px, 3vw, 0px);
+            transition: all 0.3s ease !important;
         }
 
         /* Logo responsiveness */
@@ -3739,53 +3763,53 @@
             .years-badge {
                 width: 160px;
                 left: 60px;
-                padding-bottom: 18px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
         @media (max-width: 1024px) {
             .years-badge {
-                width: 140px;
-                left: 40px;
-                padding-bottom: 15px;
-                transform: translateY(0);
-                top: 8%;
+                width: 120px;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
         @media (max-width: 768px) {
             .years-badge {
-                width: 110px;
-                left: 25px;
-                padding-bottom: 12px;
-                top: 5%;
+                width: 90px;
+                left: 40px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
         @media (max-width: 480px) {
             .years-badge {
-                width: 85px;
-                left: 15px;
-                padding-bottom: 10px;
-                top: 3%;
+                width: 70px;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
         @media (max-width: 375px) {
             .years-badge {
-                width: 70px;
-                left: 10px;
-                padding-bottom: 8px;
-                top: 2%;
+                width: 60px;
+                left: 25px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
         @media (max-width: 320px) {
             .years-badge {
-                width: 60px;
-                left: 8px;
-                padding-bottom: 5px;
-                top: 2%;
+                width: 50px;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
@@ -4997,24 +5021,24 @@
                                         }, 1200); // Same timing as menu button
 
                                     } else {
-                                        // Menu is closing - restore original white outline styling immediately
-                                        console.log("Removing menu-active class and restoring white styling"); // Debug
+                                        // Menu is closing - restore original black styling immediately
+                                        console.log("Removing menu-active class and restoring black styling"); // Debug
                                         toggleBtn.classList.remove('menu-active');
                                         // Remove menu-visible class from hamburger
                                         hamburger.classList.remove('menu-visible');
 
-                                        // Explicitly set original white outline styles
-                                        toggleBtn.style.setProperty('border-color', '#ffffff', 'important');
+                                        // Explicitly set original black styles
+                                        toggleBtn.style.setProperty('border-color', '#000000', 'important');
                                         toggleBtn.style.setProperty('background-color', 'transparent', 'important');
 
                                         const menuText = document.querySelector('.menu-text');
                                         if (menuText) {
-                                            menuText.style.setProperty('color', '#ffffff', 'important');
+                                            menuText.style.setProperty('color', '#000000', 'important');
                                         }
 
                                         const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
                                         hamburgerLines.forEach(line => {
-                                            line.style.setProperty('background-color', '#ffffff', 'important');
+                                            line.style.setProperty('background-color', '#000000', 'important');
                                         });
 
                                         // After a short delay, remove inline styles to let CSS take over
@@ -11034,13 +11058,13 @@
                                                     line.style.setProperty('background-color', '#000000', 'important');
                                                 });
                                             } else {
-                                                // Dark background - make menu button white (default)
+                                                // Dark background - make menu button black (default)
                                                 htmlElement.removeAttribute('data-current-section');
-                                                toggleBtn.style.setProperty('border-color', '#ffffff', 'important');
+                                                toggleBtn.style.setProperty('border-color', '#000000', 'important');
                                                 toggleBtn.style.setProperty('background-color', 'transparent', 'important');
-                                                menuText.style.setProperty('color', '#ffffff', 'important');
+                                                menuText.style.setProperty('color', '#000000', 'important');
                                                 hamburgerLines.forEach(line => {
-                                                    line.style.setProperty('background-color', '#ffffff', 'important');
+                                                    line.style.setProperty('background-color', '#000000', 'important');
                                                 });
                                             }
                                         }

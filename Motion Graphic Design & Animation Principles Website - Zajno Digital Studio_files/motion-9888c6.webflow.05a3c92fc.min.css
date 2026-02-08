@@ -2317,7 +2317,7 @@ textarea.w-select {
 }
 
 .h6.white {
-  color: #fdfcfa
+  color: #0c0b0b;
 }
 
 .colors-wrap {
@@ -2728,7 +2728,7 @@ textarea.w-select {
   bottom: auto;
   left: 5.27rem;
   right: auto;
- border: 3px solid black
+  border: 3px solid black
 }
 
 .anim-shape.is-controls {
@@ -2747,7 +2747,7 @@ textarea.w-select {
   top: 17.1rem;
   left: 3.6rem;
   transform: rotate(30deg);
-   border: 3px solid black
+  border: 3px solid black
 }
 
 .anim-shape.is-attention {
@@ -2757,7 +2757,7 @@ textarea.w-select {
   left: auto;
   /* right: 1.56rem */
   right: 0.90rem;
-   border: 3px solid black
+  border: 3px solid black
 }
 
 .splide.slider1 {
@@ -2966,8 +2966,11 @@ textarea.w-select {
   padding-bottom: 0
 }
 
+/* we spend part */
+
 .section.is-introduction {
-  background-color: #0c0b0b;
+  /* background-color: #0c0b0b; */
+  background-color: #fdfcfa;
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
@@ -2976,7 +2979,7 @@ textarea.w-select {
 
 .section.is-interactive {
   -webkit-text-fill-color: inherit;
-  background-color: #fdfcfa;
+  background-color: #fdfcfa ;
   background-clip: border-box;
   padding-top: 2.95rem;
   position: relative;
@@ -5317,7 +5320,7 @@ textarea.w-select {
   background-image: url(../Home_bg.svg);
   background-position: 0 0;
   background-size: cover;
-  background-color:white;
+  background-color: white;
 }
 
 .hero-visual {
@@ -6066,7 +6069,7 @@ textarea.w-select {
   .bg-visual {
     height: 20.59rem;
     background-image: url(../Home_bg_tablet.svg);
-    background-color:#000000
+    background-color: #000000
   }
 }
 
