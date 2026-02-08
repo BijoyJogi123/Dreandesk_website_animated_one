@@ -10611,6 +10611,187 @@
 
     <!-- End of bodyEnd -->
 
+        <!-- Horizontal Scroll with Mouse Wheel Script -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // Detect if device is mobile/tablet
+        function isMobileDevice() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                 (window.innerWidth <= 1024) ||
+                 ('ontouchstart' in window) ||
+                 (navigator.maxTouchPoints > 0);
+        }
+        
+        // Disable Lenis smooth scroll if it exists (only on desktop)
+        function disableLenis() {
+          if (!isMobileDevice() && window.lenis) {
+            window.lenis.destroy();
+            console.log('Lenis destroyed');
+          }
+          
+          // Remove lenis classes only on desktop
+          if (!isMobileDevice()) {
+            document.documentElement.classList.remove('lenis', 'lenis-smooth', 'lenis-autoToggle');
+            document.body.classList.remove('lenis', 'lenis-smooth');
+          }
+        }
+        
+        // Smooth scroll implementation
+        function createSmoothScroll() {
+          let targetScrollLeft = window.scrollX || window.pageXOffset;
+          let currentScrollLeft = targetScrollLeft;
+          let isScrolling = false;
+          let scrollTimeout;
+          
+          // Easing function for smooth animation
+          function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+          }
+          
+          // Animate scroll
+          function animateScroll() {
+            if (!isScrolling) return;
+            
+            const diff = targetScrollLeft - currentScrollLeft;
+            const delta = diff * 0.1; // Smoothness factor (lower = smoother but slower)
+            
+            if (Math.abs(diff) > 0.5) {
+              currentScrollLeft += delta;
+              window.scrollTo(currentScrollLeft, 0);
+              requestAnimationFrame(animateScroll);
+            } else {
+              currentScrollLeft = targetScrollLeft;
+              window.scrollTo(currentScrollLeft, 0);
+              isScrolling = false;
+            }
+          }
+          
+          // Handle wheel events
+          function handleWheel(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+            // Get scroll delta
+            let delta = 0;
+            if (e.deltaY) {
+              delta = e.deltaY;
+            } else if (e.wheelDelta) {
+              delta = -e.wheelDelta;
+            } else if (e.detail) {
+              delta = e.detail * 40;
+            }
+            
+            // Apply multiplier for better control
+            const scrollMultiplier = 1.5;
+            delta *= scrollMultiplier;
+            
+            // Update target scroll position
+            targetScrollLeft += delta;
+            
+            // Clamp to valid scroll range
+            const maxScroll = document.documentElement.scrollWidth - window.innerWidth;
+            targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, maxScroll));
+            
+            // Start animation if not already running
+            if (!isScrolling) {
+              isScrolling = true;
+              currentScrollLeft = window.scrollX || window.pageXOffset;
+              requestAnimationFrame(animateScroll);
+            }
+            
+            // Clear timeout and set new one
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+              isScrolling = false;
+            }, 100);
+            
+            return false;
+          }
+          
+          return handleWheel;
+        }
+        
+        // Force horizontal scrolling (desktop only)
+        function forceHorizontalScroll() {
+          // Check if mobile - if so, skip horizontal scroll
+          if (isMobileDevice()) {
+            console.log('Mobile device detected - vertical scrolling enabled');
+            return;
+          }
+          
+          // Create smooth scroll handler
+          const handleWheel = createSmoothScroll();
+          
+          // Add event listeners with highest priority (desktop only)
+          document.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+          window.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+          document.body.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+          
+          // Also handle mousewheel for older browsers
+          document.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
+          window.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
+          
+          // Handle DOMMouseScroll for Firefox
+          document.addEventListener('DOMMouseScroll', handleWheel, { passive: false, capture: true });
+          
+          // Add CSS for smooth scrolling
+          const style = document.createElement('style');
+          style.textContent = `
+            html {
+              scroll-behavior: auto !important;
+            }
+            body {
+              overflow-x: auto !important;
+              overflow-y: hidden !important;
+            }
+          `;
+          document.head.appendChild(style);
+          
+          console.log('Smooth horizontal scroll enabled (desktop only)');
+        }
+        
+        // Initialize everything
+        function init() {
+          // Disable Lenis only on desktop
+          disableLenis();
+          
+          // Force horizontal scroll only on desktop
+          forceHorizontalScroll();
+          
+          // Keep checking and disabling Lenis if it reinitializes (desktop only)
+          if (!isMobileDevice()) {
+            setInterval(disableLenis, 1000);
+          }
+        }
+        
+        // Run on load
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+        
+        // Also run after delays to catch late-loading scripts
+        setTimeout(init, 100);
+        setTimeout(init, 500);
+        setTimeout(init, 1000);
+        setTimeout(init, 2000);
+        
+        // Re-check on window resize (in case orientation changes)
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {
+            location.reload(); // Reload to re-detect device type
+          }, 500);
+        });
+      })();
+    </script>
+
+
 
     <iframe id="__framer-editorbar" src="./Firma_files/edit.html" aria-hidden="true" allow="autoplay" tabindex="-1"
       class="status_hidden"></iframe>
