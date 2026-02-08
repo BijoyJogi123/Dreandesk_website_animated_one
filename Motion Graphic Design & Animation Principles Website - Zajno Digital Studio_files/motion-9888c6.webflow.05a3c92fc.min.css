@@ -5313,7 +5313,8 @@ textarea.w-select {
   height: 32.7rem;
   background-image: url(../Home_bg.svg);
   background-position: 0 0;
-  background-size: cover
+  background-size: cover;
+  background-color:white;
 }
 
 .hero-visual {
