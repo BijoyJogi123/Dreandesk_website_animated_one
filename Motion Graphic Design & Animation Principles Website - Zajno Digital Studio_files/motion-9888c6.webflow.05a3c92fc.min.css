@@ -2727,7 +2727,8 @@ textarea.w-select {
   top: 2.94rem;
   bottom: auto;
   left: 5.27rem;
-  right: auto
+  right: auto;
+ border: 3px solid black
 }
 
 .anim-shape.is-controls {
@@ -2745,7 +2746,8 @@ textarea.w-select {
 .anim-shape.is-your {
   top: 17.1rem;
   left: 3.6rem;
-  transform: rotate(30deg)
+  transform: rotate(30deg);
+   border: 3px solid black
 }
 
 .anim-shape.is-attention {
@@ -2754,7 +2756,8 @@ textarea.w-select {
   bottom: auto;
   left: auto;
   /* right: 1.56rem */
-  right: 0.90rem
+  right: 0.90rem;
+   border: 3px solid black
 }
 
 .splide.slider1 {
