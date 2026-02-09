@@ -2736,11 +2736,12 @@ textarea.w-select {
   height: auto;
   background-color: #fdfcfa;
   border-radius: 10rem;
-  top: 9.53rem;
+  top: 8.83rem;
   bottom: auto;
   left: auto;
   /* right: 2.9rem */
-  right: 2.1rem
+  right: 1.6rem;
+      border: 3px solid black;
 }
 
 .anim-shape.is-your {
@@ -3473,7 +3474,7 @@ textarea.w-select {
 
 .lesson-item.is-examples-2 {
   width: 100%;
-  height: 400vh;
+  height: 80vh;
   background-color: transparent;
   position: relative
 }
@@ -4644,7 +4645,7 @@ textarea.w-select {
   z-index: 3;
   width: 7.21rem;
   height: 5.4rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/641d6afbb1ea5128453a7980_cloud_1.svg);
+  background-image: url(../Sections_svgs/new_file_too.svg);
   background-position: 0 0;
   background-size: cover;
   position: relative
@@ -4654,7 +4655,7 @@ textarea.w-select {
   z-index: 2;
   width: 7.92rem;
   height: 5.51rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/641d6b936bc2e39f88ad069f_cloud_2.svg);
+  background-image: url(../Sections_svgs/left_cloude.svg);
   background-position: 0 0;
   background-size: cover;
   position: absolute;
@@ -4668,7 +4669,7 @@ textarea.w-select {
   z-index: 1;
   width: 6.43rem;
   height: 2.92rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/641d6afca2bcc57ba21da428_cloud_3.svg);
+  background-image: url(../Sections_svgs/middle-01.svg);
   background-position: 0 0;
   background-size: cover;
   position: absolute;
@@ -5280,14 +5281,16 @@ textarea.w-select {
 .anim-smoke {
   width: 3.84rem;
   height: 4rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/63daf40a637be943c63cf0ca_smoke.svg);
+  /* background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/63daf40a637be943c63cf0ca_smoke.svg); */
   background-position: 50%;
   background-size: cover;
   position: absolute;
   top: 9.31rem;
+  top:9.50rem;
   bottom: auto;
   left: auto;
   right: 1.81rem
+    
 }
 
 .card-link {
@@ -5919,16 +5922,18 @@ textarea.w-select {
     right: auto
   }
 
+  /* Tablet */
+
   .bg-list-item.is-first {
     width: 3rem;
     height: 2.91rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64214cd17f2f1915968b01d3_cloud_1_tablet.svg)
+    background-image: url(../Sections_svgs/299\ ×\ 291\ px\ tablet-01.svg)
   }
 
   .bg-list-item.is-second {
     width: 5.7rem;
     height: 4.18rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64214cd12275245d811bbc75_cloud_2_tablet.svg);
+    background-image: url(../Sections_svgs/570\ ×\ 418\ px\ tablet-01.svg);
     top: -.73rem;
     bottom: auto;
     left: auto;
@@ -5938,7 +5943,7 @@ textarea.w-select {
   .bg-list-item.is-third {
     width: 3.71rem;
     height: 1.72rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64214cd17a77c61d45beb754_cloud_3_tablet.svg);
+    background-image: url(../Sections_svgs/299\ ×\ 291\ px\ tablet-01.svg);
     top: .21rem;
     bottom: auto;
     left: 1.85rem;
@@ -6897,14 +6902,14 @@ textarea.w-select {
   .bg-list-item.is-first {
     width: 1.94rem;
     height: 1.72rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64218b017fee5ad024dbb1e9_cloud_1_mobile.svg);
+    background-image: url(../Sections_svgs/194\ ×\ 172\ mobile-01.svg);
     display: block
   }
 
   .bg-list-item.is-second {
     width: 3.04rem;
     height: 2.21rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/64218b01cafd51dae45e5708_cloud_2_mobile.svg);
+    background-image: url(../Sections_svgs/304\ ×\ 221\ px\ Mobile-01.svg);
     display: block;
     top: auto;
     bottom: -.24rem;
@@ -6915,7 +6920,7 @@ textarea.w-select {
   .bg-list-item.is-third {
     width: 2.02rem;
     height: .92rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/6423e47495983556b7eef09a_Footer_Cloud-3_mobile.svg);
+    background-image: url(../Sections_svgs/Mobile_2.svg);
     display: block;
     top: auto;
     bottom: .69rem;
