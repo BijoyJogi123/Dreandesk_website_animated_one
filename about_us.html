@@ -9251,6 +9251,758 @@
       clip-path: unset;
     }
   </style>
+
+
+  <style>
+    /* Yellow Top Stripe Styles */
+    .top-yellow-stripe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999 !important;
+      background: #f2d803;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .stripe-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: clamp(10px, 1.2vw, 13px);
+      font-weight: 700;
+      color: #000000;
+      padding-left: 3%;
+    }
+
+    .stripe-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding-right: 0%;
+    }
+
+    .stripe-social-icons {
+      display: flex;
+      align-items: center;
+      gap: clamp(8px, 1.5vw, 15px);
+    }
+
+    .stripe-social-icons a {
+      color: #000000;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .stripe-social-icons a:hover {
+      opacity: 0.7;
+    }
+
+    .stripe-social-icons svg {
+      width: clamp(12px, 1.5vw, 16px);
+      height: clamp(12px, 1.5vw, 16px);
+    }
+
+    .iso-certified {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .iso-certified img {
+      height: clamp(20px, 2.5vw, 30px);
+      width: auto;
+    }
+
+    /* Navigation Bar Styles */
+    .navigation.w-nav {
+      position: fixed !important;
+      top: 50px !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 9998 !important;
+      background: transparent !important;
+      padding: clamp(10px, 2vw, 20px) clamp(40px, 5vw, 80px) !important;
+      transition: all 0.3s ease !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    /* Nav header alignment */
+    .nav-header {
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+
+    /* Nav logo container alignment */
+    .nav-logo {
+      display: flex !important;
+      align-items: center !important;
+      position: relative !important;
+    }
+
+    /* Logo wrapper alignment */
+    .logo-wrappers,
+    .logo-sections-wrap {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    #logo-wrap {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    #logo-wrap img {
+      max-width: clamp(90px, 12vw, 150px) !important;
+      height: auto !important;
+      display: block !important;
+      transition: all 0.3s ease !important;
+      filter: none !important;
+      opacity: 1 !important;
+    }
+
+    /* Menu Button Styles */
+    #toggle-btn {
+      position: fixed;
+      right: 40px;
+      width: auto;
+      min-width: 120px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 30px;
+      z-index: 99999;
+      cursor: pointer;
+      border: 2px solid #000000;
+      border-radius: 50px;
+      background: transparent;
+      transition: all 0.6s ease !important;
+      transform: scale(clamp(0.6, 1vw, 0.8)) !important;
+      transform-origin: center right !important;
+    }
+
+    #toggle-btn:hover {
+      border-color: #000000;
+    }
+
+    .menu-text {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: clamp(10px, 1.2vw, 12px) !important;
+      font-weight: 700;
+      color: #000000 !important;
+      text-transform: lowercase;
+      letter-spacing: 2px;
+      transition: all 0.6s ease !important;
+    }
+
+    #toggle-btn:hover .menu-text {
+      color: #f2d803;
+    }
+
+    #hamburger {
+      position: relative;
+      width: clamp(16px, 2vw, 20px) !important;
+      height: clamp(14px, 1.8vw, 16px) !important;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #hamburger .line-1,
+    #hamburger .line-2 {
+      position: relative;
+      width: 30px;
+      height: 3px;
+      background: #000000 !important;
+      transition: all 0.6s ease !important;
+      transform: none;
+    }
+
+    /* Hamburger Cross Animation */
+    #toggle-btn #hamburger.active .line.line-1 {
+      transform: rotate(45deg) translateY(9px) !important;
+    }
+
+    #toggle-btn #hamburger.active .line.line-2 {
+      transform: rotate(-45deg) translateY(-9px) !important;
+    }
+
+    /* Black hamburger X when menu is visible */
+    #toggle-btn #hamburger.active.menu-visible .line.line-1,
+    #toggle-btn #hamburger.active.menu-visible .line.line-2 {
+      background: #000000 !important;
+    }
+
+    #hamburger.active.menu-visible+.menu-text {
+      color: #000000;
+    }
+
+    /* Full Screen Menu Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9998;
+      pointer-events: none;
+    }
+
+    .overlay svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      z-index: 9997;
+      visibility: hidden;
+      /* background-color: #ffffff; */
+    }
+
+    .menu>div {
+      height: 100%;
+      display: flex;
+      /* background-color: #ffffff; */
+    }
+
+    .menu a {
+      position: relative;
+      top: 100vh;
+      line-height: 50%;
+      text-decoration: none;
+      color: #000000;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #f2d803;
+    }
+
+    .menu a span {
+      font-size: 20px;
+      margin-right: 2em;
+      opacity: 0.7;
+      color: #000000;
+    }
+
+    .menu-item {
+      position: relative;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      max-width: 800px !important;
+      margin: 0 auto !important;
+      padding: 0 100px !important;
+    }
+
+    .primary-menu {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5em;
+    }
+
+    .primary-menu .wrapper {
+      width: 100%;
+    }
+    
+    .menu-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .primary-menu .menu-item a {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin: 8px 0;
+      line-height: 1.1;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      width: 100% !important;
+      text-decoration: none !important;
+    }
+    
+    /* Numbers (01, 02, etc.) - align to right */
+    .primary-menu .menu-item a span {
+      order: 2 !important;
+      margin-left: auto !important;
+      margin-right: 0 !important;
+      min-width: 40px !important;
+      text-align: right !important;
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    /* Submenu Styles */
+    .menu-item.has-submenu {
+      position: relative;
+    }
+
+    .submenu-arrow {
+      font-size: 20px;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      color: #ffffff;
+      order: 3 !important;
+    }
+
+    .menu-item.has-submenu.active .submenu-arrow {
+      transform: rotate(360deg);
+      color: #f2d803;
+    }
+
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+      margin-top: 10px;
+      padding-left: 50px;
+      padding-right: 0;
+      display: none;
+      text-align: left;
+    }
+
+    .menu-item.has-submenu.active .submenu {
+      max-height: 500px;
+      opacity: 1;
+      display: block;
+    }
+
+    .submenu-item {
+      margin-bottom: 8px;
+      transform: translateX(-15px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    .menu-item.has-submenu.active .submenu-item {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .menu-item.has-submenu.active .submenu-item:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .menu-item.has-submenu.active .submenu-item:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .menu-item.has-submenu.active .submenu-item:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .submenu-item a {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      font-size: 20px !important;
+      font-weight: 400 !important;
+      color: #000000 !important;
+      text-decoration: none !important;
+      text-transform: capitalize !important;
+      letter-spacing: 0.3px !important;
+      position: relative !important;
+      transition: color 0.3s ease !important;
+      display: inline-block !important;
+      padding: 3px 0 !important;
+      top: 0 !important;
+      line-height: 1.2 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+
+    .submenu-item a:hover {
+      color: #f2d803;
+    }
+
+    .submenu-item a::before {
+      content: "→";
+      margin-right: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .submenu-item a:hover::before {
+      opacity: 1;
+    }
+
+    .services-toggle {
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      #toggle-btn {
+        min-width: 110px;
+        height: 48px;
+        padding: 0 22px;
+        gap: 14px;
+        right: 35px;
+        transform: scale(1) !important;
+      }
+
+      .menu-text {
+        font-size: 13px !important;
+      }
+
+      #hamburger {
+        width: 20px !important;
+        height: 16px !important;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 20px;
+        height: 2.5px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .navigation.w-nav {
+        top: 35px !important;
+        padding: 15px 20px !important;
+      }
+      
+      #toggle-btn {
+        min-width: 105px;
+        height: 46px;
+        padding: 0 20px;
+        gap: 12px;
+        right: 30px;
+      }
+
+      .menu-text {
+        font-size: 12px !important;
+      }
+
+      #hamburger {
+        width: 19px !important;
+        height: 15px !important;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 19px;
+        height: 2.5px;
+      }
+
+      .primary-menu .menu-item a {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 6px 0;
+      }
+      
+      .primary-menu .menu-item a span {
+        font-size: 14px;
+        margin-right: 1.2em;
+      }
+      
+      /* Mobile Submenu Styles */
+      .submenu {
+        padding-left: 30px;
+        padding-right: 0;
+        text-align: left;
+      }
+
+      .submenu-item {
+        text-align: left;
+      }
+
+      .submenu-item a {
+        font-size: 16px !important;
+        text-align: left !important;
+      }
+
+      .submenu-arrow {
+        font-size: 18px;
+        margin-left: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navigation.w-nav {
+        top: 32px !important;
+        padding: 12px 15px !important;
+      }
+
+      #toggle-btn {
+        min-width: 95px;
+        height: 42px;
+        padding: 0 16px;
+        gap: 10px;
+        right: 20px;
+      }
+
+      .menu-text {
+        font-size: 11px !important;
+      }
+
+      #hamburger {
+        width: 18px !important;
+        height: 14px !important;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 18px;
+        height: 2px;
+      }
+
+      #toggle-btn #hamburger.active .line.line-1 {
+        transform: rotate(45deg) translateY(7px) !important;
+      }
+
+      #toggle-btn #hamburger.active .line.line-2 {
+        transform: rotate(-45deg) translateY(-7px) !important;
+      }
+
+      .menu {
+        background-color: #ffffff !important;
+      }
+
+      .menu > div {
+        background-color: #ffffff !important;
+      }
+
+      .wrapper {
+        padding: 0 40px !important;
+        gap: 1.2em;
+      }
+
+      .primary-menu {
+        padding: 0 1em;
+      }
+
+      .primary-menu .menu-item a {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 6px 0;
+      }
+      
+      .primary-menu .menu-item a span {
+        font-size: 13px;
+      }
+
+      /* Mobile Small Submenu Styles */
+      .submenu {
+        padding-left: 25px;
+        padding-right: 0;
+        text-align: left;
+      }
+
+      .submenu-item {
+        text-align: left;
+      }
+
+      .submenu-item a {
+        font-size: 16px !important;
+        text-align: left !important;
+      }
+
+      .submenu-arrow {
+        font-size: 16px;
+        margin-left: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .top-yellow-stripe {
+        height: 28px;
+        padding: 0 12px;
+      }
+
+      .stripe-left {
+        font-size: 7px;
+      }
+
+      .iso-certified {
+        display: none;
+      }
+
+      #toggle-btn {
+        min-width: 85px;
+        height: 38px;
+        padding: 0 14px;
+        gap: 8px;
+        right: 15px;
+        border-width: 1.5px;
+      }
+
+      .menu-text {
+        font-size: 10px !important;
+        letter-spacing: 1px;
+      }
+
+      #hamburger {
+        width: 16px !important;
+        height: 12px !important;
+        gap: 4px;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 16px;
+        height: 2px;
+      }
+
+      #toggle-btn #hamburger.active .line.line-1 {
+        transform: rotate(45deg) translateY(6px) !important;
+      }
+
+      #toggle-btn #hamburger.active .line.line-2 {
+        transform: rotate(-45deg) translateY(-6px) !important;
+      }
+
+      .menu {
+        background-color: #ffffff !important;
+      }
+
+      .menu > div {
+        background-color: #ffffff !important;
+      }
+
+      .wrapper {
+        padding: 0 30px !important;
+        gap: 1em;
+      }
+
+      .primary-menu {
+        padding: 0 0.5em;
+      }
+
+      .primary-menu .menu-item a {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        margin: 4px 0;
+      }
+      
+      .primary-menu .menu-item a span {
+        font-size: 11px;
+      }
+
+      .submenu {
+        padding-left: 20px;
+      }
+
+      .submenu-item a {
+        font-size: 14px !important;
+      }
+
+      .submenu-arrow {
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      #toggle-btn {
+        min-width: 78px;
+        height: 36px;
+        padding: 0 12px;
+        gap: 7px;
+        right: 12px;
+      }
+
+      .menu-text {
+        font-size: 9px !important;
+        letter-spacing: 0.8px;
+      }
+
+      #hamburger {
+        width: 15px !important;
+        height: 11px !important;
+        gap: 3px;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 15px;
+        height: 1.8px;
+      }
+
+      #toggle-btn #hamburger.active .line.line-1 {
+        transform: rotate(45deg) translateY(5.5px) !important;
+      }
+
+      #toggle-btn #hamburger.active .line.line-2 {
+        transform: rotate(-45deg) translateY(-5.5px) !important;
+      }
+    }
+
+    @media (max-width: 320px) {
+      #toggle-btn {
+        min-width: 72px;
+        height: 34px;
+        padding: 0 10px;
+        gap: 6px;
+        right: 10px;
+      }
+
+      .menu-text {
+        font-size: 8px !important;
+        letter-spacing: 0.5px;
+      }
+
+      #hamburger {
+        width: 14px !important;
+        height: 10px !important;
+        gap: 2.5px;
+      }
+
+      #hamburger .line-1,
+      #hamburger .line-2 {
+        width: 14px;
+        height: 1.5px;
+      }
+
+      #toggle-btn #hamburger.active .line.line-1 {
+        transform: rotate(45deg) translateY(5px) !important;
+      }
+
+      #toggle-btn #hamburger.active .line.line-2 {
+        transform: rotate(-45deg) translateY(-5px) !important;
+      }
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -10565,68 +11317,137 @@
         <div id="overlay"></div>
         <div class="framer-6wokqv"></div>
         <div class="ssr-variant hidden-121iadi hidden-zrt4nr">
-          <nav class="framer-hk7g5j" data-framer-name="Fixed Navigation (z5)"
-            style="will-change: transform; opacity: 1; transform: none;">
-            <div class="framer-z8d3vr hidden-zrt4nr hidden-121iadi" data-framer-name="Social Links">
-              <div class="framer-nrkrm-container" data-framer-cursor="vuwtv9"><a
-                  class="framer-hiACp framer-1wuxec framer-v-1wuxec framer-1hnpqzc" data-framer-name="Desktop"
-                  href="https://instagram.com/" target="_blank" rel="noopener"
-                  style="height: 100%; width: 100%; opacity: 1;">
-                  <div class="framer-1oa3b7b-container" style="opacity: 1;">
-                    <div style="display: contents;">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
-                        focusable="false" color="var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255))"
-                        style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); color: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); flex-shrink: 0;">
-                        <g color="var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255))" weight="bold">
-                          <path
-                            d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,72a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM176,20H80A60.07,60.07,0,0,0,20,80v96a60.07,60.07,0,0,0,60,60h96a60.07,60.07,0,0,0,60-60V80A60.07,60.07,0,0,0,176,20Zm36,156a36,36,0,0,1-36,36H80a36,36,0,0,1-36-36V80A36,36,0,0,1,80,44h96a36,36,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16,16,0,0,1,196,76Z">
-                          </path>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                  <section class="framer-yy1dfe" data-framer-name="Circle"
-                    style="background-color: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); border-radius: 999px; opacity: 0; transform: translate(-50%, -50%);">
-                  </section>
-                  <div class="framer-55dw9h-container" style="opacity: 0;">
-                    <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
-                        focusable="false" color="var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0))"
-                        style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0)); color: var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0)); flex-shrink: 0;">
-                        <g color="var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0))" weight="bold">
-                          <path
-                            d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,72a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM176,20H80A60.07,60.07,0,0,0,20,80v96a60.07,60.07,0,0,0,60,60h96a60.07,60.07,0,0,0,60-60V80A60.07,60.07,0,0,0,176,20Zm36,156a36,36,0,0,1-36,36H80a36,36,0,0,1-36-36V80A36,36,0,0,1,80,44h96a36,36,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16,16,0,0,1,196,76Z">
-                          </path>
-                        </g>
-                      </svg></div>
-                  </div>
-                </a></div>
-           
+          
+                    <!-- NAVBAR FLAG -->
+
+          <!-- Yellow Top Stripe -->
+          <!-- <div class="top-yellow-stripe">
+            <div class="stripe-left">
+              Let's Catchup! Call Us - 91 9093 9093 56
             </div>
-            <div class="framer-1wdvtut-container" data-framer-cursor="vuwtv9">
-              <div class="framer-jfEb5 framer-csavjc framer-v-csavjc" data-framer-name="1" data-highlight="true"
-                tabindex="0" style="opacity: 1;">
-                <section class="framer-9r3l4z"
-                  style="background-color: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); transform: none; opacity: 1;">
-                </section>
-                <section class="framer-r8e1l6"
-                  style="background-color: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); transform: none; opacity: 1;">
-                </section>
+            <div class="stripe-right">
+              <div class="stripe-social-icons">
+          
+                <a href="#" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              
+                <a href="#" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+           
+                <a href="#" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="iso-certified">
+                <img src="header-iso.png" alt="ISO Certified">
               </div>
             </div>
-            <div class="framer-nk88tz-container" data-framer-cursor="vuwtv9">
-              <div class="framer-JD2xC framer-WjfPC framer-1gpxssn framer-v-1gpxssn" data-framer-name="Main"
-                style="opacity: 1;">
-                <div class="framer-cnuenk" data-framer-component-type="RichTextContainer"
-                  style="--extracted-r6o4lv: var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
-                  <p class="framer-text"
-                    style="--font-selector: R0Y7R2Vpc3QtOTAw; --framer-font-family: &quot;Geist&quot;, sans-serif; --framer-font-size: 20px; --framer-font-weight: 900; --framer-letter-spacing: -0.03em; --framer-line-height: 90%; --framer-text-color: var(--extracted-r6o4lv, var(--token-c4d2a39c-ba1b-4ddf-bd4f-3123809edf2a, rgb(255, 255, 255))); --framer-text-transform: uppercase;">
-                    <a class="framer-text framer-styles-preset-1pc42uc" data-styles-preset="dB10Iafcy"
-                      href="./index.html" data-framer-page-link-current="true">Firma</a>
-                  </p>
+          </div> -->
+
+      
+          <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+            data-easing2="ease" role="banner" class="navigation w-nav">
+            <div class="nav-header">
+
+                <!-- Menu Button -->
+                  <div id="toggle-btn" class="btn">
+                    <span class="menu-text">menu</span>
+                    <div id="hamburger">
+                      <span class="line line-1"></span>
+                      <span class="line line-2"></span>
+                    </div>
+                  </div>
+             
+             
+              <div class="nav-panels">
+                <div class="nav-panel">
+                  <div class="nav-logo">
+                    <div class="logo-wrappers">
+                      <div class="logo-sections-wrap">
+                        <a href="index.html" class="sound_click w-inline-block">
+                          <div id="logo-wrap" class="logo-text-sections">
+                            <img style="width: 200px; height: auto;" src="./logo_black.png" alt="Logo" />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                
+
+                  <!-- Full Screen Menu -->
+                   <div class="menu"
+                        style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
+                        <div class="primary-menu">
+                            <div class="menu-container">
+                                <div class="wrapper">
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>01</span>Home</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="./about_us.html"><span>02</span>About</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item has-submenu" data-submenu="services">
+                                        <a href="#" class="services-toggle"><span>+</span>Services <span
+                                                class="submenu-arrow">03</span></a>
+                                        <div class="menu-item-revealer"></div>
+                                        <div class="submenu">
+                                            <div class="submenu-item">
+                                                <a href="./For_youth.html">For Youth</a>
+                                            </div>
+                                            <div class="submenu-item">
+                                                <a href="./For_education.html">For Educational Institutions</a>
+                                            </div>
+                                            <div class="submenu-item">
+                                                <a href="./For_corporated.html">For Corporate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="./initiative.html"><span>04</span>Initiative</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="#"><span>05</span>Blogs</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="./career.html"><span>06</span>Careers</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                    <div class="menu-item" data-submenu="none">
+                                        <a href="./contact_us.html"><span>07</span>Contact</a>
+                                        <div class="menu-item-revealer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="secondary-menu">
+                            <div class="menu-container">
+                                <div class="wrapper">
+                                   
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
               </div>
             </div>
-          </nav>
+          </div>
+
         </div>
         <div class="framer-1hvz8uk-container hidden-zrt4nr hidden-121iadi">
           <div
@@ -11337,6 +12158,79 @@
         });
       })();
     </script>
+
+
+    <!-- STEP 3: Add this JavaScript before closing </body> tag -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.getElementById("toggle-btn");
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menu-item a");
+        const servicesToggle = document.querySelector(".services-toggle");
+        const hasSubmenu = document.querySelector(".has-submenu");
+
+        // Menu toggle functionality
+        toggleBtn.onclick = (e) => {
+            hamburger.classList.toggle("active");
+            
+            if (hamburger.classList.contains("active")) {
+                // Open menu
+                menu.style.visibility = "visible";
+                gsap.to(menuItems, {
+                    top: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power3.out"
+                });
+                
+                setTimeout(() => {
+                    hamburger.classList.add('menu-visible');
+                }, 800);
+            } else {
+                // Close menu
+                hamburger.classList.remove('menu-visible');
+                gsap.to(menuItems, {
+                    top: "100vh",
+                    duration: 0.6,
+                    stagger: 0.05,
+                    ease: "power3.in",
+                    onComplete: () => {
+                        menu.style.visibility = "hidden";
+                    }
+                });
+            }
+        };
+
+        // Services submenu toggle
+        if (servicesToggle && hasSubmenu) {
+            servicesToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                hasSubmenu.classList.toggle('active');
+            });
+        }
+
+        // Close menu when clicking on a menu item
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (!this.classList.contains('services-toggle')) {
+                    hamburger.classList.remove("active");
+                    hamburger.classList.remove('menu-visible');
+                    gsap.to(menuItems, {
+                        top: "100vh",
+                        duration: 0.6,
+                        stagger: 0.05,
+                        ease: "power3.in",
+                        onComplete: () => {
+                            menu.style.visibility = "hidden";
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
 
 
     <iframe id="__framer-editorbar" src="./Firma_files/edit.html" aria-hidden="true" allow="autoplay" tabindex="-1"
