@@ -2414,7 +2414,8 @@ textarea.w-select {
 }
 
 .p1.white {
-  color: #fdfcfa
+  /* color: #fdfcfa */
+  color: #000000;
 }
 
 .p2 {
@@ -3107,7 +3108,7 @@ textarea.w-select {
   height: 12.72rem;
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
-  background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/642560c7384515fae80817f1_BG.svg);
+  background-image: url(../Sections_svgs/1440\ ×\ 1272-01-01.svg);
   background-position: 50% 0;
   background-size: cover;
   flex-direction: row;
@@ -3119,7 +3120,7 @@ textarea.w-select {
   display: flex;
   position: relative;
   top: 0;
-  bottom: 0%;
+  bottom: 1%;
   left: 0%;
   right: 0%
 }
@@ -6365,7 +6366,7 @@ textarea.w-select {
 
   .content-wrap.is-techniques {
     height: 7rem;
-    background-image: url(https://assets-global.website-files.com/6384fe1e68c38ac8097a7e47/642d4f9534d7f365253b00a8_BG_mobile.svg);
+    background-image: url(../Sections_svgs/375x551-01.svg);
     margin-bottom: 0;
     padding-top: 2.56rem
   }
