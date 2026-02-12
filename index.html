@@ -323,7 +323,7 @@
             padding: 0;
             display: flex;
             position: absolute;
-            top: 58%;
+            top: 54%;
             left: 100px;
             overflow: visible;
             /* transform: translateY(-50%); */
@@ -1920,6 +1920,295 @@
         }
     </style>
 
+    <!-- Scrolling Stripe Styles for Hero Section -->
+    <style>
+        .scrolling-stripe-wrapper-hero {
+            width: 100vw;
+            height: 70px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-top: 3px solid #0c0b0b;
+            border-bottom: 3px solid #0c0b0b;
+            /* margin: 5px 0; */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* transform: rotate(2deg);  */
+
+        }
+
+        .scrolling-stripe-container-hero {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .scrolling-stripe-content-hero {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-left-hero 35s linear infinite;
+            gap: 80px;
+        }
+
+        .stripe-item-hero {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0c0b0b;
+            padding: 0 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Google Review Specific Styles */
+        .google-review-item {
+            background: rgba(234, 228, 228, 0.2);
+            border-radius: 5px;
+            padding: 8px 35px !important;
+            gap: 12px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .google-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .google-rating {
+            font-size: 28px;
+            font-weight: 800;
+            color: #f1f0ec;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .google-stars {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+
+        .stripe-icon-hero {
+            font-size: 24px;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .stripe-text-hero {
+            letter-spacing: 0.8px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes scroll-left-hero {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Pause animation on hover */
+        .scrolling-stripe-wrapper-hero:hover .scrolling-stripe-content-hero {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .stripe-outer-container {
+                margin: 20px 0;
+                padding: 15px 0;
+            }
+
+            .scrolling-stripe-wrapper-hero {
+                height: 55px;
+                transform: rotate(-1.5deg);
+            }
+
+            .stripe-item-hero {
+                font-size: 15px;
+                gap: 10px;
+                padding: 0 20px;
+            }
+
+            .google-review-item {
+                padding: 6px 25px !important;
+                gap: 8px;
+            }
+
+            .google-icon {
+                width: 26px;
+                height: 26px;
+            }
+
+            .google-rating {
+                font-size: 22px;
+            }
+
+            .google-stars {
+                font-size: 18px;
+            }
+
+            .stripe-icon-hero {
+                font-size: 20px;
+            }
+
+            .scrolling-stripe-content-hero {
+                animation: scroll-left-hero 25s linear infinite;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stripe-outer-container {
+                margin: 15px 0;
+                padding: 10px 0;
+            }
+
+            .scrolling-stripe-wrapper-hero {
+                height: 50px;
+                transform: rotate(-1deg);
+            }
+
+            .stripe-item-hero {
+                font-size: 13px;
+                gap: 8px;
+                padding: 0 15px;
+            }
+
+            .google-review-item {
+                padding: 5px 20px !important;
+                gap: 6px;
+            }
+
+            .google-icon {
+                width: 22px;
+                height: 22px;
+            }
+
+            .google-rating {
+                font-size: 18px;
+            }
+
+            .google-stars {
+                font-size: 16px;
+            }
+
+            .stripe-icon-hero {
+                font-size: 18px;
+            }
+
+            .scrolling-stripe-content-hero {
+                gap: 40px;
+            }
+        }
+    </style>
+
+    <!-- Scrolling Stripe Styles -->
+    <style>
+        .scrolling-stripe-wrapper {
+            width: 100vw;
+            height: 60px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-top: 2px solid #0c0b0b;
+            border-bottom: 2px solid #0c0b0b;
+        }
+
+        .scrolling-stripe-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .scrolling-stripe-content {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite;
+            gap: 60px;
+        }
+
+        .stripe-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0c0b0b;
+            padding: 0 20px;
+        }
+
+        .stripe-icon {
+            font-size: 20px;
+        }
+
+        .stripe-text {
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Pause animation on hover */
+        .scrolling-stripe-wrapper:hover .scrolling-stripe-content {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .scrolling-stripe-wrapper {
+                height: 50px;
+            }
+
+            .stripe-item {
+                font-size: 14px;
+                gap: 8px;
+            }
+
+            .stripe-icon {
+                font-size: 18px;
+            }
+
+            .scrolling-stripe-content {
+                animation: scroll-left 20s linear infinite;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scrolling-stripe-wrapper {
+                height: 45px;
+            }
+
+            .stripe-item {
+                font-size: 13px;
+            }
+
+            .stripe-icon {
+                font-size: 16px;
+            }
+        }
+    </style>
+
     <meta
         content="Motion is a website that showcases the power of UI/UX animation in conveying the mood and character of a brand."
         name="description">
@@ -2183,15 +2472,28 @@
         // Add loading class to body
         document.body.classList.add('loading');
 
-        // Get the GIF duration and hide loader after it plays once
-        const loaderGif = document.getElementById('loader-gif');
-
-        // Hide loader after GIF plays once (adjust timing to match your GIF duration)
-        // If your GIF is 3 seconds long, use 3000
-        setTimeout(function () {
-            document.getElementById('loader-screen').classList.add('hidden');
+        // Function to hide loader and show content
+        function hideLoader() {
+            const loaderScreen = document.getElementById('loader-screen');
+            if (loaderScreen) {
+                loaderScreen.classList.add('hidden');
+            }
             document.body.classList.remove('loading');
-        }, 3000); // Adjust this to match your GIF duration in milliseconds
+        }
+
+        // Hide loader after GIF plays once (3 seconds)
+        setTimeout(hideLoader, 3000);
+
+        // Fallback: Ensure content shows after page fully loads
+        window.addEventListener('load', function () {
+            setTimeout(hideLoader, 500);
+        });
+
+        // Emergency fallback: Force show content after 5 seconds no matter what
+        setTimeout(function () {
+            hideLoader();
+            console.log('Emergency fallback: Content forced to show');
+        }, 5000);
     </script>
 
     <div class="main-css w-embed">
@@ -9013,79 +9315,6 @@
                     }
                 </style>
 
-                <!-- <div class="student-quote-wrapper">
-                  
-
-                    <div class="student-img-box">
-
-                        <video autoplay muted loop playsinline>
-                            <source src="student_images.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-        
-                    <div class="welcome-box">
-                      
-                        <div class="content-slide welcome-content active">
-                            <div class="welcome-to">WELCOME TO</div>
-                            <div class="dreamdesk-title">DreamDesk</div>
-                            <div class="tagline-text">You Dream, We make it possible</div>
-                            <a href="#" class="know-us-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                                Know us in 60 seconds
-                            </a>
-                        </div>
-
-                      
-                        <div class="content-slide new-content">
-                            <div class="main-heading animated-text">
-                                <span class="highlight-text">#OVERTHINKING PRO MAX?</span>
-                                <span class="brand-text">DREAMDESK HAS YOUR BACK!</span>
-                            </div>
-
-                            <div class="feature-list">
-                                <div class="feature-item animated-item" style="animation-delay: 0.5s">
-                                    <span class="bullet">•</span>
-                                    <span class="feature-text">
-                                        <strong>Campus Chaos Got You Spiraling?</strong> DreamDesk Unlocks Your Calm!
-                                    </span>
-                                </div>
-
-                                <div class="feature-item animated-item" style="animation-delay: 1s">
-                                    <span class="bullet">•</span>
-                                    <span class="feature-text">
-                                        <strong>Solo in a new city? </strong> No worries—we’ve got you.
-                                    </span>
-                                </div>
-
-                                <div class="feature-item animated-item" style="animation-delay: 1.5s">
-                                    <span class="bullet">•</span>
-                                    <span class="feature-text">
-                                        <strong>Give parents peace of mind</strong> your success squad is just a tap
-                                        away.
-                                    </span>
-                                </div>
-
-                                <div class="feature-item animated-item" style="animation-delay: 2s">
-                                    <span class="bullet">•</span>
-                                    <span class="feature-text">
-                                        <strong>Trusted by 5000+ students</strong> who choose right the first time.
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="cta-section animated-item" style="animation-delay: 2.5s">
-                                <div class="cta-text">#Don't stress take Psychometric test!!</div>
-                                <a href="#" class="psychometric-btn">
-                                  
-                                    Vibe check
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
 
                 <div class="framer-ll2u5v">
 
@@ -9107,7 +9336,7 @@
                                     </div>
                                     <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
                                         <p>
-                                           We resolve career confusion, revolutionize futures boldly.<br/>
+                                            We resolve career confusion, revolutionize futures boldly.<br />
                                             <strong>Start Your Session Now !.</strong>
                                         </p>
                                     </div>
@@ -9117,23 +9346,7 @@
                             <div class="framer-5tvmqk-container hidden-1qkvzkg hidden-a1qw1e">
                                 <div class="framer-J6ugj framer-IORtY framer-yfknkv framer-v-1l1lvn4"
                                     data-framer-name="Start" data-highlight="true">
-                                    <!-- Main Title -->
-
-                                    <!-- <div class="framer-1ebgzuc" data-framer-component-type="RichTextContainer">
-                                        <h2>
-                                            <span><span>J</span><span>o</span><span>i</span><span>n</span></span>
-                                            <span>&nbsp;<span>p</span><span>e</span><span>o</span><span>p</span><span>l</span><span>e</span></span>
-                                            <span>&nbsp;<span>w</span><span>h</span><span>o</span></span>
-                                            <span>&nbsp;<span>b</span><span>e</span><span>l</span><span>i</span><span>e</span><span>v</span><span>e</span></span>
-                                            <span>&nbsp;<span>y</span><span>o</span><span>u</span><span>r</span></span>
-                                            <span><span>n</span><span>e</span><span>x</span><span>t</span></span>
-                                            <span>&nbsp;<span>b</span><span>i</span><span>g</span></span>
-                                            <span>&nbsp;<span>d</span><span>r</span><span>e</span><span>a</span><span>m</span></span>
-                                            <span>&nbsp;<span>d</span><span>e</span><span>s</span><span>e</span><span>r</span><span>v</span><span>e</span><span>s</span></span>
-                                            <span>&nbsp;<span>t</span><span>h</span><span>e</span></span>
-                                            <span>&nbsp;<span>b</span><span>e</span><span>s</span><span>t</span></span>
-                                        </h2>
-                                    </div> -->
+                                  
 
                                     <div class="framer-1ebgzuc" data-framer-component-type="RichTextContainer"
                                         style="--framer-paragraph-spacing: 0px; transform: translateY(-50%); opacity: 1;">
@@ -9162,11 +9375,168 @@
                             </div>
                         </div>
 
+
+
                         <!-- Background Video (subtle) -->
                         <div class="framer-1gqk893">
                             <video src="Sections_svgs/DreamDesk.mp4" loop muted playsinline autoplay></video>
                         </div>
 
+
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- Scrolling News Stripe Section - Right after CAREER text -->
+                <div class="scrolling-stripe-wrapper-hero">
+                    <div class="scrolling-stripe-container-hero">
+                        <div class="scrolling-stripe-content-hero">
+                            <!-- Google Review Item -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">�</spaan>
+                                    <span class="stripe-text-hero">AIBE 2H Registration 2026</span>
+                            </div>
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">📚</span>
+                                <span class="stripe-text-hero">CUET PG Exam Date 2026 LIVE Updates</span>
+                            </div>
+
+                            <!-- Google Review Item (repeated) -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">🎓</span>
+                                <span class="stripe-text-hero">MHT CET Registration 2026 Closing Date</span>
+                            </div>
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">📝</span>
+                                <span class="stripe-text-hero">JEE Main 2026 Application Open</span>
+                            </div>
+
+                            <!-- Google Review Item (repeated) -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">🏆</span>
+                                <span class="stripe-text-hero">NEET 2026 Important Dates Announced</span>
+                            </div>
+
+                            <!-- Duplicate for seamless loop -->
+                            <!-- Google Review Item -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">📢</span>
+                                <span class="stripe-text-hero">AIBE 2H Registration 2026</span>
+                            </div>
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">📚</span>
+                                <span class="stripe-text-hero">CUET PG Exam Date 2026 LIVE Updates</span>
+                            </div>
+
+                            <!-- Google Review Item (repeated) -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">🎓</span>
+                                <span class="stripe-text-hero">MHT CET Registration 2026 Closing Date</span>
+                            </div>
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">📝</span>
+                                <span class="stripe-text-hero">JEE Main 2026 Application Open</span>
+                            </div>
+
+                            <!-- Google Review Item (repeated) -->
+                            <div class="stripe-item-hero google-review-item">
+                                <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
+                                    <path fill="#FFC107"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                                    <path fill="#FF3D00"
+                                        d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                                    <path fill="#4CAF50"
+                                        d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                                    <path fill="#1976D2"
+                                        d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                                </svg>
+                                <span class="google-rating">4.2</span>
+                                <span class="google-stars">⭐⭐⭐⭐☆</span>
+                            </div>
+
+                            <div class="stripe-item-hero">
+                                <span class="stripe-icon-hero">🏆</span>
+                                <span class="stripe-text-hero">NEET 2026 Important Dates Announced</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -9174,7 +9544,107 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         </div>
-        </section>
+
+
+
+
+        <div class="pin-spacer"
+            style="background-color: white; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 6806px; padding: 0px 0px 6488px;">
+            <div class="ui first"
+                style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px;">
+                <div class="ui-track" style="transform: translate(0px, 0px); opacity: 1;">
+                    <div class="section-track">
+                        <div class="ui-text"
+                            style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
+                            <div class="text-wrap is-animation">
+                                <div class="h6 white">
+
+                                    <!-- We spend approximately<br>
+                                            80,000 hours in our WorkDesk,</br>
+                                            Let us shape your career to</br>
+                                            achieve your DreamDesk.</br> -->
+
+                                    We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
+                                    DreamDesk
+
+                                    <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
+                                            advice, real results -->
+                                </div>
+                            </div>
+                        </div>
+
+<!-- 
+                        <div class="section-slider ui-slider" style="margin-left: 0px;">
+
+                            <div class="section-slide ui-slide" id="white-hero-section"
+                                style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+
+                                <div style="padding-bottom: 60px;">
+                                    <div class="section-slide-wrap"
+                                        style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; position: relative; min-height: 450px; overflow: hidden; ">
+
+                                      
+                                        <img src="./Sections_svgs/psycometric.jpeg" alt="Psychometric Test"
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 4; opacity: 1;">
+
+
+
+                                        <div
+                                            style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: rgba(248, 248, 246, 0.95); border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px; z-index: 5;">
+                                        </div>
+                                        <div style="display: flex; gap: 6px;">
+                                            <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                            <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                            <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                        </div>
+                                    </div>
+
+                                
+                                    <button class="take-test-btn"
+                                        style="position: absolute; top: 80px; right: 60px; background: #000; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px; z-index: 4; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">Take
+                                        a Test</button>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                          <div class="section-slide ui-slide" id="one-tap-section"
+                                    style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                                    <div style=" padding-bottom: 60px;">
+                                        <div class="section-slide-wrap"
+                                            style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/psycometric.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+
+                                            <div
+                                                style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                                <div style="display: flex; gap: 6px;"> <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="ui-ball"></div>
+    </div>
+
+    </section>
     </div>
     <div class="nav nav-dark">
         <section id="introduction" class="section is-introduction">
@@ -9282,11 +9752,6 @@
                                     <div class="text-wrap is-animation">
                                         <div class="h6 white">
 
-                                            <!-- We spend approximately<br>
-                                            80,000 hours in our WorkDesk,</br>
-                                            Let us shape your career to</br>
-                                            achieve your DreamDesk.</br> -->
-
                                             We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
                                             DreamDesk
 
@@ -9295,7 +9760,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="section-slider ui-slider" style="margin-left: 0px;">
+
+
+                                <!-- <div class="section-slider ui-slider" style="margin-left: 0px;">
 
                                     <div class="section-slide ui-slide" id="white-hero-section"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
@@ -9304,14 +9771,11 @@
                                             <div class="section-slide-wrap"
                                                 style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: #f8f8f6; position: relative; min-height: 450px; overflow: hidden;">
 
-                                                <!-- Background Image -->
+                                             
                                                 <img src="./Sections_svgs/psycometric.jpeg" alt="Psychometric Test"
                                                     style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0;">
 
-                                                <!-- Light Overlay -->
-                                                <!-- <div style="position: absolute; inset: 0; background: rgba(248, 248, 246, 0.35); z-index: 1;"></div> -->
-
-                                                <!-- Top Bar -->
+                                             
                                                 <div
                                                     style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px; z-index: 2;">
                                                     <div style="display: flex; gap: 6px;">
@@ -9324,219 +9788,18 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- Take a Test Button - Floating in upper right -->
+                                              
                                                 <button class="take-test-btn"
                                                     style="position: absolute; top: 80px; right: 60px; background: #000; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px; z-index: 3; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">Take
                                                     a Test</button>
 
-                                                <!-- <div
-                                                        style="flex: 1; max-width: 55%; padding-right: 40px; display: flex; flex-direction: column; justify-content: center;">
-                                                      
-                                                        <div style="margin-bottom: 20px;">
-                                                            <h1
-                                                                style="font-size: 52px; font-weight: 900; color: #0c0b0b; line-height: 1.1; margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
-                                                                Discover Your<br>
-                                                                <span style="color: #6a1b9a;">True Potential</span>
-                                                            </h1>
-                                                        </div>
-
-                                                     
-                                                        <div style="margin-bottom: 25px;">
-                                                            <p
-                                                                style="font-size: 15px; color: #666; line-height: 1.6; margin: 0; font-family: Arial, sans-serif; max-width: 95%;">
-                                                                Take the most accurate MBTI personality test to identify
-                                                                your natural tendencies, helping you make better
-                                                                decisions in your career, relationships, and personal
-                                                                growth.
-                                                            </p>
-                                                        </div>
-
-                                                       
-                                                        <div style="margin-bottom: 25px;">
-                                                            <button
-                                                                style="background: #6a1b9a; color: #ffffff; border: none; padding: 12px 25px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: Arial, sans-serif;">
-                                                                START TEST
-                                                                <svg width="16" height="16" viewBox="0 0 24 24"
-                                                                    fill="none" stroke="currentColor" stroke-width="2">
-                                                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                                                </svg>
-                                                            </button>
-                                                        </div>
-
-
-
-                                                    </div> -->
-
-                                                <!-- Right Visual Section -->
-                                                <!-- <div
-                                                        style="flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 45%; height: 100%; padding: 10px;">
-
-                                                        <div class="hero-right" data-aos="fade-left"
-                                                            data-aos-delay="200">
-                                                            <div class="ins-266-container">
-                                                                <div class="ins-266-personality-wheel">
-                                                                    <div class="ins-266-wheel-outer">
-                                                                        <div class="ins-266-wheel-inner">
-                                                                            <div class="ins-266-wheel-center">
-                                                                                <div class="ins-266-center-text">YOU
-                                                                                </div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-1">
-                                                                                <span class="ins-266-label">E</span>
-                                                                                <span class="ins-266-label">I</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-2">
-                                                                                <span class="ins-266-label">N</span>
-                                                                                <span class="ins-266-label">S</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-3">
-                                                                                <span class="ins-266-label">T</span>
-                                                                                <span class="ins-266-label">F</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-4 ins-266-active">
-                                                                                <span class="ins-266-label">J</span>
-                                                                                <span class="ins-266-label">P</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ins-266-pulse-rings">
-                                                                        <div class="ins-266-pulse-ring ins-266-ring1">
-                                                                        </div>
-                                                                        <div class="ins-266-pulse-ring ins-266-ring2">
-                                                                        </div>
-                                                                        <div class="ins-266-pulse-ring ins-266-ring3">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="ins-266-type-cards">
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="E">
-                                                                        <div class="ins-266-card-letter">E</div>
-
-                                                                        <div class="ins-266-card-trait">Extrovert</div>
-                                                                        <div class="ins-266-card-bar" data-percent="65"
-                                                                            style="width: 65%;"></div>
-
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="N">
-                                                                        <div class="ins-266-card-letter">N</div>
-                                                                        <div class="ins-266-card-trait">Intuitive</div>
-                                                                        <div class="ins-266-card-bar" data-percent="80"
-                                                                            style="width: 80%;"></div>
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="T">
-                                                                        <div class="ins-266-card-letter">T</div>
-                                                                        <div class="ins-266-card-trait">Thinking</div>
-                                                                        <div class="ins-266-card-bar" data-percent="55"
-                                                                            style="width: 55%;"></div>
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="P">
-                                                                        <div class="ins-266-card-letter">P</div>
-                                                                        <div class="ins-266-card-trait">Perceiving</div>
-                                                                        <div class="ins-266-card-bar" data-percent="70"
-                                                                            style="width: 70%;"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <script>
-                                                            // Hero Section JavaScript - Exact copy from original
-                                                            document.addEventListener('DOMContentLoaded', function () {
-                                                                // Initialize the animations
-                                                                initTypeCards();
-
-                                                                // Add highlighting animation for personality dimensions
-                                                                animatePersonalityWheel();
-
-                                                                function animatePersonalityWheel() {
-                                                                    const dimensions = document.querySelectorAll('.ins-266-dimension');
-                                                                    let currentIndex = 0;
-
-                                                                    // Initially highlight the first dimension
-                                                                    if (dimensions.length > 0) {
-                                                                        dimensions[0].classList.add('ins-266-active');
-                                                                    }
-
-                                                                    // Rotate through dimensions every 2 seconds
-                                                                    setInterval(() => {
-                                                                        if (dimensions.length > 0) {
-                                                                            dimensions[currentIndex].classList.remove('ins-266-active');
-                                                                            currentIndex = (currentIndex + 1) % dimensions.length;
-                                                                            dimensions[currentIndex].classList.add('ins-266-active');
-                                                                        }
-                                                                    }, 2000);
-                                                                }
-
-                                                                function initTypeCards() {
-                                                                    const cards = document.querySelectorAll('.ins-266-type-card');
-
-                                                                    cards.forEach((card, index) => {
-                                                                        setTimeout(() => {
-                                                                            card.classList.add('ins-266-active');
-
-                                                                            // Animate progress bar
-                                                                            const bar = card.querySelector('.ins-266-card-bar');
-                                                                            if (bar) {
-                                                                                const percent = bar.getAttribute('data-percent');
-                                                                                bar.style.width = `${percent}%`;
-                                                                            }
-                                                                        }, 800 + index * 150);
-                                                                    });
-                                                                }
-
-                                                                // Smooth scroll for scroll indicator
-                                                                const scrollIndicator = document.querySelector('.hero-scroll-indicator');
-                                                                if (scrollIndicator) {
-                                                                    scrollIndicator.addEventListener('click', () => {
-                                                                        window.scrollTo({
-                                                                            top: window.innerHeight,
-                                                                            behavior: 'smooth'
-                                                                        });
-                                                                    });
-                                                                }
-                                                            });
-                                                        </script>
-                                                    </div> -->
+                                               
                                             </div>
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
-
-                                <!-- <div class="section-slide ui-slide"
-                                            style="width: 25vw; transform: translate(0%, 0px);">
-                                            <div class="section-slide-wrap" style="flex-direction: row;">
-
-
-
-                                                <div class="section-slide-text">
-                                                    <div class="p3"
-                                                        style="font-size: 1rem; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase; letter-spacing: -0.02em;">
-                                                        We’ll map your perfect career path </div>
-                                                </div>
-
-
-                                                <div class="section-slide-img-wrap">
-                                                    <div class="section-slide-video w-embed">
-                                                        <img src="./story_section_images/We’ll map your perfect career path-01.svg"
-                                                            alt="Career Path Illustration"
-                                                            style="width: 100%; height: 100%; object-fit: contain;">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div> -->
 
                                 <!-- World Map Breathing Animation CSS -->
                                 <style>
@@ -9732,86 +9995,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
-
-
-                                <!-- </div> -->
-
-
-                                <!-- Animated Course Section - Multiple Images with Changing Content -->
-
-                                <!-- <div class="section-slide ui-slide" id="course-depth-section"
-                                    style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
-
-                                    <div style=" padding-bottom: 60px;">
-                                        <div class="section-slide-wrap"
-                                            style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/scolarship_bg.png') center/cover no-repeat, #f8f8f6; position: relative; min-height: 450px; overflow: hidden;">
-
-                                         
-                                            <div
-                                                style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
-                                                <div style="display: flex; gap: 6px;">
-                                                    <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                    <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                    <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                </div>
-                                            </div>
-
-                                          
-                                            <div
-                                                style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding-top: 80px; min-height: 350px;">
-                                                
-                                                <div style="flex: 1; padding-right: 50px;">
-                                                    <h2
-                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 48px; font-weight: 600; color: #ffffff; margin: 0 0 12px 0; line-height: 1.0; text-align: left;">
-                                                        FROM AMBITION<br>
-                                                        TO <span
-                                                            style="color: #f2d803; display: inline-block;">ADMISSION</span><br>
-                                                    </h2>
-                                                    <h2
-                                                        style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 400; color: #ffffff; margin: 0 0 30px 0; line-height: 1.0; text-align: left;  white-space: nowrap;">
-                                                        SUPPORTED BY <span
-                                                            style="color: #f2d803; display: inline-block;"> SCHOLARSHIPS
-                                                        </span><br> AT EVERY STEPS
-                                                    </h2>
-                                                    <div
-                                                        style=" margin-top: 35px; display: flex; flex-direction: column;align-items: flex-start; gap: 8px; width: fit-content;">
-
-                                                        <div class="learn-more-text"
-                                                            style="color:white; padding-left:10px;">Learn More
-                                                        </div>
-                                                        <button
-                                                            style=" border: 2px solid #ffffff; background: transparent; padding: 18px 36px; border-radius: 30px; font-size: 18px; font-weight: 700; color: #ffffff; cursor: pointer; transition: all 0.3s ease; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px;">
-                                                            sign up
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                               
-                                                <div
-                                                    style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                                                    <img src="./Sections_svgs/SVG-01.png"
-                                                        alt="Flying Pencil Illustration"
-                                                        style="max-width: 100%; height: auto; max-height: 520px; padding-bottom: 120px;">
-                                                </div>
-                                            </div>
-                                    
-                                    
-                                        </div>
-
-                                    </div>
-                               
-                               
-                               
-                                </div> -->
 
 
                                 <div class="section-slide ui-slide" id="course-depth-section"
@@ -10792,25 +10975,28 @@
                                     </div>
 
 
-                                     <div class="section-slider ui-slider" style="margin-left: 0px;">
+                                    <div class="section-slider ui-slider" style="margin-left: 0px;">
 
-                                    <div class="section-slide ui-slide" id="white-hero-section"
-                                        style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                                        <div class="section-slide ui-slide" id="white-hero-section"
+                                            style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
 
-                                        <div style="padding-bottom: 60px;">
-                                            <div class="section-slide-wrap"
-                                                style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: #f8f8f6; position: relative; min-height: 450px; overflow: hidden;">
+                                            <div style="padding-bottom: 60px;">
+                                                <div class="section-slide-wrap"
+                                                    style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; position: relative; min-height: 450px; overflow: hidden; background-color: #f8f8f6;">
 
-                                                <!-- Background Image -->
-                                                <img src="./Sections_svgs/Teams.png" alt="Psychometric Test"
-                                                    style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0;">
+                                                    <!-- Background Image -->
+                                                    <img src="./Sections_svgs/Teams.png" alt="Teams"
+                                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 1;">
 
-                                                <!-- Light Overlay -->
-                                                <!-- <div style="position: absolute; inset: 0; background: rgba(248, 248, 246, 0.35); z-index: 1;"></div> -->
+                                                    <!-- Light Overlay for better text readability -->
+                                                    <div
+                                                        style="position: absolute; inset: 0; background: rgba(248, 248, 246, 0.3); z-index: 2;">
+                                                    </div>
 
-                                                <!-- Top Bar -->
-                                                <div
-                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px; z-index: 2;">
+                                                    <!-- Top Bar -->
+                                                    <div
+                                                        style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: rgba(248, 248, 246, 0.95); border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px; z-index: 3;">
+                                                    </div>
                                                     <div style="display: flex; gap: 6px;">
                                                         <span
                                                             style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
@@ -10821,7 +11007,7 @@
                                                     </div>
                                                 </div>
 
-                                           
+
 
                                                 <!-- <div
                                                         style="flex: 1; max-width: 55%; padding-right: 40px; display: flex; flex-direction: column; justify-content: center;">
@@ -11011,7 +11197,7 @@
 
 
 
-                                    <!-- <div id="team-section" class="section-slide ui-slide"
+                                <!-- <div id="team-section" class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
                                         <div style="height: 100%; display: flex; flex-direction: column;">
                                             <div class="section-slide-wrap-team "
@@ -11227,56 +11413,56 @@
                                     </div> -->
 
 
-                                    <div id="career-launch-section"
-                                        class="section-slide ui-slide career-section-responsive">
-                                        <div class="career-inner-wrapper">
-                                            <div class="section-slide-wrap career-slide-wrap">
+                                <div id="career-launch-section"
+                                    class="section-slide ui-slide career-section-responsive">
+                                    <div class="career-inner-wrapper">
+                                        <div class="section-slide-wrap career-slide-wrap">
 
-                                                <div class="career-top-bar">
-                                                    <div style="display: flex; gap: 6px;">
-                                                        <span
-                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                        <span
-                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                        <span
-                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                            <div class="career-top-bar">
+                                                <div style="display: flex; gap: 6px;">
+                                                    <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    <span
+                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Main Career Content -->
+                                            <div class="career-main-content" style="margin-bottom:20%;">
+                                                <div class="career-left-section">
+                                                    <h1 class="career-main-title">Launch Your
+                                                        Career</h1>
+                                                    <p class="career-subtitle">From learning to earning get the
+                                                        support and skills to start your career journey strong</p>
+                                                    <button class="career-cta-btn">Click to start you
+                                                        journey</button>
+                                                </div>
+                                                <div class="career-right-section">
+                                                    <!-- Placeholder for line art illustration -->
+                                                    <div class="career-illustration-placeholder">
+
+                                                        <img src="./Sections_svgs/goal_table.png" alt="" />
+
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <!-- Main Career Content -->
-                                                <div class="career-main-content" style="margin-bottom:20%;">
-                                                    <div class="career-left-section">
-                                                        <h1 class="career-main-title">Launch Your
-                                                            Career</h1>
-                                                        <p class="career-subtitle">From learning to earning get the
-                                                            support and skills to start your career journey strong</p>
-                                                        <button class="career-cta-btn">Click to start you
-                                                            journey</button>
-                                                    </div>
-                                                    <div class="career-right-section">
-                                                        <!-- Placeholder for line art illustration -->
-                                                        <div class="career-illustration-placeholder">
-
-                                                            <img src="./Sections_svgs/goal_table.png" alt="" />
-
-                                                        </div>
-                                                    </div>
+                                            <!-- Bottom Cards Section -->
+                                            <div class="career-bottom-cards">
+                                                <div class="career-card career-card-bg"
+                                                    style="background-image:url(./carear_section/Healthcare_new.png)">
                                                 </div>
 
-                                                <!-- Bottom Cards Section -->
-                                                <div class="career-bottom-cards">
-                                                    <div class="career-card career-card-bg"
-                                                        style="background-image:url(./carear_section/Healthcare_new.png)">
-                                                    </div>
+                                                <div class="career-card career-card-bg"
+                                                    style="background-image:url(./carear_section/aviation_new.png)">
+                                                </div>
 
-                                                    <div class="career-card career-card-bg"
-                                                        style="background-image:url(./carear_section/aviation_new.png)">
-                                                    </div>
-
-                                                    <div class="career-card career-card-bg"
-                                                        style="background-image:url(./carear_section/bussiness_new.png)">
-                                                    </div>
-                                                    <!-- <div class="career-card-content"">
+                                                <div class="career-card career-card-bg"
+                                                    style="background-image:url(./carear_section/bussiness_new.png)">
+                                                </div>
+                                                <!-- <div class="career-card-content"">
                                                            
                                                             <div class=" career-card-illustration">
 
@@ -11284,9 +11470,9 @@
                                                 </div>
                                                 <h3 class="career-card-title">Healthcare</h3>
                                             </div> -->
-                                                </div>
+                                            </div>
 
-                                                <!-- <div class="career-card">
+                                            <!-- <div class="career-card">
                                             <div class="career-card-content">
                                             
                                                 <div class="career-card-illustration"></div>
@@ -11302,147 +11488,147 @@
                                                 <h3 class="career-card-title">Become a contributor</h3>
                                             </div>
                                         </div> -->
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function () {
-                                        // Get all section elements that should hide the yellow stripe
-                                        const sectionsToHide = [
-                                            document.getElementById('white-hero-section'), // Career section
-                                            document.getElementById('one-tap-section'), // One tap section
-                                            document.getElementById('course-depth-section'), // Course depth section
-                                            document.getElementById('team-section'), // Team section
-                                            document.getElementById('career-launch-section'), // Career launch section
-                                            // Add more sections by their IDs as needed
-                                        ].filter(Boolean); // Remove null elements
+                            <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    // Get all section elements that should hide the yellow stripe
+                                    const sectionsToHide = [
+                                        document.getElementById('white-hero-section'), // Career section
+                                        document.getElementById('one-tap-section'), // One tap section
+                                        document.getElementById('course-depth-section'), // Course depth section
+                                        document.getElementById('team-section'), // Team section
+                                        document.getElementById('career-launch-section'), // Career launch section
+                                        // Add more sections by their IDs as needed
+                                    ].filter(Boolean); // Remove null elements
 
-                                        // Get sections that should change menu button to black
-                                        const lightBackgroundSections = [
-                                            document.getElementById('course-depth-section'), // Course depth section
-                                            document.getElementById('white-hero-section'), // Career section
-                                            document.getElementById('one-tap-section'), // One tap section
-                                        ].filter(Boolean);
+                                    // Get sections that should change menu button to black
+                                    const lightBackgroundSections = [
+                                        document.getElementById('course-depth-section'), // Course depth section
+                                        document.getElementById('white-hero-section'), // Career section
+                                        document.getElementById('one-tap-section'), // One tap section
+                                    ].filter(Boolean);
 
-                                        const yellowStripe = document.querySelector('.top-yellow-stripe');
-                                        const toggleBtn = document.getElementById('toggle-btn');
-                                        const menuText = document.querySelector('.menu-text');
-                                        const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
+                                    const yellowStripe = document.querySelector('.top-yellow-stripe');
+                                    const toggleBtn = document.getElementById('toggle-btn');
+                                    const menuText = document.querySelector('.menu-text');
+                                    const hamburgerLines = document.querySelectorAll('#hamburger .line-1, #hamburger .line-2');
 
-                                        if (yellowStripe && sectionsToHide.length > 0) {
-                                            // Add smooth transition to yellow stripe
-                                            yellowStripe.style.transition = 'all 0.5s ease-in-out';
+                                    if (yellowStripe && sectionsToHide.length > 0) {
+                                        // Add smooth transition to yellow stripe
+                                        yellowStripe.style.transition = 'all 0.5s ease-in-out';
 
-                                            // Track if any section is currently visible
-                                            let visibleSections = new Set();
-                                            let visibleLightSections = new Set();
+                                        // Track if any section is currently visible
+                                        let visibleSections = new Set();
+                                        let visibleLightSections = new Set();
 
-                                            // Function to update yellow stripe visibility
-                                            function updateYellowStripe() {
-                                                if (visibleSections.size > 0) {
-                                                    // At least one section is visible - hide yellow stripe
-                                                    yellowStripe.style.opacity = '0';
-                                                    yellowStripe.style.visibility = 'hidden';
-                                                    yellowStripe.style.transform = 'translateY(-100%)';
-                                                } else {
-                                                    // No sections are visible - show yellow stripe
-                                                    yellowStripe.style.opacity = '1';
-                                                    yellowStripe.style.visibility = 'visible';
-                                                    yellowStripe.style.transform = 'translateY(0)';
-                                                }
+                                        // Function to update yellow stripe visibility
+                                        function updateYellowStripe() {
+                                            if (visibleSections.size > 0) {
+                                                // At least one section is visible - hide yellow stripe
+                                                yellowStripe.style.opacity = '0';
+                                                yellowStripe.style.visibility = 'hidden';
+                                                yellowStripe.style.transform = 'translateY(-100%)';
+                                            } else {
+                                                // No sections are visible - show yellow stripe
+                                                yellowStripe.style.opacity = '1';
+                                                yellowStripe.style.visibility = 'visible';
+                                                yellowStripe.style.transform = 'translateY(0)';
                                             }
-
-                                            // Function to update menu button color
-                                            function updateMenuButtonColor() {
-                                                const htmlElement = document.documentElement;
-
-                                                if (toggleBtn && menuText && hamburgerLines.length > 0) {
-                                                    // Add smooth transition
-                                                    toggleBtn.style.transition = 'all 0.3s ease';
-                                                    menuText.style.transition = 'all 0.3s ease';
-                                                    hamburgerLines.forEach(line => {
-                                                        line.style.transition = 'all 0.3s ease';
-                                                    });
-
-                                                    if (visibleLightSections.size > 0) {
-                                                        // Light background section is visible - make menu button black
-                                                        htmlElement.setAttribute('data-current-section', 'course-depth');
-                                                        toggleBtn.style.setProperty('border-color', '#000000', 'important');
-                                                        toggleBtn.style.setProperty('background-color', 'rgba(255, 255, 255, 0.95)', 'important');
-                                                        menuText.style.setProperty('color', '#000000', 'important');
-                                                        hamburgerLines.forEach(line => {
-                                                            line.style.setProperty('background-color', '#000000', 'important');
-                                                        });
-                                                    } else {
-                                                        // Dark background - make menu button black (default)
-                                                        htmlElement.removeAttribute('data-current-section');
-                                                        toggleBtn.style.setProperty('border-color', '#000000', 'important');
-                                                        toggleBtn.style.setProperty('background-color', 'transparent', 'important');
-                                                        menuText.style.setProperty('color', '#000000', 'important');
-                                                        hamburgerLines.forEach(line => {
-                                                            line.style.setProperty('background-color', '#000000', 'important');
-                                                        });
-                                                    }
-                                                }
-                                            }
-
-                                            // Create intersection observer for each section
-                                            sectionsToHide.forEach((section, index) => {
-                                                const observer = new IntersectionObserver((entries) => {
-                                                    entries.forEach(entry => {
-                                                        const sectionId = `section-${index}`;
-                                                        if (entry.isIntersecting) {
-                                                            visibleSections.add(sectionId);
-                                                        } else {
-                                                            visibleSections.delete(sectionId);
-                                                        }
-                                                        updateYellowStripe();
-                                                    });
-                                                }, {
-                                                    // Trigger when 30% of the section is visible
-                                                    threshold: 0.3,
-                                                    // Add some margin to trigger earlier
-                                                    rootMargin: '-10% 0px -10% 0px'
-                                                });
-
-                                                // Start observing the section
-                                                observer.observe(section);
-                                            });
-
-                                            // Create intersection observer for light background sections
-                                            lightBackgroundSections.forEach((section, index) => {
-                                                const observer = new IntersectionObserver((entries) => {
-                                                    entries.forEach(entry => {
-                                                        const sectionId = `light-section-${index}`;
-                                                        if (entry.isIntersecting) {
-                                                            visibleLightSections.add(sectionId);
-                                                        } else {
-                                                            visibleLightSections.delete(sectionId);
-                                                        }
-                                                        updateMenuButtonColor();
-                                                    });
-                                                }, {
-                                                    // Trigger when 30% of the section is visible
-                                                    threshold: 0.3,
-                                                    // Add some margin to trigger earlier
-                                                    rootMargin: '-10% 0px -10% 0px'
-                                                });
-
-                                                // Start observing the light background section
-                                                observer.observe(section);
-                                            });
                                         }
-                                    });
-                                </script>
+
+                                        // Function to update menu button color
+                                        function updateMenuButtonColor() {
+                                            const htmlElement = document.documentElement;
+
+                                            if (toggleBtn && menuText && hamburgerLines.length > 0) {
+                                                // Add smooth transition
+                                                toggleBtn.style.transition = 'all 0.3s ease';
+                                                menuText.style.transition = 'all 0.3s ease';
+                                                hamburgerLines.forEach(line => {
+                                                    line.style.transition = 'all 0.3s ease';
+                                                });
+
+                                                if (visibleLightSections.size > 0) {
+                                                    // Light background section is visible - make menu button black
+                                                    htmlElement.setAttribute('data-current-section', 'course-depth');
+                                                    toggleBtn.style.setProperty('border-color', '#000000', 'important');
+                                                    toggleBtn.style.setProperty('background-color', 'rgba(255, 255, 255, 0.95)', 'important');
+                                                    menuText.style.setProperty('color', '#000000', 'important');
+                                                    hamburgerLines.forEach(line => {
+                                                        line.style.setProperty('background-color', '#000000', 'important');
+                                                    });
+                                                } else {
+                                                    // Dark background - make menu button black (default)
+                                                    htmlElement.removeAttribute('data-current-section');
+                                                    toggleBtn.style.setProperty('border-color', '#000000', 'important');
+                                                    toggleBtn.style.setProperty('background-color', 'transparent', 'important');
+                                                    menuText.style.setProperty('color', '#000000', 'important');
+                                                    hamburgerLines.forEach(line => {
+                                                        line.style.setProperty('background-color', '#000000', 'important');
+                                                    });
+                                                }
+                                            }
+                                        }
+
+                                        // Create intersection observer for each section
+                                        sectionsToHide.forEach((section, index) => {
+                                            const observer = new IntersectionObserver((entries) => {
+                                                entries.forEach(entry => {
+                                                    const sectionId = `section-${index}`;
+                                                    if (entry.isIntersecting) {
+                                                        visibleSections.add(sectionId);
+                                                    } else {
+                                                        visibleSections.delete(sectionId);
+                                                    }
+                                                    updateYellowStripe();
+                                                });
+                                            }, {
+                                                // Trigger when 30% of the section is visible
+                                                threshold: 0.3,
+                                                // Add some margin to trigger earlier
+                                                rootMargin: '-10% 0px -10% 0px'
+                                            });
+
+                                            // Start observing the section
+                                            observer.observe(section);
+                                        });
+
+                                        // Create intersection observer for light background sections
+                                        lightBackgroundSections.forEach((section, index) => {
+                                            const observer = new IntersectionObserver((entries) => {
+                                                entries.forEach(entry => {
+                                                    const sectionId = `light-section-${index}`;
+                                                    if (entry.isIntersecting) {
+                                                        visibleLightSections.add(sectionId);
+                                                    } else {
+                                                        visibleLightSections.delete(sectionId);
+                                                    }
+                                                    updateMenuButtonColor();
+                                                });
+                                            }, {
+                                                // Trigger when 30% of the section is visible
+                                                threshold: 0.3,
+                                                // Add some margin to trigger earlier
+                                                rootMargin: '-10% 0px -10% 0px'
+                                            });
+
+                                            // Start observing the light background section
+                                            observer.observe(section);
+                                        });
+                                    }
+                                });
+                            </script>
 
 
 
 
 
-                                <!-- <div class="section-slide ui-slide"
+                            <!-- <div class="section-slide ui-slide"
                                         style="width: 25vw; transform: translate(0%, 0px);">
                                         <div class="section-slide-wrap">
                                             <div class="section-slide-img-wrap">
@@ -11462,11 +11648,11 @@
                                     </div> -->
 
 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+    </div>
     </div>
     </div>
     </section>
