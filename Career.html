@@ -9219,6 +9219,239 @@
         transform: rotate(360deg);
       }
     }
+
+    /* Custom Responsive Fixes for Career Page */
+    
+    /* Fix the huge CAREER title text - make it responsive for all screen sizes */
+    .framer-career-title {
+      --framer-font-size: clamp(80px, 20vw, 440px) !important;
+      font-size: clamp(80px, 20vw, 440px) !important;
+    }
+
+    @media (max-width: 809.98px) {
+      /* Make CAREER title much smaller on mobile */
+      .framer-career-title {
+        --framer-font-size: clamp(40px, 12vw, 100px) !important;
+        font-size: clamp(40px, 12vw, 100px) !important;
+        margin-bottom: 50px !important;
+      }
+
+      /* Fix hero section container */
+      .framer-mpgbF .framer-1eiawcr {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        padding: 60px 0 40px !important;
+        gap: 30px !important;
+      }
+
+      /* Fix content wrapper */
+      .framer-mpgbF .framer-3y1b7i {
+        width: 100% !important;
+        padding: 0 16px !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        gap: 20px !important;
+        z-index: 2 !important;
+      }
+
+      /* Fix column layout and spacing */
+      .framer-mpgbF .framer-1kfwg09 {
+        gap: 16px !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* Fix large background text elements - better alignment */
+      .framer-mpgbF .framer-dnb8d0,
+      .framer-mpgbF .framer-1fa122y,
+      .framer-mpgbF .framer-jcul6d {
+        font-size: clamp(50px, 12vw, 100px) !important;
+        line-height: 0.85 !important;
+        text-align: center !important;
+        letter-spacing: -0.02em !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      /* Fix foreground text - reduce spacing */
+      .framer-mpgbF .framer-su7jo2 {
+        width: 100% !important;
+        padding: 0 !important;
+        font-size: clamp(16px, 4vw, 20px) !important;
+        line-height: 1.4 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        margin: 10px 0 !important;
+        z-index: 3 !important;
+        position: relative !important;
+      }
+
+      /* Fix "Dream, Work, Success" text spacing */
+      .framer-mpgbF .framer-lmn2uk {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        line-height: 1.3 !important;
+      }
+
+      /* Fix animated background element - move it down and behind */
+      .framer-mpgbF .framer-1gqk893 {
+        width: 100% !important;
+        max-width: 450px !important;
+        height: auto !important;
+        aspect-ratio: 3.19549 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 60px !important;
+        z-index: 0 !important;
+        opacity: 0.95 !important;
+      }
+
+      /* Fix button positioning - reduce top margin */
+      .framer-mpgbF .framer-rqqsrm {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 20px auto 0 !important;
+        z-index: 3 !important;
+      }
+
+      /* Fix job listings */
+      .framer-mpgbF .framer-1jh4nio {
+        width: 100% !important;
+        padding: 0 16px !important;
+        gap: 16px !important;
+      }
+
+      .framer-mpgbF .framer-1e29nll,
+      .framer-mpgbF .framer-1vpyq3q,
+      .framer-mpgbF .framer-1nhqt3x,
+      .framer-mpgbF .framer-bvxe2e,
+      .framer-mpgbF .framer-1p23zi0,
+      .framer-mpgbF .framer-e1ltr,
+      .framer-mpgbF .framer-12jphc2,
+      .framer-mpgbF .framer-wviyj,
+      .framer-mpgbF .framer-mu431m,
+      .framer-mpgbF .framer-8aalf7,
+      .framer-mpgbF .framer-10zky6l {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin: 8px 0 !important;
+      }
+
+      /* Fix section gaps */
+      .framer-mpgbF .framer-yh7v6h,
+      .framer-mpgbF .framer-s1zjdf,
+      .framer-mpgbF .framer-11vesbc,
+      .framer-mpgbF .framer-bngusi {
+        gap: 12px !important;
+      }
+
+      /* Fix image containers */
+      .framer-mpgbF .framer-87llmc {
+        width: 100% !important;
+        height: 300px !important;
+        min-height: 300px !important;
+      }
+
+      /* Ensure no horizontal scroll */
+      body, html {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+
+      .framer-mpgbF.framer-72rtr7 {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+
+      /* Fix any absolute positioned elements */
+      .framer-mpgbF .framer-1y11jmj {
+        display: none !important;
+      }
+
+      /* Reduce overall section padding */
+      .framer-mpgbF .framer-hu1ibh {
+        padding: 0 0 60px !important;
+        gap: 30px !important;
+      }
+
+      .framer-mpgbF .framer-140udb4 {
+        gap: 24px !important;
+      }
+    }
+
+    /* Tablet Responsive Fixes */
+    @media (min-width: 810px) and (max-width: 1199.98px) {
+      /* Fix hero section container */
+      .framer-mpgbF .framer-1eiawcr {
+        width: 100% !important;
+        padding: 80px 0 60px !important;
+        gap: 40px !important;
+      }
+
+      /* Fix content wrapper */
+      .framer-mpgbF .framer-3y1b7i {
+        width: 90% !important;
+        padding: 0 32px !important;
+        gap: 24px !important;
+      }
+
+      /* Fix large background text */
+      .framer-mpgbF .framer-dnb8d0,
+      .framer-mpgbF .framer-1fa122y,
+      .framer-mpgbF .framer-jcul6d {
+        font-size: clamp(70px, 10vw, 120px) !important;
+        line-height: 0.9 !important;
+        letter-spacing: -0.02em !important;
+      }
+
+      /* Fix foreground text */
+      .framer-mpgbF .framer-su7jo2 {
+        width: 90% !important;
+        padding: 0 !important;
+        font-size: clamp(18px, 3vw, 24px) !important;
+        line-height: 1.4 !important;
+        margin: 12px 0 !important;
+      }
+
+      /* Fix animated background */
+      .framer-mpgbF .framer-1gqk893 {
+        width: 80% !important;
+        max-width: 600px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        bottom: 80px !important;
+        z-index: 0 !important;
+      }
+
+      /* Fix button */
+      .framer-mpgbF .framer-rqqsrm {
+        margin: 24px auto 0 !important;
+      }
+
+      /* Fix job listings */
+      .framer-mpgbF .framer-1jh4nio {
+        width: 90% !important;
+        max-width: 600px !important;
+        gap: 20px !important;
+      }
+
+      /* Reduce section gaps */
+      .framer-mpgbF .framer-hu1ibh {
+        gap: 32px !important;
+        padding: 0 0 80px !important;
+      }
+
+      /* Ensure no overflow */
+      .framer-mpgbF.framer-72rtr7 {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+    }
   </style>
   <style>
     #__framer-editorbar {
@@ -10266,7 +10499,7 @@
                 tabindex="0" style="transform: translateY(-50%);">
                 <div class="framer-jcul6d" data-framer-component-type="RichTextContainer"
                   style="transform: rotate(-4deg);">
-                  <p class="framer-text"
+                  <p class="framer-text framer-career-title"
                     style="margin-bottom:300px; --font-selector: R0Y7R2Vpc3QtOTAw; --framer-font-family: &quot;Geist&quot;, sans-serif; --framer-font-size: 440px; --framer-font-weight: 900; --framer-letter-spacing: -0.05em; --framer-line-height: 90%; --framer-text-transform: uppercase;">
                     <span style="white-space: nowrap;"><span
                         style="display: inline-block; will-change: transform;">C</span><span
