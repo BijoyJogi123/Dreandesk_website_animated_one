@@ -102,10 +102,54 @@
         }
 
         body {
-            font-family: 'Geist', sans-serif;
+            /* font-family: 'Geist', sans-serif; */
             background: #000;
             overflow-x: hidden;
         }
+
+        /* Hero section Buttons */
+
+        .hero-buttons-container {
+            display: flex;
+            gap: 30px;
+            /* spacing between buttons */
+            padding-top: 10px;
+            font-family: 'Playfair', serif;
+        }
+
+        .hero-btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #f2d803;
+            font-family: inherit;
+        }
+
+        /* Orange Filled Button */
+        .hero-btn-primary {
+            background-color: #f2d803;
+            color: #000;
+        }
+
+        .hero-btn-primary:hover {
+            background-color: #e38f2e;
+            border-color: #e38f2e;
+        }
+
+        /* Transparent Button */
+        .hero-btn-secondary {
+            background-color: transparent;
+            color: #000;
+        }
+
+        .hero-btn-secondary:hover {
+            background-color: #f2d803;
+            color: #000;
+        }
+
 
         /* Take a Test Button Hover Effect */
         .take-test-btn:hover {
@@ -153,8 +197,8 @@
             align-items: flex-end;
             gap: 32px;
             position: absolute;
-            top: 58px;
-            right: 0;
+            top: -85px;
+            /* right: 150px; */
             opacity: 1;
             transform: none;
         }
@@ -172,7 +216,8 @@
             width: auto;
             height: auto;
             position: absolute;
-            top: 0;
+            /* top: 180px; */
+            top: 158px;
             left: 0;
         }
 
@@ -190,7 +235,7 @@
 
         .framer-dnb8d0 p {
             font-family: 'Caveat', cursive;
-            font-size: 120px;
+            font-size: 90px;
             letter-spacing: -0.07em;
             line-height: 70%;
             text-align: center;
@@ -215,7 +260,7 @@
             font-family: 'Geist', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #888;
+            color: #000;
             margin: 0;
         }
 
@@ -1925,7 +1970,7 @@
         .scrolling-stripe-wrapper-hero {
             width: 100vw;
             height: 70px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            background: linear-gradient(135deg, #f2d803 0%, #f2d803 100%);
             overflow: hidden;
             position: relative;
             display: flex;
@@ -4089,7 +4134,7 @@
         .years-badge {
             position: absolute;
             left: 120px;
-            /* top: 50%; */
+            top: 35%;
             transform: translateY(-50%);
             z-index: 9999;
             width: 220px;
@@ -9334,30 +9379,59 @@
                                     <div class="framer-dnb8d0" data-framer-component-type="RichTextContainer">
                                         <p>At Dream Desk.</p>
                                     </div>
-                                    <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
+                                    <!-- <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
                                         <p>
                                             We resolve career confusion, revolutionize futures boldly.<br />
                                             <strong>Start Your Session Now !.</strong>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
                             <div class="framer-5tvmqk-container hidden-1qkvzkg hidden-a1qw1e">
                                 <div class="framer-J6ugj framer-IORtY framer-yfknkv framer-v-1l1lvn4"
                                     data-framer-name="Start" data-highlight="true">
-                                  
+
 
                                     <div class="framer-1ebgzuc" data-framer-component-type="RichTextContainer"
                                         style="--framer-paragraph-spacing: 0px; transform: translateY(-50%); opacity: 1;">
 
                                         <h2 class="framer-text framer-styles-preset-19md8ao"
                                             data-styles-preset="a5EASynPI">
-                                            Aligning students potential with informed academic <span id="rotating-text"
-                                                class="rotating-word">pathways</span>
+                                            <span class="framer-text" style="font-size: 60px;">UNLOCK YOUR</span></br><span class="framer-text" style="font-size: 60px;">TRUE
+                                                POTENTIAL</span>
+
+                                            <!-- <span id="rotating-text"
+                                                class="rotating-word">pathways</span> -->
                                         </h2>
+                                        <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
+                                            <p style="font-size: 18px;">
+                                                Expert Acadamic guidance to help students get into
+                                                top </br>colleges and achieve their dream careers
+                                                <!-- <strong>Start Your Session Now !.</strong> -->
+                                            </p>
+                                        </div>
+
+                                        <!-- Here is the button -->
+
+                                        <div class="hero-buttons-container">
+                                            <button class="hero-btn hero-btn-primary">Find Your College</button>
+                                            <button class="hero-btn hero-btn-secondary">Get Job Ready Degree</button>
+                                        </div>
 
                                     </div>
+
+
+                                    <!-- <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
+                                        <p>
+                                            We resolve career confusion, revolutionize futures boldly.<br />
+                                            <strong>Start Your Session Now !.</strong>
+                                        </p>
+                                    </div> -->
+
+
+
+
 
                                 </div>
                             </div>
@@ -9365,6 +9439,9 @@
 
                         <!-- Large Text with Video Inside using Canvas -->
                         <div class="framer-rqqsrm">
+                           
+                            <!-- here is the video part -->
+                           
                             <div class="text-video-container">
                                 <!-- Hidden video element -->
                                 <video id="sourceVideo" src="Sections_svgs/DreamDesk.mp4" loop muted playsinline
@@ -9373,6 +9450,7 @@
                                 <!-- Canvas to draw video inside text -->
                                 <canvas id="textCanvas"></canvas>
                             </div>
+                       
                         </div>
 
 
@@ -9412,11 +9490,11 @@
 
                             <div class="stripe-item-hero">
                                 <span class="stripe-icon-hero">�</spaan>
-                                    <span class="stripe-text-hero">AIBE 2H Registration 2026</span>
+                                    <span class="stripe-text-hero">Trusted by 50.000 + Students Across India.</span>
                             </div>
                             <div class="stripe-item-hero">
                                 <span class="stripe-icon-hero">📚</span>
-                                <span class="stripe-text-hero">CUET PG Exam Date 2026 LIVE Updates</span>
+                                <span class="stripe-text-hero">Trusted by 50.000 + Students Across India.</span>
                             </div>
 
                             <!-- Google Review Item (repeated) -->
@@ -9441,7 +9519,7 @@
                             </div>
                             <div class="stripe-item-hero">
                                 <span class="stripe-icon-hero">📝</span>
-                                <span class="stripe-text-hero">JEE Main 2026 Application Open</span>
+                                <span class="stripe-text-hero">Trusted by 50.000 + Students Across India.</span>
                             </div>
 
                             <!-- Google Review Item (repeated) -->
@@ -9549,7 +9627,7 @@
 
 
         <div class="pin-spacer"
-            style="background-color: white; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 6806px; padding: 0px 0px 6488px;">
+            style="background-color: white; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 1000px; padding: 0px 0px 3000px;">
             <div class="ui first"
                 style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px;">
                 <div class="ui-track" style="transform: translate(0px, 0px); opacity: 1;">
@@ -9564,8 +9642,17 @@
                                             Let us shape your career to</br>
                                             achieve your DreamDesk.</br> -->
 
-                                    We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
-                                    DreamDesk
+                                    <!-- We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
+                                    DreamDesk -->
+
+                                    <!-- Your future deserves clarity</br>
+                                    discover your strengths today,</br>
+                                    design your tomorrow wisely</br> -->
+
+
+                                    Future needs clarity</br>
+                                    before you choose let’s</br>
+                                    shape it with insight
 
                                     <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
                                             advice, real results -->
@@ -9573,7 +9660,7 @@
                             </div>
                         </div>
 
-<!-- 
+                        <!-- 
                         <div class="section-slider ui-slider" style="margin-left: 0px;">
 
                             <div class="section-slide ui-slide" id="white-hero-section"
@@ -9611,26 +9698,26 @@
                             </div>
                         </div> -->
 
-                          <div class="section-slide ui-slide" id="one-tap-section"
-                                    style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
-                                    <div style=" padding-bottom: 60px;">
-                                        <div class="section-slide-wrap"
-                                            style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/psycometric.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+                        <div class="section-slide ui-slide" id="one-tap-section"
+                            style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                            <div style=" padding-bottom: 60px;">
+                                <div class="section-slide-wrap"
+                                    style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/psycometric.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
 
-                                            <div
-                                                style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
-                                                <div style="display: flex; gap: 6px;"> <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                    <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                    <span
-                                                        style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
-                                                </div>
-                                            </div>
-                                          
+                                    <div
+                                        style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                        <div style="display: flex; gap: 6px;"> <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                            <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                            <span
+                                                style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
                                         </div>
                                     </div>
+
                                 </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -9742,7 +9829,7 @@
             </div>
             <div class="ui-wrap" style="margin-top: -242px;">
                 <div class="pin-spacer"
-                    style="order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 6806px; padding: 0px 0px 6488px;">
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 1000px; padding: 0px 0px 4000px;">
                     <div class="ui first"
                         style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px;">
                         <div class="ui-track" style="transform: translate(0px, 0px); opacity: 1;">
@@ -9948,11 +10035,195 @@
 
 
 
+                                <style>
+                                    /* Responsive styles for one-tap-section */
+                                    #one-tap-section .section-slide-wrap {
+                                        position: relative;
+                                        min-height: 500px !important;
+                                    }
+
+                                    #one-tap-section .content-box {
+                                        position: absolute;
+                                        bottom: 60px;
+                                        left: 60px;
+                                        width: 600px;
+                                        height: 500px;
+                                        max-width: calc(100% - 120px);
+                                        background: white;
+                                        border: 1px solid #000;
+                                        border-radius: 20px;
+                                        padding: 40px;
+                                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+                                        z-index: 10;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                    }
+
+                                    #one-tap-section .content-box h3 {
+                                        font-family: 'Helvetica Neue', Arial, sans-serif;
+                                        font-size: 42px;
+                                        font-weight: 700;
+                                        color: #333;
+                                        margin: 0;
+                                        line-height: 1.2;
+                                    }
+
+                                    #one-tap-section .content-box p {
+                                        font-family: 'Open Sans', Arial, sans-serif;
+                                        font-size: 20px;
+                                        color: #666;
+                                        margin: 0;
+                                        line-height: 1.6;
+                                    }
+
+                                    #one-tap-section .animated-search-bar {
+                                        width: 100%;
+                                        margin: 0;
+                                    }
+
+                                    #one-tap-section .content-box button {
+                                        width: 100%;
+                                        background: #000;
+                                        color: white;
+                                        border: none;
+                                        padding: 22px;
+                                        border-radius: 25px;
+                                        font-family: 'Helvetica Neue', Arial, sans-serif;
+                                        font-size: 22px;
+                                        font-weight: 700;
+                                        cursor: pointer;
+                                        letter-spacing: 0.5px;
+                                        transition: all 0.3s ease;
+                                        margin: 0;
+                                    }
+
+                                    #one-tap-section .content-box button:hover {
+                                        background: #333;
+                                        transform: translateY(-2px);
+                                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                    }
+
+                                    /* Tablet responsive */
+                                    @media (max-width: 1024px) {
+                                        #one-tap-section .section-slide-wrap {
+                                            min-height: 450px !important;
+                                            padding: 40px !important;
+                                        }
+
+                                        #one-tap-section .content-box {
+                                            width: 500px;
+                                            height: 450px;
+                                            max-width: calc(100% - 80px);
+                                            bottom: 40px;
+                                            left: 40px;
+                                            padding: 35px;
+                                        }
+
+                                        #one-tap-section .content-box h3 {
+                                            font-size: 32px;
+                                        }
+
+                                        #one-tap-section .content-box p {
+                                            font-size: 17px;
+                                        }
+
+                                        #one-tap-section .content-box button {
+                                            padding: 18px;
+                                            font-size: 19px;
+                                        }
+                                    }
+
+                                    /* Mobile responsive */
+                                    @media (max-width: 768px) {
+                                        #one-tap-section {
+                                            width: 100vw !important;
+                                        }
+
+                                        #one-tap-section .section-slide-wrap {
+                                            min-height: 550px !important;
+                                            padding: 30px 20px !important;
+                                            background-size: cover !important;
+                                            background-position: center !important;
+                                        }
+
+                                        #one-tap-section .content-box {
+                                            position: relative;
+                                            width: 100%;
+                                            height: auto;
+                                            max-width: 100%;
+                                            bottom: auto;
+                                            left: auto;
+                                            margin-top: 200px;
+                                            padding: 30px;
+                                        }
+
+                                        #one-tap-section .content-box h3 {
+                                            font-size: 28px;
+                                            margin-bottom: 15px;
+                                        }
+
+                                        #one-tap-section .content-box h3 br {
+                                            display: none;
+                                        }
+
+                                        #one-tap-section .content-box p {
+                                            font-size: 16px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        #one-tap-section .content-box p br {
+                                            display: none;
+                                        }
+
+                                        #one-tap-section .animated-search-bar {
+                                            margin-bottom: 20px;
+                                        }
+
+                                        #one-tap-section .content-box button {
+                                            padding: 16px;
+                                            font-size: 18px;
+                                        }
+                                    }
+
+                                    /* Small mobile */
+                                    @media (max-width: 480px) {
+                                        #one-tap-section .section-slide-wrap {
+                                            min-height: 500px !important;
+                                            padding: 20px 15px !important;
+                                        }
+
+                                        #one-tap-section .content-box {
+                                            padding: 25px;
+                                            margin-top: 150px;
+                                        }
+
+                                        #one-tap-section .content-box h3 {
+                                            font-size: 24px;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        #one-tap-section .content-box p {
+                                            font-size: 15px;
+                                            margin-bottom: 18px;
+                                        }
+
+                                        #one-tap-section .animated-search-bar {
+                                            margin-bottom: 18px;
+                                        }
+
+                                        #one-tap-section .content-box button {
+                                            padding: 14px;
+                                            font-size: 17px;
+                                        }
+                                    }
+                                </style>
+
                                 <div class="section-slide ui-slide" id="one-tap-section"
                                     style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
                                     <div style=" padding-bottom: 60px;">
                                         <div class="section-slide-wrap world-map-breathing"
-                                            style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/Library1.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+                                            style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/Library2.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
 
                                             <div
                                                 style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
@@ -9964,15 +10235,14 @@
                                                         style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
                                                 </div>
                                             </div>
-                                            <div
-                                                style="position: absolute; bottom: 60px; left: 60px; width: 350px; background: white; border: 1px solid #000; border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); z-index: 10;">
-                                                <h3
-                                                    style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; color: #333; margin: 0 0 15px 0; line-height: 1.2;">
-                                                    Your Dream Future<br> Starts Here<br> Grab Your Seat NOW! </h3>
-                                                <p
-                                                    style="font-family: 'Open Sans', Arial, sans-serif; font-size: 14px; color: #666; margin: 0 0 20px 0; line-height: 1.4;">
+                                            <div class="content-box">
+                                                <h3>
+                                                    Your Dream Future<br> Starts Here<br> Grab Your Seat NOW!
+                                                </h3>
+                                                <p>
                                                     Unlock admission to India's most prestigious<br> colleges &
-                                                    leading universities! </p>
+                                                    leading universities!
+                                                </p>
 
                                                 <div class="animated-search-bar">
                                                     <div class="search-text-container">
@@ -9985,12 +10255,11 @@
                                                         <div class="search-question">Which path suits you best?
                                                         </div>
                                                     </div>
-                                                    <div class="search-icon"> <img
-                                                            src="./Sections_svgs/search-icon-white.svg" alt="" />
+                                                    <div class="search-icon">
+                                                        <img src="./Sections_svgs/search-icon-white.svg" alt="" />
                                                     </div>
-                                                </div> <button
-                                                    style="width: 100%; background: #000; color: white; border: none; padding: 15px; border-radius: 25px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px;">
-                                                    Apply Now </button>
+                                                </div>
+                                                <button>Apply Now</button>
                                             </div>
                                         </div>
                                     </div>
@@ -10075,7 +10344,7 @@
             <!-- <div class="ui-wrap" style="margin-top: 342px;"> -->
             <div class="ui-wrap" style="margin-top: -242px;">
                 <div class="pin-spacer"
-                    style="order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 6806px; padding: 0px 0px 6488px;">
+                    style="order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px;  ">
                     <div class="ui"
                         style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px;">
                         <div class="ui-track" style="transform: translate(0px, 0px); opacity: 1;">
@@ -10975,7 +11244,7 @@
                                     </div>
 
 
-                                    <div class="section-slider ui-slider" style="margin-left: 0px;">
+                                    <!-- <div class="section-slider ui-slider" style="margin-left: 0px;">
 
                                         <div class="section-slide ui-slide" id="white-hero-section"
                                             style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
@@ -10984,16 +11253,16 @@
                                                 <div class="section-slide-wrap"
                                                     style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; position: relative; min-height: 450px; overflow: hidden; background-color: #f8f8f6;">
 
-                                                    <!-- Background Image -->
+                                                   
                                                     <img src="./Sections_svgs/Teams.png" alt="Teams"
                                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 1;">
 
-                                                    <!-- Light Overlay for better text readability -->
+                                                  
                                                     <div
                                                         style="position: absolute; inset: 0; background: rgba(248, 248, 246, 0.3); z-index: 2;">
                                                     </div>
 
-                                                    <!-- Top Bar -->
+                                                
                                                     <div
                                                         style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: rgba(248, 248, 246, 0.95); border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px; z-index: 3;">
                                                     </div>
@@ -11009,188 +11278,228 @@
 
 
 
-                                                <!-- <div
-                                                        style="flex: 1; max-width: 55%; padding-right: 40px; display: flex; flex-direction: column; justify-content: center;">
-                                                      
-                                                        <div style="margin-bottom: 20px;">
-                                                            <h1
-                                                                style="font-size: 52px; font-weight: 900; color: #0c0b0b; line-height: 1.1; margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
-                                                                Discover Your<br>
-                                                                <span style="color: #6a1b9a;">True Potential</span>
-                                                            </h1>
-                                                        </div>
 
-                                                     
-                                                        <div style="margin-bottom: 25px;">
-                                                            <p
-                                                                style="font-size: 15px; color: #666; line-height: 1.6; margin: 0; font-family: Arial, sans-serif; max-width: 95%;">
-                                                                Take the most accurate MBTI personality test to identify
-                                                                your natural tendencies, helping you make better
-                                                                decisions in your career, relationships, and personal
-                                                                growth.
-                                                            </p>
-                                                        </div>
+                                                </div>
 
-                                                       
-                                                        <div style="margin-bottom: 25px;">
-                                                            <button
-                                                                style="background: #6a1b9a; color: #ffffff; border: none; padding: 12px 25px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: Arial, sans-serif;">
-                                                                START TEST
-                                                                <svg width="16" height="16" viewBox="0 0 24 24"
-                                                                    fill="none" stroke="currentColor" stroke-width="2">
-                                                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                                                </svg>
-                                                            </button>
-                                                        </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div id="team-section" class="section-slide ui-slide"
+                                        style="width: 25vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
+                                        <div style="height: 100%; display: flex; flex-direction: column;">
+                                            <div class="section-slide-wrap-team "
+                                                style="border: 2px solid #0c0b0b; border-radius: 12px; background: #f8f8f6; position: relative; height: 100%; display: flex; flex-direction: column;">
+
+                                                <div
+                                                    style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: transparent; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
+                                                    <div style="display: flex; gap: 6px;">
+                                                        <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                        <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                        <span
+                                                            style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div id="team" class="section-slide-text"
+                                                    style="padding: 60px 20px 80px 80px;">
+
+                                                    <div class="p3">
+                                                        Meet Our Team.
+                                                    </div>
+                                                    <div>
+                                                        <p style="margin: 0;">Your personal guides to success</p>
+                                                    </div>
+                                                </div>
 
 
+                                                <div
+                                                    style="padding: 20px; overflow: hidden; width:100%; flex: 1; display: flex; align-items: center;">
+                                                    <div class="counselors-carousel"
+                                                        style="display: flex; gap: 25px; animation: counselorCarousel 15s linear infinite; height: 100%;">
 
-                                                    </div> -->
-
-                                                <!-- Right Visual Section -->
-                                                <!-- <div
-                                                        style="flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 45%; height: 100%; padding: 10px;">
-
-                                                        <div class="hero-right" data-aos="fade-left"
-                                                            data-aos-delay="200">
-                                                            <div class="ins-266-container">
-                                                                <div class="ins-266-personality-wheel">
-                                                                    <div class="ins-266-wheel-outer">
-                                                                        <div class="ins-266-wheel-inner">
-                                                                            <div class="ins-266-wheel-center">
-                                                                                <div class="ins-266-center-text">YOU
-                                                                                </div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-1">
-                                                                                <span class="ins-266-label">E</span>
-                                                                                <span class="ins-266-label">I</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-2">
-                                                                                <span class="ins-266-label">N</span>
-                                                                                <span class="ins-266-label">S</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-3">
-                                                                                <span class="ins-266-label">T</span>
-                                                                                <span class="ins-266-label">F</span>
-                                                                            </div>
-                                                                            <div
-                                                                                class="ins-266-dimension ins-266-dimension-4 ins-266-active">
-                                                                                <span class="ins-266-label">J</span>
-                                                                                <span class="ins-266-label">P</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ins-266-pulse-rings">
-                                                                        <div class="ins-266-pulse-ring ins-266-ring1">
-                                                                        </div>
-                                                                        <div class="ins-266-pulse-ring ins-266-ring2">
-                                                                        </div>
-                                                                        <div class="ins-266-pulse-ring ins-266-ring3">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="ins-266-type-cards">
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="E">
-                                                                        <div class="ins-266-card-letter">E</div>
-
-                                                                        <div class="ins-266-card-trait">Extrovert</div>
-                                                                        <div class="ins-266-card-bar" data-percent="65"
-                                                                            style="width: 65%;"></div>
-
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="N">
-                                                                        <div class="ins-266-card-letter">N</div>
-                                                                        <div class="ins-266-card-trait">Intuitive</div>
-                                                                        <div class="ins-266-card-bar" data-percent="80"
-                                                                            style="width: 80%;"></div>
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="T">
-                                                                        <div class="ins-266-card-letter">T</div>
-                                                                        <div class="ins-266-card-trait">Thinking</div>
-                                                                        <div class="ins-266-card-bar" data-percent="55"
-                                                                            style="width: 55%;"></div>
-                                                                    </div>
-                                                                    <div class="ins-266-type-card ins-266-active"
-                                                                        data-type="P">
-                                                                        <div class="ins-266-card-letter">P</div>
-                                                                        <div class="ins-266-card-trait">Perceiving</div>
-                                                                        <div class="ins-266-card-bar" data-percent="70"
-                                                                            style="width: 70%;"></div>
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/deepsika.png"
+                                                                    alt="Deepsika - Career Expert"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Deepsika</h3>
+                                                                        <p class="counselor-role">Career Expert</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/Abhishek.png"
+                                                                    alt="Abhishek - College Advisor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Abhishek</h3>
+                                                                        <p class="counselor-role">College Advisor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                        <script>
-                                                            // Hero Section JavaScript - Exact copy from original
-                                                            document.addEventListener('DOMContentLoaded', function () {
-                                                                // Initialize the animations
-                                                                initTypeCards();
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/kalyani (2).png"
+                                                                    alt="Kalyani - Mentor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Kalyani</h3>
+                                                                        <p class="counselor-role">Mentor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                // Add highlighting animation for personality dimensions
-                                                                animatePersonalityWheel();
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/Priyashree.png"
+                                                                    alt="Priyashree - Study Guide"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Priyashree</h3>
+                                                                        <p class="counselor-role">Study Guide</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                function animatePersonalityWheel() {
-                                                                    const dimensions = document.querySelectorAll('.ins-266-dimension');
-                                                                    let currentIndex = 0;
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/Rishab.png"
+                                                                    alt="Rishab - Career Expert"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Rishab</h3>
+                                                                        <p class="counselor-role">Career Expert</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/rubi.png"
+                                                                    alt="Rubi - College Advisor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Rubi</h3>
+                                                                        <p class="counselor-role">College Advisor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                    // Initially highlight the first dimension
-                                                                    if (dimensions.length > 0) {
-                                                                        dimensions[0].classList.add('ins-266-active');
-                                                                    }
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/Satyaki.png"
+                                                                    alt="Satyaki - College Advisor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Satyaki</h3>
+                                                                        <p class="counselor-role">College Advisor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                    // Rotate through dimensions every 2 seconds
-                                                                    setInterval(() => {
-                                                                        if (dimensions.length > 0) {
-                                                                            dimensions[currentIndex].classList.remove('ins-266-active');
-                                                                            currentIndex = (currentIndex + 1) % dimensions.length;
-                                                                            dimensions[currentIndex].classList.add('ins-266-active');
-                                                                        }
-                                                                    }, 2000);
-                                                                }
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/Shubo.png"
+                                                                    alt="Shubo - College Advisor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">Shubo</h3>
+                                                                        <p class="counselor-role">College Advisor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                function initTypeCards() {
-                                                                    const cards = document.querySelectorAll('.ins-266-type-card');
+                                                        <div class="counselor-item"
+                                                            style="flex-shrink: 0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                            <div class="counselor-image-container"
+                                                                style="width: 340px; height: 460px; border: 2px solid #0c0b0b; border-radius: 300px; overflow: hidden; background: #fff; position: relative; cursor: pointer;">
+                                                                <img src="./counselor_images/sr sir.png"
+                                                                    alt="SR Sir - College Advisor"
+                                                                    style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
+                                                                <div class="counselor-overlay">
+                                                                    <div class="counselor-info">
+                                                                        <h3 class="counselor-name">SR Sir</h3>
+                                                                        <p class="counselor-role">College Advisor</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                                                    cards.forEach((card, index) => {
-                                                                        setTimeout(() => {
-                                                                            card.classList.add('ins-266-active');
+                                                <style>
+                                                    @keyframes counselorCarousel {
+                                                        0% {
+                                                            transform: translateX(0);
+                                                        }
 
-                                                                            // Animate progress bar
-                                                                            const bar = card.querySelector('.ins-266-card-bar');
-                                                                            if (bar) {
-                                                                                const percent = bar.getAttribute('data-percent');
-                                                                                bar.style.width = `${percent}%`;
-                                                                            }
-                                                                        }, 800 + index * 150);
-                                                                    });
-                                                                }
+                                                        100% {
+                                                            transform: translateX(-900px);
+                                                        }
+                                                    }
 
-                                                                // Smooth scroll for scroll indicator
-                                                                const scrollIndicator = document.querySelector('.hero-scroll-indicator');
-                                                                if (scrollIndicator) {
-                                                                    scrollIndicator.addEventListener('click', () => {
-                                                                        window.scrollTo({
-                                                                            top: window.innerHeight,
-                                                                            behavior: 'smooth'
-                                                                        });
-                                                                    });
-                                                                }
-                                                            });
-                                                        </script>
-                                                    </div> -->
+                                                    .counselors-carousel:hover {
+                                                        animation-play-state: paused;
+                                                    }
+                                                </style>
                                             </div>
-
                                         </div>
+
+                                        <style>
+                                            @keyframes counselorCarousel {
+                                                0% {
+                                                    transform: translateX(0);
+                                                }
+
+                                                100% {
+                                                    transform: translateX(-1220px);
+                                                }
+                                            }
+
+                                            .counselors-carousel:hover {
+                                                animation-play-state: paused;
+                                            }
+                                        </style>
                                     </div>
+
+
                                 </div>
 
 
@@ -12028,7 +12337,6 @@
 
                                             function getAIResponse(message) {
                                                 const lowerMessage = message.toLowerCase();
-
                                                 for (const [key, response] of Object.entries(responses)) {
                                                     if (key !== 'default' && lowerMessage.includes(key.replace(/[^a-z\s]/g, ''))) {
                                                         return response;
