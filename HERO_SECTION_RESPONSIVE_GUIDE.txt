@@ -1,0 +1,621 @@
+================================================================================
+HERO SECTION RESPONSIVE CSS - COPY THIS TO OTHER PAGES
+================================================================================
+
+INSTRUCTIONS:
+1. Find the <style> section in your HTML file (usually near the top, before </head>)
+2. Look for the existing @media queries for mobile and tablet
+3. Copy the CSS code below into those sections
+4. Make sure to place it BEFORE the closing </style> tag
+5. IMPORTANT: If your page has a different big title (like "INITIATIVE" instead of "CAREER"), 
+   you need to add the specific CSS for that title - see the section below
+
+================================================================================
+MOBILE RESPONSIVE CSS (max-width: 809.98px)
+================================================================================
+
+Add this code inside: @media (max-width: 809.98px) { ... }
+
+    /* Make CAREER title responsive on mobile */
+    .framer-career-title {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 50px !important;
+    }
+
+    /* Make "At Dream Desk" text smaller to fit screen */
+    .framer-mpgbF .framer-dnb8d0 {
+      --framer-font-size: 50px !important;
+      font-size: 50px !important;
+    }
+
+    .framer-mpgbF .framer-dnb8d0 p {
+      --framer-font-size: 50px !important;
+      font-size: 50px !important;
+    }
+
+    /* Fix hero section container - increase top padding to prevent navbar overlap */
+    .framer-mpgbF .framer-1eiawcr {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      min-height: 100vh !important;
+      padding: 150px 20px 60px 20px !important;
+      gap: 30px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      position: relative !important;
+    }
+
+    /* Position CAREER title closer to bottom */
+    .framer-mpgbF .framer-rqqsrm {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      margin-top: auto !important;
+      margin-bottom: 20px !important;
+      z-index: 10 !important;
+    }
+
+================================================================================
+TABLET RESPONSIVE CSS (min-width: 810px and max-width: 1199.98px)
+================================================================================
+
+Add this code inside: @media (min-width: 810px) and (max-width: 1199.98px) { ... }
+
+    /* Make "At Dream Desk" text smaller to fit tablet screen */
+    .framer-mpgbF .framer-dnb8d0 {
+      --framer-font-size: 70px !important;
+      font-size: 70px !important;
+    }
+
+    .framer-mpgbF .framer-dnb8d0 p {
+      --framer-font-size: 70px !important;
+      font-size: 70px !important;
+    }
+
+    /* Remove the 300px margin-bottom from CAREER title on tablet */
+    .framer-career-title {
+      margin-bottom: 0 !important;
+    }
+
+    /* Fix hero section container - same as mobile with increased top padding */
+    .framer-mpgbF .framer-1eiawcr {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      min-height: 100vh !important;
+      padding: 150px 30px 60px 30px !important;
+      gap: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      position: relative !important;
+    }
+
+    /* Fix content wrapper - same as mobile */
+    .framer-mpgbF .framer-3y1b7i {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 20px 30px !important;
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      gap: 25px !important;
+      z-index: 10 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      flex: 0 0 auto !important;
+    }
+
+    /* Position CAREER title closer to bottom - same as mobile */
+    .framer-mpgbF .framer-rqqsrm {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      margin-top: auto !important;
+      margin-bottom: 20px !important;
+      z-index: 10 !important;
+    }
+
+    /* Center align "Join people who believe..." text on tablet */
+    .framer-mpgbF .framer-5tvmqk-container {
+      width: 100% !important;
+      display: block !important;
+      z-index: 10 !important;
+    }
+
+    .framer-mpgbF .framer-5tvmqk-container h2 {
+      font-size: clamp(36px, 6vw, 56px) !important;
+      line-height: 1.3 !important;
+      text-align: center !important;
+      margin: 0 0 25px 0 !important;
+      padding: 0 20px !important;
+      word-wrap: break-word !important;
+      z-index: 10 !important;
+      position: relative !important;
+    }
+
+    /* Fix the text container to be responsive and centered on tablet */
+    .framer-J6ugj.framer-yfknkv {
+      width: 100% !important;
+      max-width: 90vw !important;
+      height: auto !important;
+      min-height: 50px !important;
+      gap: 5px !important;
+      overflow: visible !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+
+    /* Center align "We are committed..." text on tablet */
+    .framer-mpgbF .framer-su7jo2 {
+      width: 100% !important;
+      max-width: 90% !important;
+      margin: 0 auto !important;
+      padding: 0 30px !important;
+      font-size: clamp(18px, 3vw, 24px) !important;
+      line-height: 1.6 !important;
+      text-align: center !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      z-index: 10 !important;
+      position: relative !important;
+      color: #666 !important;
+    }
+
+================================================================================
+FOR PAGES WITH DIFFERENT BIG TITLES (INITIATIVE, ABOUT, etc.)
+================================================================================
+
+If your page has a big title that's NOT "CAREER" (like "INITIATIVE"), you need to:
+
+1. Find the class name of the container with the big title
+   - Look for the element with the huge font-size (like 340px)
+   - In initiative.html, it's: .framer-jcul6d p
+
+2. Add this CSS to BOTH mobile and tablet sections:
+
+MOBILE (max-width: 809.98px):
+    /* Make [YOUR TITLE] responsive on mobile - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+TABLET (min-width: 810px and max-width: 1199.98px):
+    /* Make [YOUR TITLE] responsive on tablet - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(120px, 25vw, 280px) !important;
+      font-size: clamp(120px, 25vw, 280px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+================================================================================
+STEP-BY-STEP GUIDE: HOW TO FIND AND FIX YOUR BIG TITLE
+================================================================================
+
+STEP 1: FIND THE BIG TITLE TEXT IN YOUR HTML
+---------------------------------------------
+1. Open your HTML file (e.g., about_us.html, For_education.html, etc.)
+2. Press Ctrl+F (or Cmd+F on Mac) to open search
+3. Search for your big title text (e.g., "ABOUT", "EDUCATION", "YOUTH", etc.)
+4. You'll find something like this:
+
+   <div class="framer-rqqsrm" ...>
+     <div class="framer-jcul6d" ...>
+       <p class="framer-text" style="font-size: 340px; margin-bottom:300px;">
+         INITIATIVE
+       </p>
+     </div>
+   </div>
+
+STEP 2: IDENTIFY THE CONTAINER CLASS
+-------------------------------------
+Look at the div that contains the <p> tag with your big title.
+In the example above, the class is: framer-jcul6d
+
+Common class names you might find:
+- .framer-jcul6d (used in initiative.html)
+- .framer-abc123 (could be different on each page)
+- .framer-xyz789 (varies by page)
+
+STEP 3: ADD THE CSS TO YOUR PAGE
+---------------------------------
+Go to the <style> section of your HTML file and find the mobile responsive section:
+@media (max-width: 809.98px) {
+
+Add this CSS at the TOP of that section (replace "framer-jcul6d" with YOUR class):
+
+    /* Make [YOUR TITLE NAME] responsive on mobile - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+STEP 4: ADD THE TABLET CSS
+---------------------------
+Find the tablet responsive section:
+@media (min-width: 810px) and (max-width: 1199.98px) {
+
+Add this CSS at the TOP of that section (replace "framer-jcul6d" with YOUR class):
+
+    /* Make [YOUR TITLE NAME] responsive on tablet - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(120px, 25vw, 280px) !important;
+      font-size: clamp(120px, 25vw, 280px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+STEP 5: SAVE AND TEST
+---------------------
+1. Save your HTML file
+2. Open it in a browser
+3. Resize the browser window to mobile size (or use DevTools)
+4. Check if the big title fits on screen without going off the sides
+
+================================================================================
+REAL EXAMPLE: INITIATIVE.HTML
+================================================================================
+
+WHAT WAS FOUND:
+In initiative.html, the big "INITIATIVE" title was:
+- Located in: <div class="framer-jcul6d">
+- Had inline style: font-size: 340px; margin-bottom:300px;
+- Was going off-screen on mobile and tablet
+
+WHAT WAS ADDED:
+
+MOBILE CSS (added at line 9240):
+    /* Make INITIATIVE title responsive on mobile - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+TABLET CSS (added at line 9465):
+    /* Make INITIATIVE title responsive on tablet - fix the big title going off screen */
+    .framer-mpgbF .framer-jcul6d p {
+      --framer-font-size: clamp(120px, 25vw, 280px) !important;
+      font-size: clamp(120px, 25vw, 280px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+RESULT:
+- Mobile: Title scales from 80px to 200px based on screen width
+- Tablet: Title scales from 120px to 280px based on screen width
+- The 300px margin-bottom is overridden to 20px
+- Title stays on screen and looks perfect
+
+================================================================================
+QUICK REFERENCE: CSS TEMPLATE FOR OTHER PAGES
+================================================================================
+
+Replace [YOUR-CLASS] with the class name you found in Step 2.
+Replace [YOUR-TITLE] with your page title (ABOUT, EDUCATION, etc.)
+
+MOBILE:
+-------
+    /* Make [YOUR-TITLE] responsive on mobile */
+    .framer-mpgbF .[YOUR-CLASS] p {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+TABLET:
+-------
+    /* Make [YOUR-TITLE] responsive on tablet */
+    .framer-mpgbF .[YOUR-CLASS] p {
+      --framer-font-size: clamp(120px, 25vw, 280px) !important;
+      font-size: clamp(120px, 25vw, 280px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+EXAMPLE FOR "ABOUT" PAGE:
+If you found class="framer-xyz123", use:
+
+MOBILE:
+    .framer-mpgbF .framer-xyz123 p {
+      --framer-font-size: clamp(80px, 22vw, 200px) !important;
+      font-size: clamp(80px, 22vw, 200px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+TABLET:
+    .framer-mpgbF .framer-xyz123 p {
+      --framer-font-size: clamp(120px, 25vw, 280px) !important;
+      font-size: clamp(120px, 25vw, 280px) !important;
+      margin-bottom: 20px !important;
+      line-height: 0.9 !important;
+    }
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: Title still goes off screen
+SOLUTION: 
+- Check if you used the correct class name
+- Make sure you added the CSS to BOTH mobile and tablet sections
+- Clear browser cache and refresh
+
+PROBLEM: Can't find the class name
+SOLUTION:
+- Search for your title text in the HTML
+- Look for the nearest <div> with class="framer-xxxxx"
+- The class name is usually 7-8 characters after "framer-"
+
+PROBLEM: CSS not working
+SOLUTION:
+- Make sure you added !important to all properties
+- Check that you're inside the correct @media query
+- Verify the class name matches exactly (case-sensitive)
+
+PROBLEM: Title too small or too large
+SOLUTION:
+- Adjust the clamp() values:
+  - First value (80px): minimum size
+  - Second value (22vw): scaling factor
+  - Third value (200px): maximum size
+- For larger titles, increase the max value (200px → 250px)
+- For smaller titles, decrease the max value (200px → 150px)
+
+================================================================================
+FIX FOR OVERLAPPING TEXT BOXES (Join people... & At Dream Desk)
+================================================================================
+
+PROBLEM:
+On mobile/tablet, two text elements overlap:
+1. "Join people who believe your next big dream deserves the best"
+2. "At Dream Desk" (the decorative text)
+
+These elements have different classes and need specific CSS to prevent overlap.
+
+SOLUTION - ADD THIS CSS:
+
+MOBILE (max-width: 809.98px):
+-------------------------------
+
+      /* Fix "Join people who believe..." text - make it responsive */
+      .framer-mpgbF .framer-1ebgzuc h2 {
+        font-size: clamp(24px, 6vw, 40px) !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        padding: 0 10px !important;
+      }
+
+      /* Fix the animated text container wrapper */
+      .framer-mpgbF .framer-5tvmqk-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      /* FIX: Make the text container responsive */
+      .framer-J6ugj.framer-yfknkv {
+        width: 100% !important;
+        max-width: 95vw !important;
+        height: auto !important;
+        min-height: 50px !important;
+        gap: 5px !important;
+        overflow: visible !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+
+      /* Center align all text inside the container */
+      .framer-J6ugj.framer-yfknkv h2,
+      .framer-J6ugj.framer-yfknkv .framer-text {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      /* Fix foreground text - reduce spacing */
+      .framer-mpgbF .framer-su7jo2 {
+        width: 100% !important;
+        padding: 0 10px !important;
+        font-size: clamp(16px, 4vw, 20px) !important;
+        line-height: 1.4 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        margin: 10px 0 !important;
+        z-index: 3 !important;
+        position: relative !important;
+        text-align: center !important;
+      }
+
+TABLET (min-width: 810px and max-width: 1199.98px):
+----------------------------------------------------
+
+      /* Fix "Join people who believe..." text on tablet */
+      .framer-mpgbF .framer-1ebgzuc h2 {
+        font-size: clamp(36px, 6vw, 56px) !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        padding: 0 20px !important;
+      }
+
+      /* Center align "Join people who believe..." text on tablet */
+      .framer-mpgbF .framer-5tvmqk-container {
+        width: 100% !important;
+        display: block !important;
+        z-index: 10 !important;
+      }
+
+      .framer-mpgbF .framer-5tvmqk-container h2 {
+        font-size: clamp(36px, 6vw, 56px) !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+        margin: 0 0 25px 0 !important;
+        padding: 0 20px !important;
+        word-wrap: break-word !important;
+        z-index: 10 !important;
+        position: relative !important;
+      }
+
+      /* Fix the text container to be responsive and centered on tablet */
+      .framer-J6ugj.framer-yfknkv {
+        width: 100% !important;
+        max-width: 90vw !important;
+        height: auto !important;
+        min-height: 50px !important;
+        gap: 5px !important;
+        overflow: visible !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+
+      /* Center align "We are committed..." text on tablet */
+      .framer-mpgbF .framer-su7jo2 {
+        width: 100% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        padding: 0 30px !important;
+        font-size: clamp(18px, 3vw, 24px) !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        z-index: 10 !important;
+        position: relative !important;
+        color: #666 !important;
+      }
+
+================================================================================
+WHAT THIS CSS DOES (Overlapping Text Fix):
+================================================================================
+
+1. .framer-1ebgzuc h2
+   - Targets the "Join people who believe..." text
+   - Makes it responsive with clamp()
+   - Enables word wrapping (white-space: normal)
+   - Centers the text
+   - Prevents text from going off screen
+
+2. .framer-5tvmqk-container
+   - Container for the animated text
+   - Makes it full width and centered
+   - Ensures proper flexbox layout
+
+3. .framer-J6ugj.framer-yfknkv
+   - The text container wrapper
+   - Limits max width to 95vw (mobile) or 90vw (tablet)
+   - Centers content
+   - Allows text to wrap properly
+
+4. .framer-su7jo2
+   - The "We are committed..." text below
+   - Responsive font sizing
+   - Proper spacing and centering
+   - Word wrapping enabled
+
+KEY PROPERTIES:
+- white-space: normal → Allows text to wrap to multiple lines
+- word-wrap: break-word → Breaks long words if needed
+- overflow-wrap: break-word → Additional wrapping support
+- text-align: center → Centers all text
+- max-width: 95vw/90vw → Prevents text from going off screen
+- clamp() → Responsive font sizing that scales with screen
+
+================================================================================
+HOW TO USE THIS ON OTHER PAGES:
+================================================================================
+
+1. Copy the MOBILE CSS section above
+2. Paste it inside your @media (max-width: 809.98px) { } block
+3. Copy the TABLET CSS section above
+4. Paste it inside your @media (min-width: 810px) and (max-width: 1199.98px) { } block
+5. Save and test
+
+NOTE: These class names are the same across pages:
+- .framer-1ebgzuc (Join people text container)
+- .framer-5tvmqk-container (Animated text wrapper)
+- .framer-J6ugj.framer-yfknkv (Text container)
+- .framer-su7jo2 (Subtitle text)
+
+So you can copy-paste this CSS directly to other pages!
+
+================================================================================
+END OF GUIDE
+================================================================================
+
+================================================================================
+WHAT THIS CSS DOES:
+================================================================================
+
+MOBILE:
+- Increases top padding to 150px to prevent text from going behind navbar
+- Makes "At Dream Desk" text 50px font size to fit screen
+- Makes CAREER title responsive (80px-200px)
+- Makes other big titles responsive (80px-200px) with margin-bottom: 20px
+- Positions CAREER title at bottom with 20px margin
+- Full screen height (100vh)
+
+TABLET:
+- Same layout as mobile but with slightly larger spacing
+- "At Dream Desk" text 70px font size
+- Big titles responsive (120px-280px) with margin-bottom: 20px
+- Removes 300px margin-bottom from CAREER title
+- Centers all text properly
+- Full screen height (100vh)
+- CAREER title at bottom with 20px margin
+
+================================================================================
+LAYOUT STRUCTURE:
+================================================================================
+
+TOP SECTION:
+1. "Join people who believe your next big dream deserves the best" (or similar text)
+2. "At Dream Desk" (50px mobile, 70px tablet)
+3. "We are committed to building..." text (or similar)
+
+BOTTOM SECTION:
+4. "CAREER" / "INITIATIVE" / etc. title (positioned at bottom with margin-top: auto)
+
+================================================================================
+NOTES:
+================================================================================
+
+- The CSS uses flexbox with justify-content: space-between to separate top and bottom
+- margin-top: auto pushes big title to the bottom
+- All text is centered with text-align: center
+- Top padding of 150px prevents navbar overlap
+- Full viewport height (100vh) ensures proper spacing
+- Big titles have margin-bottom: 20px (overrides inline 300px margin)
+- Use clamp() for responsive font sizes that scale with viewport width
+
+================================================================================
+END OF GUIDE
+================================================================================
