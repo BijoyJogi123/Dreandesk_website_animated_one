@@ -150,6 +150,54 @@
             color: #000;
         }
 
+        /* Responsive Hero Buttons */
+        @media (max-width: 1024px) {
+            .hero-buttons-container {
+                gap: 20px;
+            }
+
+            .hero-btn {
+                padding: 14px 32px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons-container {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .hero-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons-container {
+                gap: 12px;
+                max-width: 100%;
+            }
+
+            .hero-btn {
+                padding: 10px 20px;
+                font-size: 13px;
+                border-radius: 6px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero-btn {
+                padding: 9px 18px;
+                font-size: 12px;
+            }
+        }
+
 
         /* Take a Test Button Hover Effect */
         .take-test-btn:hover {
@@ -178,29 +226,33 @@
             height: 100%;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Top Text */
         .framer-3y1b7i {
             z-index: 3;
             width: 695px;
-            position: absolute;
-            top: calc(33.75% - 150px);
-            left: 360px;
-
+            position: relative;
+            min-height: 200px;
+            margin: 0 auto;
+            padding: 40px 20px 20px 20px;
         }
 
         .framer-1kfwg09 {
             will-change: transform;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: flex-start;
             gap: 32px;
-            position: absolute;
-            top: -85px;
-            /* right: 150px; */
+            position: relative;
             opacity: 1;
             transform: none;
+            width: 100%;
         }
 
         .framer-dnb8d0 {
@@ -217,7 +269,7 @@
             height: auto;
             position: absolute;
             /* top: 180px; */
-            top: 158px;
+            /* top: 158px; */
             left: 0;
         }
 
@@ -231,6 +283,7 @@
             transform: translateY(-50%);
             opacity: 1;
             position: relative;
+            margin-top: 0;
         }
 
         .framer-dnb8d0 p {
@@ -408,9 +461,35 @@
         }
 
         /* Responsive */
+        
+        /* Large screens above 1600px */
+        @media (min-width: 1601px) {
+            .framer-3y1b7i {
+                width: 650px;
+                padding: 160px 20px 20px 20px;
+            }
+        }
+        
+        @media (max-width: 1600px) {
+            .framer-3y1b7i {
+                width: 650px;
+                padding: 160px 20px 20px 20px;
+            }
+
+            .framer-1eiawcr {
+                padding-top: 70px;
+            }
+        }
+
         @media (max-width: 1400px) {
             .framer-1eiawcr {
                 width: 1800px;
+                padding-top: 60px;
+            }
+
+            .framer-3y1b7i {
+                width: 600px;
+                padding: 160px 20px 20px 20px;
             }
 
             .framer-1gqk893 {
@@ -430,12 +509,13 @@
         @media (max-width: 1200px) {
             .framer-1eiawcr {
                 width: 1400px;
+                padding-top: 50px;
             }
 
             .framer-3y1b7i {
-                width: 600px;
-                left: 200px;
-                top: 10%;
+                width: 90%;
+                max-width: 600px;
+                padding: 145px 20px 20px 20px;
             }
 
             .framer-1gqk893 {
@@ -456,29 +536,27 @@
         @media (max-width: 1024px) {
             .framer-ll2u5v {
                 flex-direction: column;
+                padding-top: 140px;
             }
 
             .framer-1eiawcr {
                 width: 100%;
                 max-width: 100vw;
+                padding-top: 40px;
             }
 
             .framer-3y1b7i {
                 width: 90%;
-                left: 5%;
-                top: 12%;
+                padding: 130px 20px 20px 20px;
             }
 
             .framer-1kfwg09 {
                 align-items: center;
-                left: 50%;
-                transform: translateX(-50%);
-                right: auto;
-                top: 20px;
             }
 
             .framer-dnb8d0 p {
                 font-size: 80px;
+                text-align: center;
             }
 
             .framer-su7jo2 p {
@@ -508,18 +586,22 @@
 
         @media (max-width: 768px) {
             .framer-3y1b7i {
-                top: 25%;
                 width: 95%;
-                left: 2.5%;
+                padding: 80px 15px 20px 15px;
             }
 
             .framer-dnb8d0 p {
                 font-size: 60px;
                 padding-top: 10px;
+                text-align: center;
             }
 
             .framer-su7jo2 p {
                 font-size: 13px;
+            }
+
+            .framer-1ebgzuc {
+                margin-top: 125px;
             }
 
             .framer-1ebgzuc h2 {
@@ -537,7 +619,7 @@
 
         @media (max-width: 480px) {
             .framer-3y1b7i {
-                top: 8%;
+                padding: 100px 15px 20px 15px;
             }
 
             .framer-dnb8d0 p {
@@ -558,6 +640,7 @@
 
             .framer-rqqsrm {
                 bottom: 5%;
+                left: 55%;
             }
         }
 
@@ -4152,6 +4235,16 @@
         }
 
         /* Responsive 15 Years Badge */
+        
+        /* Large screens above 1600px - position closer to content */
+        @media (min-width: 1601px) {
+            .years-badge {
+                left: 18%;
+                width: 220px; 
+                
+            }
+        }
+        
         @media (max-width: 1600px) {
             .years-badge {
                 width: 200px;
@@ -4172,35 +4265,26 @@
             .years-badge {
                 width: 160px;
                 left: 60px;
-                top: 50%;
+                /* top: 50%; */
                 transform: translateY(-50%);
             }
         }
 
         @media (max-width: 1024px) {
             .years-badge {
-                width: 120px;
-                left: 50px;
-                top: 50%;
-                transform: translateY(-50%);
+                display: none;
             }
         }
 
         @media (max-width: 768px) {
             .years-badge {
-                width: 90px;
-                left: 40px;
-                top: 50%;
-                transform: translateY(-50%);
+                display: none;
             }
         }
 
         @media (max-width: 480px) {
             .years-badge {
-                width: 70px;
-                left: 30px;
-                top: 50%;
-                transform: translateY(-50%);
+                display: none;
             }
         }
 
@@ -9373,20 +9457,7 @@
                         <div class="framer-3y1b7i" data-framer-name="Text Container">
 
 
-                            <div class="ssr-variant hidden-a1qw1e hidden-1qkvzkg">
-                                <div class="framer-1kfwg09" data-framer-appear-id="1kfwg09"
-                                    data-framer-name="Text Container">
-                                    <div class="framer-dnb8d0" data-framer-component-type="RichTextContainer">
-                                        <p>At Dream Desk.</p>
-                                    </div>
-                                    <!-- <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
-                                        <p>
-                                            We resolve career confusion, revolutionize futures boldly.<br />
-                                            <strong>Start Your Session Now !.</strong>
-                                        </p>
-                                    </div> -->
-                                </div>
-                            </div>
+
 
                             <div class="framer-5tvmqk-container hidden-1qkvzkg hidden-a1qw1e">
                                 <div class="framer-J6ugj framer-IORtY framer-yfknkv framer-v-1l1lvn4"
@@ -9396,9 +9467,27 @@
                                     <div class="framer-1ebgzuc" data-framer-component-type="RichTextContainer"
                                         style="--framer-paragraph-spacing: 0px; transform: translateY(-50%); opacity: 1;">
 
+
+                                        <div class="ssr-variant hidden-a1qw1e hidden-1qkvzkg">
+                                            <div class="framer-1kfwg09" data-framer-appear-id="1kfwg09"
+                                                data-framer-name="Text Container">
+                                                <div class="framer-dnb8d0"
+                                                    data-framer-component-type="RichTextContainer">
+                                                    <p>At Dream Desk.</p>
+                                                </div>
+                                                <!-- <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
+                                        <p>
+                                            We resolve career confusion, revolutionize futures boldly.<br />
+                                            <strong>Start Your Session Now !.</strong>
+                                        </p>
+                                    </div> -->
+                                            </div>
+                                        </div>
+
                                         <h2 class="framer-text framer-styles-preset-19md8ao"
                                             data-styles-preset="a5EASynPI">
-                                            <span class="framer-text" style="font-size: 60px;">UNLOCK YOUR</span></br><span class="framer-text" style="font-size: 60px;">TRUE
+                                            <span class="framer-text" style="font-size: 60px;">UNLOCK
+                                                YOUR</span></br><span class="framer-text" style="font-size: 60px;">TRUE
                                                 POTENTIAL</span>
 
                                             <!-- <span id="rotating-text"
@@ -9439,9 +9528,9 @@
 
                         <!-- Large Text with Video Inside using Canvas -->
                         <div class="framer-rqqsrm">
-                           
+
                             <!-- here is the video part -->
-                           
+
                             <div class="text-video-container">
                                 <!-- Hidden video element -->
                                 <video id="sourceVideo" src="Sections_svgs/DreamDesk.mp4" loop muted playsinline
@@ -9450,7 +9539,7 @@
                                 <!-- Canvas to draw video inside text -->
                                 <canvas id="textCanvas"></canvas>
                             </div>
-                       
+
                         </div>
 
 
@@ -9469,10 +9558,11 @@
 
 
                 <!-- Scrolling News Stripe Section - Right after CAREER text -->
-                <div class="scrolling-stripe-wrapper-hero">
+
+                <!-- <div class="scrolling-stripe-wrapper-hero">
                     <div class="scrolling-stripe-container-hero">
                         <div class="scrolling-stripe-content-hero">
-                            <!-- Google Review Item -->
+                         
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9497,7 +9587,7 @@
                                 <span class="stripe-text-hero">Trusted by 50.000 + Students Across India.</span>
                             </div>
 
-                            <!-- Google Review Item (repeated) -->
+                          
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9522,7 +9612,7 @@
                                 <span class="stripe-text-hero">Trusted by 50.000 + Students Across India.</span>
                             </div>
 
-                            <!-- Google Review Item (repeated) -->
+                           
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9543,8 +9633,7 @@
                                 <span class="stripe-text-hero">NEET 2026 Important Dates Announced</span>
                             </div>
 
-                            <!-- Duplicate for seamless loop -->
-                            <!-- Google Review Item -->
+                           
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9569,7 +9658,7 @@
                                 <span class="stripe-text-hero">CUET PG Exam Date 2026 LIVE Updates</span>
                             </div>
 
-                            <!-- Google Review Item (repeated) -->
+                           
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9594,7 +9683,7 @@
                                 <span class="stripe-text-hero">JEE Main 2026 Application Open</span>
                             </div>
 
-                            <!-- Google Review Item (repeated) -->
+                           
                             <div class="stripe-item-hero google-review-item">
                                 <svg class="google-icon" width="32" height="32" viewBox="0 0 48 48">
                                     <path fill="#FFC107"
@@ -9616,7 +9705,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- GSAP Libraries for other animations -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -13528,8 +13617,8 @@
             if (width <= 480) return 120;
             if (width <= 768) return 160;
             if (width <= 1024) return 240;
-            if (width <= 1200) return 320;
-            if (width <= 1400) return 380;
+            if (width <= 1200) return 300;
+            if (width <= 1400) return 340;
             return 440;
         }
 
