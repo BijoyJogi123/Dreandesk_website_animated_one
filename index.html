@@ -461,7 +461,7 @@
         }
 
         /* Responsive */
-        
+
         /* Large screens above 1600px */
         @media (min-width: 1601px) {
             .framer-3y1b7i {
@@ -469,7 +469,7 @@
                 padding: 160px 20px 20px 20px;
             }
         }
-        
+
         @media (max-width: 1600px) {
             .framer-3y1b7i {
                 width: 650px;
@@ -2895,6 +2895,12 @@
             .splide__slide.is-active .slide-lottie.not-active {
                 opacity: 0;
             }
+            
+            /* Keep psychometric section visible */
+            #one-tap-section .section-slide-wrap {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
 
             .section-track {
                 width: max-content;
@@ -4235,16 +4241,16 @@
         }
 
         /* Responsive 15 Years Badge */
-        
+
         /* Large screens above 1600px - position closer to content */
         @media (min-width: 1601px) {
             .years-badge {
                 left: 18%;
-                width: 220px; 
-                
+                width: 220px;
+
             }
         }
-        
+
         @media (max-width: 1600px) {
             .years-badge {
                 width: 200px;
@@ -9504,8 +9510,8 @@
                                         <!-- Here is the button -->
 
                                         <div class="hero-buttons-container">
-                                            <button class="hero-btn hero-btn-primary">Find Your College</button>
-                                            <button class="hero-btn hero-btn-secondary">Get Job Ready Degree</button>
+                                            <button class="hero-btn hero-btn-primary">Explore Career Options</button>
+                                            <button class="hero-btn hero-btn-secondary">Book Free Session</button>
                                         </div>
 
                                     </div>
@@ -9716,14 +9722,15 @@
 
 
         <div class="pin-spacer"
-            style="background-color: white; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 1000px; padding: 0px 0px 3000px;">
+            style="background-color: #ffffff; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 1000px; padding: 0px 0px 3000px;">
             <div class="ui first"
-                style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px;">
+                style="transform: translate3d(0px, 0px, 0px); inset: 0px auto auto 0px; margin: 0px; max-width: 1920px; width: 1920px; max-height: 911px; height: 911px; padding: 0px; background-color: #ffffff;">
                 <div class="ui-track" style="transform: translate(0px, 0px); opacity: 1;">
                     <div class="section-track">
                         <div class="ui-text"
                             style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
-                            <div class="text-wrap is-animation">
+                            <div class="text-wrap is-animation"
+                                style="font-family: 'Pp-neuemachina-Inktrap', sans-serif;">
                                 <div class="h6 white">
 
                                     <!-- We spend approximately<br>
@@ -9739,9 +9746,12 @@
                                     design your tomorrow wisely</br> -->
 
 
-                                    Future needs clarity</br>
+                                    <!-- Future needs clarity</br>
                                     before you choose let’s</br>
-                                    shape it with insight
+                                    shape it with insight -->
+
+                                    “Knowing yourself is the beginning of wisdom.”
+                                    And the beginning of making the right career choice.
 
                                     <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
                                             advice, real results -->
@@ -9789,13 +9799,15 @@
 
                         <div class="section-slide ui-slide" id="one-tap-section"
                             style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
-                            <div style=" padding-bottom: 60px;">
+                            <div style="padding-bottom: 60px;">
                                 <div class="section-slide-wrap"
-                                    style=" flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: url('./Sections_svgs/psycometric.jpeg') center bottom/100% auto no-repeat, #f8f8f6; background-position: center 20px; position: relative; min-height: 450px; overflow: hidden;">
+                                    style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: #f0f0f0; position: relative; min-height: 450px; overflow: hidden;">
 
+                                    <!-- Browser-style header with dots -->
                                     <div
                                         style="position: absolute; top: 0; left: 0; right: 0; height: 40px; background: #f8f8f6; border-bottom: 1px solid #0c0b0b; border-radius: 10px 10px 0 0; display: flex; align-items: center; padding-left: 15px;">
-                                        <div style="display: flex; gap: 6px;"> <span
+                                        <div style="display: flex; gap: 6px;">
+                                            <span
                                                 style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
                                             <span
                                                 style="width: 10px; height: 10px; background: #0c0b0b; border-radius: 50%;"></span>
@@ -9804,13 +9816,62 @@
                                         </div>
                                     </div>
 
+                                    <!-- Bento Grid Container -->
+                                    <div class="bento-container" style="padding-top: 40px;">
+                                        <!-- Top Left Card - Main CTA -->
+                                        <div class="bento-main-card">
+                                            <!-- Add your content here -->
+                                            <div>
+                                                <h1>Discover Your Strengths with Psychometric Test</h1>
+                                                <p class="subtitle">Scientfic Assessments reveal Aptitude, Intrests,
+                                                    Personality
+                                                </p>
+                                                <p class="description">guiding you toward your ideal career path and
+                                                    future success.</p>
+                                            </div>
+                                            <a href="#" class="explore-btn">Explore Assessments</a>
+                                        </div>
+
+                                        <!-- Top Right Card - Brain Visual (spans 2 rows) -->
+                                        <div class="bento-brain-card">
+                                            <img src="./Sections_svgs/Brain.gif" alt="Brain" class="brain-image" />
+
+                                            <div class="content-bottom" style=" color: #000000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 40px 5px 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);">
+                                                <h2>Know Your Strengths.<br>Shape Your Success.</h2>
+                                                <p class="description">Psychometric data plus expert mentoring builds
+                                                    confident, future ready career Decisions
+                                            </div>
+
+                                            <div class="circle-icon">↗</div>
+                                        </div>
+
+                                        <!-- Bottom Left Card - Pink Card -->
+                                        <div class="bento-pink-card">
+                                            <!-- Add your content here -->
+                                            <div class="icon-box">
+                                                <div class="brain-icon"></div>
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Guidance that Brings </br>Direction<br></h3>
+                                                <p>Professional counselling converts confussion into structured career
+                                                    pathways aligned with potential</p>
+                                                <a href="#">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
-
 
 
 
@@ -10125,6 +10186,192 @@
 
 
                                 <style>
+                                    /* Bento Grid Layout Styles Inside Browser Window */
+                                    #one-tap-section .bento-container {
+                                        width: 100%;
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr;
+                                        grid-template-rows: auto auto;
+                                        gap: 20px;
+                                    }
+
+                                    /* Top Left Card - Main CTA */
+                                    #one-tap-section .bento-main-card {
+                                        background: white;
+                                        border-radius: 24px;
+                                        padding: 50px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                    }
+
+                                    #one-tap-section .bento-main-card h1 {
+                                        font-size: 48px;
+                                        font-weight: 700;
+                                        line-height: 1.1;
+                                        margin-bottom: 20px;
+                                        color: #000;
+                                    }
+
+                                    #one-tap-section .bento-main-card .subtitle {
+                                        font-size: 16px;
+                                        color: #666;
+                                        margin-bottom: 8px;
+                                        font-weight: 500;
+                                    }
+
+                                    #one-tap-section .bento-main-card .description {
+                                        font-size: 14px;
+                                        color: #888;
+                                        margin-bottom: 40px;
+                                        line-height: 1.5;
+                                    }
+
+                                    /* Explore Button */
+                                    #one-tap-section .explore-btn {
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        gap: 12px;
+                                        background: #000;
+                                        color: white;
+                                        padding: 14px 20px 14px 28px;
+                                        border-radius: 50px;
+                                        text-decoration: none;
+                                        font-family: 'Pp-neuemachina-Inktrap', sans-serif;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        width: fit-content;
+                                        transition: transform 0.2s;
+                                    }
+
+                                    #one-tap-section .explore-btn:hover {
+                                        transform: translateX(4px);
+                                    }
+
+                                    #one-tap-section .explore-btn::after {
+                                        content: '→';
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        background: white;
+                                        color: #000;
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin-left: 12px;
+                                    }
+
+                                    /* Top Right Card - Brain Visual (spans 2 rows) */
+                                    #one-tap-section .bento-brain-card {
+                                        background: #eceefa;
+                                        border-radius: 24px;
+                                        padding: 50px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        position: relative;
+                                        overflow: hidden;
+                                        grid-row: span 2;
+                                    }
+
+                                    #one-tap-section .brain-image {
+                                        width: 100%;
+                                        max-width: 500px;
+                                        height: auto;
+                                        margin: 0 auto 30px auto;
+                                        display: block;
+                                        filter: brightness(1.1) drop-shadow(0 0 30px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 60px rgba(96, 165, 250, 0.4)) drop-shadow(0 0 90px rgba(147, 197, 253, 0.3));
+                                        object-fit: contain;
+                                    }
+
+                                    #one-tap-section .bento-brain-card .content-bottom {
+                                        color: rgb(0, 0, 0);
+                                    }
+
+                                    #one-tap-section .bento-brain-card h2 {
+                                        font-size: 36px;
+                                        font-weight: 700;
+                                        line-height: 1.2;
+                                        margin-bottom: 16px;
+                                        color: rgb(0, 0, 0);
+                                    }
+
+                                    #one-tap-section .bento-brain-card .description {
+                                        font-size: 14px;
+                                        line-height: 1.6;
+                                        color: rgba(0, 0, 0, 0.9);
+                                    }
+
+                                    #one-tap-section .circle-icon {
+                                        position: absolute;
+                                        bottom: 40px;
+                                        right: 40px;
+                                        width: 40px;
+                                        height: 40px;
+                                        border: 2px solid rgba(255, 255, 255, 0.5);
+                                        border-radius: 50%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: rgb(0, 0, 0);
+                                        font-size: 20px;
+                                    }
+
+                                    /* Bottom Left Card - Pink Card */
+                                    #one-tap-section .bento-pink-card {
+                                        background: linear-gradient(135deg, #ffc4e1 0%, #ffb3d9 100%);
+                                        border-radius: 24px;
+                                        padding: 30px;
+                                        display: flex;
+                                        gap: 20px;
+                                        align-items: center;
+                                    }
+
+                                    #one-tap-section .bento-pink-card .icon-box {
+                                        flex-shrink: 0;
+                                        width: 100px;
+                                        height: 100px;
+                                        background: rgba(255, 255, 255, 0.3);
+                                        border-radius: 16px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+
+                                    #one-tap-section .bento-pink-card .brain-icon {
+                                        width: 60px;
+                                        height: 60px;
+                                        background: linear-gradient(135deg, #ff9ed2 0%, #ff7cc1 100%);
+                                        border-radius: 50%;
+                                    }
+
+                                    #one-tap-section .bento-pink-card .text-content h3 {
+                                        font-size: 20px;
+                                        font-weight: 700;
+                                        margin-bottom: 8px;
+                                        color: #000;
+                                    }
+
+                                    #one-tap-section .bento-pink-card .text-content p {
+                                        font-size: 13px;
+                                        color: #333;
+                                        margin-bottom: 12px;
+                                        line-height: 1.4;
+                                    }
+
+                                    #one-tap-section .bento-pink-card .text-content a {
+                                        color: #000;
+                                        font-size: 13px;
+                                        font-weight: 600;
+                                        text-decoration: none;
+                                        border-bottom: 1px solid #000;
+                                    }
+                                </style>
+
+                                <style>
                                     /* Responsive styles for one-tap-section */
                                     #one-tap-section .section-slide-wrap {
                                         position: relative;
@@ -10200,6 +10447,26 @@
                                             padding: 40px !important;
                                         }
 
+                                        #one-tap-section .bento-container {
+                                            gap: 15px;
+                                        }
+
+                                        #one-tap-section .bento-main-card {
+                                            padding: 40px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 40px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 25px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 42px;
+                                        }
+
                                         #one-tap-section .content-box {
                                             width: 500px;
                                             height: 450px;
@@ -10223,6 +10490,26 @@
                                         }
                                     }
 
+                                    /* Bento Grid Responsive - 968px */
+                                    @media (max-width: 968px) {
+                                        #one-tap-section .bento-container {
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: auto;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            grid-row: auto;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 36px;
+                                        }
+
+                                        #one-tap-section .brain-image {
+                                            max-width: 450px;
+                                        }
+                                    }
+
                                     /* Mobile responsive */
                                     @media (max-width: 768px) {
                                         #one-tap-section {
@@ -10230,10 +10517,43 @@
                                         }
 
                                         #one-tap-section .section-slide-wrap {
-                                            min-height: 550px !important;
+                                            min-height: auto !important;
                                             padding: 30px 20px !important;
-                                            background-size: cover !important;
-                                            background-position: center !important;
+                                        }
+
+                                        #one-tap-section .bento-container {
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: auto;
+                                            gap: 15px;
+                                            padding-top: 50px !important;
+                                        }
+
+                                        #one-tap-section .brain-image {
+                                            max-width: 380px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            grid-row: auto;
+                                            padding: 35px;
+                                        }
+
+                                        #one-tap-section .bento-main-card {
+                                            padding: 35px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 32px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 28px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 20px;
+                                            flex-direction: column;
+                                            text-align: center;
                                         }
 
                                         #one-tap-section .content-box {
@@ -10278,8 +10598,46 @@
                                     /* Small mobile */
                                     @media (max-width: 480px) {
                                         #one-tap-section .section-slide-wrap {
-                                            min-height: 500px !important;
                                             padding: 20px 15px !important;
+                                        }
+
+                                        #one-tap-section .bento-container {
+                                            gap: 12px;
+                                        }
+
+                                        #one-tap-section .bento-main-card {
+                                            padding: 25px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 28px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 25px;
+                                        }
+
+                                        #one-tap-section .brain-image {
+                                            max-width: 300px;
+                                            margin-bottom: 15px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 24px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 20px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .icon-box {
+                                            width: 80px;
+                                            height: 80px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .brain-icon {
+                                            width: 50px;
+                                            height: 50px;
                                         }
 
                                         #one-tap-section .content-box {
@@ -10441,8 +10799,8 @@
                                 <div class="ui-text"
                                     style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
                                     <div class="text-wrap is-animation">
-                                        <div class="h6 white">Career counsellors
-                                            Your Colleges Are Matched. Now Meet Who Gets You There.
+                                        <div class="h6 white">One honest conversation can change a lifetime.”
+                                            These voices are living evidence.
                                         </div>
                                     </div>
                                 </div>
