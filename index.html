@@ -1767,7 +1767,7 @@
             background: #f5f5f5;
             border-radius: 12px;
             padding: 0;
-            margin: 20px;
+            /* margin: 20px; */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             height: 600px;
@@ -1782,30 +1782,45 @@
         /* Top Bar with Dots */
         .career-top-bar {
             background: #e8e8e8;
-            padding: 12px 16px;
+            /* padding: 12px 16px; */
             border-bottom: 1px solid #ddd;
         }
 
         /* Main Content Area - Top Section */
         .career-main-content {
             display: flex;
-            align-items: center;
-            padding: 60px 40px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            /* padding: 60px 80px; */
             background: #ffffff;
-            /* Leave space for bottom cards */
+            background-image: url('./Sections_svgs/Road_walking_girl.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
             position: relative;
+            min-height: calc(100vh - 45px);
+            height: 100%;
+            width: 100%;
         }
 
         .career-left-section {
-            flex: 1;
-            padding-right: 40px;
+            flex: 0 0 auto;
+            max-width: 600px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+            position: relative;
+            /* background: rgba(255, 255, 255, 0.95); */
+            border-radius: 12px;
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+            margin-right: auto;
+            margin-top: 80px;
         }
 
         .career-right-section {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: none;
         }
 
         /* Typography */
@@ -1845,20 +1860,26 @@
 
         /* Illustration Placeholder */
         .career-illustration-placeholder {
-            width: 400px;
-            height: 300px;
-            background: #f8f9fa;
-            border: 2px dashed #ddd;
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            aspect-ratio: 4/3;
+            background: transparent;
+            border: none;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 14px;
+        }
+
+        .career-illustration-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .career-illustration-placeholder::before {
-            /* content: "Line art illustration placeholder"; */
+            content: none;
         }
 
         /* Bottom Cards Section - Full width at bottom */
@@ -1962,32 +1983,75 @@
         }
 
         /* Responsive Design */
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .career-main-content {
+                padding: 60px 40px;
+                background-size: cover;
+            }
+
+            .career-left-section {
+                max-width: 500px;
+                padding: 35px;
+                margin-top: 30px;
+            }
+
+            .career-main-title {
+                font-size: 34px;
+            }
+
+            .career-subtitle {
+                font-size: 17px;
+            }
+        }
+
+        /* Mobile */
         @media (max-width: 768px) {
             .career-inner-wrapper {
                 height: auto;
-                min-height: 500px;
+                min-height: 100vh;
             }
 
             .career-main-content {
                 flex-direction: column;
-                padding: 40px 20px;
+                align-items: center;
+                padding: 50px 20px;
                 text-align: center;
                 height: auto;
+                min-height: 100vh;
+                background-size: cover;
+                background-position: center center;
             }
 
             .career-left-section {
-                padding-right: 0;
-                margin-bottom: 30px;
+                flex: 1;
+                max-width: 90%;
+                padding: 30px;
+                margin: 0;
+                margin-top: 20px;
+            }
+
+            .career-right-section {
+                display: none;
             }
 
             .career-main-title {
-                font-size: 36px;
+                font-size: 32px;
+            }
+
+            .career-subtitle {
+                font-size: 16px;
+            }
+
+            .career-cta-btn {
+                width: 100%;
+                padding: 14px 24px;
             }
 
             .career-illustration-placeholder {
                 width: 100%;
-                max-width: 300px;
-                height: 200px;
+                max-width: 350px;
+                height: auto;
             }
 
             .career-bottom-cards {
@@ -2012,17 +2076,39 @@
             }
 
             .career-inner-wrapper {
-                margin: 10px;
+                margin: 0;
             }
         }
 
+        /* Small Mobile */
         @media (max-width: 480px) {
+            .career-main-content {
+                padding: 40px 15px;
+                background-size: cover;
+            }
+
+            .career-left-section {
+                max-width: 95%;
+                padding: 25px 20px;
+                margin-top: 10px;
+            }
+
             .career-main-title {
-                font-size: 28px;
+                font-size: 26px;
             }
 
             .career-subtitle {
-                font-size: 16px;
+                font-size: 15px;
+                margin-bottom: 24px;
+            }
+
+            .career-cta-btn {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+
+            .career-illustration-placeholder {
+                max-width: 280px;
             }
 
             .career-card-content {
@@ -2037,6 +2123,22 @@
                 gap: 10px;
                 padding: 10px;
             }
+        }
+
+        /* Extra Small Mobile */
+        @media (max-width: 375px) {
+            .career-main-title {
+                font-size: 24px;
+            }
+
+            .career-subtitle {
+                font-size: 14px;
+            }
+
+            .career-left-section {
+                padding: 20px 15px;
+            }
+        }
 
             .career-main-content {
                 padding: 30px 15px;
@@ -9718,9 +9820,6 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         </div>
 
-
-
-
         <div class="pin-spacer"
             style="background-color: #ffffff; order: 0; place-self: auto; grid-area: auto; z-index: 1; float: none; flex-shrink: 1; display: block; margin: 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1920px; height: 1000px; padding: 0px 0px 3000px;">
             <div class="ui first"
@@ -12186,7 +12285,7 @@
                                             </div>
 
                                             <!-- Main Career Content -->
-                                            <div class="career-main-content" style="margin-bottom:20%;">
+                                            <div class="career-main-content">
                                                 <div class="career-left-section">
                                                     <h1 class="career-main-title">Launch Your
                                                         Career</h1>
@@ -12195,38 +12294,9 @@
                                                     <button class="career-cta-btn">Click to start you
                                                         journey</button>
                                                 </div>
-                                                <div class="career-right-section">
-                                                    <!-- Placeholder for line art illustration -->
-                                                    <div class="career-illustration-placeholder">
-
-                                                        <img src="./Sections_svgs/goal_table.png" alt="" />
-
-                                                    </div>
-                                                </div>
                                             </div>
 
-                                            <!-- Bottom Cards Section -->
-                                            <div class="career-bottom-cards">
-                                                <div class="career-card career-card-bg"
-                                                    style="background-image:url(./carear_section/Healthcare_new.png)">
-                                                </div>
-
-                                                <div class="career-card career-card-bg"
-                                                    style="background-image:url(./carear_section/aviation_new.png)">
-                                                </div>
-
-                                                <div class="career-card career-card-bg"
-                                                    style="background-image:url(./carear_section/bussiness_new.png)">
-                                                </div>
-                                                <!-- <div class="career-card-content"">
-                                                           
-                                                            <div class=" career-card-illustration">
-
-                                                    <img alt="" src="./Sections_svgs/medical.png">
-                                                </div>
-                                                <h3 class="career-card-title">Healthcare</h3>
-                                            </div> -->
-                                            </div>
+                                     
 
                                             <!-- <div class="career-card">
                                             <div class="career-card-content">
@@ -12247,6 +12317,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                
                             </div>
 
                             <!-- Yellow Stripe Hide/Show Script for All Sections + Menu Button Color Change -->
