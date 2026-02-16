@@ -167,7 +167,7 @@
                 flex-direction: column;
                 gap: 15px;
                 width: 100%;
-                max-width: 350px;
+                /* max-width: 350px; */
             }
 
             .hero-btn {
@@ -542,7 +542,7 @@
             .framer-1eiawcr {
                 width: 100%;
                 max-width: 100vw;
-                padding-top: 40px;
+                /* padding-top: 40px; */
             }
 
             .framer-3y1b7i {
@@ -586,7 +586,7 @@
 
         @media (max-width: 768px) {
             .framer-3y1b7i {
-                width: 95%;
+                width: 85%;
                 padding: 80px 15px 20px 15px;
             }
 
@@ -601,7 +601,7 @@
             }
 
             .framer-1ebgzuc {
-                margin-top: 125px;
+                margin-top: 60px;
             }
 
             .framer-1ebgzuc h2 {
@@ -3198,7 +3198,7 @@
                 background: url('./bg_count.svg') center center / cover no-repeat;
                 border-radius: 8px;
                 position: relative;
-                overflow: hidden;
+                overflow: visible;
             }
 
             .stats-counter-section::before {
@@ -3238,8 +3238,8 @@
             /* Simple Yellow Circles - Exactly like the image */
             /* Simple Yellow Circles with Continuous Loading Animation */
             .simple-circle {
-                width: 260px;
-                height: 260px;
+                width: 300px;
+                height: 300px;
                 border: 13px solid rgba(242, 216, 3, 0.2);
                 border-radius: 50%;
                 display: flex;
@@ -3537,9 +3537,12 @@
             }
 
             .stat-item:nth-child(2) .circle-content {
-                font-size: 0.4rem;
+                font-size: 0.45rem;
                 /* YOUTH/STUDENTS/PARENTS */
                 font-weight: 800;
+                padding: 0 10px;
+                word-break: keep-all;
+                white-space: nowrap;
             }
 
             .stat-item:nth-child(4) .circle-content {
@@ -3547,6 +3550,26 @@
                 /* DREAMDESK */
                 letter-spacing: 0.5px;
                 font-weight: 800;
+            }
+
+            /* Logo container needs relative positioning */
+            #logo-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Icon container for heart/like */
+            #icon-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             /* Icon styles for heart/like */
@@ -3680,37 +3703,153 @@
 
             /* Responsive Design */
             @media (max-width: 991px) {
+                .stats-counter-section {
+                    padding: 4rem 2rem !important;
+                    background: #1a1a1a !important;
+                    background-image: none !important;
+                    overflow: visible !important;
+                    border-radius: 0;
+                }
+
+                .stats-counter-section::before {
+                    display: none !important;
+                }
+
                 .stats-container {
-                    flex-direction: row;
-                    gap: 1rem;
-                    padding: 0 0.5rem;
+                    flex-direction: column;
+                    gap: 3rem;
+                    padding: 0;
+                    align-items: center;
+                }
+
+                .simple-circle {
+                    width: 250px;
+                    height: 250px;
                 }
 
                 .stat-item {
-                    width: auto;
+                    width: 100%;
+                    max-width: 300px;
+                    padding: 0;
+                    margin: 0;
                 }
 
-                .stat-number {
-                    font-size: 1.8rem;
+                .stat-item:nth-child(2) .circle-content {
+                    font-size: 0.4rem;
                 }
+            }
 
-                .stat-suffix {
-                    font-size: 1rem;
-                }
-
+            @media (max-width: 768px) {
                 .stats-counter-section {
-                    padding: 1rem 0;
+                    padding: 3rem 0;
+                    background-image: none !important;
+                    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                    min-height: auto;
+                    height: auto;
+                    overflow: visible;
+                }
+
+                .stats-counter-section::before {
+                    display: none;
+                }
+
+                .stats-container {
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    padding: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                .simple-circle {
+                    width: 240px;
+                    height: 240px;
+                    background-color: rgba(0, 0, 0, 0.6) !important;
+                }
+
+                .stat-item {
+                    width: 100%;
+                    flex: none;
+                    max-width: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .circle-content {
+                    z-index: 10;
+                    position: relative;
+                }
+
+                .stat-item:nth-child(2) .circle-content {
+                    font-size: 0.4rem;
+                }
+
+                .stat-item:nth-child(1) .circle-content {
+                    font-size: 0.5rem;
+                }
+
+                .stat-item:nth-child(4) .circle-content {
+                    font-size: 0.35rem;
                 }
             }
 
             @media (max-width: 479px) {
                 .stats-counter-section {
-                    padding: 1rem 0;
+                    padding: 3rem 0;
+                    background-image: none !important;
+                    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                    height: auto;
+                    min-height: auto;
+                    overflow: visible;
+                }
+
+                .stats-counter-section::before {
+                    display: none;
                 }
 
                 .stats-container {
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: 2.5rem;
+                    padding: 1rem;
+                    width: 100%;
+                    max-width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .simple-circle {
+                    width: 220px;
+                    height: 220px;
+                    border: 10px solid rgba(242, 216, 3, 0.2);
+                    background-color: rgba(0, 0, 0, 0.6) !important;
+                }
+
+                .simple-circle::before {
+                    border-width: 10px;
+                    top: -10px;
+                    left: -10px;
+                    right: -10px;
+                    bottom: -10px;
+                }
+
+                .simple-circle::after {
+                    border-width: 5px;
+                }
+
+                .stat-item {
+                    max-width: 280px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .circle-content {
+                    z-index: 10;
+                    position: relative;
                 }
 
                 .stat-number {
@@ -3724,6 +3863,66 @@
                 .stat-label {
                     font-size: 0.7rem;
                 }
+
+                .stat-item:nth-child(2) .circle-content {
+                    font-size: 0.38rem;
+                    padding: 0 10px;
+                }
+
+                .stat-item:nth-child(1) .circle-content {
+                    font-size: 0.48rem;
+                }
+
+                .stat-item:nth-child(4) .circle-content {
+                    font-size: 0.32rem;
+                }
+
+                .logo-image,
+                .icon-image {
+                    max-width: 75%;
+                    max-height: 75%;
+                }
+            }
+
+            @media (max-width: 375px) {
+                .stats-counter-section {
+                    padding: 2rem 0;
+                }
+
+                .simple-circle {
+                    width: 180px;
+                    height: 180px;
+                    border: 8px solid rgba(242, 216, 3, 0.2);
+                }
+
+                .simple-circle::before {
+                    border-width: 8px;
+                    top: -8px;
+                    left: -8px;
+                    right: -8px;
+                    bottom: -8px;
+                }
+
+                .simple-circle::after {
+                    border-width: 4px;
+                }
+
+                .stat-item {
+                    max-width: 220px;
+                }
+
+                .stat-item:nth-child(2) .circle-content {
+                    font-size: 0.32rem;
+                }
+
+                .stat-item:nth-child(1) .circle-content {
+                    font-size: 0.42rem;
+                }
+
+                .stat-item:nth-child(4) .circle-content {
+                    font-size: 0.28rem;
+                }
+            }
 
                 .stat-description {
                     font-size: 0.65rem;
@@ -10617,7 +10816,7 @@
 
                                         #one-tap-section .section-slide-wrap {
                                             min-height: auto !important;
-                                            padding: 30px 20px !important;
+                                            padding: 20px 15px !important;
                                         }
 
                                         #one-tap-section .bento-container {
@@ -10628,31 +10827,96 @@
                                         }
 
                                         #one-tap-section .brain-image {
-                                            max-width: 380px;
-                                            margin-bottom: 20px;
+                                            max-width: 100%;
+                                            /* width: 280px; */
+                                            width: 170px;
+                                            margin: 0 auto 20px auto;
                                         }
 
                                         #one-tap-section .bento-brain-card {
                                             grid-row: auto;
-                                            padding: 35px;
+                                            padding: 25px 20px;
                                         }
 
                                         #one-tap-section .bento-main-card {
-                                            padding: 35px;
+                                            padding: 25px 20px;
                                         }
 
                                         #one-tap-section .bento-main-card h1 {
-                                            font-size: 32px;
+                                            font-size: 28px;
+                                            line-height: 1.2;
+                                        }
+
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 14px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .description {
+                                            font-size: 13px;
+                                            margin-bottom: 25px;
+                                        }
+
+                                        #one-tap-section .explore-btn {
+                                            width: 100%;
+                                            justify-content: center;
+                                            padding: 12px 20px;
+                                            font-size: 13px;
+                                        }
+
+                                        #one-tap-section .explore-btn::after {
+                                            width: 35px;
+                                            height: 35px;
+                                            font-size: 16px;
                                         }
 
                                         #one-tap-section .bento-brain-card h2 {
-                                            font-size: 28px;
+                                            font-size: 24px;
+                                            line-height: 1.3;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 13px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 15px 25px;
+                                        }
+
+                                        #one-tap-section .circle-icon {
+                                            width: 35px;
+                                            height: 35px;
+                                            bottom: 25px;
+                                            right: 25px;
+                                            font-size: 18px;
                                         }
 
                                         #one-tap-section .bento-pink-card {
                                             padding: 20px;
                                             flex-direction: column;
                                             text-align: center;
+                                            align-items: center;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .icon-box {
+                                            /* width: 90px;
+                                            height: 90px;
+                                            margin-bottom: 15px; */
+                                            display: none;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .brain-icon {
+                                            width: 55px;
+                                            height: 55px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h3 {
+                                            font-size: 18px;
+                                            line-height: 1.3;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 12px;
+                                            line-height: 1.5;
                                         }
 
                                         #one-tap-section .content-box {
@@ -10697,46 +10961,104 @@
                                     /* Small mobile */
                                     @media (max-width: 480px) {
                                         #one-tap-section .section-slide-wrap {
-                                            padding: 20px 15px !important;
+                                            padding: 15px 12px !important;
                                         }
 
                                         #one-tap-section .bento-container {
                                             gap: 12px;
+                                            padding-top: 45px !important;
                                         }
 
                                         #one-tap-section .bento-main-card {
-                                            padding: 25px;
+                                            padding: 20px 18px;
                                         }
 
                                         #one-tap-section .bento-main-card h1 {
-                                            font-size: 28px;
-                                        }
-
-                                        #one-tap-section .bento-brain-card {
-                                            padding: 25px;
-                                        }
-
-                                        #one-tap-section .brain-image {
-                                            max-width: 300px;
+                                            font-size: 24px;
                                             margin-bottom: 15px;
                                         }
 
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 13px;
+                                            margin-bottom: 6px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .description {
+                                            font-size: 12px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        #one-tap-section .explore-btn {
+                                            padding: 10px 18px;
+                                            font-size: 12px;
+                                        }
+
+                                        #one-tap-section .explore-btn::after {
+                                            width: 32px;
+                                            height: 32px;
+                                            font-size: 15px;
+                                            margin-left: 8px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 20px 18px;
+                                        }
+
+                                        #one-tap-section .brain-image {
+                                            max-width: 100%;
+                                            width: 150px;
+                                            margin: 0 auto 15px auto;
+                                        }
+
                                         #one-tap-section .bento-brain-card h2 {
-                                            font-size: 24px;
+                                            font-size: 20px;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 12px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 12px 20px;
+                                        }
+
+                                        #one-tap-section .circle-icon {
+                                            width: 30px;
+                                            height: 30px;
+                                            bottom: 20px;
+                                            right: 20px;
+                                            font-size: 16px;
                                         }
 
                                         #one-tap-section .bento-pink-card {
-                                            padding: 20px;
+                                            padding: 18px 15px;
                                         }
 
                                         #one-tap-section .bento-pink-card .icon-box {
-                                            width: 80px;
-                                            height: 80px;
+                                            /* width: 75px;
+                                            height: 75px;
+                                            margin-bottom: 12px; */
+                                            display: none;
                                         }
 
                                         #one-tap-section .bento-pink-card .brain-icon {
-                                            width: 50px;
-                                            height: 50px;
+                                            width: 45px;
+                                            height: 45px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h3 {
+                                            font-size: 16px;
+                                            margin-bottom: 6px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 11px;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content a {
+                                            font-size: 12px;
                                         }
 
                                         #one-tap-section .content-box {
@@ -10761,6 +11083,131 @@
                                         #one-tap-section .content-box button {
                                             padding: 14px;
                                             font-size: 17px;
+                                        }
+                                    }
+
+                                    /* Extra small mobile - 375px and below */
+                                    @media (max-width: 375px) {
+                                        #one-tap-section .section-slide-wrap {
+                                            padding: 12px 10px !important;
+                                        }
+
+                                        #one-tap-section .bento-container {
+                                            gap: 10px;
+                                            padding-top: 40px !important;
+                                        }
+
+                                        #one-tap-section .bento-main-card {
+                                            padding: 18px 15px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 22px;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 12px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .description {
+                                            font-size: 11px;
+                                            margin-bottom: 18px;
+                                        }
+
+                                        #one-tap-section .explore-btn {
+                                            padding: 9px 16px;
+                                            font-size: 11px;
+                                        }
+
+                                        #one-tap-section .explore-btn::after {
+                                            width: 28px;
+                                            height: 28px;
+                                            font-size: 14px;
+                                            margin-left: 6px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 18px 15px;
+                                        }
+
+                                        #one-tap-section .brain-image {
+                                            width: 200px;
+                                            margin: 0 auto 12px auto;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 18px;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 11px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 10px 18px;
+                                        }
+
+                                        #one-tap-section .circle-icon {
+                                            width: 28px;
+                                            height: 28px;
+                                            bottom: 18px;
+                                            right: 18px;
+                                            font-size: 14px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 15px 12px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .icon-box {
+                                            width: 65px;
+                                            height: 65px;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .brain-icon {
+                                            width: 40px;
+                                            height: 40px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h3 {
+                                            font-size: 15px;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 10px;
+                                            margin-bottom: 8px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content a {
+                                            font-size: 11px;
+                                        }
+
+                                        #one-tap-section .content-box {
+                                            padding: 20px;
+                                            margin-top: 120px;
+                                        }
+
+                                        #one-tap-section .content-box h3 {
+                                            font-size: 20px;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        #one-tap-section .content-box p {
+                                            font-size: 13px;
+                                            margin-bottom: 15px;
+                                        }
+
+                                        #one-tap-section .animated-search-bar {
+                                            margin-bottom: 15px;
+                                        }
+
+                                        #one-tap-section .content-box button {
+                                            padding: 12px;
+                                            font-size: 15px;
                                         }
                                     }
                                 </style>
@@ -15168,73 +15615,88 @@
             const statsSection = document.querySelector('.stats-counter-section');
 
             if (statsSection) {
-                // Create intersection observer
+                console.log('Stats section found, setting up animation...');
+                
+                // Get all elements
+                const percentText = document.querySelector('.stat-item:nth-child(1) .circle-content');
+                const alternatingText = document.getElementById('alternating-text');
+                const heartIcon = document.querySelector('.heart-icon');
+                const likeIcon = document.querySelector('.like-icon');
+                const logoImage = document.querySelector('.logo-image');
+                const iconImage = document.querySelector('.icon-image');
+
+                console.log('Elements found:', {
+                    percentText: !!percentText,
+                    alternatingText: !!alternatingText,
+                    heartIcon: !!heartIcon,
+                    likeIcon: !!likeIcon,
+                    logoImage: !!logoImage,
+                    iconImage: !!iconImage
+                });
+
+                // Animation states
+                const texts = ['YOUTH', 'STUDENTS', 'PARENTS'];
+                let textIndex = 0;
+                let heartActive = true;
+                let logoActive = true;
+                let percentVisible = true;
+
+                // Master synchronization function
+                function syncAllAnimations() {
+                    console.log('Syncing animations...');
+                    
+                    // 1. Toggle 96% text opacity
+                    if (percentText) {
+                        percentVisible = !percentVisible;
+                        percentText.style.transition = 'opacity 0.3s ease';
+                        percentText.style.opacity = percentVisible ? '1' : '0.3';
+                    }
+
+                    // 2. Change alternating text
+                    if (alternatingText) {
+                        alternatingText.style.transition = 'opacity 0.2s ease';
+                        alternatingText.style.opacity = '0.5';
+                        setTimeout(() => {
+                            textIndex = (textIndex + 1) % texts.length;
+                            alternatingText.textContent = texts[textIndex];
+                            alternatingText.style.opacity = '1';
+                            console.log('Text changed to:', texts[textIndex]);
+                        }, 200);
+                    }
+
+                    // 3. Toggle heart/like icons
+                    if (heartIcon && likeIcon) {
+                        heartActive = !heartActive;
+                        if (heartActive) {
+                            heartIcon.classList.add('active');
+                            likeIcon.classList.remove('active');
+                        } else {
+                            heartIcon.classList.remove('active');
+                            likeIcon.classList.add('active');
+                        }
+                        console.log('Icon toggled to:', heartActive ? 'heart' : 'like');
+                    }
+
+                    // 4. Toggle logo/icon images
+                    if (logoImage && iconImage) {
+                        logoActive = !logoActive;
+                        if (logoActive) {
+                            logoImage.classList.add('active');
+                            iconImage.classList.remove('active');
+                        } else {
+                            logoImage.classList.remove('active');
+                            iconImage.classList.add('active');
+                        }
+                        console.log('Logo toggled to:', logoActive ? 'logo' : 'icon');
+                    }
+                }
+
+                // Create intersection observer with lower threshold
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             console.log('Stats section is visible, starting synchronized animation...');
-                            entry.target.classList.add('animate');
-
-                            // Get all elements
-                            const percentText = document.querySelector('.stat-item:nth-child(1) .circle-content');
-                            const alternatingText = document.getElementById('alternating-text');
-                            const heartIcon = document.querySelector('.heart-icon');
-                            const likeIcon = document.querySelector('.like-icon');
-                            const logoImage = document.querySelector('.logo-image');
-                            const iconImage = document.querySelector('.icon-image');
-
-                            // Animation states
-                            const texts = ['YOUTH', 'STUDENTS', 'PARENTS'];
-                            let textIndex = 0;
-                            let heartActive = true;
-                            let logoActive = true;
-                            let percentVisible = true;
-
-                            // Master synchronization function
-                            function syncAllAnimations() {
-                                // 1. Toggle 96% text opacity
-                                if (percentText) {
-                                    percentVisible = !percentVisible;
-                                    percentText.style.transition = 'opacity 0.3s ease';
-                                    percentText.style.opacity = percentVisible ? '1' : '0.3';
-                                }
-
-                                // 2. Change alternating text
-                                if (alternatingText) {
-                                    alternatingText.style.transition = 'opacity 0.2s ease';
-                                    alternatingText.style.opacity = '0.5';
-                                    setTimeout(() => {
-                                        textIndex = (textIndex + 1) % texts.length;
-                                        alternatingText.textContent = texts[textIndex];
-                                        alternatingText.style.opacity = '1';
-                                    }, 200);
-                                }
-
-                                // 3. Toggle heart/like icons
-                                if (heartIcon && likeIcon) {
-                                    heartActive = !heartActive;
-                                    if (heartActive) {
-                                        heartIcon.classList.add('active');
-                                        likeIcon.classList.remove('active');
-                                    } else {
-                                        heartIcon.classList.remove('active');
-                                        likeIcon.classList.add('active');
-                                    }
-                                }
-
-                                // 4. Toggle logo/icon images
-                                if (logoImage && iconImage) {
-                                    logoActive = !logoActive;
-                                    if (logoActive) {
-                                        logoImage.classList.add('active');
-                                        iconImage.classList.remove('active');
-                                    } else {
-                                        logoImage.classList.remove('active');
-                                        iconImage.classList.add('active');
-                                    }
-                                }
-                            }
-
+                            
                             // Start synchronized animation immediately
                             syncAllAnimations();
 
@@ -15246,25 +15708,16 @@
                         }
                     });
                 }, {
-                    threshold: 0.5,
-                    rootMargin: '0px 0px -100px 0px'
+                    threshold: 0.1,
+                    rootMargin: '0px'
                 });
 
                 observer.observe(statsSection);
-                console.log('Perfect sync observer set up for stats section');
+                console.log('Observer set up for stats section');
             } else {
                 console.log('Stats section not found');
             }
         });
-    </script>
-    });
-
-    observer.observe(statsSection);
-    console.log('Observer set up for stats section');
-    } else {
-    console.log('Stats section not found');
-    }
-    });
     </script>
 
     <!-- Alternating Hero Content Animation Script -->

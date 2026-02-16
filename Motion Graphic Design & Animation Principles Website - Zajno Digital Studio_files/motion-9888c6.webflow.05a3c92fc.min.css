@@ -5483,8 +5483,10 @@ textarea.w-select {
     padding: .16rem .24rem;
     font-size: .28rem;
     line-height: .28rem;
-    top: 10.52rem;
-    left: 2.76rem
+    /* top: 10.52rem;
+    left: 2.76rem */
+    top: 10.64rem;
+        left: 2.00rem;
   }
 
   .anim-shape.is-attention {
@@ -6105,9 +6107,9 @@ textarea.w-select {
   }
 
   .h6 {
-    letter-spacing: -.0096rem;
-    font-size: .24rem;
-    line-height: .32rem
+    /* letter-spacing: -.0096rem; */
+  font-size: .44rem;
+    line-height: .54rem
   }
 
   .h6.white {
@@ -7083,8 +7085,9 @@ textarea.w-select {
   }
 
   .bg-visual {
-    height: 12.45rem;
+    height: 17.45rem;
     background-image: url(../Home_bg_mobile.svg)
+  
   }
 }
 
