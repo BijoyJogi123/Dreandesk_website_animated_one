@@ -11222,6 +11222,70 @@
                                     }
                                 </style>
 
+                                <style>
+                                    /* Course Depth Section - Video Responsive Styles */
+                                    #course-depth-section .section-slide-wrap {
+                                        position: relative;
+                                        min-height: 500px !important;
+                                        background: #fff !important;
+                                    }
+
+                                    #course-depth-section video {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                        transform: translate(-50%, -50%);
+                                        z-index: 0;
+                                    }
+
+                                    /* Tablet responsive */
+                                    @media (max-width: 1024px) {
+                                        #course-depth-section {
+                                            width: 100vw !important;
+                                        }
+
+                                        #course-depth-section .section-slide-wrap {
+                                            min-height: 450px !important;
+                                            padding: 40px !important;
+                                        }
+                                    }
+
+                                    /* Mobile responsive */
+                                    @media (max-width: 768px) {
+                                        #course-depth-section {
+                                            width: 100vw !important;
+                                        }
+
+                                        #course-depth-section .section-slide-wrap {
+                                            min-height: 400px !important;
+                                            padding: 30px 20px !important;
+                                        }
+
+                                        #course-depth-section video {
+                                            object-fit: contain;
+                                        }
+                                    }
+
+                                    /* Small mobile */
+                                    @media (max-width: 480px) {
+                                        #course-depth-section .section-slide-wrap {
+                                            min-height: 350px !important;
+                                            padding: 20px 15px !important;
+                                        }
+                                    }
+
+                                    /* Extra small mobile */
+                                    @media (max-width: 375px) {
+                                        #course-depth-section .section-slide-wrap {
+                                            min-height: 300px !important;
+                                            padding: 15px 12px !important;
+                                        }
+                                    }
+                                </style>
+
                                 <div class="section-slide ui-slide" id="one-tap-section"
                                     style="width: 50vw; transform: translate(0%, 0px); background-color: #f8f8f6;">
                                     <div style=" padding-bottom: 60px;">
@@ -11274,11 +11338,11 @@
 
                                     <div style="padding-bottom: 60px;">
                                         <div class="section-slide-wrap"
-                                            style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: #000; position: relative; min-height: 450px; overflow: hidden;">
+                                            style="flex-direction: row; border: 2px solid #0c0b0b; border-radius: 12px; padding: 50px; background: #fff; position: relative; min-height: 450px; overflow: hidden;">
 
                                             <!-- VIDEO BACKGROUND -->
                                             <video autoplay muted loop playsinline
-                                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                                                style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: contain; transform: translate(-50%, -50%); z-index: 0;">
                                                 <source src="./Sections_svgs/admission_video.mp4" type="video/mp4">
                                             </video>
 
