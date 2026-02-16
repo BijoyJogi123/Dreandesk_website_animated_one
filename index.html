@@ -13782,28 +13782,203 @@
 
         <!-- Responsive Styles -->
         <style>
+            /* Tablet Responsive */
+            @media (max-width: 1024px) {
+                #main-footer {
+                    padding: 50px 0 25px 0 !important;
+                }
+
+                #main-footer > div {
+                    padding: 0 30px !important;
+                }
+
+                #main-footer > div > div:first-child {
+                    grid-template-columns: 1fr 1fr !important;
+                    gap: 35px !important;
+                }
+            }
+
+            /* Mobile Responsive */
             @media (max-width: 768px) {
-                #main-footer .main-footer>div>div:first-child {
+                #main-footer {
+                    padding: 40px 0 20px 0 !important;
+                }
+
+                #main-footer > div {
+                    padding: 0 20px !important;
+                }
+
+                #main-footer > div > div:first-child {
                     grid-template-columns: 1fr !important;
-                    gap: 30px !important;
+                    gap: 40px !important;
+                    margin-bottom: 40px !important;
                 }
 
-                #main-footer .main-footer>div>div:first-child>div:first-child {
-                    grid-column: 1 !important;
+                #main-footer h4 {
+                    font-size: 18px !important;
+                    margin-bottom: 12px !important;
                 }
 
-                #main-footer .main-footer>div>div:nth-child(2)>div {
+                #main-footer p {
+                    font-size: 14px !important;
+                }
+
+                /* Newsletter input and button */
+                #main-footer input[type="email"] {
+                    font-size: 13px !important;
+                    padding: 10px 12px !important;
+                }
+
+                #main-footer button {
+                    font-size: 13px !important;
+                    padding: 10px 16px !important;
+                }
+
+                /* Links grid */
+                #main-footer > div > div:first-child > div:nth-child(2) > div:last-child {
+                    grid-template-columns: 1fr !important;
+                    gap: 20px !important;
+                }
+
+                /* Social icons */
+                #main-footer > div > div:first-child > div:nth-child(3) > div {
+                    justify-content: flex-start !important;
+                    flex-wrap: wrap !important;
+                }
+
+                /* Footer bottom */
+                #main-footer > div > div:last-child {
+                    padding-top: 15px !important;
+                }
+
+                #main-footer > div > div:last-child p {
+                    font-size: 12px !important;
+                }
+            }
+
+            /* Small Mobile */
+            @media (max-width: 480px) {
+                #main-footer {
+                    padding: 30px 0 15px 0 !important;
+                }
+
+                #main-footer > div {
+                    padding: 0 15px !important;
+                }
+
+                #main-footer > div > div:first-child {
+                    gap: 35px !important;
+                    margin-bottom: 35px !important;
+                }
+
+                #main-footer h4 {
+                    font-size: 16px !important;
+                    margin-bottom: 10px !important;
+                }
+
+                #main-footer p {
+                    font-size: 13px !important;
+                    line-height: 1.5 !important;
+                }
+
+                /* Phone number badge */
+                #main-footer > div > div:first-child > div:first-child > div {
+                    font-size: 13px !important;
+                    padding: 6px 12px !important;
+                }
+
+                /* Partner logos */
+                #main-footer > div > div:first-child > div:first-child img {
+                    height: 32px !important;
+                }
+
+                /* Newsletter section */
+                #main-footer > div > div:first-child > div:nth-child(2) > div {
                     flex-direction: column !important;
-                    align-items: flex-start !important;
+                    gap: 10px !important;
                 }
 
-                #main-footer .main-footer>div>div:nth-child(2)>div>div:last-child {
-                    max-width: 100% !important;
+                #main-footer input[type="email"] {
+                    width: 100% !important;
+                    border-radius: 5px !important;
+                    border-right: 1px solid #333 !important;
                 }
 
-                #main-footer .main-footer>div>div:last-child>div {
-                    flex-direction: column !important;
-                    text-align: center !important;
+                #main-footer button {
+                    width: 100% !important;
+                    border-radius: 5px !important;
+                }
+
+                /* Links */
+                #main-footer a {
+                    font-size: 13px !important;
+                }
+
+                #main-footer li {
+                    margin-bottom: 6px !important;
+                }
+
+                /* Social icons */
+                #main-footer > div > div:first-child > div:nth-child(3) > div a {
+                    width: 36px !important;
+                    height: 36px !important;
+                }
+
+                #main-footer > div > div:first-child > div:nth-child(3) > div a svg {
+                    width: 18px !important;
+                    height: 18px !important;
+                }
+
+                /* Contact section */
+                #main-footer > div > div:first-child > div:last-child > div {
+                    font-size: 13px !important;
+                }
+
+                /* Footer bottom */
+                #main-footer > div > div:last-child p {
+                    font-size: 11px !important;
+                }
+            }
+
+            /* Extra Small Mobile */
+            @media (max-width: 375px) {
+                #main-footer {
+                    padding: 25px 0 15px 0 !important;
+                }
+
+                #main-footer > div {
+                    padding: 0 12px !important;
+                }
+
+                #main-footer h4 {
+                    font-size: 15px !important;
+                }
+
+                #main-footer p {
+                    font-size: 12px !important;
+                }
+
+                #main-footer > div > div:first-child > div:first-child > div {
+                    font-size: 12px !important;
+                    padding: 5px 10px !important;
+                }
+
+                #main-footer > div > div:first-child > div:first-child img {
+                    height: 28px !important;
+                }
+
+                #main-footer a {
+                    font-size: 12px !important;
+                }
+
+                #main-footer > div > div:first-child > div:nth-child(3) > div a {
+                    width: 32px !important;
+                    height: 32px !important;
+                }
+
+                #main-footer > div > div:first-child > div:nth-child(3) > div a svg {
+                    width: 16px !important;
+                    height: 16px !important;
                 }
             }
         </style>
