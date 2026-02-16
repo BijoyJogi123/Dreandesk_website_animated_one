@@ -7490,10 +7490,10 @@ div[id="team"].section-slide-text {
 /* DESKTOP (1200px and up) - Apply margin-left: 200px */
 @media only screen and (min-width: 1200px) {
 
-  #team.section-slide-text,
+  /* #team.section-slide-text,
   div[id="team"].section-slide-text {
     margin-left: 200px !important;
-  }
+  } */
 }
 
 /* LAPTOP (992px - 1199px) - No margin-left */
@@ -7961,7 +7961,7 @@ reer Launch Section Styles */
   flex-direction: row;
   border: 2px solid #0c0b0b;
   border-radius: 12px;
-  padding: 20px;
+  /* padding: 20px; */
   background: #f8f8f6;
   position: relative;
   overflow: hidden;
