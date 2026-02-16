@@ -2037,9 +2037,9 @@
                 padding: 50px 20px;
                 text-align: center;
                 height: auto;
-                min-height: 100vh;
-                background-size: cover;
-                background-position: center center;
+                min-height: auto;
+                background-image: none !important;
+                background: #ffffff;
             }
 
             .career-left-section {
@@ -2048,10 +2048,23 @@
                 padding: 30px;
                 margin: 0;
                 margin-top: 20px;
+                order: 2;
             }
 
             .career-right-section {
-                display: none;
+                display: block !important;
+                order: 1;
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .career-mobile-image {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
             }
 
             .career-main-title {
@@ -2102,14 +2115,18 @@
         /* Small Mobile */
         @media (max-width: 480px) {
             .career-main-content {
-                padding: 40px 15px;
-                background-size: cover;
+                padding: 30px 15px;
+                background-image: none !important;
             }
 
             .career-left-section {
                 max-width: 95%;
                 padding: 25px 20px;
                 margin-top: 10px;
+            }
+
+            .career-mobile-image {
+                max-width: 400px;
             }
 
             .career-main-title {
@@ -2157,10 +2174,14 @@
             .career-left-section {
                 padding: 20px 15px;
             }
-        }
 
             .career-main-content {
-                padding: 30px 15px;
+                padding: 25px 15px;
+                background-image: none !important;
+            }
+
+            .career-mobile-image {
+                max-width: 320px;
             }
 
             .career-card-illustration {
@@ -12948,6 +12969,11 @@
 
                                             <!-- Main Career Content -->
                                             <div class="career-main-content">
+                                                <!-- Mobile Image Section (shows only on mobile) -->
+                                                <div class="career-right-section">
+                                                    <img src="./Sections_svgs/Road_walking_girl.svg" alt="Career Journey" class="career-mobile-image">
+                                                </div>
+
                                                 <div class="career-left-section">
                                                     <h1 class="career-main-title">Launch Your
                                                         Career</h1>

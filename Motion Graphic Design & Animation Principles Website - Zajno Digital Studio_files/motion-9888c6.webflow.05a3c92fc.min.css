@@ -3254,9 +3254,6 @@ textarea.w-select {
 
 
 
-
-
-
 .bg-wrap.is-main.mobile {
   display: none
 }
@@ -7085,8 +7082,10 @@ textarea.w-select {
   }
 
   .bg-visual {
-    height: 17.45rem;
-    background-image: url(../Home_bg_mobile.svg)
+    /* height: 17.45rem;
+    background-image: url(../Home_bg_mobile.svg) */
+     height: 20.59rem;
+    background-image: url(../Home_bg_tablet.svg);
   
   }
 }
@@ -7293,7 +7292,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   }
 
   .section-slide-text .p3 {
-    font-size: 2.2rem !important;
+    font-size: 0.60rem !important;
     line-height: 1.2 !important;
     margin-bottom: 18px !important;
   }
@@ -7359,7 +7358,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   }
 
   .section-slide-text .p3 {
-    font-size: 1.8rem !important;
+    font-size: 0.60rem !important;
     line-height: 1.2 !important;
     padding: 0 10px !important;
     font-weight: 800 !important;
