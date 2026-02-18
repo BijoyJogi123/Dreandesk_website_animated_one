@@ -5,12 +5,21 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <!-- Wevli Bold Font for DREAMDESK -->
     <style>
         @font-face {
             font-family: 'WevliBold';
             src: url('./font/wevli-bold_C1a4O/Wevli Bold/Wevli Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Minion Variable Concept';
+            src: url('./font/MinionVariableConcept-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -105,6 +114,36 @@
             /* font-family: 'Geist', sans-serif; */
             background: #fff;
             overflow-x: hidden;
+        }
+
+        /* Counselor Image Sizes - Make them bigger */
+        .counselor-image-container {
+            width: 360px !important;
+            height: 540px !important;
+        }
+
+        /* Responsive for tablets */
+        @media (max-width: 1024px) {
+            .counselor-image-container {
+                width: 320px !important;
+                height: 480px !important;
+            }
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .counselor-image-container {
+                width: 280px !important;
+                height: 420px !important;
+            }
+        }
+
+        /* Responsive for small mobile */
+        @media (max-width: 480px) {
+            .counselor-image-container {
+                width: 240px !important;
+                height: 360px !important;
+            }
         }
 
         /* Hero section Buttons */
@@ -253,6 +292,7 @@
             opacity: 1;
             transform: none;
             width: 100%;
+            margin-top:40px;
         }
 
         .framer-dnb8d0 {
@@ -288,8 +328,9 @@
 
         .framer-dnb8d0 p {
             font-family: 'Caveat', cursive;
-            font-size: 90px;
-            letter-spacing: -0.07em;
+            font-size: 80px;
+            letter-spacing: 1px;
+            /* letter-spacing: -0.07em; */
             line-height: 70%;
             text-align: center;
             color: #000;
@@ -310,7 +351,7 @@
         }
 
         .framer-su7jo2 p {
-            font-family: 'Geist', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 16px;
             line-height: 1.6;
             color: #000;
@@ -601,7 +642,7 @@
             }
 
             .framer-1ebgzuc {
-                margin-top: 60px;
+                margin-top: 75px;
             }
 
             .framer-1ebgzuc h2 {
@@ -660,20 +701,66 @@
 
         /* Responsive styles for TRUEPOTENTIAL text */
         @media (max-width: 768px) {
-            .framer-text[style*="font-size: 60px"] {
-                font-size: 45px !important;
+            .framer-text[style*="font-size: 65px"] {
+                font-size: 48px !important;
             }
         }
 
         @media (max-width: 480px) {
-            .framer-text[style*="font-size: 60px"] {
-                font-size: 45px !important;
+            .framer-text[style*="font-size: 65px"] {
+                font-size: 38px !important;
             }
         }
 
         @media (max-width: 375px) {
-            .framer-text[style*="font-size: 60px"] {
+            .framer-text[style*="font-size: 65px"] {
                 font-size: 32px !important;
+            }
+        }
+
+        /* Responsive styles for DreamDesk Logo in WorkDesk section */
+        .dreamdesk-logo-responsive {
+            width: 600px;
+            height: 160px;
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 1400px) {
+            .dreamdesk-logo-responsive {
+                width: 500px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .dreamdesk-logo-responsive {
+                width: 450px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .dreamdesk-logo-responsive {
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dreamdesk-logo-responsive {
+                width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dreamdesk-logo-responsive {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .dreamdesk-logo-responsive {
+                width: 200px;
             }
         }
     </style>
@@ -911,7 +998,7 @@
         /* Animated Search Bar Styles */
         .animated-search-bar {
             background: #ba0806;
-            padding: 12px;
+            padding: 12px 22px 12px 22px;
             border-radius: 25px;
             margin: 20px auto;
             max-width: 600px;
@@ -928,16 +1015,17 @@
 
         .search-text-container {
             flex: 1;
-            height: 28px;
+            height: 38px;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            opacity: 0.6;
         }
 
         .search-question {
             color: #ffffff;
-            font-size: 14px;
+            font-size: 20px;
             position: absolute;
             left: 0;
             top: 50%;
@@ -947,6 +1035,7 @@
             white-space: nowrap;
             width: 100%;
             font-weight: 400;
+            
         }
 
         .search-question.active {
@@ -1835,8 +1924,10 @@
             border-radius: 12px;
             /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
             margin-right: auto;
-            margin-top: 80px;
+            margin-top: 10%;
         }
+
+     
 
         .career-right-section {
             display: none;
@@ -1855,11 +1946,11 @@
 
         /* Typography */
         .career-main-title {
-            font-size: 38px;
+            font-size: .90rem;
             font-weight: 700;
             color: #000;
             margin: 0 0 16px 0;
-            line-height: 1.1;
+            line-height: 0.7;
             max-width: 800px;
         }
 
@@ -1867,7 +1958,7 @@
             font-size: 18px;
             color: #666;
             margin: 0 0 32px 0;
-            line-height: 1.4;
+            line-height: 1;
         }
 
         /* CTA Button */
@@ -2741,6 +2832,246 @@
             hideLoader();
             console.log('Emergency fallback: Content forced to show');
         }, 5000);
+    </script>
+
+    <!-- ISO Certificate Popup Modal -->
+    <div id="iso-certificate-modal" class="iso-modal">
+        <div class="iso-modal-overlay"></div>
+        <div class="iso-modal-content">
+            <span class="iso-modal-close">&times;</span>
+            <img src="dreamdesk_content/iso.jpg" alt="ISO Certificate" class="iso-certificate-img">
+        </div>
+    </div>
+
+    <style>
+        /* ISO Certificate Modal */
+        .iso-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 99999;
+        }
+
+        .iso-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: modalFadeIn 0.4s ease-out;
+        }
+
+        .iso-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            cursor: pointer;
+        }
+
+        .iso-modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            z-index: 100000;
+            animation: certificateZoomIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .iso-modal-close {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 45px;
+            height: 45px;
+            background: #f41414;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100001;
+            box-shadow: 0 4px 12px rgba(244, 20, 20, 0.4);
+            line-height: 1;
+        }
+
+        .iso-modal-close:hover {
+            background: #c00;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .iso-certificate-img {
+            width: auto;
+            height: auto;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: block;
+            border-radius: 8px;
+            cursor: pointer;
+            object-fit: contain;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes certificateZoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .iso-modal-content {
+                max-width: 85vw;
+                max-height: 85vh;
+            }
+            
+            .iso-certificate-img {
+                max-width: 85vw;
+                max-height: 85vh;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .iso-modal-content {
+                max-width: 95vw;
+                max-height: 90vh;
+            }
+
+            .iso-certificate-img {
+                max-width: 95vw;
+                max-height: 90vh;
+            }
+
+            .iso-modal-close {
+                width: 38px;
+                height: 38px;
+                font-size: 26px;
+                top: -15px;
+                right: -15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .iso-modal-content {
+                max-width: 95vw;
+                max-height: 88vh;
+            }
+
+            .iso-certificate-img {
+                max-width: 95vw;
+                max-height: 88vh;
+            }
+
+            .iso-modal-close {
+                width: 35px;
+                height: 35px;
+                font-size: 24px;
+                top: -12px;
+                right: -12px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .iso-modal-content {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+
+            .iso-certificate-img {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+
+            .iso-modal-close {
+                width: 32px;
+                height: 32px;
+                font-size: 22px;
+            }
+        }
+    </style>
+
+    <script>
+        // ISO Certificate Popup
+        (function() {
+            const certificateShown = sessionStorage.getItem('isoCertificateShown');
+            
+            if (!certificateShown) {
+                setTimeout(function() {
+                    const modal = document.getElementById('iso-certificate-modal');
+                    if (modal) {
+                        modal.classList.add('show');
+                        sessionStorage.setItem('isoCertificateShown', 'true');
+                        
+                        // Auto close after 10 seconds
+                        setTimeout(function() {
+                            closeModal();
+                        }, 10000);
+                    }
+                }, 3500);
+            }
+            
+            function closeModal() {
+                const modal = document.getElementById('iso-certificate-modal');
+                if (modal) {
+                    modal.style.animation = 'modalFadeIn 0.3s ease-out reverse';
+                    setTimeout(function() {
+                        modal.classList.remove('show');
+                        modal.style.animation = '';
+                    }, 300);
+                }
+            }
+            
+            // Close on overlay click
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('iso-modal-overlay')) {
+                    closeModal();
+                }
+            });
+            
+            // Close on X button
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('iso-modal-close')) {
+                    closeModal();
+                }
+            });
+            
+            // Close on certificate click
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('iso-certificate-img')) {
+                    closeModal();
+                }
+            });
+            
+            // Close on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        })();
     </script>
 
     <div class="main-css w-embed">
@@ -4075,7 +4406,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+             font-family: 'Playfair Display', serif; 
             font-size: clamp(10px, 1.2vw, 13px);
             font-weight: 700;
             color: #000000;
@@ -4528,7 +4859,7 @@
         }
 
         #toggle-btn .menu-text {
-            font-size: clamp(10px, 1.2vw, 12px) !important;
+            font-size: clamp(16px, 1.8vw, 22px) !important;
             transition: all 0.3s ease !important;
         }
 
@@ -4564,7 +4895,8 @@
         @media (min-width: 1601px) {
             .years-badge {
                 left: 18%;
-                width: 220px;
+                width: 260px;
+                padding-bottom: 3%;
 
             }
         }
@@ -4733,8 +5065,8 @@
     </style>
 
     <div class="top-yellow-stripe">
-        <div class="stripe-left">
-            Let's Catchup! Call Us - 91 9093 9093 56
+        <div class="stripe-left" style=" font-family: 'Geist', sans-serif;  font-weight: 600; ">
+            Let's Catchup! Call Us - +91 9093 9093 56
         </div>
         <div class="stripe-right">
             <div class="stripe-social-icons">
@@ -4939,10 +5271,10 @@
                         #toggle-btn.active {
                             border-color: #000000;
                         }
-
+                        /* Here menu */
                         .menu-text {
-                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                            font-size: 24px;
+                            font-family: 'Geist', sans-serif;
+                            font-size: 32px !important;
                             font-weight: 700;
                             color: #000000;
                             text-transform: lowercase;
@@ -5249,7 +5581,7 @@
                             }
 
                             .menu-text {
-                                font-size: 20px;
+                                font-size: 24px !important;
                             }
 
                             #hamburger .line-1,
@@ -5315,7 +5647,7 @@
                             }
 
                             .menu-text {
-                                font-size: 18px;
+                                font-size: 22px !important;
                             }
 
                             #hamburger .line-1,
@@ -5498,8 +5830,8 @@
 
                         /* Menu Text Styling */
                         .menu-text {
-                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-                            font-size: 24px !important;
+                            font-family: 'Geist', sans-serif;
+                            font-size: 38px !important;
                             font-weight: 700 !important;
                             color: #000000 !important;
                             text-transform: lowercase !important;
@@ -5563,7 +5895,7 @@
                             }
 
                             .menu-text {
-                                font-size: 16px !important;
+                                font-size: 20px !important;
                             }
 
                             #hamburger .line-1,
@@ -5602,7 +5934,7 @@
                             }
 
                             .menu-text {
-                                font-size: 14px !important;
+                                font-size: 18px !important;
                             }
 
                             #hamburger .line-1,
@@ -5641,7 +5973,7 @@
                             }
 
                             .menu-text {
-                                font-size: 12px !important;
+                                font-size: 16px !important;
                             }
 
                             #hamburger .line-1,
@@ -6002,7 +6334,7 @@
                                     if (!this.isAnimating) {
                                         this.nextQuestion();
                                     }
-                                }, 3500); // Change every 3.5 seconds
+                                }, 5000); // Change every 5 seconds (slower)
                             }
 
                             nextQuestion() {
@@ -6032,8 +6364,8 @@
                                         // Reset previous question
                                         currentQuestion.classList.remove('slide-out-left');
                                         this.isAnimating = false;
-                                    }, 100);
-                                }, 400);
+                                    }, 200);
+                                }, 800); // Slower transition (800ms instead of 400ms)
                             }
                         }
 
@@ -9836,7 +10168,7 @@
                                                 data-framer-name="Text Container">
                                                 <div class="framer-dnb8d0"
                                                     data-framer-component-type="RichTextContainer">
-                                                    <p>At Dream Desk.</p>
+                                                    <p>At <span style="color:#f41414; letter-spacing: 0px;"><span>Dream</span><span>Desk</span></span></p>
                                                 </div>
                                                 <!-- <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
                                         <p>
@@ -9848,27 +10180,27 @@
                                         </div>
 
                                         <h2 class="framer-text framer-styles-preset-19md8ao"
-                                            data-styles-preset="a5EASynPI">
-                                            <span class="framer-text" style="font-size: 60px;">UNLOCK
-                                                YOUR</span></br><span class="framer-text" style="font-size: 60px;">TRUE
-                                                POTENTIAL</span>
+                                            data-styles-preset="a5EASynPI" style="font-family: 'Playfair Display', serif;">
+                                            <span class="framer-text" style="font-size: 65px; font-weight: 600; letter-spacing: 2px;">Unlock
+                                                Your</span></br><span class="framer-text" style="font-size: 65px; font-weight: 600; letter-spacing: 2px;">True
+                                                Potential</span>
 
                                             <!-- <span id="rotating-text"
                                                 class="rotating-word">pathways</span> -->
                                         </h2>
-                                        <div class="framer-su7jo2" data-framer-component-type="RichTextContainer">
-                                            <p style="font-size: 18px;">
-                                                Expert Acadamic guidance to help students get into
-                                                top </br>colleges and achieve their dream careers
+                                        <div class="framer-su7jo2" data-framer-component-type="RichTextContainer" style="margin-top: 15px;">
+                                            <p style="font-size: 20px; font-family: 'Playfair Display', serif; font-weight:600; word-spacing: 2px; line-height: 1.2;">
+                                                Expert academic guidance to help students get</br> into
+                                                top colleges and achieve their dream career
                                                 <!-- <strong>Start Your Session Now !.</strong> -->
                                             </p>
                                         </div>
 
                                         <!-- Here is the button -->
 
-                                        <div class="hero-buttons-container">
+                                        <div class="hero-buttons-container" style="margin-top:15px;">
                                             <button class="hero-btn hero-btn-primary">Explore Career Options</button>
-                                            <button class="hero-btn hero-btn-secondary">Book Free Session</button>
+                                            <button class="hero-btn hero-btn-secondary">Book a Free Session</button>
                                         </div>
 
                                     </div>
@@ -10084,29 +10416,21 @@
                         <div class="ui-text"
                             style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
                             <div class="text-wrap is-animation"
-                                style="font-family: 'Pp-neuemachina-Inktrap', sans-serif;">
-                                <div class="h6 white">
+                                style="font-family: 'Playfair Display', serif;">
+                                <div class="h6 white" >
 
-                                    <!-- We spend approximately<br>
-                                            80,000 hours in our WorkDesk,</br>
-                                            Let us shape your career to</br>
-                                            achieve your DreamDesk.</br> -->
+                                
+                                            We spend <span style="font-family: 'Minion Variable Concept', serif;">80,000</span>  hours</br> at our WorkDesk, let’s </br>turn it into your </br>
+                                            <!-- <span style="font-family: WevliBold; color:#f41414; font-weight: 600;  font-size: .70rem;" >DREAMDESK</span> -->
+                                             <img class="dreamdesk-logo-responsive" src="./logo_black.png" alt="DreamDesk Logo" />
 
-                                    <!-- We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
-                                    DreamDesk -->
+                                            <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
+                                            advice, real results -->
+                                       
 
-                                    <!-- Your future deserves clarity</br>
-                                    discover your strengths today,</br>
-                                    design your tomorrow wisely</br> -->
+                                    
 
-
-                                    <!-- Future needs clarity</br>
-                                    before you choose let’s</br>
-                                    shape it with insight -->
-
-                                    “Knowing yourself is the beginning of wisdom.”
-                                    And the beginning of making the right career choice.
-
+                                  
                                     <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
                                             advice, real results -->
                                 </div>
@@ -10171,52 +10495,51 @@
                                     </div>
 
                                     <!-- Bento Grid Container -->
-                                    <div class="bento-container" style="padding-top: 40px;">
+                                    <div class="bento-container" >
                                         <!-- Top Left Card - Main CTA -->
                                         <div class="bento-main-card">
                                             <!-- Add your content here -->
                                             <div>
-                                                <h1>Discover Your Strengths with Psychometric Test</h1>
-                                                <p class="subtitle">Scientfic Assessments reveal Aptitude, Intrests,
-                                                    Personality
+                                                <h1>Discover your strengths with psychometric test</h1>
+                                                <p class="subtitle">Scientific Assessments reveal Aptitude, Interest,
+                                                    Personality guiding you toward your ideal career path and
+                                                    future success.
                                                 </p>
-                                                <p class="description">guiding you toward your ideal career path and
-                                                    future success.</p>
+                                                <!-- <p class="description"></p> -->
                                             </div>
-                                            <a href="#" class="explore-btn">Explore Assessments</a>
+                                            <a href="#" class="explore-btn"><span style=" font-family: 'Playfair Display', serif;">Explore Assessments</span></a>
                                         </div>
 
                                         <!-- Top Right Card - Brain Visual (spans 2 rows) -->
                                         <div class="bento-brain-card">
                                             <img src="./Sections_svgs/Brain.gif" alt="Brain" class="brain-image" />
 
-                                            <div class="content-bottom" style=" color: #000000;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 5px 40px 5px 40px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);">
-                                                <h2>Know Your Strengths.<br>Shape Your Success.</h2>
-                                                <p class="description">Psychometric data plus expert mentoring builds
-                                                    confident, future ready career Decisions
+                                            <div class="content-bottom">
+                                                <h2>Know Your Strengths.<br>Shape Your Success. 
+                                                    
+                                                    <p class="description">Psychometric data plus expert mentoring </br> builds 
+                                                    confident,future ready career decisions
+                                                    </p></h2>
+                                                
                                             </div>
 
-                                            <div class="circle-icon">↗</div>
+                                            <!-- <div class="circle-icon">↗</div> -->
                                         </div>
 
                                         <!-- Bottom Left Card - Pink Card -->
                                         <div class="bento-pink-card">
                                             <!-- Add your content here -->
                                             <div class="icon-box">
-                                                <div class="brain-icon"></div>
+                                                <!-- <div class="brain-icon"></div> -->
+                                                
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 265.92 266.3"><defs><style>.cls-1{fill:#f7b9d4;}.cls-2{fill:#fff;}</style></defs><rect class="cls-1" x="0.81" y="1" width="264.29" height="264.29" rx="33.82"/><path d="M135.82,160.2v46.85l2.69,1.23L206,133.22l-69.7-77.73v51.84c-9.59-1.2-17.76-2-25.83-3.29C77.22,98.56,44,92.68,10.73,87.48,2.66,86.22-.45,83.32.05,74.85.81,62,.08,49.1.3,36.22.64,15.88,15.51.32,35.88.23Q133-.22,230.07.24c20.23.1,35.63,15.87,35.69,36.07q.32,97.11,0,194.23c-.07,18.51-13.61,32.89-32.05,35.17a102.17,102.17,0,0,1-12.5.56q-88.74,0-177.48,0c-30.11,0-43.46-13.22-43.47-43,0-11.84-.36-23.69.26-35.49.15-2.78,3.24-7.36,5.56-7.76,42.11-7.31,84.3-14.1,126.48-21C133.15,159,133.85,159.52,135.82,160.2Z"/><path class="cls-2" d="M138.58,213.7a8.52,8.52,0,0,1-3.65-.83,8.84,8.84,0,0,1-4.82-8.09V166.85L1,185.71V175.16A1.14,1.14,0,0,1,2,174l139.52-20.48v43.87l60.22-68,8.54,7.57-65.41,73.85A8.39,8.39,0,0,1,138.58,213.7Z"/></svg>
+
                                             </div>
                                             <div class="text-content">
-                                                <h3>Guidance that Brings </br>Direction<br></h3>
-                                                <p>Professional counselling converts confussion into structured career
+                                                <h1>Guidance that</br> Brings Direction</h1>
+                                                <p>Professional counselling converts confusion into structured career
                                                     pathways aligned with potential</p>
-                                                <a href="#">Learn more</a>
+                                                <!-- <a href="#">Learn more</a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -10340,11 +10663,12 @@
                             <div class="section-track">
                                 <div class="ui-text"
                                     style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
-                                    <div class="text-wrap is-animation">
-                                        <div class="h6 white">
+                                    <div class="text-wrap is-animation" style="font-family: 'Playfair Display', serif;" >
+                                        <div class="h6 white" >
 
-                                            We spend 80,000 hours</br> at our WorkDesk—let’s </br>turn it into your
-                                            DreamDesk
+                                            <span style="font-family: 'Playfair Display', serif; font-style: italic; color:#f41414; font-weight: 600;  font-size: .70rem;" >Knowing yourself</span> </br> is the beginning of wisdom</br>
+                                    and the beginning of making </br>the right career choice.
+
 
                                             <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
                                             advice, real results -->
@@ -10553,10 +10877,11 @@
                                     #one-tap-section .bento-main-card {
                                         background: white;
                                         border-radius: 24px;
-                                        padding: 50px;
+                                        padding: 100px 100px 100px 100px;
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: space-between;
+                                        
                                     }
 
                                     #one-tap-section .bento-main-card h1 {
@@ -10565,38 +10890,44 @@
                                         line-height: 1.1;
                                         margin-bottom: 20px;
                                         color: #000;
+                                        font-family: 'Playfair Display', serif; 
                                     }
 
                                     #one-tap-section .bento-main-card .subtitle {
-                                        font-size: 16px;
-                                        color: #666;
-                                        margin-bottom: 8px;
+                                        font-size: 20px;
+                                        color: #000;
+                                        margin-bottom: 4px;
                                         font-weight: 500;
+                                        font-family: 'Geist', sans-serif;;
+                                        
+                                    
                                     }
 
-                                    #one-tap-section .bento-main-card .description {
+                                    /* #one-tap-section .bento-main-card .description {
                                         font-size: 14px;
                                         color: #888;
                                         margin-bottom: 40px;
                                         line-height: 1.5;
-                                    }
+                                    } */
 
                                     /* Explore Button */
                                     #one-tap-section .explore-btn {
                                         display: inline-flex;
                                         align-items: center;
                                         justify-content: space-between;
-                                        gap: 12px;
+                                        gap: 0px;
                                         background: #000;
                                         color: white;
                                         padding: 14px 20px 14px 28px;
                                         border-radius: 50px;
                                         text-decoration: none;
-                                        font-family: 'Pp-neuemachina-Inktrap', sans-serif;
-                                        font-size: 14px;
+                                         /* font-family: 'Playfair Display', serif;  */
+                                        font-size: 18px;
                                         font-weight: 500;
                                         width: fit-content;
                                         transition: transform 0.2s;
+                                      /* margin-top:10px; */
+                                      /* margin-bottom: 60px; */
                                     }
 
                                     #one-tap-section .explore-btn:hover {
@@ -10620,7 +10951,7 @@
 
                                     /* Top Right Card - Brain Visual (spans 2 rows) */
                                     #one-tap-section .bento-brain-card {
-                                        background: #eceefa;
+                                        background: #ffffff;
                                         border-radius: 24px;
                                         padding: 50px;
                                         display: flex;
@@ -10633,30 +10964,50 @@
 
                                     #one-tap-section .brain-image {
                                         width: 100%;
-                                        max-width: 500px;
+                                        max-width: 450px;
                                         height: auto;
-                                        margin: 0 auto 30px auto;
+                                        margin: 0 auto 0 auto;
                                         display: block;
-                                        filter: brightness(1.1) drop-shadow(0 0 30px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 60px rgba(96, 165, 250, 0.4)) drop-shadow(0 0 90px rgba(147, 197, 253, 0.3));
+                                        /* filter: brightness(1.1) drop-shadow(0 0 30px rgba(59, 130, 246, 0.6)) drop-shadow(0 0 60px rgba(96, 165, 250, 0.4)) drop-shadow(0 0 90px rgba(147, 197, 253, 0.3)); */
                                         object-fit: contain;
                                     }
 
                                     #one-tap-section .bento-brain-card .content-bottom {
-                                        color: rgb(0, 0, 0);
+                                        color: #000000;
+                                        background: rgba(243, 239, 239, 0.1);
+                                        backdrop-filter: blur(10px);
+                                        -webkit-backdrop-filter: blur(10px);
+                                        border: 1px solid rgba(255, 255, 255, 0.2);
+                                        border-radius: 20px;
+                                        padding: 30px;
+                                        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+                                        text-align: start;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: start;
+                                        width: 100%;
                                     }
 
                                     #one-tap-section .bento-brain-card h2 {
-                                        font-size: 36px;
+                                        font-size: 40px;
                                         font-weight: 700;
-                                        line-height: 1.2;
-                                        margin-bottom: 16px;
+                                        line-height: 1;
+                                        margin-bottom: 8px;
                                         color: rgb(0, 0, 0);
+                                        font-family: 'Playfair Display', serif; 
+
+                                        /* here bijoy */
                                     }
 
                                     #one-tap-section .bento-brain-card .description {
-                                        font-size: 14px;
-                                        line-height: 1.6;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        padding-top: 10px;
+                                        line-height: 1.2;
                                         color: rgba(0, 0, 0, 0.9);
+                                        font-family: 'Geist', sans-serif;
+                                        /* here bijoyjo */
                                     }
 
                                     #one-tap-section .circle-icon {
@@ -10676,19 +11027,22 @@
 
                                     /* Bottom Left Card - Pink Card */
                                     #one-tap-section .bento-pink-card {
-                                        background: linear-gradient(135deg, #ffc4e1 0%, #ffb3d9 100%);
+                                        background-color: #ffb9dc;
                                         border-radius: 24px;
-                                        padding: 30px;
+                                        /* padding: 40px 40px 40px 40px ; */
+                                        padding:10px 40px 10px 40px;
                                         display: flex;
                                         gap: 20px;
                                         align-items: center;
+                                        /* justify-content: center;
+                                        text-align: start; */
                                     }
 
                                     #one-tap-section .bento-pink-card .icon-box {
                                         flex-shrink: 0;
-                                        width: 100px;
-                                        height: 100px;
-                                        background: rgba(255, 255, 255, 0.3);
+                                        width: 130px;
+                                        height: 130px;
+                                        /* background: rgba(255, 255, 255, 0.3); */
                                         border-radius: 16px;
                                         display: flex;
                                         align-items: center;
@@ -10698,22 +11052,25 @@
                                     #one-tap-section .bento-pink-card .brain-icon {
                                         width: 60px;
                                         height: 60px;
-                                        background: linear-gradient(135deg, #ff9ed2 0%, #ff7cc1 100%);
+                                        /* background: linear-gradient(135deg, #ff9ed2 0%, #ff7cc1 100%); */
                                         border-radius: 50%;
                                     }
 
-                                    #one-tap-section .bento-pink-card .text-content h3 {
-                                        font-size: 20px;
+                                    #one-tap-section .bento-pink-card .text-content h1 {
+                                        font-size: 40px;
                                         font-weight: 700;
                                         margin-bottom: 8px;
                                         color: #000;
+                                        font-family: 'Playfair Display', serif; 
                                     }
 
                                     #one-tap-section .bento-pink-card .text-content p {
-                                        font-size: 13px;
-                                        color: #333;
+                                        font-size: 16px;
+                                        color: #000;
                                         margin-bottom: 12px;
-                                        line-height: 1.4;
+                                        font-weight: 500;
+                                        line-height: 1;
+                                        font-family: 'Geist', sans-serif;;
                                     }
 
                                     #one-tap-section .bento-pink-card .text-content a {
@@ -10744,7 +11101,7 @@
                                         background: white;
                                         border: 1px solid #000;
                                         border-radius: 20px;
-                                        padding: 40px;
+                                        padding: 60px 40px 60px 40px;
                                         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
                                         z-index: 10;
                                         display: flex;
@@ -10753,25 +11110,29 @@
                                     }
 
                                     #one-tap-section .content-box h3 {
-                                        font-family: 'Helvetica Neue', Arial, sans-serif;
-                                        font-size: 42px;
-                                        font-weight: 700;
+                                        font-family: 'Playfair Display', serif; 
+                                        font-size: 44px;
+                                        font-weight: 600;
                                         color: #333;
                                         margin: 0;
-                                        line-height: 1.2;
+                                        line-height: 1.1;
                                     }
 
                                     #one-tap-section .content-box p {
-                                        font-family: 'Open Sans', Arial, sans-serif;
-                                        font-size: 20px;
+                                        padding-bottom:6px;
+                                        padding-top:10px;
+                                        font-size: 24px;
                                         color: #666;
                                         margin: 0;
-                                        line-height: 1.6;
+                                        line-height: 1.2;
+                                        font-family: 'Geist', sans-serif;
                                     }
 
                                     #one-tap-section .animated-search-bar {
                                         width: 100%;
-                                        margin: 0;
+                                        /* padding: 12px 10px 12px 10px; */
+                                         font-family: 'Geist', sans-serif;
+                                        
                                     }
 
                                     #one-tap-section .content-box button {
@@ -10781,7 +11142,7 @@
                                         border: none;
                                         padding: 22px;
                                         border-radius: 25px;
-                                        font-family: 'Helvetica Neue', Arial, sans-serif;
+                                        font-family: 'Playfair Display', serif; ;
                                         font-size: 22px;
                                         font-weight: 700;
                                         cursor: pointer;
@@ -10794,6 +11155,102 @@
                                         background: #333;
                                         transform: translateY(-2px);
                                         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                    }
+
+                                    /* Desktop medium - 1400px */
+                                    @media (max-width: 1400px) {
+                                        #one-tap-section .bento-main-card {
+                                            padding: 70px 60px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 42px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 18px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 40px 35px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 35px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 16px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 25px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 10px 35px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 35px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 14px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .icon-box {
+                                            width: 120px;
+                                            height: 120px;
+                                        }
+                                    }
+
+                                    /* Desktop small - 1200px */
+                                    @media (max-width: 1200px) {
+                                        #one-tap-section .bento-main-card {
+                                            padding: 40px 30px;
+                                        }
+
+                                        #one-tap-section .bento-main-card h1 {
+                                            font-size: 30px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 12px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card {
+                                            padding: 28px 22px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 23px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 10px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 13px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card {
+                                            padding: 5px 22px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 23px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 10px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .icon-box {
+                                            width: 100px;
+                                            height: 100px;
+                                        }
                                     }
 
                                     /* Tablet responsive */
@@ -10823,6 +11280,30 @@
 
                                         #one-tap-section .bento-main-card h1 {
                                             font-size: 42px;
+                                        }
+
+                                        #one-tap-section .bento-main-card .subtitle {
+                                            font-size: 18px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card h2 {
+                                            font-size: 36px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .description {
+                                            font-size: 16px;
+                                        }
+
+                                        #one-tap-section .bento-brain-card .content-bottom {
+                                            padding: 25px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 36px;
+                                        }
+
+                                        #one-tap-section .bento-pink-card .text-content p {
+                                            font-size: 15px;
                                         }
 
                                         #one-tap-section .content-box {
@@ -10938,10 +11419,12 @@
 
                                         #one-tap-section .bento-brain-card .description {
                                             font-size: 13px;
+                                            padding-top: 8px;
                                         }
 
                                         #one-tap-section .bento-brain-card .content-bottom {
-                                            padding: 15px 25px;
+                                            padding: 15px 20px;
+                                            border-radius: 15px;
                                         }
 
                                         #one-tap-section .circle-icon {
@@ -10971,9 +11454,9 @@
                                             height: 55px;
                                         }
 
-                                        #one-tap-section .bento-pink-card .text-content h3 {
-                                            font-size: 18px;
-                                            line-height: 1.3;
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 24px;
+                                            line-height: 1.2;
                                         }
 
                                         #one-tap-section .bento-pink-card .text-content p {
@@ -11081,10 +11564,12 @@
 
                                         #one-tap-section .bento-brain-card .description {
                                             font-size: 12px;
+                                            padding-top: 6px;
                                         }
 
                                         #one-tap-section .bento-brain-card .content-bottom {
-                                            padding: 12px 20px;
+                                            padding: 12px 18px;
+                                            border-radius: 12px;
                                         }
 
                                         #one-tap-section .circle-icon {
@@ -11111,9 +11596,10 @@
                                             height: 45px;
                                         }
 
-                                        #one-tap-section .bento-pink-card .text-content h3 {
-                                            font-size: 16px;
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 20px;
                                             margin-bottom: 6px;
+                                            line-height: 1.2;
                                         }
 
                                         #one-tap-section .bento-pink-card .text-content p {
@@ -11209,10 +11695,12 @@
 
                                         #one-tap-section .bento-brain-card .description {
                                             font-size: 11px;
+                                            padding-top: 5px;
                                         }
 
                                         #one-tap-section .bento-brain-card .content-bottom {
-                                            padding: 10px 18px;
+                                            padding: 10px 15px;
+                                            border-radius: 10px;
                                         }
 
                                         #one-tap-section .circle-icon {
@@ -11238,9 +11726,10 @@
                                             height: 40px;
                                         }
 
-                                        #one-tap-section .bento-pink-card .text-content h3 {
-                                            font-size: 15px;
+                                        #one-tap-section .bento-pink-card .text-content h1 {
+                                            font-size: 18px;
                                             margin-bottom: 5px;
+                                            line-height: 1.2;
                                         }
 
                                         #one-tap-section .bento-pink-card .text-content p {
@@ -11360,7 +11849,7 @@
                                             </div>
                                             <div class="content-box">
                                                 <h3>
-                                                    Your Dream Future<br> Starts Here<br> Grab Your Seat NOW!
+                                                    Your Dream <br>Future Starts Here<br><span style="font-weight: 700; font-size: 48px;"> Grab Your Seat Now!</span>
                                                 </h3>
                                                 <p>
                                                     Unlock admission to India's most prestigious<br> colleges &
@@ -11473,9 +11962,10 @@
                             <div class="section-track">
                                 <div class="ui-text"
                                     style="clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%); transform: translate(0px, 0px);">
-                                    <div class="text-wrap is-animation">
-                                        <div class="h6 white">One honest conversation can change a lifetime.”
-                                            These voices are living evidence.
+                                    <div class="text-wrap is-animation" style="font-family: 'Playfair Display', serif;">
+                                        <div class="h6 white">
+                                          <span style="font-family: 'Playfair Display', serif; font-style: italic; color:#f41414; font-weight: 600;  font-size: .65rem;" >Real Stories</span>. <span style="font-family: 'Playfair Display', serif; font-style: italic; color:#f41414; font-weight: 600;   font-size: .65rem;" >Real Success</span>.
+                                          </br><span style="font-size: .90rem; font-weight: 600; word-spacing: 15px;"> If They Can Do It,</br> So Can You.</span> 
                                         </div>
                                     </div>
                                 </div>
@@ -11711,11 +12201,12 @@
                                                 #spinny-flipz-section .spinny-top img {
                                                     width: 25vw;
                                                     height: 30vw;
-                                                    max-height: 300px;
-                                                    max-width: 250px;
-                                                    object-fit: cover;
+                                                    max-height: 450px;
+                                                    max-width: 350px;
+                                                    object-fit: contain;
                                                     position: relative;
-                                                    border-radius: 8px;
+                                                    border-radius: 20px;
+                                                    border: none;
                                                 }
 
                                                 /* Gallery display container - left image, right description */
@@ -11762,9 +12253,14 @@
                                                     width: 400px;
                                                     height: 400px;
                                                     object-fit: cover;
-                                                    border-radius: 35px;
+                                                    border-radius: 40px;
                                                     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
                                                     border: 1px solid #fff;
+                                                }
+
+                                                #spinny-flipz-section .gallery-image-container {
+                                                    border-radius: 40px;
+                                                    overflow: hidden;
                                                 }
 
                                                 #spinny-flipz-section .gallery-description {
@@ -11782,6 +12278,7 @@
                                                     margin-bottom: 10px !important;
                                                     color: #fff !important;
                                                     line-height: 1.2 !important;
+                                                    font-family: 'Playfair Display', serif !important;
                                                 }
 
                                                 #spinny-flipz-section .gallery-description .student-course,
@@ -11857,6 +12354,7 @@
                                                     padding-left: 30px;
                                                     border-left: 5px solid #f5c518;
                                                     margin-bottom: 30px;
+                                                    font-family: 'Geist', sans-serif !important;
                                                 }
 
                                                 /* Social Media Icons */
@@ -11938,6 +12436,12 @@
                                                     #spinny-flipz-section #student-quote {
                                                         font-size: 20px !important;
                                                     }
+
+                                                    /* Top profile image responsive */
+                                                    #spinny-flipz-section .spinny-top img {
+                                                        max-height: 400px !important;
+                                                        max-width: 320px !important;
+                                                    }
                                                 }
 
                                                 @media (max-width: 768px) {
@@ -11998,6 +12502,12 @@
                                                         width: 40px !important;
                                                         height: 40px !important;
                                                         font-size: 18px !important;
+                                                    }
+
+                                                    /* Top profile image responsive */
+                                                    #spinny-flipz-section .spinny-top img {
+                                                        max-height: 380px !important;
+                                                        max-width: 300px !important;
                                                     }
                                                 }
 
@@ -12548,13 +13058,13 @@
                                                 </div>
 
                                                 <div id="team" class="section-slide-text"
-                                                    style="padding: 60px 20px 80px 80px;">
+                                                    style="padding-top: 60px; font-family: 'Playfair Display', serif;">
 
                                                     <div class="p3">
-                                                        Meet Our Team.
+                                                        Meet our <span style="font-family: 'Playfair Display', serif; font-style: italic; color:#f41414; font-weight: 600;  font-size: .70rem;">team</span>
                                                     </div>
                                                     <div>
-                                                        <p style="margin: 0;">Your personal guides to success</p>
+                                                        <p style="margin-top: 12px; font-size: .28rem; ">Your personal guides to success</p>
                                                     </div>
                                                 </div>
 
@@ -12991,12 +13501,13 @@
                                                 </div>
 
                                                 <div class="career-left-section">
-                                                    <h1 class="career-main-title">Launch Your
-                                                        Career</h1>
-                                                    <p class="career-subtitle">From learning to earning get the
-                                                        support and skills to start your career journey strong</p>
-                                                    <button class="career-cta-btn">Click to start you
-                                                        journey</button>
+                                                    <h1 class="career-main-title" style="font-family: 'Playfair Display', serif; font-weight: 500;">Launch</br><span style="font-family: 'Playfair Display', serif; font-style: italic; color:#f41414; font-weight: 600; white-space: nowrap; font-size: .95rem;">your
+                                                        career</span> 
+                                           
+                                                         <p style=" font-size:30px; color:#000; font-family: 'Geist', sans-serif; padding-top:40px;" class="career-subtitle">From learning to earning get the support  and skills to <span style="font-weight:600">start your career journey</span> strong.</p>
+                                                    </h1> 
+                                                    <!-- <button class="career-cta-btn">Click to start you
+                                                        journey</button> -->
                                                 </div>
                                             </div>
 
@@ -13216,10 +13727,10 @@
             <div class="content-wrap is-techniques">
                 <div data-w-id="7a61b557-4dcd-92ad-1f18-47267d831649" class="text-wrap is-techniques"
                     style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                    <div class="p1 white">Every modern career path blends skills, learning, and experience to create
-                        value for organizations and individuals alike.
-                        Many of these journeys have their foundations in curiosity and effort – but are continuously
-                        reshaped by technology and evolving markets globally.</div>
+                    <div class="p1 white" style="text-align: justify; font-family: 'Playfair Display', serif;"><span style="font-weight: 600;">Every modern career path blends skills, learning, and experience </span> to create
+                        value for organizations and  individuals alike.
+                        Many of these journeys have their foundations in <span style="font-weight: 600;">curiosity</span> and <span style="font-weight: 600;">effort</span> but are continuously
+                        reshaped by <span style="font-weight: 600;">technology</span> and <span style="font-weight: 600;">evolving markets</span> globally.</div>
                 </div>
             </div>
         </section>
@@ -13633,7 +14144,7 @@
 
     <!-- Footer Section -->
     <footer id="main-footer" class="main-footer"
-        style="background: #000000; color: #ffffff; padding: 60px 0 30px 0; position: relative; z-index: 10;">
+        style="background: #000000; color: #ffffff; padding: 60px 0 30px 0; position: relative; z-index: 10; font-family: 'Playfair Display', serif;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <!-- Footer Top Section -->
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px;">
@@ -13642,11 +14153,11 @@
                 <div>
                     <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 15px 0; color: #f2d803;">Call Our Helpline
                     </h4>
-                    <p style="font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 15px 0; font-family: 'Geist', sans-serif;">
                         Got career-related questions? Talk to our experts!
                     </p>
                     <div
-                        style="background: #f2d803; color: #000; padding: 8px 16px; border-radius: 5px; display: inline-block; font-weight: 600; font-size: 14px;">
+                        style="font-family: 'Geist', sans-serif; background: #f2d803; color: #000; padding: 8px 16px; border-radius: 5px; display: inline-block; font-weight: 600; font-size: 14px;">
                         📞 +91 9093 9093 55
                     </div>
 
@@ -13671,7 +14182,7 @@
                 <div>
                     <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 15px 0; color: #f2d803;">Subscribe to our
                         Newsletter</h4>
-                    <p style="font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 20px 0;">
+                    <p style="font-family: 'Geist', sans-serif; font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 20px 0;">
                         Expert-written articles, ebooks and everything else you need to choose the right career,
                         delivered weekly to your inbox.
                     </p>
@@ -13737,7 +14248,7 @@
                 <div>
                     <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 15px 0; color: #f2d803;">Stay Connected
                     </h4>
-                    <p style="font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 20px 0;">
+                    <p style="font-family: 'Geist', sans-serif; font-size: 14px; line-height: 1.6; color: #cccccc; margin: 0 0 20px 0;">
                         Stay updated with all things career - trends, inspiration and more.
                     </p>
                     <div style="display: flex; gap: 15px; margin-bottom: 30px;">
@@ -13774,23 +14285,23 @@
                 <!-- Contact Us -->
                 <div>
                     <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 15px 0; color: #f2d803;">Contact Us</h4>
-                    <div style="font-size: 14px; line-height: 1.6; color: #cccccc; margin-bottom: 15px;">
+                    <div style="font-family: 'Geist', sans-serif; font-size: 14px; line-height: 1.6; color: #cccccc; margin-bottom: 15px;">
                         Strong Enclave Building, Iskcon Rd, beside<br>
                         Himalayan English School, Ward 40, Siliguri,<br>
                         West Bengal
                     </div>
                     <div style="margin-bottom: 8px;">
-                        <span style="color: #cccccc; font-size: 14px;">✉️ info@dreamdesk.in</span>
+                        <span style="color: #cccccc; font-size: 14px; font-family: 'Geist', sans-serif;">✉️ info@dreamdesk.in</span>
                     </div>
                     <div>
-                        <span style="color: #cccccc; font-size: 14px;">📞 91 9093 9093 55</span>
+                        <span style="color: #cccccc; font-size: 14px; font-family: 'Geist', sans-serif;">📞 91 9093 9093 55</span>
                     </div>
                 </div>
             </div>
 
             <!-- Footer Bottom -->
             <div style="border-top: 1px solid #333; padding-top: 20px; text-align: center;">
-                <p style="margin: 0; font-size: 14px; color: #888;">
+                <p style="margin: 0; font-size: 14px; color: #888; font-family: 'Geist', sans-serif;">
                     © 2024 DreamDesk. All rights reserved.
                 </p>
             </div>
