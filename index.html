@@ -6165,9 +6165,6 @@
                                     hamburger.classList.toggle("active");
                                     console.log("Hamburger active:", hamburger.classList.contains("active")); // Debug
 
-                                    // Toggle menu button and logo colors ONLY when menu is fully visible
-                                    const logoImg = document.querySelector('#logo-wrap img');
-
                                     if (hamburger.classList.contains("active")) {
                                         // Menu is opening - wait for menu to be fully visible before changing colors
                                         // Total menu animation is ~1.1s, so wait 1.2s to be safe
@@ -6193,25 +6190,6 @@
 
                                             console.log("Classes and styles applied"); // Debug
                                         }, 1200); // Wait 1.2s for menu to be fully visible
-
-                                        // Change logo with fade effect after menu is visible
-                                        setTimeout(() => {
-                                            if (logoImg) {
-                                                gsap.to(logoImg, {
-                                                    opacity: 0,
-                                                    duration: 0.2,
-                                                    ease: "power2.inOut",
-                                                    onComplete: () => {
-                                                        logoImg.src = './logo_black.png';
-                                                        gsap.to(logoImg, {
-                                                            opacity: 1,
-                                                            duration: 0.2,
-                                                            ease: "power2.inOut"
-                                                        });
-                                                    }
-                                                });
-                                            }
-                                        }, 1200); // Same timing as menu button
 
                                     } else {
                                         // Menu is closing - restore original black styling immediately
@@ -6245,23 +6223,6 @@
                                                 line.style.removeProperty('background-color');
                                             });
                                         }, 100); // Small delay to ensure white styling is applied first
-
-                                        // Change logo back with fade effect
-                                        if (logoImg) {
-                                            gsap.to(logoImg, {
-                                                opacity: 0,
-                                                duration: 0.15,
-                                                ease: "power2.inOut",
-                                                onComplete: () => {
-                                                    logoImg.src = './LOGO 22-01.png';
-                                                    gsap.to(logoImg, {
-                                                        opacity: 1,
-                                                        duration: 0.15,
-                                                        ease: "power2.inOut"
-                                                    });
-                                                }
-                                            });
-                                        }
                                     }
 
                                     tl.reversed(!tl.reversed());
