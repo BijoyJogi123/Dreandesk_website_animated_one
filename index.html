@@ -462,10 +462,11 @@
             padding: 0;
             display: flex;
             position: absolute;
-            top: 54%;
-            left: 100px;
+            top: 58%;
+            left:100px;
+            /* bottom: 8%; */
+            /* right: 60px; */
             overflow: visible;
-            /* transform: translateY(-50%); */
             transform: rotate(-4deg);
         }
 
@@ -520,6 +521,9 @@
             .framer-1eiawcr {
                 padding-top: 70px;
             }
+            .framer-rqqsrm {
+                left: 80px;
+            }
         }
 
         @media (max-width: 1400px) {
@@ -566,7 +570,8 @@
             }
 
             .framer-rqqsrm {
-                left: 10%;
+                right: 50px;
+                bottom: 8%;
             }
 
             .framer-1ebgzuc h2 {
@@ -15434,13 +15439,17 @@
         // Get responsive font size based on window width
         function getResponsiveFontSize() {
             const width = window.innerWidth;
-            if (width <= 375) return 100;
-            if (width <= 480) return 120;
-            if (width <= 768) return 160;
-            if (width <= 1024) return 240;
-            if (width <= 1200) return 300;
-            if (width <= 1400) return 340;
-            return 440;
+            if (width <= 375) return 95;
+            if (width <= 480) return 115;
+            if (width <= 768) return 155;
+            if (width <= 1024) return 235;
+            if (width <= 1200) return 250;
+            if (width <= 1366) return 295;  // Common laptop size
+            if (width <= 1440) return 295;  // MacBook and 1400px screens
+            if (width <= 1536) return 330;  // HD+ laptops
+            if (width <= 1600) return 370;  // Larger laptops
+            if (width <= 1920) return 420;  // Full HD
+            return 460;  // 2K and above
         }
 
         // Get responsive stroke width
