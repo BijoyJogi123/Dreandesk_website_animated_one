@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Readiness Check - DreamDesk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f2d803;
+            border-bottom: 3px solid #f2d803;
+            padding-bottom: 10px;
+        }
+        .check-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .check-item.pass {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .check-item.fail {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+        .check-item.pending {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .icon {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .pass .icon { color: #28a745; }
+        .fail .icon { color: #dc3545; }
+        .pending .icon { color: #ffc107; }
+        button {
+            background: #f2d803;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #e6c200;
+        }
+        .summary {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #f2d803;
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #000;
+        }
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Production Readiness Check</h1>
+        <p>This tool verifies that your 404 error page setup is ready for production deployment.</p>
+        
+        <button onclick="runChecks()">Run All Checks</button>
+        <button onclick="location.reload()">Reset</button>
+        
+        <div id="results"></div>
+        
+        <div class="summary" id="summary" style="display: none;">
+            <h2>Summary</h2>
+            <p id="summary-text"></p>
+            <p id="next-steps"></p>
+        </div>
+    </div>
+
+    <script>
+        const checks = [
+            {
+                name: '404.html file exists',
+                test: () => fetch('./404.html').then(r => r.ok)
+            },
+            {
+                name: 'Logo file (LOGO 22-01.png) exists',
+                test: () => fetch('./LOGO 22-01.png').then(r => r.ok)
+            },
+            {
+                name: '.htaccess file exists',
+                test: () => fetch('./.htaccess').then(r => r.ok)
+            },
+            {
+                name: 'index.html exists',
+                test: () => fetch('./index.html').then(r => r.ok)
+            },
+            {
+                name: 'about_us.html exists',
+                test: () => fetch('./about_us.html').then(r => r.ok)
+            },
+            {
+                name: 'contact_us.html exists',
+                test: () => fetch('./contact_us.html').then(r => r.ok)
+            },
+            {
+                name: 'Career.html exists',
+                test: () => fetch('./Career.html').then(r => r.ok)
+            }
+        ];
+
+        async function runChecks() {
+            const resultsDiv = document.getElementById('results');
+            const summaryDiv = document.getElementById('summary');
+            const summaryText = document.getElementById('summary-text');
+            const nextSteps = document.getElementById('next-steps');
+            
+            resultsDiv.innerHTML = '<h2>Running checks...</h2>';
+            summaryDiv.style.display = 'none';
+            
+            let passed = 0;
+            let failed = 0;
+            let html = '<h2>Check Results:</h2>';
+            
+            for (const check of checks) {
+                try {
+                    const result = await check.test();
+                    if (result) {
+                        passed++;
+                        html += `
+                            <div class="check-item pass">
+                                <span class="icon">✓</span>
+                                <span>${check.name}</span>
+                            </div>
+                        `;
+                    } else {
+                        failed++;
+                        html += `
+                            <div class="check-item fail">
+                                <span class="icon">✗</span>
+                                <span>${check.name}</span>
+                            </div>
+                        `;
+                    }
+                } catch (error) {
+                    failed++;
+                    html += `
+                        <div class="check-item fail">
+                            <span class="icon">✗</span>
+                            <span>${check.name} - Error: ${error.message}</span>
+                        </div>
+                    `;
+                }
+            }
+            
+            resultsDiv.innerHTML = html;
+            
+            // Show summary
+            summaryDiv.style.display = 'block';
+            const total = passed + failed;
+            const percentage = Math.round((passed / total) * 100);
+            
+            if (percentage === 100) {
+                summaryText.innerHTML = `
+                    <strong style="color: #28a745;">✓ All checks passed! (${passed}/${total})</strong><br>
+                    Your website is ready for production deployment.
+                `;
+                nextSteps.innerHTML = `
+                    <strong>Next Steps:</strong><br>
+                    1. Review DEPLOYMENT-CHECKLIST.txt<br>
+                    2. Upload all files to your hosting<br>
+                    3. Test 404 page on live site<br>
+                    4. Refer to PRODUCTION-DEPLOYMENT-GUIDE.md if needed
+                `;
+            } else if (percentage >= 70) {
+                summaryText.innerHTML = `
+                    <strong style="color: #ffc107;">⚠ Most checks passed (${passed}/${total})</strong><br>
+                    Fix the failed items before deploying.
+                `;
+                nextSteps.innerHTML = `
+                    <strong>Action Required:</strong><br>
+                    1. Fix the failed checks above<br>
+                    2. Run checks again<br>
+                    3. Deploy when all checks pass
+                `;
+            } else {
+                summaryText.innerHTML = `
+                    <strong style="color: #dc3545;">✗ Multiple checks failed (${passed}/${total})</strong><br>
+                    Several required files are missing.
+                `;
+                nextSteps.innerHTML = `
+                    <strong>Action Required:</strong><br>
+                    1. Ensure all required files are in the correct location<br>
+                    2. Check file names match exactly (case-sensitive)<br>
+                    3. Run checks again<br>
+                    4. Do NOT deploy until all checks pass
+                `;
+            }
+        }
+
+        // Auto-run checks on page load
+        window.addEventListener('load', () => {
+            setTimeout(runChecks, 500);
+        });
+    </script>
+</body>
+</html>
