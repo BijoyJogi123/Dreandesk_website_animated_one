@@ -1355,6 +1355,7 @@
       position: absolute;
       top: 58px;
       right: 0;
+      left:40%;
       overflow: visible
     }
 
@@ -10629,7 +10630,7 @@
 
                     <h2 class="framer-text framer-styles-preset-19md8ao" style="word-spacing: 10px;"
                       data-styles-preset="a5EASynPI">
-                      Join people who believe your next big dream deserves the best
+                      Join people who believe your next big dream deserves the best <span id="rotating-career-word" class="rotating-career-word">Desk</span>
                     </h2>
 
                   </div>
@@ -12570,3 +12571,83 @@
 </body>
 
 </html>
+
+
+<!-- Rotating Text Animation for Career Page -->
+<style>
+.rotating-career-word {
+    display: inline-block;
+    position: relative;
+    color: #f2d803;
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+    border: 3px solid #f41414;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: rgba(244, 20, 20, 0.05);
+}
+
+.rotating-career-word.fade-out {
+    animation: fadeOutCareer 0.5s ease-in-out forwards;
+}
+
+.rotating-career-word.fade-in {
+    animation: fadeInCareer 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOutCareer {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeInCareer {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<script>
+// Rotating text animation for Career page
+(function() {
+    const words = ['Desk', 'Team', 'Shot'];
+    let currentIndex = 0;
+    const rotatingElement = document.getElementById('rotating-career-word');
+    
+    if (!rotatingElement) return;
+    
+    function rotateWord() {
+        // Fade out
+        rotatingElement.classList.add('fade-out');
+        
+        setTimeout(() => {
+            // Change word
+            currentIndex = (currentIndex + 1) % words.length;
+            rotatingElement.textContent = words[currentIndex];
+            
+            // Fade in
+            rotatingElement.classList.remove('fade-out');
+            rotatingElement.classList.add('fade-in');
+            
+            setTimeout(() => {
+                rotatingElement.classList.remove('fade-in');
+            }, 500);
+        }, 500);
+    }
+    
+    // Start rotation every 3 seconds
+    setInterval(rotateWord, 3000);
+})();
+</script>
