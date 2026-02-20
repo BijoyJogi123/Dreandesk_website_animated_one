@@ -2270,14 +2270,22 @@
             justify-content: flex-start;
             /* padding: 60px 80px; */
             background: #ffffff;
-            background-image: url('./Sections_svgs/Road_walking_girl.svg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
             position: relative;
             min-height: calc(100vh - 45px);
             height: 100%;
             width: 100%;
+            overflow: hidden;
+        }
+
+        /* Video Background for Desktop */
+        .career-video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
         }
 
         .career-left-section {
@@ -2302,14 +2310,14 @@
             display: none;
         }
 
-        /* Desktop - hide the image element, show background */
+        /* Desktop - hide the mobile video, show background video */
         @media (min-width: 769px) {
             .career-right-section {
                 display: none !important;
             }
 
-            .career-main-content {
-                background-image: url('./Sections_svgs/Road_walking_girl.svg') !important;
+            .career-video-background {
+                display: block;
             }
         }
 
@@ -2513,6 +2521,10 @@
                 background: #ffffff;
             }
 
+            .career-video-background {
+                display: none !important;
+            }
+
             .career-left-section {
                 flex: 1;
                 max-width: 90%;
@@ -2530,12 +2542,13 @@
                 padding: 20px;
             }
 
-            .career-mobile-image {
+            .career-mobile-video {
                 width: 100%;
                 max-width: 500px;
                 height: auto;
                 display: block;
                 margin: 0 auto;
+                object-fit: cover;
             }
 
             .career-main-title {
@@ -2596,7 +2609,7 @@
                 margin-top: 10px;
             }
 
-            .career-mobile-image {
+            .career-mobile-video {
                 max-width: 400px;
             }
 
@@ -2651,7 +2664,7 @@
                 background-image: none !important;
             }
 
-            .career-mobile-image {
+            .career-mobile-video {
                 max-width: 320px;
             }
 
@@ -13844,10 +13857,18 @@
 
                                         <!-- Main Career Content -->
                                         <div class="career-main-content">
-                                            <!-- Mobile Image Section (shows only on mobile) -->
+                                            <!-- Desktop Video Background -->
+                                            <video autoplay loop muted playsinline class="career-video-background">
+                                                <source src="./Sections_svgs/walking_student.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+
+                                            <!-- Mobile Video Section (shows only on mobile) -->
                                             <div class="career-right-section">
-                                                <img src="./Sections_svgs/Road_walking_girl.svg" alt="Career Journey"
-                                                    class="career-mobile-image">
+                                                <video autoplay loop muted playsinline class="career-mobile-video">
+                                                    <source src="./Sections_svgs/walking_student.mp4" type="video/mp4">
+                                                    Your browser does not support the video tag.
+                                                </video>
                                             </div>
 
                                             <div class="career-left-section">
