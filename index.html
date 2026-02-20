@@ -192,6 +192,234 @@
             color: #000;
         }
 
+        /* Popup Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: 0;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+            margin: auto;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #666;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            background: #f0f0f0;
+            color: #000;
+            transform: rotate(90deg);
+        }
+
+        .modal-content {
+            padding: 50px 40px 40px;
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .modal-subtitle {
+            font-family: 'Geist', sans-serif;
+            font-size: 15px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-family: 'Geist', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            font-family: 'Geist', sans-serif;
+            padding: 14px 16px;
+            border: 2px solid #000;
+            border-radius: 0;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #f2d803;
+            box-shadow: 0 0 0 3px rgba(242, 216, 3, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #000;
+            font-family: 'Geist', sans-serif;
+        }
+
+        .submit-btn {
+            font-family: 'Geist', sans-serif;
+            background: #000;
+            color: white;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #f2d803;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(242, 216, 3, 0.4);
+        }
+
+        /* Responsive Modal Styles */
+        @media (max-width: 768px) {
+            .modal-overlay {
+                padding: 15px;
+            }
+
+            .modal-container {
+                width: 95%;
+                max-width: none;
+            }
+
+            .modal-content {
+                padding: 45px 25px 30px;
+            }
+
+            .modal-title {
+                font-size: 26px;
+            }
+
+            .modal-subtitle {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .form-group {
+                gap: 8px;
+            }
+
+            .form-group input {
+                padding: 13px 15px;
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 40px 20px 25px;
+            }
+
+            .modal-title {
+                font-size: 24px;
+            }
+
+            .modal-subtitle {
+                font-size: 13px;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                font-size: 28px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .booking-form {
+                gap: 20px;
+            }
+        }
+
         /* Responsive Hero Buttons */
         @media (max-width: 1024px) {
             .hero-buttons-container {
@@ -4447,8 +4675,8 @@
         }
 
         .sound-icon-wrap {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -5346,13 +5574,13 @@
                                     <div class="menu-item-revealer"></div>
                                     <div class="submenu">
                                         <div class="submenu-item">
-                                            <a href="./For_youth.html">For Youth</a>
+                                            <a href="./For_education.html">For Youth</a>
                                         </div>
                                         <div class="submenu-item">
                                             <a href="./For_education.html">For Educational Institutions</a>
                                         </div>
                                         <div class="submenu-item">
-                                            <a href="./For_corporated.html">For Corporate</a>
+                                            <a href="./For_education.html">For Corporate</a>
                                         </div>
                                     </div>
                                 </div>
@@ -10251,9 +10479,116 @@
                                     <!-- Here is the button -->
 
                                     <div class="hero-buttons-container" style="margin-top:15px;">
-                                        <button class="hero-btn hero-btn-primary">Explore Career Options</button>
-                                        <button class="hero-btn hero-btn-secondary">Book a Free Session</button>
+                                       <a href="./contact_us.html"> <button class="hero-btn hero-btn-primary">Explore Career Options</button></a>
+                                      <button class="hero-btn hero-btn-secondary" id="bookSessionBtn">Book a Free Session</button>
                                     </div>
+
+                                    <!-- Popup Form Modal -->
+                                    <div id="bookingFormModal" class="modal-overlay">
+                                        <div class="modal-container">
+                                            <button class="modal-close" id="closeModal">&times;</button>
+                                            <div class="modal-content">
+                                                <h2 class="modal-title">Book Your Free Session</h2>
+                                                <p class="modal-subtitle">Fill in your details and we'll get back to you soon!</p>
+                                                
+                                                <form id="bookingForm" class="booking-form">
+                                                    <div class="form-group">
+                                                        <label for="studentName">Full Name *</label>
+                                                        <input type="text" id="studentName" name="name" placeholder="Enter your full name" required>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="studentEmail">Email Address *</label>
+                                                        <input type="email" id="studentEmail" name="email" placeholder="Enter your email" required>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="studentPhone">Phone Number *</label>
+                                                        <input type="tel" id="studentPhone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10,15}">
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="submit-btn">Submit Request</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Popup Form JavaScript -->
+                                    <script>
+                                        (function() {
+                                            // Get elements
+                                            const bookSessionBtn = document.getElementById('bookSessionBtn');
+                                            const modal = document.getElementById('bookingFormModal');
+                                            const closeModalBtn = document.getElementById('closeModal');
+                                            const bookingForm = document.getElementById('bookingForm');
+
+                                            // Open modal
+                                            if (bookSessionBtn) {
+                                                bookSessionBtn.addEventListener('click', function(e) {
+                                                    e.preventDefault();
+                                                    modal.classList.add('active');
+                                                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                                                });
+                                            }
+
+                                            // Close modal
+                                            function closeModal() {
+                                                modal.classList.remove('active');
+                                                document.body.style.overflow = ''; // Restore scrolling
+                                            }
+
+                                            if (closeModalBtn) {
+                                                closeModalBtn.addEventListener('click', closeModal);
+                                            }
+
+                                            // Close modal when clicking outside
+                                            modal.addEventListener('click', function(e) {
+                                                if (e.target === modal) {
+                                                    closeModal();
+                                                }
+                                            });
+
+                                            // Close modal on ESC key
+                                            document.addEventListener('keydown', function(e) {
+                                                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                                                    closeModal();
+                                                }
+                                            });
+
+                                            // Handle form submission
+                                            if (bookingForm) {
+                                                bookingForm.addEventListener('submit', function(e) {
+                                                    e.preventDefault();
+                                                    
+                                                    // Get form data
+                                                    const formData = {
+                                                        name: document.getElementById('studentName').value,
+                                                        email: document.getElementById('studentEmail').value,
+                                                        phone: document.getElementById('studentPhone').value
+                                                    };
+
+                                                    // Here you can add your form submission logic
+                                                    console.log('Form submitted:', formData);
+                                                    
+                                                    // Show success message
+                                                    alert('Thank you! We will contact you soon.');
+                                                    
+                                                    // Reset form and close modal
+                                                    bookingForm.reset();
+                                                    closeModal();
+                                                    
+                                                    // You can add AJAX call here to send data to your server
+                                                    // Example:
+                                                    // fetch('/api/booking', {
+                                                    //     method: 'POST',
+                                                    //     headers: { 'Content-Type': 'application/json' },
+                                                    //     body: JSON.stringify(formData)
+                                                    // }).then(response => response.json())
+                                                    //   .then(data => console.log(data));
+                                                });
+                                            }
+                                        })();
+                                    </script>
 
                                 </div>
 
@@ -10296,12 +10631,8 @@
                         <video src="Sections_svgs/DreamDesk.mp4" loop muted playsinline autoplay></video>
                     </div>
 
-
-
                 </div>
             </div>
-
-
 
 
             <!-- Scrolling News Stripe Section - Right after CAREER text -->
@@ -11022,13 +11353,27 @@
                                     font-size: 18px;
                                     font-weight: 500;
                                     width: fit-content;
-                                    transition: transform 0.2s;
+                                    transition: all 0.3s ease;
                                     /* margin-top:10px; */
                                     /* margin-bottom: 60px; */
+                                    position: relative;
+                                    animation: pulseGlow 2s ease-in-out infinite;
+                                }
+
+                                /* Pulsing glow animation for the button */
+                                @keyframes pulseGlow {
+                                    0%, 100% {
+                                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                                    }
+                                    50% {
+                                        box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
+                                    }
                                 }
 
                                 #one-tap-section .explore-btn:hover {
-                                    transform: translateX(4px);
+                                    transform: translateX(4px) scale(1.05);
+                                    animation: none;
+                                    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
                                 }
 
                                 #one-tap-section .explore-btn::after {
@@ -11044,6 +11389,37 @@
                                     align-items: center;
                                     justify-content: center;
                                     margin-left: 12px;
+                                    animation: bounceRotate 1.5s ease-in-out infinite;
+                                }
+
+                                /* Bouncing and rotating animation for the arrow circle */
+                                @keyframes bounceRotate {
+                                    0%, 100% {
+                                        transform: translateY(0) rotate(0deg) scale(1);
+                                    }
+                                    25% {
+                                        transform: translateY(-5px) rotate(-10deg) scale(1.1);
+                                    }
+                                    50% {
+                                        transform: translateY(0) rotate(0deg) scale(1);
+                                    }
+                                    75% {
+                                        transform: translateY(-3px) rotate(10deg) scale(1.05);
+                                    }
+                                }
+
+                                #one-tap-section .explore-btn:hover::after {
+                                    animation: spinContinuous 0.6s linear infinite;
+                                }
+
+                                /* Continuous spin on hover */
+                                @keyframes spinContinuous {
+                                    from {
+                                        transform: rotate(0deg);
+                                    }
+                                    to {
+                                        transform: rotate(360deg);
+                                    }
                                 }
 
                                 /* Top Right Card - Brain Visual (spans 2 rows) */
@@ -12921,169 +13297,39 @@
                                                     <div class="spinny-circle">
                                                         <!-- Student Image cards - B&W in carousel, Color on click -->
                                                         <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Priya Sharma" data-course="Computer Science"
+                                                            data-color-src="./Students_images/Ayush thapa.png"
+                                                            data-name="Ayush Thapa" data-course="Computer Science"
                                                             data-quote="This platform helped me discover my true passion for coding. The career guidance was exceptional!">
-                                                            <img src="./Students_images/16b_with_thambail.png"
+                                                            <img src="./Students_images/Ayush thapa.png"
                                                                 alt="Student 1">
                                                         </div>
                                                         <div class="spinny-item"
-                                                            data-color-src="./Students_images/2a.png"
-                                                            data-name="Rahul Verma" data-course="Engineering"
+                                                            data-color-src="./Students_images/Manisha gurung.png"
+                                                            data-name="Manisha Gurung" data-course="Engineering"
                                                             data-quote="I found the perfect engineering path thanks to the personalized recommendations.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
+                                                            <img src="./Students_images/Manisha gurung.png"
                                                                 alt="Student 2">
                                                         </div>
                                                         <div class="spinny-item"
-                                                            data-color-src="./Students_images/3a.png"
-                                                            data-name="Ananya Patel" data-course="Design"
+                                                            data-color-src="./Students_images/Roshni pradhan.png"
+                                                            data-name="Roshni Pradhan" data-course="Design"
                                                             data-quote="The creative career options opened up a whole new world for me. Absolutely life-changing!">
-                                                            <img src="./Students_images/16b_with_thambail.png"
+                                                            <img src="./Students_images/Roshni pradhan.png"
                                                                 alt="Student 3">
                                                         </div>
                                                         <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Vikram Singh" data-course="Business Management"
+                                                            data-color-src="./Students_images/Ahiliya Ekka & Sneha Minj.png"
+                                                            data-name="Ahiliya Ekka & Sneha Minj" data-course="Business Management"
                                                             data-quote="From confused to confident - this platform transformed my career outlook completely.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
+                                                            <img src="./Students_images/Ahiliya Ekka & Sneha Minj.png"
                                                                 alt="Student 4">
                                                         </div>
                                                         <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Sneha Reddy" data-course="Medicine"
+                                                            data-color-src="./Students_images/Aryan tamang.png"
+                                                            data-name="Aryan Tamang" data-course="Medicine"
                                                             data-quote="The guidance helped me realize my dream of becoming a doctor was achievable.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
+                                                            <img src="./Students_images/Aryan tamang.png"
                                                                 alt="Student 5">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Arjun Kumar" data-course="Aviation"
-                                                            data-quote="Flying high towards my dreams! The aviation career path was exactly what I needed.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 6">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Meera Joshi" data-course="Allied Health"
-                                                            data-quote="Healthcare was my calling, and this platform helped me find the right specialization.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 7">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Karthik Nair" data-course="Data Science"
-                                                            data-quote="The future is data, and I'm ready for it thanks to the amazing career mapping!">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 8">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Divya Menon" data-course="Architecture"
-                                                            data-quote="Building dreams into reality - the perfect career choice for my creative mind.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 9">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Aditya Gupta" data-course="Finance"
-                                                            data-quote="Numbers make sense now! The finance track was the best decision of my life.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 10">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Pooja Iyer" data-course="Psychology"
-                                                            data-quote="Understanding minds is my passion. This platform showed me the way.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 11">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Rohan Desai" data-course="Marketing"
-                                                            data-quote="Creative marketing strategies are my forte now. Thank you for the guidance!">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 12">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16b_with_thambail.png"
-                                                            data-name="Kavya Rao" data-course="Journalism"
-                                                            data-quote="Telling stories that matter - journalism was my hidden calling.">
-                                                            <img src="./Students_images/16b_with_thambail.png"
-                                                                alt="Student 13">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/14a.png"
-                                                            data-name="Sanjay Pillai" data-course="Law"
-                                                            data-quote="Justice and advocacy - the legal path was meant for me.">
-                                                            <img src="./Students_images/14b.png" alt="Student 14">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/15a.png"
-                                                            data-name="Nisha Kapoor" data-course="Nursing"
-                                                            data-quote="Caring for others is my purpose. Nursing is where I belong.">
-                                                            <img src="./Students_images/15b.png" alt="Student 15">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/16a.png"
-                                                            data-name="Amit Saxena" data-course="Mechanical Engineering"
-                                                            data-quote="Building machines that change the world - engineering excellence!">
-                                                            <img src="./Students_images/16b.png" alt="Student 16">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/18a.png"
-                                                            data-name="Lakshmi Venkat" data-course="Biotechnology"
-                                                            data-quote="Science meets innovation - biotech is the future I'm creating.">
-                                                            <img src="./Students_images/18b.png" alt="Student 18">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/19a.png"
-                                                            data-name="Harsh Malhotra" data-course="Film Making"
-                                                            data-quote="Lights, camera, action! My creative journey in cinema begins.">
-                                                            <img src="./Students_images/19b.png" alt="Student 19">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/20a.png"
-                                                            data-name="Ritu Agarwal" data-course="Environmental Science"
-                                                            data-quote="Saving the planet one step at a time - my green career path.">
-                                                            <img src="./Students_images/20b.png" alt="Student 20">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/21a.png"
-                                                            data-name="Varun Choudhary" data-course="Sports Management"
-                                                            data-quote="Passion for sports turned into a career. Dreams do come true!">
-                                                            <img src="./Students_images/21b.png" alt="Student 21">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./StudenCreating trends, not following them. Fashion is my canvas."
-                                                            ts_images/22a.png" data-name="Swati Bhatt"
-                                                            data-course="Fashion Design"
-                                                            data-quote="Creating trends, not following them. Fashion is my canvas.">
-                                                            <img src="./Students_images/22b.png" alt="Student 22">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/23a.png"
-                                                            data-name="Nikhil Sharma" data-course="Cyber Security"
-                                                            data-quote="Protecting the digital world - cyber security is my mission.">
-                                                            <img src="./Students_images/23b.png" alt="Student 23">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/24a.png"
-                                                            data-name="Anjali Mishra" data-course="Hotel Management"
-                                                            data-quote="Hospitality is an art, and I'm mastering it every day.">
-                                                            <img src="./Students_images/24b.png" alt="Student 24">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/25a.png"
-                                                            data-name="Deepak Jain"
-                                                            data-course="Artificial Intelligence"
-                                                            data-quote="AI is reshaping the world, and I'm part of that revolution.">
-                                                            <img src="./Students_images/25b.png" alt="Student 25">
-                                                        </div>
-                                                        <div class="spinny-item"
-                                                            data-color-src="./Students_images/26a.png"
-                                                            data-name="Tanvi Kulkarni" data-course="Pharmacy"
-                                                            data-quote="Healing through medicine - pharmacy is my path to helping others.">
-                                                            <img src="./Students_images/26b.png" alt="Student 26">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -13187,8 +13433,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Deepsika</h3>
-                                                                    <p class="counselor-role">Career Expert</p>
+                                                                     <h3 class="counselor-name">Academic Counselor</h3>
+                                                                    <!-- <p class="counselor-role">Career Expert</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13203,8 +13449,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Abhishek</h3>
-                                                                    <p class="counselor-role">College Advisor</p>
+                                                                    <h3 class="counselor-name">Financial Counselor</h3>
+                                                                    <!-- <p class="counselor-role">College Advisor</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13219,8 +13465,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Kalyani</h3>
-                                                                    <p class="counselor-role">Mentor</p>
+                                                                     <h3 class="counselor-name">Academic Counselor</h3>
+                                                                    <!-- <p class="counselor-role">Mentor</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13235,8 +13481,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Priyashree</h3>
-                                                                    <p class="counselor-role">Study Guide</p>
+                                                                     <h3 class="counselor-name">Academic Counselor</h3>
+                                                                    <!-- <p class="counselor-role">Study Guide</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13251,8 +13497,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Rishab</h3>
-                                                                    <p class="counselor-role">Career Expert</p>
+                                                                    <h3 class="counselor-name">Financial Counselor</h3>
+                                                                    <!-- <p class="counselor-role">Career Expert</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13266,8 +13512,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Rubi</h3>
-                                                                    <p class="counselor-role">College Advisor</p>
+                                                                    <h3 class="counselor-name">Academic Counselor</h3>
+                                                                    <!-- <p class="counselor-role">College Advisor</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13282,8 +13528,8 @@
                                                                 style="width: 100%; height: 100%; object-fit: cover; background-color:black; transition: transform 0.3s ease;">
                                                             <div class="counselor-overlay">
                                                                 <div class="counselor-info">
-                                                                    <h3 class="counselor-name">Satyaki</h3>
-                                                                    <p class="counselor-role">College Advisor</p>
+                                                                    <h3 class="counselor-name">Financial Counselor</h3>
+                                                                    <!-- <p class="counselor-role">College Advisor</p> -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -13616,8 +13862,8 @@
                                                         and skills to <span style="font-weight:600">start your career
                                                             journey</span> strong.</p>
                                                 </h1>
-                                                <!-- <button class="career-cta-btn">Click to start you
-                                                        journey</button> -->
+                                                <button style="font-family: 'Geist', sans-serif;" class="career-cta-btn">Click to start you
+                                                        journey</button>
                                             </div>
                                         </div>
 

@@ -2113,7 +2113,8 @@
       .framer-j54un .framer-1urwlxv-container,
       .framer-j54un .framer-1tqr79m-container {
         width: 100%;
-        height: auto
+        height: auto;
+        display: none !important;
       }
 
       .framer-j54un .framer-p0elwd {
@@ -2252,7 +2253,8 @@
       .framer-j54un .framer-1urwlxv-container,
       .framer-j54un .framer-1tqr79m-container {
         width: 100%;
-        height: auto
+        height: auto;
+        display: none !important;
       }
 
       .framer-j54un .framer-p0elwd {
@@ -7117,6 +7119,13 @@
         transform: rotate(-45deg) translateY(-5px) !important;
       }
     }
+
+    /* Hide newsletter section on mobile devices */
+    @media (max-width: 768px) {
+      .framer-1urwlxv-container {
+        display: none !important;
+      }
+    }
   </style>
 
 </head>
@@ -7823,7 +7832,7 @@
                     Address:</p>
                 </div>
                 <div class="framer-1fbm35u" data-framer-component-type="RichTextContainer" style="transform: none;">
-                  <h3 class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn"><a
+                  <h3 style="text-align: justify; " class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn"><a
                       class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
                       href="https://maps.app.goo.gl/BshptZEXsHipQLHm8" target="_blank"
                       rel="noopener">Strong&nbsp;Enclave&nbsp;Building,&nbsp;Iskcon&nbsp;Rd,&nbsp;Beside&nbsp;Himalayan&nbsp;English&nbsp;School,&nbsp;Ward&nbsp;40,&nbsp;Siliguri,&nbsp;West&nbsp;Bengal
@@ -9320,13 +9329,13 @@
                                         <div class="menu-item-revealer"></div>
                                         <div class="submenu">
                                             <div class="submenu-item">
-                                                <a href="./For_youth.html">For Youth</a>
+                                                <a href="./For_education.html">For Youth</a>
                                             </div>
                                             <div class="submenu-item">
                                                 <a href="./For_education.html">For Educational Institutions</a>
                                             </div>
                                             <div class="submenu-item">
-                                                <a href="./For_corporated.html">For Corporate</a>
+                                                <a href="./For_education.html">For Corporate</a>
                                             </div>
                                         </div>
                                     </div>

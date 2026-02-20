@@ -1355,7 +1355,7 @@
       position: absolute;
       top: 58px;
       right: 0;
-      left:40%;
+      left: 40%;
       overflow: visible
     }
 
@@ -8132,7 +8132,7 @@
       width: min-content;
       height: 989px;
       /* padding: 0 0 0 160px; */
-       padding: 0 0 0 0px;
+      padding: 0 0 0 0px;
       display: flex;
       position: relative;
       overflow: hidden
@@ -8396,6 +8396,8 @@
       position: relative;
     }
 
+
+
     /* Footer Responsive Styles */
     @media (max-width: 810px) {
       .framer-YvH6K.framer-6kbkm {
@@ -8496,6 +8498,10 @@
     }
 
     @media (max-width: 480px) {
+      .framer-1tqr79m-container {
+        width: 100% !important;
+      }
+
       .framer-YvH6K .framer-1t9pgou {
         padding: 32px 16px !important;
       }
@@ -8527,11 +8533,10 @@
       }
     }
 
-    .framer-YvH6K.framer-v-126vpaf.fr
-      flex-direction: column;
-      width: 375px;
-      height: min-content;
-      padding: 0
+    .framer-YvH6K.framer-v-126vpaf.fr flex-direction: column;
+    width: 375px;
+    height: min-content;
+    padding: 0
     }
 
     .framer-YvH6K.framer-v-126vpaf .framer-1t9pgou {
@@ -10274,6 +10279,56 @@
       }
     }
 
+    /* Social Media Icons Styling */
+    .career-social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+      justify-content: flex-start;
+    }
+
+    .social-icon-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icon-link:hover {
+      background-color: #f2d803;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(242, 216, 3, 0.4);
+    }
+
+    .social-icon-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .career-social-icons {
+        justify-content: flex-start;
+        margin-top: 20px;
+      }
+
+      .social-icon-link {
+        width: 36px;
+        height: 36px;
+      }
+
+      .social-icon-link svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
     @media (max-width: 768px) {
       .navigation.w-nav {
         top: 32px !important;
@@ -10630,7 +10685,8 @@
 
                     <h2 class="framer-text framer-styles-preset-19md8ao" style="word-spacing: 10px;"
                       data-styles-preset="a5EASynPI">
-                      Join people who believe your next big dream deserves the best <span id="rotating-career-word" class="rotating-career-word">Desk</span>
+                      Join people who believe your next big dream deserves the best<span id="rotating-career-word"
+                        class="rotating-career-word">Desk</span>
                     </h2>
 
                   </div>
@@ -11035,7 +11091,7 @@
                   <h2 class="framer-text framer-styles-preset-1cinv1t" data-styles-preset="hlzaXNfgP">Our</h2>
                 </div>
                 <div class="framer-1e4fpb7" style="transform: none;" data-framer-component-type="RichTextContainer">
-                  <h1 class="framer-text framer-styles-preset-1cinv1t" data-styles-preset="hlzaXNfgP">Projects</h1>
+                  <h1 class="framer-text framer-styles-preset-1cinv1t" data-styles-preset="hlzaXNfgP">Workhive</h1>
                 </div>
               </div>
             </div>
@@ -11070,6 +11126,35 @@
                           employee-focused workplace.
                           We foster a culture rooted in respect, openness, and collaboration.
                           Every individual is empowered to grow, belong, and build a meaningful long-term career.</p>
+                      </div>
+                      
+                      <!-- Social Media Icons -->
+                      <div class="career-social-icons" style="display: flex; gap: 15px; margin-top: 25px; justify-content: flex-start;">
+                        <a href="https://www.facebook.com/dreamdesk" target="_blank" rel="noopener" class="social-icon-link" title="Facebook">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                          </svg>
+                        </a>
+                        <a href="https://www.instagram.com/dreamdesk" target="_blank" rel="noopener" class="social-icon-link" title="Instagram">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                          </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreamdesk" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                        </a>
+                        <a href="https://twitter.com/dreamdesk" target="_blank" rel="noopener" class="social-icon-link" title="Twitter">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                          </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@dreamdesk" target="_blank" rel="noopener" class="social-icon-link" title="YouTube">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                          </svg>
+                        </a>
                       </div>
                     </div>
                   </div><!--$--><!--/$-->
@@ -11132,8 +11217,8 @@
                     </div> -->
                     <div class="framer-yh7v6h" data-framer-name="Text Container">
                       <div class="framer-1vpyq3q" style="transform:none" data-framer-component-type="RichTextContainer">
-                        <h2 class="framer-text framer-styles-preset-19md8ao" data-styles-preset="a5EASynPI">Inclusive.
-                          Supportive. Human</h2>
+                        <h2 class="framer-text framer-styles-preset-19md8ao" data-styles-preset="a5EASynPI">
+                          Support Without Barriers</h2>
                       </div>
                       <div class="framer-1nhqt3x" style="transform:none" data-framer-component-type="RichTextContainer">
                         <p style="text-align: justify;" class="framer-text framer-styles-preset-l27xre">From day one,
@@ -11218,7 +11303,7 @@
                       </div>
                     </div>
                   </div><!--$--><!--/$-->
-                  <div class="ssr-variant hidden-a1qw1e hidden-1qkvzkg">       
+                  <div class="ssr-variant hidden-a1qw1e hidden-1qkvzkg">
                     <!-- <div class="framer-191x3y5-container"><a
                         class="framer-8azpp framer-mqS22 framer-qap07s framer-v-qap07s framer-okb0bz"
                         data-framer-cursor="vuwtv9" data-framer-name="Desktop" data-highlight="true"
@@ -11505,100 +11590,115 @@
             <div class="framer-lu15q6-container"><!--$--><img src="./carear_section/Background_career.jpeg"
                 alt="Principles"
                 style="cursor:auto;width:100%;height:100%;border-radius:0px;display:block;object-fit:contain;background-color:#000000;object-position:50% 50%"><!--/$-->
-            
-              </div>
+
+            </div>
 
           </div>
 
           <!-- Footer Section -->
-          <div class="framer-1tqr79m-container" style="width: 100vw; position: relative;">
-            <footer class="framer-YvH6K framer-mqS22 framer-PFpUy framer-mcouO framer-220Gr framer-HHmnN framer-6kbkm framer-v-6kbkm"
-              data-framer-name="Desktop"
-              style="background-color: rgb(255, 255, 255); opacity: 1; height: 100%;">
+          <div class="framer-1tqr79m-container" style="width: 100vh; position: relative;">
+            <footer
+              class="framer-YvH6K framer-mqS22 framer-PFpUy framer-mcouO framer-220Gr framer-HHmnN framer-6kbkm framer-v-6kbkm"
+              data-framer-name="Desktop" style="background-color: rgb(255, 255, 255); opacity: 1; height: 100%;">
               <div class="framer-1t9pgou" data-framer-name="Contact Info"
                 style="background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(237, 237, 237) 100%); opacity: 1;">
                 <div class="framer-fsojxs" data-framer-name="Container" style="opacity: 1;">
                   <div class="framer-1yekuf3" data-framer-name="Phone and Email" style="opacity: 1;">
                     <div class="framer-1b50o8z" data-framer-name="Email" style="opacity: 1;">
-                      <div class="framer-1sh6zh2" data-framer-component-type="RichTextContainer" style="opacity: 1; display: block;">
+                      <div class="framer-1sh6zh2" data-framer-component-type="RichTextContainer"
+                        style="opacity: 1; display: block;">
                         <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
                           style="color: rgb(85, 85, 85); font-size: 16px; margin-bottom: 8px;">Email:</p>
                       </div>
                       <div class="framer-1aft5g8" style="opacity: 1;">
                         <div class="framer-1b9mp1a" data-framer-component-type="RichTextContainer" style="opacity: 1;">
-                          <h3 class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn" style="font-size: 20px;"></h3>
-                            <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
-                              href="mailto:info@dreamdesk.in" target="_blank" rel="noopener" style="color: #000; text-decoration: none;">info@dreamdesk.in</a>
+                          <h3 class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn"
+                            style="font-size: 20px;"></h3>
+                          <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
+                            href="mailto:info@dreamdesk.in" target="_blank" rel="noopener"
+                            style="color: #000; text-decoration: none;">info@dreamdesk.in</a>
                           </h3>
                         </div>
                       </div>
                     </div>
                     <div class="framer-jpsgw2" data-framer-name="Phone" style="opacity: 1; margin-top: 24px;">
-                      <div class="framer-1nsljb6" data-framer-component-type="RichTextContainer" style="opacity: 1; display: block;">
+                      <div class="framer-1nsljb6" data-framer-component-type="RichTextContainer"
+                        style="opacity: 1; display: block;">
                         <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
                           style="color: rgb(85, 85, 85); font-size: 16px; margin-bottom: 8px;">Phone:</p>
                       </div>
                       <div class="framer-13uv1rn" data-framer-component-type="RichTextContainer" style="opacity: 1;">
-                        <h3 class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn" style="font-size: 20px; white-space: nowrap;">
+                        <h3 class="framer-text framer-styles-preset-1xqhpog" data-styles-preset="X2kf37Gtn"
+                          style="font-size: 20px; white-space: nowrap;">
                           <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
-                            href="tel:+919093909355" target="_blank" rel="noopener" style="color: #000; text-decoration: none; white-space: nowrap;">+91 9093 9093 55</a>
+                            href="tel:+919093909355" target="_blank" rel="noopener"
+                            style="color: #000; text-decoration: none; white-space: nowrap;">+91 9093 9093 55</a>
                         </h3>
                       </div>
                     </div>
                   </div>
                   <div class="framer-hroadi" data-framer-name="Container" style="opacity: 1; margin-top: 32px;"></div>
-                    <div class="framer-1bznlxo" data-framer-component-type="RichTextContainer" style="opacity: 1;">
-                      <div class="framer-d5tdsq" data-framer-component-type="RichTextContainer" style="margin-bottom: 16px;">
-                        <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
-                          style="margin-right: 0; color: rgb(85, 85, 85); font-size: 16px; font-weight: 500;">Other offices:</p>
-                      </div>
+                  <div class="framer-1bznlxo" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                    <div class="framer-d5tdsq" data-framer-component-type="RichTextContainer"
+                      style="margin-bottom: 16px;">
                       <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
-                        style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">Dreamdesk Delhi : Ground floor, D- 15 22, near variation, Sector 3, Sector 3D, Rohini, New Delhi, Delhi, 110085</p>
-                      <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
-                        style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">DreamDesk Bangalore : 367, 1st Cross Rd, behind Pytotron Resharce Center, Agrahara Badavane, Thirumenahalli, Bengaluru, Karnataka 560064</p>
-                      <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
-                        style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">B-55 Saheed Nagar, Bhubaneswar, Odisha, 751007.</p>
+                        style="margin-right: 0; color: rgb(85, 85, 85); font-size: 16px; font-weight: 500;">Other
+                        offices:</p>
                     </div>
-                    <div class="framer-enbo98" data-framer-name="Links" style="opacity: 1; margin-top: 24px;">
-                      <div class="framer-tyfzlw" data-framer-component-type="RichTextContainer" style="opacity: 1; margin-bottom: 12px;">
-                        <p class="framer-text framer-styles-preset-1cpyfq7" data-styles-preset="MRO_lYT3k"
-                          style="color: rgb(0, 0, 0); font-size: 14px;">
-                          <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
-                            href="#" style="color: #000; text-decoration: underline;">Privacy Policy</a>
-                        </p>
-                      </div>
-                      <div class="framer-124cqnk" data-framer-component-type="RichTextContainer" style="opacity: 1;">
-                        <p class="framer-text framer-styles-preset-1cpyfq7" data-styles-preset="MRO_lYT3k"
-                          style="color: rgb(0, 0, 0); font-size: 14px;">
-                          <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB"
-                            href="#" style="color: #000; text-decoration: underline;">Terms of Service</a>
-                        </p>
-                      </div>
+                    <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
+                      style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">Dreamdesk Delhi :
+                      Ground floor, D- 15 22, near variation, Sector 3, Sector 3D, Rohini, New Delhi, Delhi, 110085</p>
+                    <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
+                      style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">DreamDesk Bangalore
+                      : 367, 1st Cross Rd, behind Pytotron Resharce Center, Agrahara Badavane, Thirumenahalli,
+                      Bengaluru, Karnataka 560064</p>
+                    <p class="framer-text framer-styles-preset-l27xre" data-styles-preset="pobGLBR7U"
+                      style="color:#000000; font-size:15px; line-height: 1.6; margin-bottom: 12px;">B-55 Saheed Nagar,
+                      Bhubaneswar, Odisha, 751007.</p>
+                  </div>
+                  <div class="framer-enbo98" data-framer-name="Links" style="opacity: 1; margin-top: 24px;">
+                    <div class="framer-tyfzlw" data-framer-component-type="RichTextContainer"
+                      style="opacity: 1; margin-bottom: 12px;">
+                      <p class="framer-text framer-styles-preset-1cpyfq7" data-styles-preset="MRO_lYT3k"
+                        style="color: rgb(0, 0, 0); font-size: 14px;">
+                        <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB" href="#"
+                          style="color: #000; text-decoration: underline;">Privacy Policy</a>
+                      </p>
+                    </div>
+                    <div class="framer-124cqnk" data-framer-component-type="RichTextContainer" style="opacity: 1;">
+                      <p class="framer-text framer-styles-preset-1cpyfq7" data-styles-preset="MRO_lYT3k"
+                        style="color: rgb(0, 0, 0); font-size: 14px;">
+                        <a class="framer-text framer-styles-preset-kvwc0q" data-styles-preset="DujmytgHB" href="#"
+                          style="color: #000; text-decoration: underline;">Terms of Service</a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+
             </footer>
           </div>
-          <!-- End Footer Section -->
 
-
-          <!-- Here is should be the service section -->
-
-
-          <div class="framer-1m45xna-container hidden-1qkvzkg hidden-a1qw1e">
-            <link href="./Firma_files/lenis.css" rel="stylesheet">
-          </div>
         </div>
-        <div id="overlay"></div>
-        <div class="framer-6wokqv"></div>
-        <div class="ssr-variant hidden-121iadi hidden-zrt4nr">
+        <!-- End Footer Section -->
 
 
-          <!-- NAVBAR FLAG -->
+        <!-- Here is should be the service section -->
 
-          <!-- Yellow Top Stripe -->
-          <!-- <div class="top-yellow-stripe">
+
+        <div class="framer-1m45xna-container hidden-1qkvzkg hidden-a1qw1e">
+          <link href="./Firma_files/lenis.css" rel="stylesheet">
+        </div>
+      </div>
+      <div id="overlay"></div>
+      <div class="framer-6wokqv"></div>
+      <div class="ssr-variant hidden-121iadi hidden-zrt4nr">
+
+
+        <!-- NAVBAR FLAG -->
+
+        <!-- Yellow Top Stripe -->
+        <!-- <div class="top-yellow-stripe">
             <div class="stripe-left">
               Let's Catchup! Call Us - 91 9093 9093 56
             </div>
@@ -11633,93 +11733,93 @@
           </div> -->
 
 
-          <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
-            data-easing2="ease" role="banner" class="navigation w-nav">
-            <div class="nav-header">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+          role="banner" class="navigation w-nav">
+          <div class="nav-header">
 
-              <!-- Menu Button -->
-              <div id="toggle-btn" class="btn">
-                <span class="menu-text">menu</span>
-                <div id="hamburger">
-                  <span class="line line-1"></span>
-                  <span class="line line-2"></span>
-                </div>
+            <!-- Menu Button -->
+            <div id="toggle-btn" class="btn">
+              <span class="menu-text">menu</span>
+              <div id="hamburger">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
               </div>
+            </div>
 
 
-              <div class="nav-panels">
-                <div class="nav-panel">
-                  <div class="nav-logo">
-                    <div class="logo-wrappers">
-                      <div class="logo-sections-wrap">
-                        <a href="index.html" class="sound_click w-inline-block">
-                          <div id="logo-wrap" class="logo-text-sections">
-                            <img style="width: 200px; height: auto;" src="./logo_black.png" alt="Logo" />
-                          </div>
-                        </a>
-                      </div>
+            <div class="nav-panels">
+              <div class="nav-panel">
+                <div class="nav-logo">
+                  <div class="logo-wrappers">
+                    <div class="logo-sections-wrap">
+                      <a href="index.html" class="sound_click w-inline-block">
+                        <div id="logo-wrap" class="logo-text-sections">
+                          <img style="width: 200px; height: auto;" src="./logo_black.png" alt="Logo" />
+                        </div>
+                      </a>
                     </div>
                   </div>
+                </div>
 
-                  <!-- Full Screen Menu -->
-                  <div class="menu"
-                    style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
-                    <div class="primary-menu">
-                      <div class="menu-container">
-                        <div class="wrapper">
-                          <div class="menu-item" data-submenu="none">
-                            <a href="index.html"><span>01</span>Home</a>
-                          </div>
-                          <div class="menu-item" data-submenu="none">
-                            <a href="./about_us.html"><span>02</span>About</a>
-                          </div>
-                          <div class="menu-item has-submenu" data-submenu="services">
-                            <a href="#" class="services-toggle"><span>+</span>Services <span
-                                class="submenu-arrow">03</span></a>
-                            <div class="submenu">
-                              <div class="submenu-item">
-                                <a href="./For_youth.html">For Youth</a>
-                              </div>
-                              <div class="submenu-item">
-                                <a href="./For_education.html">For Educational Institutions</a>
-                              </div>
-                              <div class="submenu-item">
-                                <a href="./For_corporated.html">For Corporate</a>
-                              </div>
+                <!-- Full Screen Menu -->
+                <div class="menu"
+                  style="background: url('./Sections_svgs/background_of_navmenu.png') center bottom/100% auto no-repeat;">
+                  <div class="primary-menu">
+                    <div class="menu-container">
+                      <div class="wrapper">
+                        <div class="menu-item" data-submenu="none">
+                          <a href="index.html"><span>01</span>Home</a>
+                        </div>
+                        <div class="menu-item" data-submenu="none">
+                          <a href="./about_us.html"><span>02</span>About</a>
+                        </div>
+                        <div class="menu-item has-submenu" data-submenu="services">
+                          <a href="#" class="services-toggle"><span>+</span>Services <span
+                              class="submenu-arrow">03</span></a>
+                          <div class="submenu">
+                            <div class="submenu-item">
+                              <a href="./For_education.html">For Youth</a>
+                            </div>
+                            <div class="submenu-item">
+                              <a href="./For_education.html">For Educational Institutions</a>
+                            </div>
+                            <div class="submenu-item">
+                              <a href="./For_education.html">For Corporate</a>
                             </div>
                           </div>
-                          <div class="menu-item" data-submenu="none">
-                            <a href="./initiative.html"><span>04</span>Initiative</a>
-                          </div>
-                          <div class="menu-item" data-submenu="none">
-                            <a href="#"><span>05</span>Blogs</a>
-                          </div>
-                          <div class="menu-item" data-submenu="none">
-                            <a href="./Career.html"><span>06</span>Careers</a>
-                          </div>
-                          <div class="menu-item" data-submenu="none">
-                            <a href="./contact_us.html"><span>07</span>Contact</a>
-                          </div>
+                        </div>
+                        <div class="menu-item" data-submenu="none">
+                          <a href="./initiative.html"><span>04</span>Initiative</a>
+                        </div>
+                        <div class="menu-item" data-submenu="none">
+                          <a href="#"><span>05</span>Blogs</a>
+                        </div>
+                        <div class="menu-item" data-submenu="none">
+                          <a href="./Career.html"><span>06</span>Careers</a>
+                        </div>
+                        <div class="menu-item" data-submenu="none">
+                          <a href="./contact_us.html"><span>07</span>Contact</a>
                         </div>
                       </div>
                     </div>
                   </div>
-
-
-
                 </div>
+
+
+
               </div>
             </div>
           </div>
+        </div>
 
 
+      </div>
+      <div class="framer-1hvz8uk-container hidden-zrt4nr hidden-121iadi">
+        <div
+          style="position: fixed; bottom: 0px; left: 0px; height: 8px; background-color: var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0)); opacity: 1; z-index: 9; pointer-events: none; width: 1.23598%;">
         </div>
-        <div class="framer-1hvz8uk-container hidden-zrt4nr hidden-121iadi">
-          <div
-            style="position: fixed; bottom: 0px; left: 0px; height: 8px; background-color: var(--token-a52a650f-fdc2-43f9-93f7-15f9ca573529, rgb(0, 0, 0)); opacity: 1; z-index: 9; pointer-events: none; width: 1.23598%;">
-          </div>
-        </div>
-        <!-- <div class="framer-e6kwu9-container hidden-zrt4nr hidden-121iadi" data-framer-appear-id="e6kwu9"
+      </div>
+      <!-- <div class="framer-e6kwu9-container hidden-zrt4nr hidden-121iadi" data-framer-appear-id="e6kwu9"
           style="opacity: 1; transform: none; will-change: transform;">
           <div class="framer-dCEup framer-1bygqlm framer-v-1bygqlm" data-framer-name="On"
             style="background-color: rgba(0, 0, 0, 0.04); height: 100%; width: 100%; border-radius: 10px; opacity: 1;">
@@ -11755,559 +11855,559 @@
           </div>
         </div> -->
 
+    </div>
+    <div id="template-overlay"></div><!--/$-->
+
+  </div>
+  <script>(() => { function u() { function n(t, e, i) { let r = document.createElement("a"); r.href = t, r.target = i, r.rel = e, document.body.appendChild(r), r.click(), r.remove() } function o(t) { if (this.dataset.hydrated) { this.removeEventListener("click", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; if (/Mac|iPod|iPhone|iPad/u.test(navigator.userAgent) ? t.metaKey : t.ctrlKey) return n(e, "", "_blank"); let r = this.getAttribute("rel") ?? "", c = this.getAttribute("target") ?? ""; n(e, r, c) } function a(t) { if (this.dataset.hydrated) { this.removeEventListener("auxclick", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); e && n(e, "", "_blank") } function s(t) { if (this.dataset.hydrated) { this.removeEventListener("keydown", s); return } if (t.key !== "Enter") return; t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; let i = this.getAttribute("rel") ?? "", r = this.getAttribute("target") ?? ""; n(e, i, r) } document.querySelectorAll("[data-nested-link]").forEach(t => { t instanceof HTMLElement && (t.addEventListener("click", o), t.addEventListener("auxclick", a), t.addEventListener("keydown", s)) }) } return u })()()</script>
+  <script>(() => { function i() { for (let e of document.querySelectorAll("[data-framer-original-sizes]")) { let t = e.getAttribute("data-framer-original-sizes"); t === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", t), e.removeAttribute("data-framer-original-sizes") } } function a() { window.__framer_onRewriteBreakpoints = i } return a })()()</script>
+  <script>!function () {
+      var l = "framer_variant"; function u(a, r) { let n = r.indexOf("#"), e = n === -1 ? r : r.substring(0, n), o = n === -1 ? "" : r.substring(n), t = e.indexOf("?"), m = t === -1 ? e : e.substring(0, t), d = t === -1 ? "" : e.substring(t), s = new URLSearchParams(d), h = new URLSearchParams(a); for (let [i, g] of h) s.has(i) || i !== l && s.append(i, g); let c = s.toString(); return c === "" ? e + o : m + "?" + c + o } var w = 'div#main a[href^="#"],div#main a[href^="/"],div#main a[href^="."]', f = "div#main a[data-framer-preserve-params]", p = document.currentScript?.hasAttribute("data-preserve-internal-params"); if (window.location.search && !navigator.webdriver && !/bot|-google|google-|yandex|ia_archiver|crawl|spider/iu.test(navigator.userAgent)) { let a = document.querySelectorAll(p ? `${w},${f}` : f); for (let r of a) { let n = u(window.location.search, r.href); r.setAttribute("href", n) } }
+    }()</script>
+
+  <div id="__framer-badge-container"><!--$--><!--$--><!--$--><a
+      class="framer-6jWyo framer-n0ccwk framer-v-n0ccwk framer-bmpgw8 __framer-badge" data-framer-appear-id="n0ccwk"
+      data-framer-name="Light" data-nosnippet="true"
+      style="will-change: transform; pointer-events: auto; opacity: 1; transform: none;" href="https://www.framer.com/"
+      rel="noopener"
+      title="Create a free website with Framer, the website builder loved by startups, designers and agencies.">
+      <div class="framer-13yxzio" data-framer-name="Backdrop"
+        style="background-color: rgb(255, 255, 255); border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.17) 0px 0.602187px 1.56569px -1.5px, rgba(0, 0, 0, 0.14) 0px 2.28853px 5.95019px -3px, rgba(0, 0, 0, 0.02) 0px 10px 26px -4.5px; opacity: 1;">
       </div>
-      <div id="template-overlay"></div><!--/$-->
+      <div class="framer-19yaanm" data-framer-name="Content" style="transform: translate(-50%, -50%); opacity: 1;">
+        <div class="framer-1kflzx5" style="opacity: 1;">
+          <div data-framer-name="Logo" class="framer-hcsc7 framer-e50co"
+            style="--1bd4d3i: rgb(0, 0, 0); --otdjsv: rgb(0, 0, 0); transform: translateX(-50%); opacity: 1;"></div>
+        </div><!--$-->
+        <p style="position:absolute;transform:scale(0.001)">Create a free website with Framer, the website builder
+          loved
+          by startups, designers and agencies.</p>
+        <div data-framer-name="Text" class="framer-g7oZR framer-1um7t9d"
+          style="--1bd4d3i: rgb(0, 0, 0); --otdjsv: rgb(0, 0, 0); opacity: 1;"></div><!--/$-->
+      </div>
+      <div class="framer-j4ugry" data-framer-name="Bottom"
+        style="mask:linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%) add;-webkit-mask:linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%) add;border-bottom-left-radius:11px;border-bottom-right-radius:11px;border-top-left-radius:11px;border-top-right-radius:11px;box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);opacity:0.06">
+      </div>
+      <div class="framer-jnuwbw" data-framer-name="Border"
+        style="border-bottom-left-radius:11px;border-bottom-right-radius:11px;border-top-left-radius:11px;border-top-right-radius:11px;box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);opacity:0.04">
+      </div>
+    </a><!--/$--><!--/$--><!--/$--></div>
+  <script>var animator = (() => { var O = (e, r, t) => t > r ? r : t < e ? e : t; var j = () => { }; function W(e) { let r; return () => (r === void 0 && (r = e()), r) } var q = e => e; var V = e => e * 1e3, D = e => e / 1e3; function X(e, r) { return r ? e * (1e3 / r) : 0 } var Y = e => Array.isArray(e) && typeof e[0] == "number"; var H = { value: null, addProjectionMetrics: null }; var Z = { layout: 0, mainThread: 0, waapi: 0 }; var L = (e, r, t = 10) => { let o = "", s = Math.max(Math.round(r / t), 2); for (let n = 0; n < s; n++)o += Math.round(e(n / (s - 1)) * 1e4) / 1e4 + ", "; return `linear(${o.substring(0, o.length - 2)})` }; function R(e) { let r = 0, t = 50, o = e.next(r); for (; !o.done && r < 2e4;)r += t, o = e.next(r); return r >= 2e4 ? 1 / 0 : r } function fe(e, r = 100, t) { let o = t({ ...e, keyframes: [0, r] }), s = Math.min(R(o), 2e4); return { type: "keyframes", ease: n => o.next(s * n).value / r, duration: D(s) } } var Ee = 5; function ce(e, r, t) { let o = Math.max(r - Ee, 0); return X(t - e(o), r - o) } var u = { stiffness: 100, damping: 10, mass: 1, velocity: 0, duration: 800, bounce: .3, visualDuration: .3, restSpeed: { granular: .01, default: 2 }, restDelta: { granular: .005, default: .5 }, minDuration: .01, maxDuration: 10, minDamping: .05, maxDamping: 1 }; var _ = .001; function le({ duration: e = u.duration, bounce: r = u.bounce, velocity: t = u.velocity, mass: o = u.mass }) { let s, n; j(e <= V(u.maxDuration), "Spring duration must be 10 seconds or less", "spring-duration-limit"); let i = 1 - r; i = O(u.minDamping, u.maxDamping, i), e = O(u.minDuration, u.maxDuration, D(e)), i < 1 ? (s = m => { let p = m * i, c = p * e, l = p - t, x = z(m, i), g = Math.exp(-c); return _ - l / x * g }, n = m => { let c = m * i * e, l = c * t + t, x = Math.pow(i, 2) * Math.pow(m, 2) * e, g = Math.exp(-c), y = z(Math.pow(m, 2), i); return (-s(m) + _ > 0 ? -1 : 1) * ((l - x) * g) / y }) : (s = m => { let p = Math.exp(-m * e), c = (m - t) * e + 1; return -_ + p * c }, n = m => { let p = Math.exp(-m * e), c = (t - m) * (e * e); return p * c }); let f = 5 / e, a = Ce(s, n, f); if (e = V(e), isNaN(a)) return { stiffness: u.stiffness, damping: u.damping, duration: e }; { let m = Math.pow(a, 2) * o; return { stiffness: m, damping: i * 2 * Math.sqrt(o * m), duration: e } } } var ke = 12; function Ce(e, r, t) { let o = t; for (let s = 1; s < ke; s++)o = o - e(o) / r(o); return o } function z(e, r) { return e * Math.sqrt(1 - r * r) } var Be = ["duration", "bounce"], Ie = ["stiffness", "damping", "mass"]; function ue(e, r) { return r.some(t => e[t] !== void 0) } function Ke(e) { let r = { velocity: u.velocity, stiffness: u.stiffness, damping: u.damping, mass: u.mass, isResolvedFromDuration: !1, ...e }; if (!ue(e, Ie) && ue(e, Be)) if (e.visualDuration) { let t = e.visualDuration, o = 2 * Math.PI / (t * 1.2), s = o * o, n = 2 * O(.05, 1, 1 - (e.bounce || 0)) * Math.sqrt(s); r = { ...r, mass: u.mass, stiffness: s, damping: n } } else { let t = le(e); r = { ...r, ...t, mass: u.mass }, r.isResolvedFromDuration = !0 } return r } function v(e = u.visualDuration, r = u.bounce) { let t = typeof e != "object" ? { visualDuration: e, keyframes: [0, 1], bounce: r } : e, { restSpeed: o, restDelta: s } = t, n = t.keyframes[0], i = t.keyframes[t.keyframes.length - 1], f = { done: !1, value: n }, { stiffness: a, damping: m, mass: p, duration: c, velocity: l, isResolvedFromDuration: x } = Ke({ ...t, velocity: -D(t.velocity || 0) }), g = l || 0, y = m / (2 * Math.sqrt(a * p)), T = i - n, h = D(Math.sqrt(a / p)), K = Math.abs(T) < 5; o || (o = K ? u.restSpeed.granular : u.restSpeed.default), s || (s = K ? u.restDelta.granular : u.restDelta.default); let S; if (y < 1) { let d = z(h, y); S = A => { let b = Math.exp(-y * h * A); return i - b * ((g + y * h * T) / d * Math.sin(d * A) + T * Math.cos(d * A)) } } else if (y === 1) S = d => i - Math.exp(-h * d) * (T + (g + h * T) * d); else { let d = h * Math.sqrt(y * y - 1); S = A => { let b = Math.exp(-y * h * A), G = Math.min(d * A, 300); return i - b * ((g + y * h * T) * Math.sinh(G) + d * T * Math.cosh(G)) / d } } let P = { calculatedDuration: x && c || null, next: d => { let A = S(d); if (x) f.done = d >= c; else { let b = d === 0 ? g : 0; y < 1 && (b = d === 0 ? V(g) : ce(S, d, A)); let G = Math.abs(b) <= o, Oe = Math.abs(i - A) <= s; f.done = G && Oe } return f.value = f.done ? i : A, f }, toString: () => { let d = Math.min(R(P), 2e4), A = L(b => P.next(d * b).value, d, 30); return d + "ms " + A }, toTransition: () => { } }; return P } v.applyToOptions = e => { let r = fe(e, 100, v); return e.ease = r.ease, e.duration = V(r.duration), e.type = "keyframes", e }; var xe = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], Q = new Set(xe); var de = {}; function ge(e, r) { let t = W(e); return () => de[r] ?? t() } var ye = ge(() => { try { document.createElement("div").animate({ opacity: 0 }, { easing: "linear(0, 1)" }) } catch { return !1 } return !0 }, "linearEasing"); var w = ([e, r, t, o]) => `cubic-bezier(${e}, ${r}, ${t}, ${o})`; var J = { linear: "linear", ease: "ease", easeIn: "ease-in", easeOut: "ease-out", easeInOut: "ease-in-out", circIn: w([0, .65, .55, 1]), circOut: w([.55, 0, 1, .45]), backIn: w([.31, .01, .66, -.59]), backOut: w([.33, 1.53, .69, .99]) }; function ee(e, r) { if (e) return typeof e == "function" ? ye() ? L(e, r) : "ease-out" : Y(e) ? w(e) : Array.isArray(e) ? e.map(t => ee(t, r) || J.easeOut) : J[e] } function F(e, r, t, { delay: o = 0, duration: s = 300, repeat: n = 0, repeatType: i = "loop", ease: f = "easeOut", times: a } = {}, m = void 0) { let p = { [r]: t }; a && (p.offset = a); let c = ee(f, s); Array.isArray(c) && (p.easing = c), H.value && Z.waapi++; let l = { delay: o, duration: s, easing: Array.isArray(c) ? "linear" : c, fill: "both", iterations: n + 1, direction: i === "reverse" ? "alternate" : "normal" }; m && (l.pseudoElement = m); let x = e.animate(p, l); return H.value && x.finished.finally(() => { Z.waapi-- }), x } function Ae(e) { return e.replace(/([A-Z])/g, r => `-${r.toLowerCase()}`) } var N = "framerAppearId", re = "data-" + Ae(N); function te(e) { return e.props[re] } var M = new Map, E = new Map; var k = (e, r) => { let t = Q.has(r) ? "transform" : r; return `${e}: ${t}` }; function oe(e, r, t) { let o = k(e, r), s = M.get(o); if (!s) return null; let { animation: n, startTime: i } = s; function f() { window.MotionCancelOptimisedAnimation?.(e, r, t) } return n.onfinish = f, i === null || window.MotionHandoffIsComplete?.(e) ? (f(), null) : i } var $, C, ne = new Set; function Ge() { ne.forEach(e => { e.animation.play(), e.animation.startTime = e.startTime }), ne.clear() } function ie(e, r, t, o, s) { if (window.MotionIsMounted) return; let n = e.dataset[N]; if (!n) return; window.MotionHandoffAnimation = oe; let i = k(n, r); C || (C = F(e, r, [t[0], t[0]], { duration: 1e4, ease: "linear" }), M.set(i, { animation: C, startTime: null }), window.MotionHandoffAnimation = oe, window.MotionHasOptimisedAnimation = (a, m) => { if (!a) return !1; if (!m) return E.has(a); let p = k(a, m); return !!M.get(p) }, window.MotionHandoffMarkAsComplete = a => { E.has(a) && E.set(a, !0) }, window.MotionHandoffIsComplete = a => E.get(a) === !0, window.MotionCancelOptimisedAnimation = (a, m, p, c) => { let l = k(a, m), x = M.get(l); x && (p && c === void 0 ? p.postRender(() => { p.postRender(() => { x.animation.cancel() }) }) : x.animation.cancel(), p && c ? (ne.add(x), p.render(Ge)) : (M.delete(l), M.size || (window.MotionCancelOptimisedAnimation = void 0))) }, window.MotionCheckAppearSync = (a, m, p) => { let c = te(a); if (!c) return; let l = window.MotionHasOptimisedAnimation?.(c, m), x = a.props.values?.[m]; if (!l || !x) return; let g = p.on("change", y => { x.get() !== y && (window.MotionCancelOptimisedAnimation?.(c, m), g()) }); return g }); let f = () => { C.cancel(); let a = F(e, r, t, o); $ === void 0 && ($ = performance.now()), a.startTime = $, M.set(i, { animation: a, startTime: $ }), s && s(a) }; E.set(n, !1), C.ready ? C.ready.then(f).catch(q) : f() } var ae = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], Le = { x: "translateX", y: "translateY", z: "translateZ", transformPerspective: "perspective" }, Re = { translateX: "px", translateY: "px", translateZ: "px", x: "px", y: "px", z: "px", perspective: "px", transformPerspective: "px", rotate: "deg", rotateX: "deg", rotateY: "deg" }; function Te(e, r) { let t = Re[e]; return !t || typeof r == "string" && r.endsWith(t) ? r : `${r}${t}` } function se(e) { return ae.includes(e) } var ze = (e, r) => ae.indexOf(e) - ae.indexOf(r); function he({ transform: e, transformKeys: r }, t) { let o = {}, s = !0, n = ""; r.sort(ze); for (let i of r) { let f = e[i], a = !0; typeof f == "number" ? a = f === (i.startsWith("scale") ? 1 : 0) : a = parseFloat(f) === 0, a || (s = !1, n += `${Le[i] || i}(${e[i]}) `), t && (o[i] = e[i]) } return n = n.trim(), t ? n = t(o, n) : s && (n = "none"), n } function pe(e, r) { let t = new Set(Object.keys(e)); for (let o in r) t.add(o); return Array.from(t) } function me(e, r) { let t = r - e.length; if (t <= 0) return e; let o = new Array(t).fill(e[e.length - 1]); return e.concat(o) } function B(e) { return e * 1e3 } var be = { duration: .001 }, I = { opacity: 1, scale: 1, translateX: 0, translateY: 0, translateZ: 0, x: 0, y: 0, z: 0, rotate: 0, rotateX: 0, rotateY: 0 }; function De(e, r, t, o, s) { return t.delay && (t.delay = B(t.delay)), t.type === "spring" ? Ne(e, r, t, o, s) : je(e, r, t, o, s) } function Fe(e, r, t) { let o = {}, s = 0, n = 0; for (let i of pe(e, r)) { let f = e[i] ?? I[i], a = r[i] ?? I[i]; if (f === void 0 || a === void 0 || i !== "transformPerspective" && f === a && f === I[i]) continue; i === "transformPerspective" && (o[i] = [f, a]); let m = He(f, a, t), { duration: p, keyframes: c } = m; p === void 0 || c === void 0 || (p > s && (s = p, n = c.length), o[i] = c) } return { keyframeValuesByProps: o, longestDuration: s, longestLength: n } } function Ne(e, r, t, o, s) { let n = {}, { keyframeValuesByProps: i, longestDuration: f, longestLength: a } = Fe(e, r, t); if (!a) return n; let m = { ease: "linear", duration: f, delay: t.delay }, p = s ? be : m, c = {}; for (let [x, g] of Object.entries(i)) se(x) ? c[x] = me(g, a) : n[x] = { keyframes: me(g, a), options: x === "opacity" ? m : p }; let l = ve(c, o); return l && (n.transform = { keyframes: l, options: p }), n } function $e(e) { let { type: r, duration: t, ...o } = e; return { duration: B(t), ...o } } function je(e, r, t, o, s) { let n = $e(t); if (!n) return; let i = {}, f = s ? be : n, a = {}; for (let p of pe(e, r)) { let c = e[p] ?? I[p], l = r[p] ?? I[p]; c === void 0 || l === void 0 || p !== "transformPerspective" && c === l || (se(p) ? a[p] = [c, l] : i[p] = { keyframes: [c, l], options: p === "opacity" ? n : f }) } let m = ve(a, o); return m && (i.transform = { keyframes: m, options: f }), i } var We = ["duration", "bounce"], qe = ["stiffness", "damping", "mass"]; function Ve(e) { return qe.some(r => r in e) ? !1 : We.some(r => r in e) } function Xe(e, r, t) { return Ve(t) ? `${e}-${r}-${t.duration}-${t.bounce}` : `${e}-${r}-${t.damping}-${t.stiffness}-${t.mass}` } function Ye(e) { return Ve(e) ? { ...e, duration: B(e.duration) } : e } var Me = new Map, Se = 10; function He(e, r, t) { let o = Xe(e, r, t), s = Me.get(o); if (s) return s; let n = [e, r], i = v({ ...Ye(t), keyframes: n }), f = { done: !1, value: n[0] }, a = [], m = 0; for (; !f.done && m < B(10);)f = i.next(m), a.push(f.value), m += Se; n = a; let p = m - Se, l = { keyframes: n, duration: p, ease: "linear" }; return Me.set(o, l), l } function ve(e, r) { let t = [], o = Object.values(e)[0]?.length; if (!o) return; let s = Object.keys(e); for (let n = 0; n < o; n++) { let i = {}; for (let [a, m] of Object.entries(e)) { let p = m[n]; p !== void 0 && (i[a] = Te(a, p)) } let f = he({ transform: i, transformKeys: s }, r); t.push(f) } return t } function Ze(e, r) { if (!r) for (let t in e) { let o = e[t]; return o?.legacy === !0 ? o : void 0 } } function we(e, r, t, o, s, n) { for (let [i, f] of Object.entries(e)) { let a = n ? f[n] : void 0; if (a === null || !a && f.default === null) continue; let m = a ?? f.default ?? Ze(f, n); if (!m) continue; let { initial: p, animate: c, transformTemplate: l } = m; if (!p || !c) continue; let { transition: x, ...g } = c, y = De(p, g, x, Ue(l, o), s); if (!y) continue; let T = {}, h = {}; for (let [S, P] of Object.entries(y)) T[S] = P.keyframes, h[S] = P.options; let K = n ? `:not(.hidden-${n}) ` : ""; r(`${K}[${t}="${i}"]`, T, h) } } function Ue(e, r) { if (!(!e || !r)) return (t, o) => e.replace(r, o) } function Pe(e) { return e ? e.find(t => t.mediaQuery ? window.matchMedia(t.mediaQuery).matches === !0 : !1)?.hash : void 0 } var zt = { animateAppearEffects: we, getActiveVariantHash: Pe, spring: v, startOptimizedAppearAnimation: ie }; return zt })()</script>
+  <script type="framer/appear"
+    id="__framer__appearAnimationsContent">{"1kfwg09":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":0},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"delay":1,"duration":1,"ease":[0.6,0,0.4,1],"type":"tween"},"x":0,"y":0}},"a1qw1e":null,"1qkvzkg":null},"1vt5zq3":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1,"duration":1,"type":"spring"},"x":0,"y":0}}},"1cegyh1":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.1,"duration":1,"type":"spring"},"x":0,"y":0}}},"azmub0":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.2,"duration":1,"type":"spring"},"x":0,"y":0}}},"e7pv7g":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.3,"duration":1,"type":"spring"},"x":0,"y":0}}},"e6kwu9":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}},"171oejd":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}},"1wx0bkg":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}},"121iadi":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}},"zrt4nr":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}}}</script>
+  <script type="framer/appear"
+    id="__framer__breakpoints">[{"hash":"72rtr7","mediaQuery":"(min-width: 1200px)"},{"hash":"a1qw1e","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"1qkvzkg","mediaQuery":"(max-width: 809.98px)"},{"hash":"10o9kcu","mediaQuery":"(min-width: 1200px)"},{"hash":"zrt4nr","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"121iadi","mediaQuery":"(max-width: 809.98px)"}]</script>
+  <script
+    data-framer-appear-animation="no-preference">(() => { function c(i, o, s) { if (window.__framer_disable_appear_effects_optimization__ || typeof animator > "u") return; let e = { detail: { bg: document.hidden } }; requestAnimationFrame(() => { let a = "framer-appear-start"; performance.mark(a, e), animator.animateAppearEffects(JSON.parse(window.__framer__appearAnimationsContent.text), (m, p, d) => { let t = document.querySelector(m); if (t) for (let [r, f] of Object.entries(p)) animator.startOptimizedAppearAnimation(t, r, f, d[r]) }, i, o, s && window.matchMedia("(prefers-reduced-motion:reduce)").matches === !0, animator.getActiveVariantHash(JSON.parse(window.__framer__breakpoints.text))); let n = "framer-appear-end"; performance.mark(n, e), performance.measure("framer-appear", { start: a, end: n, detail: e.detail }) }) } return c })()("data-framer-appear-id", "__Appear_Animation_Transform__", false)</script>
+  <script>typeof document < "u" && (window.process = { ...window.process, env: { ...window.process?.env, NODE_ENV: "production" } });</script>
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/react.BGe8Y4dC.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/rolldown-runtime.CrzmA4BD.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/motion.Dl_0CF8X.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/framer.Ck8wa-Ej.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/shared-lib.Djpk_QJF.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bpb5UkTTu.CsSJUxza.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/j6DfAo0_QpJvBGj7bNlK20qOxN0Ocb3xeDPulBgZMJ8.BW4YvPOs.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/C5G6Nyq_9.Y2cEk5-a.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/hlzaXNfgP.C0xe37Uk.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bVEWVnbXn.D3Hw149r.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bcZ7vbB9m.BRn5e7x3.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/jdXmslKvZ.B0QZNDLi.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/h4S0bZNLN.BbeO7h9j.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/wkxkh7BsO.DZHMw6bB.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/xhs7U55FX.7J0k5d5A.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/Ticker.BB9lX66T.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/augiA20Il.D4aBOM8c.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/T6M__7ENs.ChECod6g.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/VerticalShift.B2NpqXuv.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/AnimatedNumberCounter_Prod.Ct2SmTDj.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/Q6ecgM69R.CtsVtFAz.mjs">
+  <link rel="modulepreload" fetchpriority="low"
+    href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/MexjCZNXA.i7FTeGWq.mjs">
+  <link rel="modulepreload" fetchpriority="low" href="./Firma_files/script_main.Bc2AOisy.mjs">
+  <script type="module" async="" data-framer-bundle="main" fetchpriority="low"
+    src="./Firma_files/script_main.Bc2AOisy.mjs"></script>
+  <div id="svg-templates"
+    style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict"
+    aria-hidden="true">
+    <svg viewBox="0 0 24 24" id="svg-1241953022_113">
+      <path d="M4 0h16v8h-8zm0 8h8l8 8H4zm0 8h8v8z"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 0 0 L 0 4.5 L 7.5 4.5 L 7.5 12 L 12 12 L 12 0 Z" fill-opacity="var(--1m6trwb, 0)"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="12px" id="cfNFsTWLl" transform="translate(8.25 3.75)" width="12px">
+      </path>
+      <path d="M 7.5 12 L 12 12 L 12 0 L 0 0 L 0 4.5" fill="transparent" height="12px" id="ODJ_TeZYo"
+        stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3.75)" width="12px"></path>
+      <path d="M 0 12 L 0 0 L 12 0 L 12 12 Z" fill="transparent" height="12px" id="Ea3BNSkj5" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 8.25)" width="12px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="7.5px" id="YRVmJ2NxP"
+        transform="translate(3 6)" width="7.125px"></path>
+      <path
+        d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="7.5px" id="Mbc3zo2eV"
+        transform="translate(13.875 6)" width="7.125px"></path>
+      <path
+        d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 L 7.125 9 C 7.125 11.071 5.446 12.75 3.375 12.75"
+        fill="transparent" height="12.75px" id="EU8WkDZVO" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3 6)" width="7.125px"></path>
+      <path
+        d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 L 7.125 9 C 7.125 11.071 5.446 12.75 3.375 12.75"
+        fill="transparent" height="12.75px" id="TuL7tpJzc" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(13.875 6)" width="7.125px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 8.389 7.888 L 6.855 0 L 6.855 0 C 7.106 1.419 6.716 2.877 5.79 3.98 C 4.863 5.084 3.495 5.721 2.054 5.719 L 0 5.719 L 3.948 10.2 C 4.758 11.01 6 11.201 7.016 10.672 C 8.032 10.143 8.587 9.016 8.389 7.888 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="10.968481287579621px" id="Twl2LIRXA"
+        transform="translate(14.071 8.531)" width="8.4286875924804px"></path>
+      <path d="M 0 0 L 2.25 0" fill="transparent" height="1px" id="PBrySwxmU" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(14.25 9.75)" width="2.25px"></path>
+      <path d="M 0 0 L 3 0" fill="transparent" height="1px" id="upCb0uKCi" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(6.75 9.75)" width="3px"></path>
+      <path d="M 0 0 L 0 3" fill="transparent" height="3px" id="nHf611gfO" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(8.25 8.25)" width="1px"></path>
+      <path
+        d="M 8.429 9.75 L 4.481 14.231 C 3.671 15.041 2.429 15.232 1.413 14.703 C 0.397 14.174 -0.159 13.047 0.04 11.919 L 1.574 4.031 C 1.983 1.704 4.002 0.005 6.364 0 L 14.625 0 C 17.317 0 19.5 2.183 19.5 4.875 C 19.5 7.567 17.317 9.75 14.625 9.75 Z"
+        fill="transparent" height="14.999731287579628px" id="HxQp0DaNe" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(1.5 4.5)" width="19.49962509248038px"></path>
+      <path
+        d="M 0 5.719 L 3.948 10.2 C 4.758 11.01 6 11.201 7.016 10.672 C 8.032 10.143 8.587 9.016 8.389 7.888 L 6.855 0"
+        fill="transparent" height="10.968481287579621px" id="rRbDIKqII" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(14.071 8.531)" width="8.4286875924804px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 0 17.25 C 0 16.007 1.007 15 2.25 15 L 15 15 L 15 0 L 2.25 0 C 1.007 0 0 1.007 0 2.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="rwSjL0zxZ"
+        transform="translate(4.5 3)" width="15px"></path>
+      <path d="M 0 17.25 C 0 16.007 1.007 15 2.25 15 L 15 15 L 15 0 L 2.25 0 C 1.007 0 0 1.007 0 2.25 Z"
+        fill="transparent" height="17.25px" id="uGzgr0vL7" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(4.5 3)" width="15px"></path>
+      <path d="M 0 0 L 0 0.75 L 13.5 0.75" fill="transparent" height="1px" id="J0wY0mdtc" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(4.5 20.25)" width="13.5px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="16.5px" id="m4966p9IP"
+        transform="translate(3.75 3.75)" width="16.5px"></path>
+      <path
+        d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z"
+        fill="transparent" height="16.5px" id="br_hlS6X_" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.75 3.75)" width="16.5px"></path>
+      <path
+        d="M 15.821 0.445 C 18.365 -0.231 20.266 -0.16 20.831 0.815 C 21.862 2.589 18.07 6.684 12.364 9.963 C 6.657 13.241 1.198 14.463 0.169 12.681 C -0.399 11.704 0.498 10.022 2.371 8.16"
+        fill="transparent" height="13.500452610855575px" id="pb3Fb3ggf" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(1.5 5.25)" width="21.0001917404997px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="H5Toe0LhE"
+        transform="translate(3.75 3)" width="16.5px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uRA2Wk3tO" transform="translate(8.25 9.75)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="hR1wzn62a" transform="translate(13.5 9.75)"
+        width="2.25px"></path>
+      <path
+        d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
+        fill="transparent" height="17.25px" id="uhRxAP9bc" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.75 3)" width="16.5px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="3.75px" id="lHAy2XJ8x"
+        transform="translate(1.5 16.5)" width="21px"></path>
+      <path d="M 9.75 0 L 0 12 L 9.75 12 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))"
+        height="12px" id="rtwxNVoCY" transform="translate(3 0.75)" width="9.75px"></path>
+      <path
+        d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
+        fill="transparent" height="3.75px" id="BBdHchIMl" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(1.5 16.5)" width="21px"></path>
+      <path d="M 0 8.25 L 7.5 8.25 L 0 0" fill="transparent" height="8.25px" id="SLpDFhnM4" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(12.75 4.5)" width="7.5px"></path>
+      <path d="M 9.75 15.75 L 9.75 0 L 0 12 L 9.75 12" fill="transparent" height="15.75px" id="h1L4CZ2fk"
+        stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 0.75)" width="9.75px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="12.000188038477893px" id="h2RVElj7m"
+        transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
+      <path
+        d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
+        fill="transparent" height="12.000188038477893px" id="Omd1xueOI" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
+      <path d="M 5.48 0 L 0 5.48" fill="transparent" height="5.479687499999997px" id="zIKXnFQZL" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(2.25 11.02)" width="5.479687499999997px"></path>
+      <path d="M 4.993 0 L 0 4.993" fill="transparent" height="4.993124999999992px" id="lv4E4uZ0o" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 16.757)" width="4.993124999999999px"></path>
+      <path d="M 5.089 0 L 0 5.089" fill="transparent" height="5.0887500000000045px" id="pTxkkoSCS" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(10.5 16.661)" width="5.0887500000000045px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="9.7487961692037px" id="ugallOpxe"
+        transform="translate(12 11.25)" width="5.25px"></path>
+      <path
+        d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.25px" id="lQV3eI5uT"
+        transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
+      <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.115000000000009px" id="Rol3EuQGC"
+        transform="translate(3.75 15.135)" width="5.115000000000002px"></path>
+      <path
+        d="M 10.417 6.833 C 12.667 4.583 12.807 1.907 12.737 0.713 C 12.713 0.337 12.413 0.037 12.037 0.013 C 10.843 -0.057 8.168 0.082 5.917 2.333 L 0 8.25 L 4.5 12.75 Z"
+        fill="transparent" height="12.749957776566365px" id="T1dzJH3_E" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(7.5 3.75)" width="12.74989583333332px"></path>
+      <path
+        d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25"
+        fill="transparent" height="5.25px" id="Xo_c2m9KI" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
+      <path
+        d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25"
+        fill="transparent" height="9.7487961692037px" id="puaO4cp7A" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(12 11.25)" width="5.25px"></path>
+      <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0" fill="transparent"
+        height="5.115000000000009px" id="lMY7FBQMB" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 15.135)"
+        width="5.115000000000002px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18.00072584206196px" id="f4qL21INY"
+        transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
+      <path
+        d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
+        fill="transparent" height="18.00072584206196px" id="r6KG7nvgM" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="CqhnUww23" transform="translate(10.875 10.875)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uCSdgdlkE" transform="translate(6.75 10.875)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="tynFhUs5i" transform="translate(15 10.875)"
+        width="2.25px"></path>
+    </svg>
+    <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="3288219287">
+      <path
+        d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="H5Toe0LhE"
+        transform="translate(3.75 3)" width="16.5px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uRA2Wk3tO" transform="translate(8.25 9.75)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="hR1wzn62a" transform="translate(13.5 9.75)"
+        width="2.25px"></path>
+      <path
+        d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
+        fill="transparent" height="17.25px" id="uhRxAP9bc" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.75 3)" width="16.5px"></path>
+    </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      id="1793599557">
+      <path
+        d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="3.75px" id="lHAy2XJ8x"
+        transform="translate(1.5 16.5)" width="21px"></path>
+      <path d="M 9.75 0 L 0 12 L 9.75 12 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))"
+        height="12px" id="rtwxNVoCY" transform="translate(3 0.75)" width="9.75px"></path>
+      <path
+        d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
+        fill="transparent" height="3.75px" id="BBdHchIMl" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(1.5 16.5)" width="21px"></path>
+      <path d="M 0 8.25 L 7.5 8.25 L 0 0" fill="transparent" height="8.25px" id="SLpDFhnM4" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(12.75 4.5)" width="7.5px"></path>
+      <path d="M 9.75 15.75 L 9.75 0 L 0 12 L 9.75 12" fill="transparent" height="15.75px" id="h1L4CZ2fk"
+        stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 0.75)" width="9.75px"></path>
+    </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      id="1724523750">
+      <path
+        d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="12.000188038477893px" id="h2RVElj7m"
+        transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
+      <path
+        d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
+        fill="transparent" height="12.000188038477893px" id="Omd1xueOI" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
+      <path d="M 5.48 0 L 0 5.48" fill="transparent" height="5.479687499999997px" id="zIKXnFQZL" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(2.25 11.02)" width="5.479687499999997px"></path>
+      <path d="M 4.993 0 L 0 4.993" fill="transparent" height="4.993124999999992px" id="lv4E4uZ0o" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 16.757)" width="4.993124999999999px"></path>
+      <path d="M 5.089 0 L 0 5.089" fill="transparent" height="5.0887500000000045px" id="pTxkkoSCS" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(10.5 16.661)" width="5.0887500000000045px"></path>
+    </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      id="1175745045">
+      <path
+        d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="9.7487961692037px" id="ugallOpxe"
+        transform="translate(12 11.25)" width="5.25px"></path>
+      <path
+        d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.25px" id="lQV3eI5uT"
+        transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
+      <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.115000000000009px" id="Rol3EuQGC"
+        transform="translate(3.75 15.135)" width="5.115000000000002px"></path>
+      <path
+        d="M 10.417 6.833 C 12.667 4.583 12.807 1.907 12.737 0.713 C 12.713 0.337 12.413 0.037 12.037 0.013 C 10.843 -0.057 8.168 0.082 5.917 2.333 L 0 8.25 L 4.5 12.75 Z"
+        fill="transparent" height="12.749957776566365px" id="T1dzJH3_E" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(7.5 3.75)" width="12.74989583333332px"></path>
+      <path
+        d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25"
+        fill="transparent" height="5.25px" id="Xo_c2m9KI" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
+      <path
+        d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25"
+        fill="transparent" height="9.7487961692037px" id="puaO4cp7A" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(12 11.25)" width="5.25px"></path>
+      <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0" fill="transparent"
+        height="5.115000000000009px" id="lMY7FBQMB" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 15.135)"
+        width="5.115000000000002px"></path>
+    </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      id="1233169835">
+      <path
+        d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
+        fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18.00072584206196px" id="f4qL21INY"
+        transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
+      <path
+        d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
+        fill="transparent" height="18.00072584206196px" id="r6KG7nvgM" stroke-dasharray="" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
+        transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="CqhnUww23" transform="translate(10.875 10.875)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uCSdgdlkE" transform="translate(6.75 10.875)"
+        width="2.25px"></path>
+      <path
+        d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="tynFhUs5i" transform="translate(15 10.875)"
+        width="2.25px"></path>
+    </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      id="743177299">
+      <path d="M 0 0 L 0 4.5 L 7.5 4.5 L 7.5 12 L 12 12 L 12 0 Z" fill-opacity="var(--1m6trwb, 0)"
+        fill="var(--21h8s6, rgb(0, 0, 0))" height="12px" id="cfNFsTWLl" transform="translate(8.25 3.75)" width="12px">
+      </path>
+      <path d="M 7.5 12 L 12 12 L 12 0 L 0 0 L 0 4.5" fill="transparent" height="12px" id="ODJ_TeZYo"
+        stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3.75)" width="12px"></path>
+      <path d="M 0 12 L 0 0 L 12 0 L 12 12 Z" fill="transparent" height="12px" id="Ea3BNSkj5" stroke-dasharray=""
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
+        stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 8.25)" width="12px"></path>
+    </svg>
+  </div>
+  <!-- Start of bodyEnd -->
 
-    </div>
-    <script>(() => { function u() { function n(t, e, i) { let r = document.createElement("a"); r.href = t, r.target = i, r.rel = e, document.body.appendChild(r), r.click(), r.remove() } function o(t) { if (this.dataset.hydrated) { this.removeEventListener("click", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; if (/Mac|iPod|iPhone|iPad/u.test(navigator.userAgent) ? t.metaKey : t.ctrlKey) return n(e, "", "_blank"); let r = this.getAttribute("rel") ?? "", c = this.getAttribute("target") ?? ""; n(e, r, c) } function a(t) { if (this.dataset.hydrated) { this.removeEventListener("auxclick", o); return } t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); e && n(e, "", "_blank") } function s(t) { if (this.dataset.hydrated) { this.removeEventListener("keydown", s); return } if (t.key !== "Enter") return; t.preventDefault(), t.stopPropagation(); let e = this.getAttribute("href"); if (!e) return; let i = this.getAttribute("rel") ?? "", r = this.getAttribute("target") ?? ""; n(e, i, r) } document.querySelectorAll("[data-nested-link]").forEach(t => { t instanceof HTMLElement && (t.addEventListener("click", o), t.addEventListener("auxclick", a), t.addEventListener("keydown", s)) }) } return u })()()</script>
-    <script>(() => { function i() { for (let e of document.querySelectorAll("[data-framer-original-sizes]")) { let t = e.getAttribute("data-framer-original-sizes"); t === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", t), e.removeAttribute("data-framer-original-sizes") } } function a() { window.__framer_onRewriteBreakpoints = i } return a })()()</script>
-    <script>!function () {
-        var l = "framer_variant"; function u(a, r) { let n = r.indexOf("#"), e = n === -1 ? r : r.substring(0, n), o = n === -1 ? "" : r.substring(n), t = e.indexOf("?"), m = t === -1 ? e : e.substring(0, t), d = t === -1 ? "" : e.substring(t), s = new URLSearchParams(d), h = new URLSearchParams(a); for (let [i, g] of h) s.has(i) || i !== l && s.append(i, g); let c = s.toString(); return c === "" ? e + o : m + "?" + c + o } var w = 'div#main a[href^="#"],div#main a[href^="/"],div#main a[href^="."]', f = "div#main a[data-framer-preserve-params]", p = document.currentScript?.hasAttribute("data-preserve-internal-params"); if (window.location.search && !navigator.webdriver && !/bot|-google|google-|yandex|ia_archiver|crawl|spider/iu.test(navigator.userAgent)) { let a = document.querySelectorAll(p ? `${w},${f}` : f); for (let r of a) { let n = u(window.location.search, r.href); r.setAttribute("href", n) } }
-      }()</script>
+  <!-- End of bodyEnd -->
 
-    <div id="__framer-badge-container"><!--$--><!--$--><!--$--><a
-        class="framer-6jWyo framer-n0ccwk framer-v-n0ccwk framer-bmpgw8 __framer-badge" data-framer-appear-id="n0ccwk"
-        data-framer-name="Light" data-nosnippet="true"
-        style="will-change: transform; pointer-events: auto; opacity: 1; transform: none;"
-        href="https://www.framer.com/" rel="noopener"
-        title="Create a free website with Framer, the website builder loved by startups, designers and agencies.">
-        <div class="framer-13yxzio" data-framer-name="Backdrop"
-          style="background-color: rgb(255, 255, 255); border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.17) 0px 0.602187px 1.56569px -1.5px, rgba(0, 0, 0, 0.14) 0px 2.28853px 5.95019px -3px, rgba(0, 0, 0, 0.02) 0px 10px 26px -4.5px; opacity: 1;">
-        </div>
-        <div class="framer-19yaanm" data-framer-name="Content" style="transform: translate(-50%, -50%); opacity: 1;">
-          <div class="framer-1kflzx5" style="opacity: 1;">
-            <div data-framer-name="Logo" class="framer-hcsc7 framer-e50co"
-              style="--1bd4d3i: rgb(0, 0, 0); --otdjsv: rgb(0, 0, 0); transform: translateX(-50%); opacity: 1;"></div>
-          </div><!--$-->
-          <p style="position:absolute;transform:scale(0.001)">Create a free website with Framer, the website builder
-            loved
-            by startups, designers and agencies.</p>
-          <div data-framer-name="Text" class="framer-g7oZR framer-1um7t9d"
-            style="--1bd4d3i: rgb(0, 0, 0); --otdjsv: rgb(0, 0, 0); opacity: 1;"></div><!--/$-->
-        </div>
-        <div class="framer-j4ugry" data-framer-name="Bottom"
-          style="mask:linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%) add;-webkit-mask:linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%) add;border-bottom-left-radius:11px;border-bottom-right-radius:11px;border-top-left-radius:11px;border-top-right-radius:11px;box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);opacity:0.06">
-        </div>
-        <div class="framer-jnuwbw" data-framer-name="Border"
-          style="border-bottom-left-radius:11px;border-bottom-right-radius:11px;border-top-left-radius:11px;border-top-right-radius:11px;box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);opacity:0.04">
-        </div>
-      </a><!--/$--><!--/$--><!--/$--></div>
-    <script>var animator = (() => { var O = (e, r, t) => t > r ? r : t < e ? e : t; var j = () => { }; function W(e) { let r; return () => (r === void 0 && (r = e()), r) } var q = e => e; var V = e => e * 1e3, D = e => e / 1e3; function X(e, r) { return r ? e * (1e3 / r) : 0 } var Y = e => Array.isArray(e) && typeof e[0] == "number"; var H = { value: null, addProjectionMetrics: null }; var Z = { layout: 0, mainThread: 0, waapi: 0 }; var L = (e, r, t = 10) => { let o = "", s = Math.max(Math.round(r / t), 2); for (let n = 0; n < s; n++)o += Math.round(e(n / (s - 1)) * 1e4) / 1e4 + ", "; return `linear(${o.substring(0, o.length - 2)})` }; function R(e) { let r = 0, t = 50, o = e.next(r); for (; !o.done && r < 2e4;)r += t, o = e.next(r); return r >= 2e4 ? 1 / 0 : r } function fe(e, r = 100, t) { let o = t({ ...e, keyframes: [0, r] }), s = Math.min(R(o), 2e4); return { type: "keyframes", ease: n => o.next(s * n).value / r, duration: D(s) } } var Ee = 5; function ce(e, r, t) { let o = Math.max(r - Ee, 0); return X(t - e(o), r - o) } var u = { stiffness: 100, damping: 10, mass: 1, velocity: 0, duration: 800, bounce: .3, visualDuration: .3, restSpeed: { granular: .01, default: 2 }, restDelta: { granular: .005, default: .5 }, minDuration: .01, maxDuration: 10, minDamping: .05, maxDamping: 1 }; var _ = .001; function le({ duration: e = u.duration, bounce: r = u.bounce, velocity: t = u.velocity, mass: o = u.mass }) { let s, n; j(e <= V(u.maxDuration), "Spring duration must be 10 seconds or less", "spring-duration-limit"); let i = 1 - r; i = O(u.minDamping, u.maxDamping, i), e = O(u.minDuration, u.maxDuration, D(e)), i < 1 ? (s = m => { let p = m * i, c = p * e, l = p - t, x = z(m, i), g = Math.exp(-c); return _ - l / x * g }, n = m => { let c = m * i * e, l = c * t + t, x = Math.pow(i, 2) * Math.pow(m, 2) * e, g = Math.exp(-c), y = z(Math.pow(m, 2), i); return (-s(m) + _ > 0 ? -1 : 1) * ((l - x) * g) / y }) : (s = m => { let p = Math.exp(-m * e), c = (m - t) * e + 1; return -_ + p * c }, n = m => { let p = Math.exp(-m * e), c = (t - m) * (e * e); return p * c }); let f = 5 / e, a = Ce(s, n, f); if (e = V(e), isNaN(a)) return { stiffness: u.stiffness, damping: u.damping, duration: e }; { let m = Math.pow(a, 2) * o; return { stiffness: m, damping: i * 2 * Math.sqrt(o * m), duration: e } } } var ke = 12; function Ce(e, r, t) { let o = t; for (let s = 1; s < ke; s++)o = o - e(o) / r(o); return o } function z(e, r) { return e * Math.sqrt(1 - r * r) } var Be = ["duration", "bounce"], Ie = ["stiffness", "damping", "mass"]; function ue(e, r) { return r.some(t => e[t] !== void 0) } function Ke(e) { let r = { velocity: u.velocity, stiffness: u.stiffness, damping: u.damping, mass: u.mass, isResolvedFromDuration: !1, ...e }; if (!ue(e, Ie) && ue(e, Be)) if (e.visualDuration) { let t = e.visualDuration, o = 2 * Math.PI / (t * 1.2), s = o * o, n = 2 * O(.05, 1, 1 - (e.bounce || 0)) * Math.sqrt(s); r = { ...r, mass: u.mass, stiffness: s, damping: n } } else { let t = le(e); r = { ...r, ...t, mass: u.mass }, r.isResolvedFromDuration = !0 } return r } function v(e = u.visualDuration, r = u.bounce) { let t = typeof e != "object" ? { visualDuration: e, keyframes: [0, 1], bounce: r } : e, { restSpeed: o, restDelta: s } = t, n = t.keyframes[0], i = t.keyframes[t.keyframes.length - 1], f = { done: !1, value: n }, { stiffness: a, damping: m, mass: p, duration: c, velocity: l, isResolvedFromDuration: x } = Ke({ ...t, velocity: -D(t.velocity || 0) }), g = l || 0, y = m / (2 * Math.sqrt(a * p)), T = i - n, h = D(Math.sqrt(a / p)), K = Math.abs(T) < 5; o || (o = K ? u.restSpeed.granular : u.restSpeed.default), s || (s = K ? u.restDelta.granular : u.restDelta.default); let S; if (y < 1) { let d = z(h, y); S = A => { let b = Math.exp(-y * h * A); return i - b * ((g + y * h * T) / d * Math.sin(d * A) + T * Math.cos(d * A)) } } else if (y === 1) S = d => i - Math.exp(-h * d) * (T + (g + h * T) * d); else { let d = h * Math.sqrt(y * y - 1); S = A => { let b = Math.exp(-y * h * A), G = Math.min(d * A, 300); return i - b * ((g + y * h * T) * Math.sinh(G) + d * T * Math.cosh(G)) / d } } let P = { calculatedDuration: x && c || null, next: d => { let A = S(d); if (x) f.done = d >= c; else { let b = d === 0 ? g : 0; y < 1 && (b = d === 0 ? V(g) : ce(S, d, A)); let G = Math.abs(b) <= o, Oe = Math.abs(i - A) <= s; f.done = G && Oe } return f.value = f.done ? i : A, f }, toString: () => { let d = Math.min(R(P), 2e4), A = L(b => P.next(d * b).value, d, 30); return d + "ms " + A }, toTransition: () => { } }; return P } v.applyToOptions = e => { let r = fe(e, 100, v); return e.ease = r.ease, e.duration = V(r.duration), e.type = "keyframes", e }; var xe = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], Q = new Set(xe); var de = {}; function ge(e, r) { let t = W(e); return () => de[r] ?? t() } var ye = ge(() => { try { document.createElement("div").animate({ opacity: 0 }, { easing: "linear(0, 1)" }) } catch { return !1 } return !0 }, "linearEasing"); var w = ([e, r, t, o]) => `cubic-bezier(${e}, ${r}, ${t}, ${o})`; var J = { linear: "linear", ease: "ease", easeIn: "ease-in", easeOut: "ease-out", easeInOut: "ease-in-out", circIn: w([0, .65, .55, 1]), circOut: w([.55, 0, 1, .45]), backIn: w([.31, .01, .66, -.59]), backOut: w([.33, 1.53, .69, .99]) }; function ee(e, r) { if (e) return typeof e == "function" ? ye() ? L(e, r) : "ease-out" : Y(e) ? w(e) : Array.isArray(e) ? e.map(t => ee(t, r) || J.easeOut) : J[e] } function F(e, r, t, { delay: o = 0, duration: s = 300, repeat: n = 0, repeatType: i = "loop", ease: f = "easeOut", times: a } = {}, m = void 0) { let p = { [r]: t }; a && (p.offset = a); let c = ee(f, s); Array.isArray(c) && (p.easing = c), H.value && Z.waapi++; let l = { delay: o, duration: s, easing: Array.isArray(c) ? "linear" : c, fill: "both", iterations: n + 1, direction: i === "reverse" ? "alternate" : "normal" }; m && (l.pseudoElement = m); let x = e.animate(p, l); return H.value && x.finished.finally(() => { Z.waapi-- }), x } function Ae(e) { return e.replace(/([A-Z])/g, r => `-${r.toLowerCase()}`) } var N = "framerAppearId", re = "data-" + Ae(N); function te(e) { return e.props[re] } var M = new Map, E = new Map; var k = (e, r) => { let t = Q.has(r) ? "transform" : r; return `${e}: ${t}` }; function oe(e, r, t) { let o = k(e, r), s = M.get(o); if (!s) return null; let { animation: n, startTime: i } = s; function f() { window.MotionCancelOptimisedAnimation?.(e, r, t) } return n.onfinish = f, i === null || window.MotionHandoffIsComplete?.(e) ? (f(), null) : i } var $, C, ne = new Set; function Ge() { ne.forEach(e => { e.animation.play(), e.animation.startTime = e.startTime }), ne.clear() } function ie(e, r, t, o, s) { if (window.MotionIsMounted) return; let n = e.dataset[N]; if (!n) return; window.MotionHandoffAnimation = oe; let i = k(n, r); C || (C = F(e, r, [t[0], t[0]], { duration: 1e4, ease: "linear" }), M.set(i, { animation: C, startTime: null }), window.MotionHandoffAnimation = oe, window.MotionHasOptimisedAnimation = (a, m) => { if (!a) return !1; if (!m) return E.has(a); let p = k(a, m); return !!M.get(p) }, window.MotionHandoffMarkAsComplete = a => { E.has(a) && E.set(a, !0) }, window.MotionHandoffIsComplete = a => E.get(a) === !0, window.MotionCancelOptimisedAnimation = (a, m, p, c) => { let l = k(a, m), x = M.get(l); x && (p && c === void 0 ? p.postRender(() => { p.postRender(() => { x.animation.cancel() }) }) : x.animation.cancel(), p && c ? (ne.add(x), p.render(Ge)) : (M.delete(l), M.size || (window.MotionCancelOptimisedAnimation = void 0))) }, window.MotionCheckAppearSync = (a, m, p) => { let c = te(a); if (!c) return; let l = window.MotionHasOptimisedAnimation?.(c, m), x = a.props.values?.[m]; if (!l || !x) return; let g = p.on("change", y => { x.get() !== y && (window.MotionCancelOptimisedAnimation?.(c, m), g()) }); return g }); let f = () => { C.cancel(); let a = F(e, r, t, o); $ === void 0 && ($ = performance.now()), a.startTime = $, M.set(i, { animation: a, startTime: $ }), s && s(a) }; E.set(n, !1), C.ready ? C.ready.then(f).catch(q) : f() } var ae = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], Le = { x: "translateX", y: "translateY", z: "translateZ", transformPerspective: "perspective" }, Re = { translateX: "px", translateY: "px", translateZ: "px", x: "px", y: "px", z: "px", perspective: "px", transformPerspective: "px", rotate: "deg", rotateX: "deg", rotateY: "deg" }; function Te(e, r) { let t = Re[e]; return !t || typeof r == "string" && r.endsWith(t) ? r : `${r}${t}` } function se(e) { return ae.includes(e) } var ze = (e, r) => ae.indexOf(e) - ae.indexOf(r); function he({ transform: e, transformKeys: r }, t) { let o = {}, s = !0, n = ""; r.sort(ze); for (let i of r) { let f = e[i], a = !0; typeof f == "number" ? a = f === (i.startsWith("scale") ? 1 : 0) : a = parseFloat(f) === 0, a || (s = !1, n += `${Le[i] || i}(${e[i]}) `), t && (o[i] = e[i]) } return n = n.trim(), t ? n = t(o, n) : s && (n = "none"), n } function pe(e, r) { let t = new Set(Object.keys(e)); for (let o in r) t.add(o); return Array.from(t) } function me(e, r) { let t = r - e.length; if (t <= 0) return e; let o = new Array(t).fill(e[e.length - 1]); return e.concat(o) } function B(e) { return e * 1e3 } var be = { duration: .001 }, I = { opacity: 1, scale: 1, translateX: 0, translateY: 0, translateZ: 0, x: 0, y: 0, z: 0, rotate: 0, rotateX: 0, rotateY: 0 }; function De(e, r, t, o, s) { return t.delay && (t.delay = B(t.delay)), t.type === "spring" ? Ne(e, r, t, o, s) : je(e, r, t, o, s) } function Fe(e, r, t) { let o = {}, s = 0, n = 0; for (let i of pe(e, r)) { let f = e[i] ?? I[i], a = r[i] ?? I[i]; if (f === void 0 || a === void 0 || i !== "transformPerspective" && f === a && f === I[i]) continue; i === "transformPerspective" && (o[i] = [f, a]); let m = He(f, a, t), { duration: p, keyframes: c } = m; p === void 0 || c === void 0 || (p > s && (s = p, n = c.length), o[i] = c) } return { keyframeValuesByProps: o, longestDuration: s, longestLength: n } } function Ne(e, r, t, o, s) { let n = {}, { keyframeValuesByProps: i, longestDuration: f, longestLength: a } = Fe(e, r, t); if (!a) return n; let m = { ease: "linear", duration: f, delay: t.delay }, p = s ? be : m, c = {}; for (let [x, g] of Object.entries(i)) se(x) ? c[x] = me(g, a) : n[x] = { keyframes: me(g, a), options: x === "opacity" ? m : p }; let l = ve(c, o); return l && (n.transform = { keyframes: l, options: p }), n } function $e(e) { let { type: r, duration: t, ...o } = e; return { duration: B(t), ...o } } function je(e, r, t, o, s) { let n = $e(t); if (!n) return; let i = {}, f = s ? be : n, a = {}; for (let p of pe(e, r)) { let c = e[p] ?? I[p], l = r[p] ?? I[p]; c === void 0 || l === void 0 || p !== "transformPerspective" && c === l || (se(p) ? a[p] = [c, l] : i[p] = { keyframes: [c, l], options: p === "opacity" ? n : f }) } let m = ve(a, o); return m && (i.transform = { keyframes: m, options: f }), i } var We = ["duration", "bounce"], qe = ["stiffness", "damping", "mass"]; function Ve(e) { return qe.some(r => r in e) ? !1 : We.some(r => r in e) } function Xe(e, r, t) { return Ve(t) ? `${e}-${r}-${t.duration}-${t.bounce}` : `${e}-${r}-${t.damping}-${t.stiffness}-${t.mass}` } function Ye(e) { return Ve(e) ? { ...e, duration: B(e.duration) } : e } var Me = new Map, Se = 10; function He(e, r, t) { let o = Xe(e, r, t), s = Me.get(o); if (s) return s; let n = [e, r], i = v({ ...Ye(t), keyframes: n }), f = { done: !1, value: n[0] }, a = [], m = 0; for (; !f.done && m < B(10);)f = i.next(m), a.push(f.value), m += Se; n = a; let p = m - Se, l = { keyframes: n, duration: p, ease: "linear" }; return Me.set(o, l), l } function ve(e, r) { let t = [], o = Object.values(e)[0]?.length; if (!o) return; let s = Object.keys(e); for (let n = 0; n < o; n++) { let i = {}; for (let [a, m] of Object.entries(e)) { let p = m[n]; p !== void 0 && (i[a] = Te(a, p)) } let f = he({ transform: i, transformKeys: s }, r); t.push(f) } return t } function Ze(e, r) { if (!r) for (let t in e) { let o = e[t]; return o?.legacy === !0 ? o : void 0 } } function we(e, r, t, o, s, n) { for (let [i, f] of Object.entries(e)) { let a = n ? f[n] : void 0; if (a === null || !a && f.default === null) continue; let m = a ?? f.default ?? Ze(f, n); if (!m) continue; let { initial: p, animate: c, transformTemplate: l } = m; if (!p || !c) continue; let { transition: x, ...g } = c, y = De(p, g, x, Ue(l, o), s); if (!y) continue; let T = {}, h = {}; for (let [S, P] of Object.entries(y)) T[S] = P.keyframes, h[S] = P.options; let K = n ? `:not(.hidden-${n}) ` : ""; r(`${K}[${t}="${i}"]`, T, h) } } function Ue(e, r) { if (!(!e || !r)) return (t, o) => e.replace(r, o) } function Pe(e) { return e ? e.find(t => t.mediaQuery ? window.matchMedia(t.mediaQuery).matches === !0 : !1)?.hash : void 0 } var zt = { animateAppearEffects: we, getActiveVariantHash: Pe, spring: v, startOptimizedAppearAnimation: ie }; return zt })()</script>
-    <script type="framer/appear"
-      id="__framer__appearAnimationsContent">{"1kfwg09":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":0},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"delay":1,"duration":1,"ease":[0.6,0,0.4,1],"type":"tween"},"x":0,"y":0}},"a1qw1e":null,"1qkvzkg":null},"1vt5zq3":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1,"duration":1,"type":"spring"},"x":0,"y":0}}},"1cegyh1":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.1,"duration":1,"type":"spring"},"x":0,"y":0}}},"azmub0":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.2,"duration":1,"type":"spring"},"x":0,"y":0}}},"e7pv7g":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":14},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":1.3,"duration":1,"type":"spring"},"x":0,"y":0}}},"e6kwu9":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}},"171oejd":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}},"1wx0bkg":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}},"121iadi":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}},"zrt4nr":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":20},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":2,"duration":0.5,"type":"spring"},"x":0,"y":0}}}}</script>
-    <script type="framer/appear"
-      id="__framer__breakpoints">[{"hash":"72rtr7","mediaQuery":"(min-width: 1200px)"},{"hash":"a1qw1e","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"1qkvzkg","mediaQuery":"(max-width: 809.98px)"},{"hash":"10o9kcu","mediaQuery":"(min-width: 1200px)"},{"hash":"zrt4nr","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"121iadi","mediaQuery":"(max-width: 809.98px)"}]</script>
-    <script
-      data-framer-appear-animation="no-preference">(() => { function c(i, o, s) { if (window.__framer_disable_appear_effects_optimization__ || typeof animator > "u") return; let e = { detail: { bg: document.hidden } }; requestAnimationFrame(() => { let a = "framer-appear-start"; performance.mark(a, e), animator.animateAppearEffects(JSON.parse(window.__framer__appearAnimationsContent.text), (m, p, d) => { let t = document.querySelector(m); if (t) for (let [r, f] of Object.entries(p)) animator.startOptimizedAppearAnimation(t, r, f, d[r]) }, i, o, s && window.matchMedia("(prefers-reduced-motion:reduce)").matches === !0, animator.getActiveVariantHash(JSON.parse(window.__framer__breakpoints.text))); let n = "framer-appear-end"; performance.mark(n, e), performance.measure("framer-appear", { start: a, end: n, detail: e.detail }) }) } return c })()("data-framer-appear-id", "__Appear_Animation_Transform__", false)</script>
-    <script>typeof document < "u" && (window.process = { ...window.process, env: { ...window.process?.env, NODE_ENV: "production" } });</script>
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/react.BGe8Y4dC.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/rolldown-runtime.CrzmA4BD.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/motion.Dl_0CF8X.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/framer.Ck8wa-Ej.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/shared-lib.Djpk_QJF.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bpb5UkTTu.CsSJUxza.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/j6DfAo0_QpJvBGj7bNlK20qOxN0Ocb3xeDPulBgZMJ8.BW4YvPOs.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/C5G6Nyq_9.Y2cEk5-a.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/hlzaXNfgP.C0xe37Uk.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bVEWVnbXn.D3Hw149r.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/bcZ7vbB9m.BRn5e7x3.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/jdXmslKvZ.B0QZNDLi.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/h4S0bZNLN.BbeO7h9j.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/wkxkh7BsO.DZHMw6bB.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/xhs7U55FX.7J0k5d5A.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/Ticker.BB9lX66T.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/augiA20Il.D4aBOM8c.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/T6M__7ENs.ChECod6g.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/VerticalShift.B2NpqXuv.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/AnimatedNumberCounter_Prod.Ct2SmTDj.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/Q6ecgM69R.CtsVtFAz.mjs">
-    <link rel="modulepreload" fetchpriority="low"
-      href="https://framerusercontent.com/sites/cpYk8V9GLIu7wLl5mOZAO/MexjCZNXA.i7FTeGWq.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="./Firma_files/script_main.Bc2AOisy.mjs">
-    <script type="module" async="" data-framer-bundle="main" fetchpriority="low"
-      src="./Firma_files/script_main.Bc2AOisy.mjs"></script>
-    <div id="svg-templates"
-      style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict"
-      aria-hidden="true">
-      <svg viewBox="0 0 24 24" id="svg-1241953022_113">
-        <path d="M4 0h16v8h-8zm0 8h8l8 8H4zm0 8h8v8z"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 0 0 L 0 4.5 L 7.5 4.5 L 7.5 12 L 12 12 L 12 0 Z" fill-opacity="var(--1m6trwb, 0)"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="12px" id="cfNFsTWLl" transform="translate(8.25 3.75)" width="12px">
-        </path>
-        <path d="M 7.5 12 L 12 12 L 12 0 L 0 0 L 0 4.5" fill="transparent" height="12px" id="ODJ_TeZYo"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3.75)" width="12px"></path>
-        <path d="M 0 12 L 0 0 L 12 0 L 12 12 Z" fill="transparent" height="12px" id="Ea3BNSkj5" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 8.25)" width="12px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="7.5px" id="YRVmJ2NxP"
-          transform="translate(3 6)" width="7.125px"></path>
-        <path
-          d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="7.5px" id="Mbc3zo2eV"
-          transform="translate(13.875 6)" width="7.125px"></path>
-        <path
-          d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 L 7.125 9 C 7.125 11.071 5.446 12.75 3.375 12.75"
-          fill="transparent" height="12.75px" id="EU8WkDZVO" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3 6)" width="7.125px"></path>
-        <path
-          d="M 7.125 7.5 L 0.75 7.5 C 0.336 7.5 0 7.164 0 6.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 6.375 0 C 6.789 0 7.125 0.336 7.125 0.75 L 7.125 9 C 7.125 11.071 5.446 12.75 3.375 12.75"
-          fill="transparent" height="12.75px" id="TuL7tpJzc" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(13.875 6)" width="7.125px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 8.389 7.888 L 6.855 0 L 6.855 0 C 7.106 1.419 6.716 2.877 5.79 3.98 C 4.863 5.084 3.495 5.721 2.054 5.719 L 0 5.719 L 3.948 10.2 C 4.758 11.01 6 11.201 7.016 10.672 C 8.032 10.143 8.587 9.016 8.389 7.888 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="10.968481287579621px"
-          id="Twl2LIRXA" transform="translate(14.071 8.531)" width="8.4286875924804px"></path>
-        <path d="M 0 0 L 2.25 0" fill="transparent" height="1px" id="PBrySwxmU" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(14.25 9.75)" width="2.25px"></path>
-        <path d="M 0 0 L 3 0" fill="transparent" height="1px" id="upCb0uKCi" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(6.75 9.75)" width="3px"></path>
-        <path d="M 0 0 L 0 3" fill="transparent" height="3px" id="nHf611gfO" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(8.25 8.25)" width="1px"></path>
-        <path
-          d="M 8.429 9.75 L 4.481 14.231 C 3.671 15.041 2.429 15.232 1.413 14.703 C 0.397 14.174 -0.159 13.047 0.04 11.919 L 1.574 4.031 C 1.983 1.704 4.002 0.005 6.364 0 L 14.625 0 C 17.317 0 19.5 2.183 19.5 4.875 C 19.5 7.567 17.317 9.75 14.625 9.75 Z"
-          fill="transparent" height="14.999731287579628px" id="HxQp0DaNe" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(1.5 4.5)" width="19.49962509248038px"></path>
-        <path
-          d="M 0 5.719 L 3.948 10.2 C 4.758 11.01 6 11.201 7.016 10.672 C 8.032 10.143 8.587 9.016 8.389 7.888 L 6.855 0"
-          fill="transparent" height="10.968481287579621px" id="rRbDIKqII" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(14.071 8.531)" width="8.4286875924804px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 0 17.25 C 0 16.007 1.007 15 2.25 15 L 15 15 L 15 0 L 2.25 0 C 1.007 0 0 1.007 0 2.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="rwSjL0zxZ"
-          transform="translate(4.5 3)" width="15px"></path>
-        <path d="M 0 17.25 C 0 16.007 1.007 15 2.25 15 L 15 15 L 15 0 L 2.25 0 C 1.007 0 0 1.007 0 2.25 Z"
-          fill="transparent" height="17.25px" id="uGzgr0vL7" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(4.5 3)" width="15px"></path>
-        <path d="M 0 0 L 0 0.75 L 13.5 0.75" fill="transparent" height="1px" id="J0wY0mdtc" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(4.5 20.25)" width="13.5px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="16.5px" id="m4966p9IP"
-          transform="translate(3.75 3.75)" width="16.5px"></path>
-        <path
-          d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z"
-          fill="transparent" height="16.5px" id="br_hlS6X_" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.75 3.75)" width="16.5px"></path>
-        <path
-          d="M 15.821 0.445 C 18.365 -0.231 20.266 -0.16 20.831 0.815 C 21.862 2.589 18.07 6.684 12.364 9.963 C 6.657 13.241 1.198 14.463 0.169 12.681 C -0.399 11.704 0.498 10.022 2.371 8.16"
-          fill="transparent" height="13.500452610855575px" id="pb3Fb3ggf" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(1.5 5.25)" width="21.0001917404997px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="H5Toe0LhE"
-          transform="translate(3.75 3)" width="16.5px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uRA2Wk3tO" transform="translate(8.25 9.75)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="hR1wzn62a" transform="translate(13.5 9.75)"
-          width="2.25px"></path>
-        <path
-          d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
-          fill="transparent" height="17.25px" id="uhRxAP9bc" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.75 3)" width="16.5px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="3.75px" id="lHAy2XJ8x"
-          transform="translate(1.5 16.5)" width="21px"></path>
-        <path d="M 9.75 0 L 0 12 L 9.75 12 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))"
-          height="12px" id="rtwxNVoCY" transform="translate(3 0.75)" width="9.75px"></path>
-        <path
-          d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
-          fill="transparent" height="3.75px" id="BBdHchIMl" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(1.5 16.5)" width="21px"></path>
-        <path d="M 0 8.25 L 7.5 8.25 L 0 0" fill="transparent" height="8.25px" id="SLpDFhnM4" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(12.75 4.5)" width="7.5px"></path>
-        <path d="M 9.75 15.75 L 9.75 0 L 0 12 L 9.75 12" fill="transparent" height="15.75px" id="h1L4CZ2fk"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 0.75)" width="9.75px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="12.000188038477893px"
-          id="h2RVElj7m" transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
-        <path
-          d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
-          fill="transparent" height="12.000188038477893px" id="Omd1xueOI" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
-        <path d="M 5.48 0 L 0 5.48" fill="transparent" height="5.479687499999997px" id="zIKXnFQZL" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(2.25 11.02)" width="5.479687499999997px"></path>
-        <path d="M 4.993 0 L 0 4.993" fill="transparent" height="4.993124999999992px" id="lv4E4uZ0o" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 16.757)" width="4.993124999999999px"></path>
-        <path d="M 5.089 0 L 0 5.089" fill="transparent" height="5.0887500000000045px" id="pTxkkoSCS"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(10.5 16.661)" width="5.0887500000000045px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="9.7487961692037px" id="ugallOpxe"
-          transform="translate(12 11.25)" width="5.25px"></path>
-        <path
-          d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.25px" id="lQV3eI5uT"
-          transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
-        <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.115000000000009px"
-          id="Rol3EuQGC" transform="translate(3.75 15.135)" width="5.115000000000002px"></path>
-        <path
-          d="M 10.417 6.833 C 12.667 4.583 12.807 1.907 12.737 0.713 C 12.713 0.337 12.413 0.037 12.037 0.013 C 10.843 -0.057 8.168 0.082 5.917 2.333 L 0 8.25 L 4.5 12.75 Z"
-          fill="transparent" height="12.749957776566365px" id="T1dzJH3_E" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(7.5 3.75)" width="12.74989583333332px"></path>
-        <path
-          d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25"
-          fill="transparent" height="5.25px" id="Xo_c2m9KI" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
-        <path
-          d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25"
-          fill="transparent" height="9.7487961692037px" id="puaO4cp7A" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(12 11.25)" width="5.25px"></path>
-        <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0" fill="transparent"
-          height="5.115000000000009px" id="lMY7FBQMB" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round"
-          stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 15.135)"
-          width="5.115000000000002px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18.00072584206196px"
-          id="f4qL21INY" transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
-        <path
-          d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
-          fill="transparent" height="18.00072584206196px" id="r6KG7nvgM" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="CqhnUww23" transform="translate(10.875 10.875)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uCSdgdlkE" transform="translate(6.75 10.875)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="tynFhUs5i" transform="translate(15 10.875)"
-          width="2.25px"></path>
-      </svg>
-      <svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="3288219287">
-        <path
-          d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="17.25px" id="H5Toe0LhE"
-          transform="translate(3.75 3)" width="16.5px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uRA2Wk3tO" transform="translate(8.25 9.75)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="hR1wzn62a" transform="translate(13.5 9.75)"
-          width="2.25px"></path>
-        <path
-          d="M 16.5 17.25 L 13.75 15 L 11 17.25 L 8.25 15 L 5.5 17.25 L 2.75 15 L 0 17.25 L 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 Z"
-          fill="transparent" height="17.25px" id="uhRxAP9bc" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.75 3)" width="16.5px"></path>
-      </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        id="1793599557">
-        <path
-          d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="3.75px" id="lHAy2XJ8x"
-          transform="translate(1.5 16.5)" width="21px"></path>
-        <path d="M 9.75 0 L 0 12 L 9.75 12 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))"
-          height="12px" id="rtwxNVoCY" transform="translate(3 0.75)" width="9.75px"></path>
-        <path
-          d="M 0 0 L 21 0 L 18.225 3.469 C 18.083 3.646 17.868 3.75 17.64 3.75 L 3.36 3.75 C 3.132 3.75 2.917 3.646 2.775 3.469 Z"
-          fill="transparent" height="3.75px" id="BBdHchIMl" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(1.5 16.5)" width="21px"></path>
-        <path d="M 0 8.25 L 7.5 8.25 L 0 0" fill="transparent" height="8.25px" id="SLpDFhnM4" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(12.75 4.5)" width="7.5px"></path>
-        <path d="M 9.75 15.75 L 9.75 0 L 0 12 L 9.75 12" fill="transparent" height="15.75px" id="h1L4CZ2fk"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 0.75)" width="9.75px"></path>
-      </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        id="1724523750">
-        <path
-          d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="12.000188038477893px"
-          id="h2RVElj7m" transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
-        <path
-          d="M 6.369 9.906 L 9.724 11.924 C 9.899 12.032 10.123 12.025 10.29 11.905 C 10.458 11.785 10.537 11.576 10.492 11.375 L 9.579 7.607 L 12.564 5.087 C 12.721 4.955 12.782 4.74 12.719 4.545 C 12.656 4.35 12.48 4.213 12.276 4.198 L 8.358 3.888 L 6.848 0.312 C 6.767 0.123 6.58 0 6.374 0 C 6.168 0 5.981 0.123 5.9 0.312 L 4.39 3.888 L 0.472 4.198 C 0.267 4.211 0.09 4.348 0.025 4.543 C -0.039 4.739 0.022 4.954 0.179 5.087 L 3.164 7.607 L 2.244 11.375 C 2.199 11.576 2.278 11.785 2.446 11.905 C 2.613 12.025 2.837 12.032 3.012 11.924 Z"
-          fill="transparent" height="12.000188038477893px" id="Omd1xueOI" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(9.006 2.25)" width="12.743701791581444px"></path>
-        <path d="M 5.48 0 L 0 5.48" fill="transparent" height="5.479687499999997px" id="zIKXnFQZL" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(2.25 11.02)" width="5.479687499999997px"></path>
-        <path d="M 4.993 0 L 0 4.993" fill="transparent" height="4.993124999999992px" id="lv4E4uZ0o" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 16.757)" width="4.993124999999999px"></path>
-        <path d="M 5.089 0 L 0 5.089" fill="transparent" height="5.0887500000000045px" id="pTxkkoSCS"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(10.5 16.661)" width="5.0887500000000045px"></path>
-      </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        id="1175745045">
-        <path
-          d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="9.7487961692037px" id="ugallOpxe"
-          transform="translate(12 11.25)" width="5.25px"></path>
-        <path
-          d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.25px" id="lQV3eI5uT"
-          transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
-        <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="5.115000000000009px"
-          id="Rol3EuQGC" transform="translate(3.75 15.135)" width="5.115000000000002px"></path>
-        <path
-          d="M 10.417 6.833 C 12.667 4.583 12.807 1.907 12.737 0.713 C 12.713 0.337 12.413 0.037 12.037 0.013 C 10.843 -0.057 8.168 0.082 5.917 2.333 L 0 8.25 L 4.5 12.75 Z"
-          fill="transparent" height="12.749957776566365px" id="T1dzJH3_E" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(7.5 3.75)" width="12.74989583333332px"></path>
-        <path
-          d="M 9.749 0 L 3.969 0 C 3.77 0 3.58 0.079 3.439 0.219 L 0.219 3.44 C 0.019 3.641 -0.051 3.938 0.039 4.207 C 0.129 4.476 0.363 4.672 0.644 4.712 L 4.499 5.25"
-          fill="transparent" height="5.25px" id="Xo_c2m9KI" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.001 6.75)" width="9.7487961692037px"></path>
-        <path
-          d="M 5.25 0 L 5.25 5.78 C 5.25 5.978 5.171 6.169 5.031 6.309 L 1.81 9.53 C 1.609 9.73 1.312 9.8 1.043 9.71 C 0.774 9.62 0.578 9.386 0.538 9.105 L 0 5.25"
-          fill="transparent" height="9.7487961692037px" id="puaO4cp7A" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(12 11.25)" width="5.25px"></path>
-        <path d="M 5.115 2.473 C 4.752 3.269 3.53 5.115 0 5.115 C 0 1.585 1.846 0.363 2.642 0" fill="transparent"
-          height="5.115000000000009px" id="lMY7FBQMB" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round"
-          stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 15.135)"
-          width="5.115000000000002px"></path>
-      </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        id="1233169835">
-        <path
-          d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
-          fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18.00072584206196px"
-          id="f4qL21INY" transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
-        <path
-          d="M 4.493 16.79 C 8.403 19.053 13.386 18.066 16.138 14.483 C 18.891 10.9 18.56 5.831 15.365 2.636 C 12.17 -0.559 7.101 -0.89 3.518 1.863 C -0.065 4.615 -1.052 9.598 1.211 13.508 L 1.211 13.508 L 0.039 17.01 C -0.051 17.279 0.019 17.577 0.22 17.777 C 0.421 17.978 0.718 18.049 0.987 17.959 Z"
-          fill="transparent" height="18.00072584206196px" id="r6KG7nvgM" stroke-dasharray="" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))"
-          transform="translate(3.001 3.002)" width="18.000910893351044px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="CqhnUww23" transform="translate(10.875 10.875)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="uCSdgdlkE" transform="translate(6.75 10.875)"
-          width="2.25px"></path>
-        <path
-          d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="2.25px" id="tynFhUs5i" transform="translate(15 10.875)"
-          width="2.25px"></path>
-      </svg><svg display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-        id="743177299">
-        <path d="M 0 0 L 0 4.5 L 7.5 4.5 L 7.5 12 L 12 12 L 12 0 Z" fill-opacity="var(--1m6trwb, 0)"
-          fill="var(--21h8s6, rgb(0, 0, 0))" height="12px" id="cfNFsTWLl" transform="translate(8.25 3.75)" width="12px">
-        </path>
-        <path d="M 7.5 12 L 12 12 L 12 0 L 0 0 L 0 4.5" fill="transparent" height="12px" id="ODJ_TeZYo"
-          stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3.75)" width="12px"></path>
-        <path d="M 0 12 L 0 0 L 12 0 L 12 12 Z" fill="transparent" height="12px" id="Ea3BNSkj5" stroke-dasharray=""
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)"
-          stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3.75 8.25)" width="12px"></path>
-      </svg>
-    </div>
-    <!-- Start of bodyEnd -->
+  <!-- Horizontal Scroll with Mouse Wheel Script -->
+  <script>
+    (function () {
+      'use strict';
 
-    <!-- End of bodyEnd -->
+      // Detect if device is mobile/tablet
+      function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+          (window.innerWidth <= 1024) ||
+          ('ontouchstart' in window) ||
+          (navigator.maxTouchPoints > 0);
+      }
 
-    <!-- Horizontal Scroll with Mouse Wheel Script -->
-    <script>
-      (function () {
-        'use strict';
-
-        // Detect if device is mobile/tablet
-        function isMobileDevice() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-            (window.innerWidth <= 1024) ||
-            ('ontouchstart' in window) ||
-            (navigator.maxTouchPoints > 0);
+      // Disable Lenis smooth scroll if it exists (only on desktop)
+      function disableLenis() {
+        if (!isMobileDevice() && window.lenis) {
+          window.lenis.destroy();
+          console.log('Lenis destroyed');
         }
 
-        // Disable Lenis smooth scroll if it exists (only on desktop)
-        function disableLenis() {
-          if (!isMobileDevice() && window.lenis) {
-            window.lenis.destroy();
-            console.log('Lenis destroyed');
-          }
+        // Remove lenis classes only on desktop
+        if (!isMobileDevice()) {
+          document.documentElement.classList.remove('lenis', 'lenis-smooth', 'lenis-autoToggle');
+          document.body.classList.remove('lenis', 'lenis-smooth');
+        }
+      }
 
-          // Remove lenis classes only on desktop
-          if (!isMobileDevice()) {
-            document.documentElement.classList.remove('lenis', 'lenis-smooth', 'lenis-autoToggle');
-            document.body.classList.remove('lenis', 'lenis-smooth');
+      // Smooth scroll implementation
+      function createSmoothScroll() {
+        let targetScrollLeft = window.scrollX || window.pageXOffset;
+        let currentScrollLeft = targetScrollLeft;
+        let isScrolling = false;
+        let scrollTimeout;
+
+        // Easing function for smooth animation
+        function easeOutCubic(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+
+        // Animate scroll
+        function animateScroll() {
+          if (!isScrolling) return;
+
+          const diff = targetScrollLeft - currentScrollLeft;
+          const delta = diff * 0.1; // Smoothness factor (lower = smoother but slower)
+
+          if (Math.abs(diff) > 0.5) {
+            currentScrollLeft += delta;
+            window.scrollTo(currentScrollLeft, 0);
+            requestAnimationFrame(animateScroll);
+          } else {
+            currentScrollLeft = targetScrollLeft;
+            window.scrollTo(currentScrollLeft, 0);
+            isScrolling = false;
           }
         }
 
-        // Smooth scroll implementation
-        function createSmoothScroll() {
-          let targetScrollLeft = window.scrollX || window.pageXOffset;
-          let currentScrollLeft = targetScrollLeft;
-          let isScrolling = false;
-          let scrollTimeout;
+        // Handle wheel events
+        function handleWheel(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
 
-          // Easing function for smooth animation
-          function easeOutCubic(t) {
-            return 1 - Math.pow(1 - t, 3);
+          // Get scroll delta
+          let delta = 0;
+          if (e.deltaY) {
+            delta = e.deltaY;
+          } else if (e.wheelDelta) {
+            delta = -e.wheelDelta;
+          } else if (e.detail) {
+            delta = e.detail * 40;
           }
 
-          // Animate scroll
-          function animateScroll() {
-            if (!isScrolling) return;
+          // Apply multiplier for better control
+          const scrollMultiplier = 1.5;
+          delta *= scrollMultiplier;
 
-            const diff = targetScrollLeft - currentScrollLeft;
-            const delta = diff * 0.1; // Smoothness factor (lower = smoother but slower)
+          // Update target scroll position
+          targetScrollLeft += delta;
 
-            if (Math.abs(diff) > 0.5) {
-              currentScrollLeft += delta;
-              window.scrollTo(currentScrollLeft, 0);
-              requestAnimationFrame(animateScroll);
-            } else {
-              currentScrollLeft = targetScrollLeft;
-              window.scrollTo(currentScrollLeft, 0);
-              isScrolling = false;
-            }
+          // Clamp to valid scroll range
+          const maxScroll = document.documentElement.scrollWidth - window.innerWidth;
+          targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, maxScroll));
+
+          // Start animation if not already running
+          if (!isScrolling) {
+            isScrolling = true;
+            currentScrollLeft = window.scrollX || window.pageXOffset;
+            requestAnimationFrame(animateScroll);
           }
 
-          // Handle wheel events
-          function handleWheel(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
+          // Clear timeout and set new one
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+          }, 100);
 
-            // Get scroll delta
-            let delta = 0;
-            if (e.deltaY) {
-              delta = e.deltaY;
-            } else if (e.wheelDelta) {
-              delta = -e.wheelDelta;
-            } else if (e.detail) {
-              delta = e.detail * 40;
-            }
-
-            // Apply multiplier for better control
-            const scrollMultiplier = 1.5;
-            delta *= scrollMultiplier;
-
-            // Update target scroll position
-            targetScrollLeft += delta;
-
-            // Clamp to valid scroll range
-            const maxScroll = document.documentElement.scrollWidth - window.innerWidth;
-            targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, maxScroll));
-
-            // Start animation if not already running
-            if (!isScrolling) {
-              isScrolling = true;
-              currentScrollLeft = window.scrollX || window.pageXOffset;
-              requestAnimationFrame(animateScroll);
-            }
-
-            // Clear timeout and set new one
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-              isScrolling = false;
-            }, 100);
-
-            return false;
-          }
-
-          return handleWheel;
+          return false;
         }
 
-        // Force horizontal scrolling (desktop only)
-        function forceHorizontalScroll() {
-          // Check if mobile - if so, skip horizontal scroll
-          if (isMobileDevice()) {
-            console.log('Mobile device detected - vertical scrolling enabled');
-            return;
-          }
+        return handleWheel;
+      }
 
-          // Create smooth scroll handler
-          const handleWheel = createSmoothScroll();
+      // Force horizontal scrolling (desktop only)
+      function forceHorizontalScroll() {
+        // Check if mobile - if so, skip horizontal scroll
+        if (isMobileDevice()) {
+          console.log('Mobile device detected - vertical scrolling enabled');
+          return;
+        }
 
-          // Add event listeners with highest priority (desktop only)
-          document.addEventListener('wheel', handleWheel, { passive: false, capture: true });
-          window.addEventListener('wheel', handleWheel, { passive: false, capture: true });
-          document.body.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+        // Create smooth scroll handler
+        const handleWheel = createSmoothScroll();
 
-          // Also handle mousewheel for older browsers
-          document.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
-          window.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
+        // Add event listeners with highest priority (desktop only)
+        document.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+        window.addEventListener('wheel', handleWheel, { passive: false, capture: true });
+        document.body.addEventListener('wheel', handleWheel, { passive: false, capture: true });
 
-          // Handle DOMMouseScroll for Firefox
-          document.addEventListener('DOMMouseScroll', handleWheel, { passive: false, capture: true });
+        // Also handle mousewheel for older browsers
+        document.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
+        window.addEventListener('mousewheel', handleWheel, { passive: false, capture: true });
 
-          // Add CSS for smooth scrolling
-          const style = document.createElement('style');
-          style.textContent = `
+        // Handle DOMMouseScroll for Firefox
+        document.addEventListener('DOMMouseScroll', handleWheel, { passive: false, capture: true });
+
+        // Add CSS for smooth scrolling
+        const style = document.createElement('style');
+        style.textContent = `
             html {
               scroll-behavior: auto !important;
             }
@@ -12316,79 +12416,105 @@
               overflow-y: hidden !important;
             }
           `;
-          document.head.appendChild(style);
+        document.head.appendChild(style);
 
-          console.log('Smooth horizontal scroll enabled (desktop only)');
+        console.log('Smooth horizontal scroll enabled (desktop only)');
+      }
+
+      // Initialize everything
+      function init() {
+        // Disable Lenis only on desktop
+        disableLenis();
+
+        // Force horizontal scroll only on desktop
+        forceHorizontalScroll();
+
+        // Keep checking and disabling Lenis if it reinitializes (desktop only)
+        if (!isMobileDevice()) {
+          setInterval(disableLenis, 1000);
         }
+      }
 
-        // Initialize everything
-        function init() {
-          // Disable Lenis only on desktop
-          disableLenis();
+      // Run on load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
 
-          // Force horizontal scroll only on desktop
-          forceHorizontalScroll();
+      // Also run after delays to catch late-loading scripts
+      setTimeout(init, 100);
+      setTimeout(init, 500);
+      setTimeout(init, 1000);
+      setTimeout(init, 2000);
 
-          // Keep checking and disabling Lenis if it reinitializes (desktop only)
-          if (!isMobileDevice()) {
-            setInterval(disableLenis, 1000);
-          }
-        }
+      // Re-check on window resize (in case orientation changes)
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          location.reload(); // Reload to re-detect device type
+        }, 500);
+      });
+    })();
+  </script>
 
-        // Run on load
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', init);
+  <!-- STEP 3: Add this JavaScript before closing </body> tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById("toggle-btn");
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.querySelector(".menu");
+      const menuItems = document.querySelectorAll(".menu-item a");
+      const servicesToggle = document.querySelector(".services-toggle");
+      const hasSubmenu = document.querySelector(".has-submenu");
+
+      // Menu toggle functionality
+      toggleBtn.onclick = (e) => {
+        hamburger.classList.toggle("active");
+
+        if (hamburger.classList.contains("active")) {
+          // Open menu
+          menu.style.visibility = "visible";
+          gsap.to(menuItems, {
+            top: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out"
+          });
+
+          setTimeout(() => {
+            hamburger.classList.add('menu-visible');
+          }, 800);
         } else {
-          init();
+          // Close menu
+          hamburger.classList.remove('menu-visible');
+          gsap.to(menuItems, {
+            top: "100vh",
+            duration: 0.6,
+            stagger: 0.05,
+            ease: "power3.in",
+            onComplete: () => {
+              menu.style.visibility = "hidden";
+            }
+          });
         }
+      };
 
-        // Also run after delays to catch late-loading scripts
-        setTimeout(init, 100);
-        setTimeout(init, 500);
-        setTimeout(init, 1000);
-        setTimeout(init, 2000);
-
-        // Re-check on window resize (in case orientation changes)
-        let resizeTimer;
-        window.addEventListener('resize', function () {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(function () {
-            location.reload(); // Reload to re-detect device type
-          }, 500);
+      // Services submenu toggle
+      if (servicesToggle && hasSubmenu) {
+        servicesToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          hasSubmenu.classList.toggle('active');
         });
-      })();
-    </script>
+      }
 
-    <!-- STEP 3: Add this JavaScript before closing </body> tag -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const toggleBtn = document.getElementById("toggle-btn");
-        const hamburger = document.getElementById("hamburger");
-        const menu = document.querySelector(".menu");
-        const menuItems = document.querySelectorAll(".menu-item a");
-        const servicesToggle = document.querySelector(".services-toggle");
-        const hasSubmenu = document.querySelector(".has-submenu");
-
-        // Menu toggle functionality
-        toggleBtn.onclick = (e) => {
-          hamburger.classList.toggle("active");
-
-          if (hamburger.classList.contains("active")) {
-            // Open menu
-            menu.style.visibility = "visible";
-            gsap.to(menuItems, {
-              top: 0,
-              duration: 0.8,
-              stagger: 0.1,
-              ease: "power3.out"
-            });
-
-            setTimeout(() => {
-              hamburger.classList.add('menu-visible');
-            }, 800);
-          } else {
-            // Close menu
+      // Close menu when clicking on a menu item
+      menuItems.forEach(item => {
+        item.addEventListener('click', function () {
+          if (!this.classList.contains('services-toggle')) {
+            hamburger.classList.remove("active");
             hamburger.classList.remove('menu-visible');
             gsap.to(menuItems, {
               top: "100vh",
@@ -12400,174 +12526,148 @@
               }
             });
           }
-        };
-
-        // Services submenu toggle
-        if (servicesToggle && hasSubmenu) {
-          servicesToggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            hasSubmenu.classList.toggle('active');
-          });
-        }
-
-        // Close menu when clicking on a menu item
-        menuItems.forEach(item => {
-          item.addEventListener('click', function () {
-            if (!this.classList.contains('services-toggle')) {
-              hamburger.classList.remove("active");
-              hamburger.classList.remove('menu-visible');
-              gsap.to(menuItems, {
-                top: "100vh",
-                duration: 0.6,
-                stagger: 0.05,
-                ease: "power3.in",
-                onComplete: () => {
-                  menu.style.visibility = "hidden";
-                }
-              });
-            }
-          });
         });
       });
-    </script>
+    });
+  </script>
 
 
 
 
-    <!-- JavaScript to draw video inside text using Canvas -->
-    <script>
-      const canvas = document.getElementById('textCanvas');
-      const ctx = canvas.getContext('2d');
-      const video = document.getElementById('sourceVideo');
-      const text = 'CAREER';
-      let animationId = null;
+  <!-- JavaScript to draw video inside text using Canvas -->
+  <script>
+    const canvas = document.getElementById('textCanvas');
+    const ctx = canvas.getContext('2d');
+    const video = document.getElementById('sourceVideo');
+    const text = 'CAREER';
+    let animationId = null;
 
-      // Get responsive font size based on window width
-      function getResponsiveFontSize() {
-        const width = window.innerWidth;
-        // Adjusted for better fit on mobile/tablet - prevents text cutoff
-        if (width <= 375) return 85;      // Increased for mobile
-        if (width <= 480) return 100;     // Increased for small mobile
-        if (width <= 600) return 115;     // Increased for large mobile
-        if (width <= 768) return 130;     // Increased for tablet portrait
-        if (width <= 1024) return 180;    // Tablet landscape
-        if (width <= 1200) return 280;    // Small desktop
-        if (width <= 1400) return 350;    // Desktop
-        return 440;
+    // Get responsive font size based on window width
+    function getResponsiveFontSize() {
+      const width = window.innerWidth;
+      // Adjusted for better fit on mobile/tablet - prevents text cutoff
+      if (width <= 375) return 85;      // Increased for mobile
+      if (width <= 480) return 100;     // Increased for small mobile
+      if (width <= 600) return 115;     // Increased for large mobile
+      if (width <= 768) return 130;     // Increased for tablet portrait
+      if (width <= 1024) return 180;    // Tablet landscape
+      if (width <= 1200) return 280;    // Small desktop
+      if (width <= 1400) return 350;    // Desktop
+      return 440;
+    }
+
+    // Get responsive stroke width
+    function getResponsiveStrokeWidth() {
+      const width = window.innerWidth;
+      if (width <= 768) return 1;
+      if (width <= 1024) return 1.5;
+      return 2;
+    }
+
+    // Function to setup canvas
+    function setupCanvas() {
+      const fontSize = getResponsiveFontSize();
+
+      // Set font to measure text - using Geist 900 (matching Career.html)
+      ctx.font = `900 ${fontSize}px "Geist", sans-serif`;
+      const metrics = ctx.measureText(text);
+      const textWidth = metrics.width;
+      const textHeight = fontSize * 1.2;
+
+      // Set high DPI
+      const dpr = window.devicePixelRatio || 1;
+      canvas.style.width = textWidth + 'px';
+      canvas.style.height = textHeight + 'px';
+      canvas.width = textWidth * dpr;
+      canvas.height = textHeight * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    function drawVideoInText() {
+      if (video.paused || video.ended) {
+        video.play().catch(e => console.log('Video play failed:', e));
       }
 
-      // Get responsive stroke width
-      function getResponsiveStrokeWidth() {
-        const width = window.innerWidth;
-        if (width <= 768) return 1;
-        if (width <= 1024) return 1.5;
-        return 2;
+      const fontSize = getResponsiveFontSize();
+      const dpr = window.devicePixelRatio || 1;
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Save context
+      ctx.save();
+
+      // Draw video scaled to canvas
+      if (video.readyState >= video.HAVE_CURRENT_DATA) {
+        ctx.drawImage(video, 0, 0, canvas.width / dpr, canvas.height / dpr);
       }
 
-      // Function to setup canvas
-      function setupCanvas() {
-        const fontSize = getResponsiveFontSize();
+      // Set composite operation to show video only in text
+      ctx.globalCompositeOperation = 'destination-in';
 
-        // Set font to measure text - using Geist 900 (matching Career.html)
-        ctx.font = `900 ${fontSize}px "Geist", sans-serif`;
-        const metrics = ctx.measureText(text);
-        const textWidth = metrics.width;
-        const textHeight = fontSize * 1.2;
+      // Draw text mask - using Geist 900 (matching Career.html)
+      ctx.font = `900 ${fontSize}px "Geist", sans-serif`;
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = '#000';
+      ctx.fillText(text, 0, 0);
 
-        // Set high DPI
-        const dpr = window.devicePixelRatio || 1;
-        canvas.style.width = textWidth + 'px';
-        canvas.style.height = textHeight + 'px';
-        canvas.width = textWidth * dpr;
-        canvas.height = textHeight * dpr;
-        ctx.scale(dpr, dpr);
-      }
+      // Restore context
+      ctx.restore();
 
-      function drawVideoInText() {
-        if (video.paused || video.ended) {
-          video.play().catch(e => console.log('Video play failed:', e));
-        }
+      // Continue animation
+      animationId = requestAnimationFrame(drawVideoInText);
+    }
 
-        const fontSize = getResponsiveFontSize();
-        const dpr = window.devicePixelRatio || 1;
-
-        // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Save context
-        ctx.save();
-
-        // Draw video scaled to canvas
-        if (video.readyState >= video.HAVE_CURRENT_DATA) {
-          ctx.drawImage(video, 0, 0, canvas.width / dpr, canvas.height / dpr);
-        }
-
-        // Set composite operation to show video only in text
-        ctx.globalCompositeOperation = 'destination-in';
-
-        // Draw text mask - using Geist 900 (matching Career.html)
-        ctx.font = `900 ${fontSize}px "Geist", sans-serif`;
-        ctx.textBaseline = 'top';
-        ctx.fillStyle = '#000';
-        ctx.fillText(text, 0, 0);
-
-        // Restore context
-        ctx.restore();
-
-        // Continue animation
-        animationId = requestAnimationFrame(drawVideoInText);
-      }
-
-      // Start animation when video can play
-      video.addEventListener('canplay', () => {
-        video.play().then(() => {
+    // Start animation when video can play
+    video.addEventListener('canplay', () => {
+      video.play().then(() => {
+        drawVideoInText();
+      }).catch(e => {
+        console.log('Autoplay prevented, trying again...', e);
+        // Try to play on user interaction
+        document.addEventListener('click', () => {
+          video.play();
           drawVideoInText();
-        }).catch(e => {
-          console.log('Autoplay prevented, trying again...', e);
-          // Try to play on user interaction
-          document.addEventListener('click', () => {
-            video.play();
-            drawVideoInText();
-          }, { once: true });
-        });
+        }, { once: true });
       });
+    });
 
-      // Fallback: start immediately if video is already loaded
-      if (video.readyState >= 3) {
-        video.play().then(() => {
-          drawVideoInText();
-        }).catch(e => console.log('Video play error:', e));
-      }
+    // Fallback: start immediately if video is already loaded
+    if (video.readyState >= 3) {
+      video.play().then(() => {
+        drawVideoInText();
+      }).catch(e => console.log('Video play error:', e));
+    }
 
-      // Handle window resize with debouncing
-      let resizeTimeout;
-      window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          // Cancel current animation
-          if (animationId) {
-            cancelAnimationFrame(animationId);
-          }
-          // Reconfigure canvas
-          setupCanvas();
-          // Restart animation
-          drawVideoInText();
-        }, 250);
-      });
-
-      // Handle touch events for mobile video playback
-      document.addEventListener('touchstart', () => {
-        if (video.paused) {
-          video.play().catch(e => console.log('Touch play failed:', e));
+    // Handle window resize with debouncing
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        // Cancel current animation
+        if (animationId) {
+          cancelAnimationFrame(animationId);
         }
-      }, { once: true });
+        // Reconfigure canvas
+        setupCanvas();
+        // Restart animation
+        drawVideoInText();
+      }, 250);
+    });
 
-      // Initial setup
-      setupCanvas();
-    </script>
+    // Handle touch events for mobile video playback
+    document.addEventListener('touchstart', () => {
+      if (video.paused) {
+        video.play().catch(e => console.log('Touch play failed:', e));
+      }
+    }, { once: true });
 
-    <iframe id="__framer-editorbar" src="./Firma_files/edit.html" aria-hidden="true" allow="autoplay" tabindex="-1"
-      class="status_hidden"></iframe>
+    // Initial setup
+    setupCanvas();
+  </script>
+
+  <iframe id="__framer-editorbar" src="./Firma_files/edit.html" aria-hidden="true" allow="autoplay" tabindex="-1"
+    class="status_hidden"></iframe>
 </body>
 
 </html>
@@ -12575,79 +12675,80 @@
 
 <!-- Rotating Text Animation for Career Page -->
 <style>
-.rotating-career-word {
+  .rotating-career-word {
     display: inline-block;
     position: relative;
     color: #f2d803;
     font-weight: 600;
     min-width: 120px;
     text-align: center;
-    border: 3px solid #f41414;
     padding: 8px 20px;
-    border-radius: 8px;
-    background: rgba(244, 20, 20, 0.05);
-}
 
-.rotating-career-word.fade-out {
+
+  }
+
+  .rotating-career-word.fade-out {
     animation: fadeOutCareer 0.5s ease-in-out forwards;
-}
+  }
 
-.rotating-career-word.fade-in {
+  .rotating-career-word.fade-in {
     animation: fadeInCareer 0.5s ease-in-out forwards;
-}
+  }
 
-@keyframes fadeOutCareer {
+  @keyframes fadeOutCareer {
     0% {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-    100% {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
-}
 
-@keyframes fadeInCareer {
-    0% {
-        opacity: 0;
-        transform: translateY(15px);
-    }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 0;
+      transform: translateY(-15px);
     }
-}
+  }
+
+  @keyframes fadeInCareer {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
 
 <script>
-// Rotating text animation for Career page
-(function() {
+  // Rotating text animation for Career page
+  (function () {
     const words = ['Desk', 'Team', 'Shot'];
     let currentIndex = 0;
     const rotatingElement = document.getElementById('rotating-career-word');
-    
+
     if (!rotatingElement) return;
-    
+
     function rotateWord() {
-        // Fade out
-        rotatingElement.classList.add('fade-out');
-        
+      // Fade out
+      rotatingElement.classList.add('fade-out');
+
+      setTimeout(() => {
+        // Change word
+        currentIndex = (currentIndex + 1) % words.length;
+        rotatingElement.textContent = words[currentIndex];
+
+        // Fade in
+        rotatingElement.classList.remove('fade-out');
+        rotatingElement.classList.add('fade-in');
+
         setTimeout(() => {
-            // Change word
-            currentIndex = (currentIndex + 1) % words.length;
-            rotatingElement.textContent = words[currentIndex];
-            
-            // Fade in
-            rotatingElement.classList.remove('fade-out');
-            rotatingElement.classList.add('fade-in');
-            
-            setTimeout(() => {
-                rotatingElement.classList.remove('fade-in');
-            }, 500);
+          rotatingElement.classList.remove('fade-in');
         }, 500);
+      }, 500);
     }
-    
+
     // Start rotation every 3 seconds
     setInterval(rotateWord, 3000);
-})();
+  })();
 </script>
