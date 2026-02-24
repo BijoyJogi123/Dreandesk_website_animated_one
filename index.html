@@ -199,6 +199,131 @@
             color: #000;
         }
 
+        /* ============================================
+           WELCOME LOADER SCREEN
+           ============================================ */
+        #welcome-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #welcome-loader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .loader-gif {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .loader-text {
+            margin-top: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .loader-subtext {
+            margin-top: 10px;
+            font-family: 'Geist', sans-serif;
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Loading progress bar */
+        .loader-progress {
+            width: 300px;
+            height: 4px;
+            background: #f0f0f0;
+            border-radius: 2px;
+            margin: 20px auto 0;
+            overflow: hidden;
+        }
+
+        .loader-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #f2d803, #e38f2e);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* Responsive loader */
+        @media (max-width: 768px) {
+            .loader-gif {
+                max-width: 300px;
+            }
+
+            .loader-text {
+                font-size: 20px;
+            }
+
+            .loader-subtext {
+                font-size: 14px;
+            }
+
+            .loader-progress {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .loader-gif {
+                max-width: 250px;
+            }
+
+            .loader-text {
+                font-size: 18px;
+            }
+
+            .loader-subtext {
+                font-size: 13px;
+            }
+
+            .loader-progress {
+                width: 200px;
+            }
+        }
+
+        /* Hide main content until loaded */
+        body.loading {
+            overflow: hidden;
+        }
+
+        body.loading .main-content {
+            opacity: 0;
+        }
+
+        .main-content {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        /* ============================================
+           END WELCOME LOADER SCREEN
+           ============================================ */
+
+
         /* Popup Modal Styles */
         .modal-overlay {
             display: none;
@@ -832,315 +957,335 @@
                 padding-top: 50px;
             }
 
-            .framer-3y1b7i {
-                width: 580px;
-                padding: 120px 20px 20px 20px;
+            /* .pin-spacer {
+
+                height: 8632px;
+                padding: 0 0 7980px;
+
+            } */
+
+
+            .pin-spacer {
+                height: 2000px;
+                padding: 0 0 3559px;
             }
 
-            .framer-1gqk893 {
-                width: 1400px;
-                height: 438px;
+            
+                .framer-3y1b7i {
+                    width: 580px;
+                    padding: 120px 20px 20px 20px;
+                }
+
+                .framer-1gqk893 {
+                    width: 1400px;
+                    height: 438px;
+                }
+
+                .framer-rqqsrm {
+                    left: 10%;
+                }
+
+                /* Reduce "At DreamDesk" text size */
+                .framer-dnb8d0 p {
+                    font-size: 55px !important;
+                }
+
+                /* Reduce "Unlock Your True Potential" heading size */
+                .framer-1ebgzuc h2 {
+                    font-size: 46px !important;
+                    letter-spacing: 0.5px !important;
+                }
+
+                .framer-text[style*="font-size: 65px"],
+                .framer-text[style*="font-size: 52px"] {
+                    font-size: 46px !important;
+                    letter-spacing: 0.5px !important;
+                }
+
+                /* Reduce description text size */
+                .framer-su7jo2 p {
+                    font-size: 16px !important;
+                    line-height: 1.35 !important;
+                }
+
+                /* Adjust button sizes */
+                .hero-btn {
+                    padding: 13px 28px !important;
+                    font-size: 15px !important;
+                }
+
+                .hero-buttons-container {
+                    gap: 20px !important;
+                    margin-top: 12px !important;
+                }
+
+                /* Adjust spacing */
+                .framer-1kfwg09 {
+                    gap: 20px !important;
+                    margin-top: 25px !important;
+                }
             }
 
-            .framer-rqqsrm {
-                left: 10%;
+            @media (max-width: 1200px) {
+
+                .pin-spacer {
+                    height: 7400px;
+                    padding: 0 0 6840px;
+                }
+
+                .framer-1eiawcr {
+                    width: 1400px;
+                    padding-top: 40px;
+                }
+
+                .framer-3y1b7i {
+                    width: 90%;
+                    max-width: 550px;
+                    padding: 110px 20px 20px 20px;
+                }
+
+                .framer-1gqk893 {
+                    width: 1100px;
+                    height: 344px;
+                    left: 8%;
+                }
+
+                .framer-rqqsrm {
+                    right: 50px;
+                    bottom: 8%;
+                }
+
+                /* Reduce "At DreamDesk" text size */
+                .framer-dnb8d0 p {
+                    font-size: 48px !important;
+                }
+
+                /* Reduce "Unlock Your True Potential" heading size */
+                .framer-1ebgzuc h2 {
+                    font-size: 40px !important;
+                    letter-spacing: 0px !important;
+                }
+
+                .framer-text[style*="font-size: 65px"],
+                .framer-text[style*="font-size: 52px"],
+                .framer-text[style*="font-size: 46px"] {
+                    font-size: 40px !important;
+                    letter-spacing: 0px !important;
+                }
+
+                /* Reduce description text size */
+                .framer-su7jo2 p {
+                    font-size: 15px !important;
+                    line-height: 1.4 !important;
+                }
+
+                /* Adjust button sizes */
+                .hero-btn {
+                    padding: 12px 26px !important;
+                    font-size: 14px !important;
+                }
+
+                .hero-buttons-container {
+                    gap: 18px !important;
+                    margin-top: 10px !important;
+                }
+
+                /* Adjust spacing */
+                .framer-1kfwg09 {
+                    gap: 18px !important;
+                    margin-top: 20px !important;
+                }
             }
 
-            /* Reduce "At DreamDesk" text size */
-            .framer-dnb8d0 p {
-                font-size: 55px !important;
+            @media (max-width: 1024px) {
+                .framer-ll2u5v {
+                    flex-direction: column;
+                    padding-top: 140px;
+                }
+
+                .framer-1eiawcr {
+                    width: 100%;
+                    max-width: 100vw;
+                    /* padding-top: 40px; */
+                }
+
+                .framer-3y1b7i {
+                    width: 90%;
+                    padding: 130px 20px 20px 20px;
+                }
+
+                .framer-1kfwg09 {
+                    align-items: center;
+                }
+
+                .framer-dnb8d0 p {
+                    font-size: 80px;
+                    text-align: center;
+                }
+
+                .framer-su7jo2 p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                .framer-1ebgzuc h2 {
+                    font-size: 44px;
+                    text-align: center;
+                }
+
+                .framer-rqqsrm {
+                    bottom: 12%;
+                    top: auto;
+                    left: 50%;
+                    transform: translate(-50%, 0) rotate(-4deg);
+                }
+
+                .framer-1gqk893 {
+                    width: 90%;
+                    height: 281px;
+                    left: 5%;
+                    bottom: 12%;
+                }
             }
 
-            /* Reduce "Unlock Your True Potential" heading size */
-            .framer-1ebgzuc h2 {
-                font-size: 46px !important;
-                letter-spacing: 0.5px !important;
+            @media (max-width: 768px) {
+                .framer-3y1b7i {
+                    width: 85%;
+                    padding: 80px 15px 20px 15px;
+                }
+
+                .framer-dnb8d0 p {
+                    font-size: 60px;
+                    padding-top: 10px;
+                    text-align: center;
+                }
+
+                .framer-su7jo2 p {
+                    font-size: 13px;
+                }
+
+                .framer-1ebgzuc {
+                    margin-top: 75px;
+                }
+
+                .framer-1ebgzuc h2 {
+                    font-size: 36px;
+                }
+
+                .framer-1gqk893 {
+                    height: 188px;
+                }
+
+                .framer-rqqsrm {
+                    bottom: 8%;
+                }
             }
 
-            .framer-text[style*="font-size: 65px"],
-            .framer-text[style*="font-size: 52px"] {
-                font-size: 46px !important;
-                letter-spacing: 0.5px !important;
+            @media (max-width: 480px) {
+                .framer-3y1b7i {
+                    padding: 100px 15px 20px 15px;
+                }
+
+                .framer-dnb8d0 p {
+                    font-size: 40px;
+                }
+
+                .framer-su7jo2 p {
+                    font-size: 11px;
+                }
+
+                .framer-1ebgzuc h2 {
+                    font-size: 28px;
+                }
+
+                .framer-1gqk893 {
+                    height: 125px;
+                }
+
+                .framer-rqqsrm {
+                    bottom: 5%;
+                    left: 55%;
+                }
             }
 
-            /* Reduce description text size */
-            .framer-su7jo2 p {
-                font-size: 16px !important;
-                line-height: 1.35 !important;
+            @media (max-width: 375px) {
+                .framer-dnb8d0 p {
+                    font-size: 32px;
+                }
+
+                .framer-su7jo2 p {
+                    font-size: 10px;
+                }
+
+                .framer-1ebgzuc h2 {
+                    font-size: 24px;
+                }
             }
 
-            /* Adjust button sizes */
-            .hero-btn {
-                padding: 13px 28px !important;
-                font-size: 15px !important;
+            /* Responsive styles for TRUEPOTENTIAL text */
+            @media (max-width: 768px) {
+                .framer-text[style*="font-size: 65px"] {
+                    font-size: 48px !important;
+                }
             }
 
-            .hero-buttons-container {
-                gap: 20px !important;
-                margin-top: 12px !important;
+            @media (max-width: 480px) {
+                .framer-text[style*="font-size: 65px"] {
+                    font-size: 38px !important;
+                }
             }
 
-            /* Adjust spacing */
-            .framer-1kfwg09 {
-                gap: 20px !important;
-                margin-top: 25px !important;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .framer-1eiawcr {
-                width: 1400px;
-                padding-top: 40px;
+            @media (max-width: 375px) {
+                .framer-text[style*="font-size: 65px"] {
+                    font-size: 32px !important;
+                }
             }
 
-            .framer-3y1b7i {
-                width: 90%;
-                max-width: 550px;
-                padding: 110px 20px 20px 20px;
-            }
-
-            .framer-1gqk893 {
-                width: 1100px;
-                height: 344px;
-                left: 8%;
-            }
-
-            .framer-rqqsrm {
-                right: 50px;
-                bottom: 8%;
-            }
-
-            /* Reduce "At DreamDesk" text size */
-            .framer-dnb8d0 p {
-                font-size: 48px !important;
-            }
-
-            /* Reduce "Unlock Your True Potential" heading size */
-            .framer-1ebgzuc h2 {
-                font-size: 40px !important;
-                letter-spacing: 0px !important;
-            }
-
-            .framer-text[style*="font-size: 65px"],
-            .framer-text[style*="font-size: 52px"],
-            .framer-text[style*="font-size: 46px"] {
-                font-size: 40px !important;
-                letter-spacing: 0px !important;
-            }
-
-            /* Reduce description text size */
-            .framer-su7jo2 p {
-                font-size: 15px !important;
-                line-height: 1.4 !important;
-            }
-
-            /* Adjust button sizes */
-            .hero-btn {
-                padding: 12px 26px !important;
-                font-size: 14px !important;
-            }
-
-            .hero-buttons-container {
-                gap: 18px !important;
-                margin-top: 10px !important;
-            }
-
-            /* Adjust spacing */
-            .framer-1kfwg09 {
-                gap: 18px !important;
-                margin-top: 20px !important;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .framer-ll2u5v {
-                flex-direction: column;
-                padding-top: 140px;
-            }
-
-            .framer-1eiawcr {
-                width: 100%;
-                max-width: 100vw;
-                /* padding-top: 40px; */
-            }
-
-            .framer-3y1b7i {
-                width: 90%;
-                padding: 130px 20px 20px 20px;
-            }
-
-            .framer-1kfwg09 {
-                align-items: center;
-            }
-
-            .framer-dnb8d0 p {
-                font-size: 80px;
-                text-align: center;
-            }
-
-            .framer-su7jo2 p {
-                font-size: 14px;
-                text-align: center;
-            }
-
-            .framer-1ebgzuc h2 {
-                font-size: 44px;
-                text-align: center;
-            }
-
-            .framer-rqqsrm {
-                bottom: 12%;
-                top: auto;
-                left: 50%;
-                transform: translate(-50%, 0) rotate(-4deg);
-            }
-
-            .framer-1gqk893 {
-                width: 90%;
-                height: 281px;
-                left: 5%;
-                bottom: 12%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .framer-3y1b7i {
-                width: 85%;
-                padding: 80px 15px 20px 15px;
-            }
-
-            .framer-dnb8d0 p {
-                font-size: 60px;
-                padding-top: 10px;
-                text-align: center;
-            }
-
-            .framer-su7jo2 p {
-                font-size: 13px;
-            }
-
-            .framer-1ebgzuc {
-                margin-top: 75px;
-            }
-
-            .framer-1ebgzuc h2 {
-                font-size: 36px;
-            }
-
-            .framer-1gqk893 {
-                height: 188px;
-            }
-
-            .framer-rqqsrm {
-                bottom: 8%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .framer-3y1b7i {
-                padding: 100px 15px 20px 15px;
-            }
-
-            .framer-dnb8d0 p {
-                font-size: 40px;
-            }
-
-            .framer-su7jo2 p {
-                font-size: 11px;
-            }
-
-            .framer-1ebgzuc h2 {
-                font-size: 28px;
-            }
-
-            .framer-1gqk893 {
-                height: 125px;
-            }
-
-            .framer-rqqsrm {
-                bottom: 5%;
-                left: 55%;
-            }
-        }
-
-        @media (max-width: 375px) {
-            .framer-dnb8d0 p {
-                font-size: 32px;
-            }
-
-            .framer-su7jo2 p {
-                font-size: 10px;
-            }
-
-            .framer-1ebgzuc h2 {
-                font-size: 24px;
-            }
-        }
-
-        /* Responsive styles for TRUEPOTENTIAL text */
-        @media (max-width: 768px) {
-            .framer-text[style*="font-size: 65px"] {
-                font-size: 48px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .framer-text[style*="font-size: 65px"] {
-                font-size: 38px !important;
-            }
-        }
-
-        @media (max-width: 375px) {
-            .framer-text[style*="font-size: 65px"] {
-                font-size: 32px !important;
-            }
-        }
-
-        /* Responsive styles for DreamDesk Logo in WorkDesk section */
-        .dreamdesk-logo-responsive {
-            width: 600px;
-            height: 160px;
-            max-width: 100%;
-            height: auto;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        @media (max-width: 1400px) {
+            /* Responsive styles for DreamDesk Logo in WorkDesk section */
             .dreamdesk-logo-responsive {
-                width: 500px;
+                width: 600px;
+                height: 160px;
+                max-width: 100%;
+                height: auto;
+                display: inline-block;
+                vertical-align: middle;
             }
-        }
 
-        @media (max-width: 1200px) {
-            .dreamdesk-logo-responsive {
-                width: 450px;
+            @media (max-width: 1400px) {
+                .dreamdesk-logo-responsive {
+                    width: 500px;
+                }
             }
-        }
 
-        @media (max-width: 1024px) {
-            .dreamdesk-logo-responsive {
-                width: 400px;
+            @media (max-width: 1200px) {
+                .dreamdesk-logo-responsive {
+                    width: 450px;
+                }
             }
-        }
 
-        @media (max-width: 768px) {
-            .dreamdesk-logo-responsive {
-                width: 320px;
+            @media (max-width: 1024px) {
+                .dreamdesk-logo-responsive {
+                    width: 400px;
+                }
             }
-        }
 
-        @media (max-width: 480px) {
-            .dreamdesk-logo-responsive {
-                width: 250px;
+            @media (max-width: 768px) {
+                .dreamdesk-logo-responsive {
+                    width: 320px;
+                }
             }
-        }
 
-        @media (max-width: 375px) {
-            .dreamdesk-logo-responsive {
-                width: 200px;
+            @media (max-width: 480px) {
+                .dreamdesk-logo-responsive {
+                    width: 250px;
+                }
             }
-        }
+
+            @media (max-width: 375px) {
+                .dreamdesk-logo-responsive {
+                    width: 200px;
+                }
+            }
     </style>
 
     <!-- Manrope Font for Nav Options -->
@@ -3028,7 +3173,13 @@
 
 <!-- Loader Screen -->
 <div id="loader-screen" style="background: #ffffff !important;">
-    <img src="wellcom.gif" alt="Loading..." id="loader-gif">
+    <div style="text-align: center;">
+        <img src="wellcom.gif" alt="Loading..." id="loader-gif">
+        <div id="loader-status"
+            style="margin-top: 20px; font-family: 'Playfair Display', serif; font-size: 18px; color: #333; font-weight: 500;">
+            Loading your experience...
+        </div>
+    </div>
 </div>
 
 <style>
@@ -3113,17 +3264,169 @@
         padding: 0 !important;
     }
 
-    /* Prevent scrolling during loading */
+    /* Loader Status Text - Responsive */
+    #loader-status {
+        margin-top: 20px !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 18px !important;
+        color: #333 !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.6;
+        }
+    }
+
+    /* Mobile status text */
+    @media (max-width: 768px) {
+        #loader-status {
+            font-size: 16px !important;
+            margin-top: 15px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #loader-status {
+            font-size: 14px !important;
+            margin-top: 12px !important;
+            padding: 0 15px !important;
+        }
+    }
+
+    @media (max-width: 375px) {
+        #loader-status {
+            font-size: 13px !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    /* Prevent scrolling during loading - Enhanced for mobile */
     body.loading {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
         background: #ffffff !important;
+        touch-action: none !important;
+        /* Prevent touch scrolling */
+        -webkit-overflow-scrolling: none !important;
+    }
+
+    /* Prevent iOS bounce effect during loading */
+    body.loading * {
+        overscroll-behavior: none !important;
     }
 
     /* Ensure body background is white */
     body {
         background: #ffffff !important;
+    }
+
+    /* Mobile-specific optimizations */
+    @media (max-width: 768px) {
+        #loader-screen {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+
+        /* Prevent pull-to-refresh on mobile during loading */
+        body.loading {
+            overscroll-behavior-y: contain !important;
+        }
+    }
+
+    /* Tablet-specific optimizations */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        #loader-screen img {
+            max-width: 85vw !important;
+            max-height: 85vh !important;
+        }
+
+        #loader-status {
+            font-size: 17px !important;
+        }
+    }
+
+    /* iPad Pro and large tablets */
+    @media (min-width: 1024px) and (max-width: 1366px) {
+        #loader-screen img {
+            max-width: 80vw !important;
+            max-height: 80vh !important;
+        }
+    }
+
+    /* Small phones (iPhone SE, etc.) */
+    @media (max-width: 375px) and (max-height: 667px) {
+        #loader-screen img {
+            max-width: 100vw !important;
+            max-height: 60vh !important;
+        }
+    }
+
+    /* Very small phones */
+    @media (max-width: 320px) {
+        #loader-screen img {
+            max-width: 100vw !important;
+            max-height: 55vh !important;
+        }
+
+        #loader-status {
+            font-size: 12px !important;
+            margin-top: 8px !important;
+        }
+    }
+
+    /* Landscape mode on phones */
+    @media (max-width: 768px) and (orientation: landscape) {
+        #loader-screen img {
+            max-width: 70vw !important;
+            max-height: 85vh !important;
+        }
+
+        #loader-status {
+            font-size: 14px !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    /* Landscape mode on tablets */
+    @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+        #loader-screen img {
+            max-width: 75vw !important;
+            max-height: 80vh !important;
+        }
+    }
+
+    /* iOS Safari specific fixes */
+    @supports (-webkit-touch-callout: none) {
+        #loader-screen {
+            height: -webkit-fill-available !important;
+        }
+
+        body.loading {
+            height: -webkit-fill-available !important;
+        }
+    }
+
+    /* Android Chrome specific fixes */
+    @media screen and (max-width: 768px) {
+        #loader-screen {
+            min-height: 100vh !important;
+            min-height: -webkit-fill-available !important;
+        }
     }
 
 
@@ -3200,28 +3503,183 @@
     // Add loading class to body
     document.body.classList.add('loading');
 
-    // Function to hide loader and show content
+    // Detect device type for optimized loading
+    function detectDevice() {
+        const width = window.innerWidth;
+        const isMobile = width <= 768;
+        const isTablet = width > 768 && width <= 1024;
+        const isDesktop = width > 1024;
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        return {
+            isMobile,
+            isTablet,
+            isDesktop,
+            isTouchDevice,
+            width,
+            height: window.innerHeight
+        };
+    }
+
+    // Log device info
+    const device = detectDevice();
+    console.log('📱 Device detected:', {
+        type: device.isMobile ? 'Mobile' : device.isTablet ? 'Tablet' : 'Desktop',
+        touch: device.isTouchDevice ? 'Yes' : 'No',
+        size: `${device.width}x${device.height}`
+    });
+
+    // Enhanced loader with progress tracking
     function hideLoader() {
         const loaderScreen = document.getElementById('loader-screen');
         if (loaderScreen) {
             loaderScreen.classList.add('hidden');
         }
         document.body.classList.remove('loading');
+
+        // Re-enable scrolling on mobile
+        if (device.isMobile || device.isTablet) {
+            document.body.style.touchAction = '';
+            document.body.style.overflow = '';
+        }
+
+        console.log('✅ Page loaded - Loader hidden');
     }
 
-    // Hide loader after GIF plays once (3 seconds)
-    setTimeout(hideLoader, 3000);
+    // Update loader status text
+    function updateLoaderStatus(message) {
+        const statusEl = document.getElementById('loader-status');
+        if (statusEl) {
+            statusEl.textContent = message;
+            console.log(`📝 Status: ${message}`);
+        }
+    }
 
-    // Fallback: Ensure content shows after page fully loads
-    window.addEventListener('load', function () {
-        setTimeout(hideLoader, 500);
-    });
+    // Prevent touch scrolling during load on mobile
+    if (device.isMobile || device.isTablet) {
+        document.addEventListener('touchmove', function (e) {
+            if (document.body.classList.contains('loading')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
 
-    // Emergency fallback: Force show content after 5 seconds no matter what
+    // Wait for critical resources
+    function waitForCriticalResources() {
+        return new Promise((resolve) => {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    console.log('✓ DOM Content Loaded');
+                    updateLoaderStatus(device.isMobile ? 'Loading...' : 'Preparing content...');
+                    resolve();
+                });
+            } else {
+                resolve();
+            }
+        });
+    }
+
+    // Wait for videos to be ready (with device-specific timeout)
+    function waitForVideos() {
+        return new Promise((resolve) => {
+            const videos = document.querySelectorAll('video');
+            if (videos.length === 0) {
+                resolve();
+                return;
+            }
+
+            updateLoaderStatus(device.isMobile ? 'Loading media...' : 'Loading videos...');
+            let videosReady = 0;
+            const checkVideos = () => {
+                videosReady++;
+                if (videosReady >= videos.length) {
+                    console.log('✓ Videos ready');
+                    updateLoaderStatus(device.isMobile ? 'Almost there...' : 'Almost ready...');
+                    resolve();
+                }
+            };
+
+            videos.forEach(video => {
+                if (video.readyState >= 2) {
+                    checkVideos();
+                } else {
+                    video.addEventListener('loadeddata', checkVideos, { once: true });
+                }
+            });
+
+            // Shorter timeout for mobile (3s) vs desktop (5s)
+            const timeout = device.isMobile ? 3000 : 5000;
+            setTimeout(() => {
+                console.log(`⏱ Video loading timeout (${timeout}ms) - continuing anyway`);
+                updateLoaderStatus(device.isMobile ? 'Almost there...' : 'Almost ready...');
+                resolve();
+            }, timeout);
+        });
+    }
+
+    // Main loading sequence
+    async function initializeLoader() {
+        console.log('🚀 Initializing loader...');
+        updateLoaderStatus(device.isMobile ? 'Loading...' : 'Loading your experience...');
+
+        // Device-specific minimum display time
+        // Mobile: 2s (faster), Tablet: 2.5s, Desktop: 2.5s
+        const minDisplayTime = device.isMobile ? 2000 : 2500;
+        const startTime = Date.now();
+
+        try {
+            // Wait for critical resources
+            await waitForCriticalResources();
+
+            // Wait for window load event
+            await new Promise(resolve => {
+                if (document.readyState === 'complete') {
+                    resolve();
+                } else {
+                    window.addEventListener('load', () => {
+                        updateLoaderStatus(device.isMobile ? 'Ready!' : 'Finalizing...');
+                        resolve();
+                    }, { once: true });
+                }
+            });
+
+            console.log('✓ Window loaded');
+
+            // Wait for videos (with timeout)
+            await waitForVideos();
+
+            // Ensure minimum display time
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
+            if (remainingTime > 0) {
+                console.log(`⏳ Waiting ${remainingTime}ms to complete GIF animation...`);
+                updateLoaderStatus('Welcome to DreamDesk!');
+                await new Promise(resolve => setTimeout(resolve, remainingTime));
+            }
+
+            // Hide loader
+            hideLoader();
+
+        } catch (error) {
+            console.error('❌ Loader error:', error);
+            hideLoader();
+        }
+    }
+
+    // Start the loading sequence
+    initializeLoader();
+
+    // Emergency fallback: Force show content after device-specific timeout
+    const emergencyTimeout = device.isMobile ? 6000 : 8000; // 6s mobile, 8s desktop
     setTimeout(function () {
-        hideLoader();
-        console.log('Emergency fallback: Content forced to show');
-    }, 5000);
+        if (document.getElementById('loader-screen') &&
+            !document.getElementById('loader-screen').classList.contains('hidden')) {
+            hideLoader();
+            console.log(`⚠️ Emergency fallback: Content forced to show after ${emergencyTimeout / 1000}s`);
+        }
+    }, emergencyTimeout);
+
 </script>
 
 <!-- ISO Certificate Popup Modal -->
@@ -4908,6 +5366,19 @@
 
     /* Standard Desktop (1600px-1919px) */
     @media (max-width: 1919px) and (min-width: 1600px) {
+
+
+        /* .pin-spacer {
+            height: 9865px;
+            padding: 0 0 9120px;
+        } */
+
+        .pin-spacer {
+            height: 3000px;
+            padding: 0 0 419vh;
+        }
+
+
         .top-yellow-stripe {
             height: 42px;
             padding: 0 40px;
@@ -5094,6 +5565,13 @@
 
     /* Tablet Landscape (769px-1024px) */
     @media (max-width: 1024px) and (min-width: 769px) {
+
+        .pin-spacer {
+            height: 6314px;
+            padding: 0 0 5837px;
+        }
+
+
         .top-yellow-stripe {
             height: 32px;
             padding: 0 18px;
@@ -5261,7 +5739,7 @@
         left: 120px;
         top: 35%;
         transform: translateY(-50%);
-        z-index: 9999;
+        z-index: 99;
         width: 220px;
         height: auto;
         opacity: 1;
@@ -5966,6 +6444,15 @@
 
                     /* Mobile Responsive */
                     @media (max-width: 768px) {
+
+                        .pin-spacer {
+
+                            height: 4735px;
+                            padding: 0 0 4378px;
+
+
+                        }
+
                         #toggle-btn {
                             min-width: 150px;
                             height: 60px;
@@ -6342,8 +6829,8 @@
                     /* Mobile Large (376px-480px) */
                     @media (max-width: 480px) and (min-width: 376px) {
                         .nav-panel {
-                            padding: 0 12px !important;
-                            margin-top: 20px;
+                            padding: 0 2px !important;
+                            /* margin-top: 20px; */
                         }
 
                         #logo-wrap img {
@@ -10504,24 +10991,23 @@
                                                 <p class="modal-subtitle">Fill in your details and we'll get back to you
                                                     soon!</p>
 
-                                                <form id="bookingForm" class="booking-form">
+                                                <form id="bookingForm" class="booking-form" novalidate>
                                                     <div class="form-group">
                                                         <label for="studentName">Full Name *</label>
                                                         <input type="text" id="studentName" name="name"
-                                                            placeholder="Enter your full name" required>
+                                                            placeholder="Enter your full name">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="studentEmail">Email Address *</label>
                                                         <input type="email" id="studentEmail" name="email"
-                                                            placeholder="Enter your email" required>
+                                                            placeholder="Enter your email">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="studentPhone">Phone Number *</label>
                                                         <input type="tel" id="studentPhone" name="phone"
-                                                            placeholder="Enter your phone number" required
-                                                            pattern="[0-9]{10,15}">
+                                                            placeholder="Enter your phone number">
                                                     </div>
 
                                                     <button type="submit" class="submit-btn">Submit Request</button>
@@ -10844,15 +11330,12 @@
                                 <!-- <span style="font-family: WevliBold; color:#f41414; font-weight: 600;  font-size: .70rem;" >DREAMDESK</span> -->
                                 <img class="dreamdesk-logo-responsive" src="./logo_black.png" alt="DreamDesk Logo" />
 
-                                <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
-                                            advice, real results -->
 
 
 
 
 
-                                <!-- Your vibe, ,<br>your goals, <br> your future, <br>real
-                                            advice, real results -->
+
                             </div>
                         </div>
                     </div>
@@ -11099,7 +11582,6 @@
                         stroke="white"></path>
                 </svg>
             </div>
-
 
         </div>
         <div class="ui-wrap" style="margin-top: -242px;">
@@ -13034,6 +13516,12 @@
                                                     padding: 10px !important;
                                                 }
 
+                                                .pin-spacer {
+
+                                                    height: 2367px;
+                                                    padding: 0px 0px 200vh;
+                                                }
+
                                                 #spinny-flipz-section .gallery-image {
                                                     width: 240px !important;
                                                     height: 240px !important;
@@ -13078,6 +13566,13 @@
                                                 #spinny-flipz-section .gallery-image {
                                                     width: 200px !important;
                                                     height: 200px !important;
+                                                }
+
+                                                .pin-spacer {
+
+
+                                                    height: 2367px;
+                                                    padding: 0px 0px 2200px;
                                                 }
 
                                                 #spinny-flipz-section .gallery-description .student-name,
@@ -14958,7 +15453,7 @@
 
 
 
-<div class="fixed-bottom">
+<!-- <div class="fixed-bottom">
     <div>
         <div style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
             class="sound-btn-wrap">
@@ -14985,7 +15480,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
@@ -16469,15 +16964,30 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const rotatingText = document.getElementById('rotating-text');
+
+        // Check if element exists before proceeding
+        if (!rotatingText) {
+            console.log('Rotating text element not active (element is commented out or missing)');
+            return; // Exit early if element doesn't exist
+        }
+
         const words = ['pathways', 'insight', 'structure', 'purpose'];
         let currentIndex = 0;
 
         function rotateText() {
+            // Check if rotatingText element exists before accessing it
+            if (!rotatingText || !rotatingText.classList) {
+                console.warn('Rotating text element not found');
+                return;
+            }
+
             // Add fade-out animation
             rotatingText.classList.add('fade-out');
 
             // Wait for fade-out to complete, then change text
             setTimeout(() => {
+                if (!rotatingText) return; // Double check before updating
+
                 currentIndex = (currentIndex + 1) % words.length;
                 rotatingText.textContent = words[currentIndex];
 
@@ -16487,7 +16997,9 @@
 
                 // Remove fade-in class after animation completes
                 setTimeout(() => {
-                    rotatingText.classList.remove('fade-in');
+                    if (rotatingText && rotatingText.classList) {
+                        rotatingText.classList.remove('fade-in');
+                    }
                 }, 500);
             }, 500);
         }
@@ -16655,34 +17167,11 @@
 <!-- CRITICAL PERFORMANCE FIXES -->
 <script src="./critical-performance-fix.js"></script>
 
+<!-- BOOKING FORM HANDLER -->
+<script src="./scripts/booking-form.js"></script>
+
 </body>
 
-<!-- <grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
-        <style>
-            div.grammarly-desktop-integration {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
 
-            div.grammarly-desktop-integration:before {
-                content: attr(data-content);
-            }
-        </style>
-        <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
-            data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
-        </div>
-    </template>
-</grammarly-desktop-integration> -->
 
 </html>

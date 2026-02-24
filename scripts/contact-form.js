@@ -1,6 +1,6 @@
 // Contact Form Submission Handler for "Ping Us @ Dreamdesk" Form
 // Replace YOUR_GOOGLE_APPS_SCRIPT_URL with your actual Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://docs.google.com/spreadsheets/d/1mUij8nIe2yYpjCsKf2S0zeXSNVF1zuSASRwa5QQZ8sc/edit?gid=0#gid=0';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR9KOkF0Ov_S-x_c2SYqxSOutxxkDbEX10R9Wo22EgU8_m0CnKd6aSpjrMikmRdkqs4A/exec';
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('pingUsForm');
