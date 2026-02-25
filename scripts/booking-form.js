@@ -1,7 +1,7 @@
 // Booking Form Submission Handler for "Book Your Free Session" Form
 // Google Apps Script URL for booking form submissions
-const BOOKING_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzW1Km1rvEeu6cNFmzskgnJ8qhkXU4Sk4PyNQ9opi_Aa0OTLkD1AVGu7c6ctetMWxqIRA/exec';
-
+// const BOOKING_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzW1Km1rvEeu6cNFmzskgnJ8qhkXU4Sk4PyNQ9opi_Aa0OTLkD1AVGu7c6ctetMWxqIRA/exec';
+const BOOKING_SCRIPT_URL = '';
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('bookingForm');
   const modal = document.getElementById('bookingFormModal');
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
       name: nameValue,
       email: emailValue,
       phone: phoneValue,
-      formType: 'Booking Form'
+      // formType: 'Booking Form'
     };
     
     console.log('📤 Sending data:', data);
