@@ -2722,7 +2722,7 @@
             .career-left-section {
                 flex: 1;
                 max-width: 90%;
-                padding: 30px;
+                padding: 30px 15px;
                 margin: 0;
                 margin-top: 20px;
                 order: 2;
@@ -2733,7 +2733,7 @@
                 order: 1;
                 width: 100%;
                 max-width: 100%;
-                padding: 20px;
+                /* padding: 20px; */
             }
 
             .career-mobile-video {
@@ -2747,15 +2747,33 @@
 
             .career-main-title {
                 font-size: 32px;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .career-main-title br {
+                display: none;
+            }
+
+            .career-main-title span {
+                display: inline-block;
+                white-space: normal !important;
+                margin-left: 8px;
             }
 
             .career-subtitle {
-                font-size: 16px;
+                font-size: 14px !important;
+                text-align: center;
+                line-height: 1.5;
+                padding-top: 20px !important;
+                word-spacing: normal;
             }
 
             .career-cta-btn {
                 width: 100%;
+                max-width: 350px;
                 padding: 14px 24px;
+                margin: 20px auto 0;
             }
 
             .career-illustration-placeholder {
@@ -2793,13 +2811,13 @@
         /* Small Mobile */
         @media (max-width: 480px) {
             .career-main-content {
-                padding: 30px 15px;
+                padding: 30px 12px;
                 background-image: none !important;
             }
 
             .career-left-section {
                 max-width: 95%;
-                padding: 25px 20px;
+                padding: 20px 10px;
                 margin-top: 10px;
             }
 
@@ -2809,16 +2827,20 @@
 
             .career-main-title {
                 font-size: 26px;
+                text-align: center;
             }
 
             .career-subtitle {
-                font-size: 15px;
+                font-size: 13px !important;
                 margin-bottom: 24px;
+                text-align: center;
+                padding-top: 15px !important;
             }
 
             .career-cta-btn {
                 padding: 12px 20px;
                 font-size: 15px;
+                max-width: 320px;
             }
 
             .career-illustration-placeholder {
@@ -2843,11 +2865,24 @@
         @media (max-width: 375px) {
             .career-main-title {
                 font-size: 24px;
+                text-align: center;
             }
 
             .career-subtitle {
+                font-size: 12px !important;
+                text-align: center;
+                padding-top: 12px !important;
+            }
+
+            .career-left-section {
+                padding: 15px 8px;
+            }
+
+            .career-cta-btn {
+                max-width: 300px;
                 font-size: 14px;
             }
+        }
 
             .career-left-section {
                 padding: 20px 15px;
