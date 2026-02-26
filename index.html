@@ -4440,13 +4440,10 @@
             transform: translateY(-3px);
         }
 
-        /* Simple Yellow Circles - Exactly like the image */
-        /* Simple Yellow Circles with Continuous Loading Animation */
+        /* Simple Yellow Circles with Loading Animation */
         .simple-circle {
             width: 300px;
             height: 300px;
-            border: 13px solid rgba(242, 216, 3, 0.2);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4454,63 +4451,39 @@
             position: relative;
             margin: 0 auto;
             background-color: #0000007a;
+            border-radius: 50%;
         }
 
-        .simple-circle::before {
-            content: '';
+        /* SVG Circle Styles */
+        .circle-svg {
             position: absolute;
-            top: -13px;
-            left: -13px;
-            right: -13px;
-            bottom: -13px;
-            border-radius: 50%;
-            border: 13px solid transparent;
-            border-top: 13px solid #f2d803;
-            border-right: 13px solid #f2d803;
-            animation: continuousSpinner 2s linear infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
             z-index: 1;
         }
 
-        .simple-circle::after {
-            content: '';
-            position: absolute;
-            top: -6px;
-            left: -6px;
-            right: -6px;
-            bottom: -6px;
-            border-radius: 50%;
-            border: 6px solid transparent;
-            border-top: 6px solid rgba(242, 216, 3, 0.6);
-            animation: continuousSpinner 1.5s linear infinite reverse;
-            z-index: 2;
+        .circle-bg {
+            fill: none;
+            stroke: rgba(242, 216, 3, 0.2);
+            stroke-width: 13;
         }
 
-        .stat-item:nth-child(1) .simple-circle::before {
-            animation-delay: 0s;
+        .circle-progress {
+            fill: none;
+            stroke: #f2d803;
+            stroke-width: 13;
+            stroke-linecap: round;
+            stroke-dasharray: 565.48;
+            stroke-dashoffset: 565.48;
+            transition: stroke-dashoffset 2.5s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
 
-        .stat-item:nth-child(2) .simple-circle::before {
-            animation-delay: 0.5s;
-        }
-
-        .stat-item:nth-child(3) .simple-circle::before {
-            animation-delay: 1s;
-        }
-
-        .stat-item:nth-child(4) .simple-circle::before {
-            animation-delay: 1.5s;
-        }
-
-        @keyframes continuousSpinner {
-            0% {
-                transform: rotate(0deg);
-                opacity: 1;
-            }
-
-            100% {
-                transform: rotate(360deg);
-                opacity: 1;
-            }
+        /* Animation triggers when section comes into view */
+        .simple-circle.animate .circle-progress {
+            stroke-dashoffset: 0;
         }
 
         .circle-content {
@@ -4742,7 +4715,7 @@
         }
 
         .stat-item:nth-child(2) .circle-content {
-            font-size: 0.45rem;
+            font-size: 0.28rem;
             /* YOUTH/STUDENTS/PARENTS */
             font-weight: 800;
             padding: 0 10px;
@@ -11886,11 +11859,11 @@
                                 }
 
                                 #one-tap-section .explore-btn:hover {
-                                    transform: translateX(4px) scale(1.05);
+                                    transform: translateX(4px) scale(0.6);
                                     animation: none;
-                                    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                                 }
-
+                                
                                 #one-tap-section .explore-btn::after {
                                     content: '→';
                                     font-size: 18px;
@@ -14691,6 +14664,10 @@
                                 <!-- First Circle - 96% -->
                                 <div class="stat-item">
                                     <div class="simple-circle">
+                                        <svg class="circle-svg" viewBox="0 0 200 200">
+                                            <circle class="circle-bg" cx="100" cy="100" r="90" />
+                                            <circle class="circle-progress" cx="100" cy="100" r="90" />
+                                        </svg>
                                         <div class="circle-content">96%</div>
                                     </div>
                                 </div>
@@ -14698,6 +14675,10 @@
                                 <!-- Second Circle - Youth/Students/Parents -->
                                 <div class="stat-item">
                                     <div class="simple-circle">
+                                        <svg class="circle-svg" viewBox="0 0 200 200">
+                                            <circle class="circle-bg" cx="100" cy="100" r="90" />
+                                            <circle class="circle-progress" cx="100" cy="100" r="90" />
+                                        </svg>
                                         <div class="circle-content" id="alternating-text">YOUTH</div>
                                     </div>
                                 </div>
@@ -14705,6 +14686,10 @@
                                 <!-- Third Circle - Heart/Like Icons -->
                                 <div class="stat-item">
                                     <div class="simple-circle">
+                                        <svg class="circle-svg" viewBox="0 0 200 200">
+                                            <circle class="circle-bg" cx="100" cy="100" r="90" />
+                                            <circle class="circle-progress" cx="100" cy="100" r="90" />
+                                        </svg>
                                         <div class="circle-content" id="icon-container">
                                             <svg class="heart-icon active" viewBox="0 0 24 24" fill="currentColor"
                                                 width="30" height="30">
@@ -14723,6 +14708,10 @@
                                 <!-- Fourth Circle - Logo Animation -->
                                 <div class="stat-item">
                                     <div class="simple-circle">
+                                        <svg class="circle-svg" viewBox="0 0 200 200">
+                                            <circle class="circle-bg" cx="100" cy="100" r="90" />
+                                            <circle class="circle-progress" cx="100" cy="100" r="90" />
+                                        </svg>
                                         <div class="circle-content" id="logo-container">
                                             <img class="logo-image active" src="./LOGO 22-01.png" alt="DreamDesk Logo"
                                                 width="180" height="180">
@@ -16940,11 +16929,19 @@
                 }
             }
 
-            // Create intersection observer with lower threshold
+            // Create intersection observer to trigger when section is in middle of screen
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        console.log('Stats section is visible, starting synchronized animation...');
+                        console.log('Stats section is visible in middle of screen, starting animation...');
+
+                        // Trigger circle loading animation once
+                        const circles = document.querySelectorAll('.simple-circle');
+                        circles.forEach((circle, index) => {
+                            setTimeout(() => {
+                                circle.classList.add('animate');
+                            }, index * 500); // Stagger animation for each circle
+                        });
 
                         // Start synchronized animation immediately
                         syncAllAnimations();
@@ -16957,7 +16954,7 @@
                     }
                 });
             }, {
-                threshold: 0.1,
+                threshold: 0.5, // Trigger when 50% of section is visible (middle of screen)
                 rootMargin: '0px'
             });
 
