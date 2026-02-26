@@ -4219,6 +4219,12 @@
             body, html {
                 overflow-x: hidden !important;
                 max-width: 100vw !important;
+                width: 100% !important;
+            }
+
+            /* Hide bento-pink-card on all mobile screens */
+            .bento-pink-card {
+                display: none !important;
             }
 
             .pin-spacer {
@@ -4227,6 +4233,7 @@
                 width: 100% !important;
                 max-width: 100vw !important;
                 overflow: hidden !important;
+                box-sizing: border-box !important;
             }
 
             .ui, .ui.first {
@@ -4239,6 +4246,7 @@
                 overflow: hidden !important;
                 padding: 0 !important;
                 margin: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .ui-wrap {
@@ -4247,6 +4255,7 @@
                 max-width: 100vw !important;
                 overflow: hidden !important;
                 padding: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .ui-track {
@@ -4258,6 +4267,7 @@
                 overflow: hidden !important;
                 padding: 0 !important;
                 margin: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .section-track {
@@ -4265,10 +4275,11 @@
                 max-width: 100vw !important;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
-                padding: 30px 0 !important;
+                gap: 25px;
+                padding: 20px 0 !important;
                 overflow: hidden !important;
                 margin: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .ui-text {
@@ -4276,10 +4287,10 @@
                 transform: none !important;
                 width: 100% !important;
                 max-width: 100vw !important;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 opacity: 1 !important;
                 visibility: visible !important;
-                padding: 0 20px !important;
+                padding: 0 15px !important;
                 box-sizing: border-box !important;
             }
 
@@ -4287,6 +4298,7 @@
                 opacity: 1 !important;
                 visibility: visible !important;
                 padding: 0 !important;
+                width: 100% !important;
             }
 
             .ui-text .h6 {
@@ -4295,15 +4307,15 @@
             }
 
             .section-slider, .ui-slider {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+                margin: 0 !important;
                 width: 100% !important;
                 max-width: 100vw !important;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 25px;
                 overflow: hidden !important;
                 padding: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .section-slide, .ui-slide {
@@ -4313,7 +4325,7 @@
                 clip-path: none !important;
                 -webkit-clip-path: none !important;
                 margin: 0 !important;
-                padding: 0 15px !important;
+                padding: 0 10px !important;
                 opacity: 1 !important;
                 visibility: visible !important;
                 box-sizing: border-box !important;
@@ -4321,22 +4333,23 @@
 
             .section-slide-wrap {
                 min-height: auto !important;
-                padding: 30px 20px !important;
+                padding: 25px 15px 35px 15px !important;
                 opacity: 1 !important;
                 visibility: visible !important;
                 width: 100% !important;
                 max-width: 100% !important;
                 box-sizing: border-box !important;
-                margin: 0 !important;
+                margin: 0 0 20px 0 !important;
             }
 
             /* Make bento grid single column on mobile */
             .bento-container {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 15px !important;
                 width: 100% !important;
                 max-width: 100% !important;
                 padding: 0 !important;
+                box-sizing: border-box !important;
             }
 
             .bento-main-card,
@@ -4347,6 +4360,7 @@
                 grid-row: auto !important;
                 width: 100% !important;
                 max-width: 100% !important;
+                box-sizing: border-box !important;
             }
 
             /* Ensure images don't overflow */
@@ -4365,6 +4379,95 @@
             .section-slide-wrap > div[style*="position: absolute"] {
                 left: 0 !important;
                 right: 0 !important;
+            }
+
+            /* Airplane animation - ensure it works on mobile */
+            .anim-ball.is-intro {
+                width: 70px !important;
+                height: 70px !important;
+            }
+
+            .anim-ball-border {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            /* Ensure intro section doesn't cause horizontal scroll */
+            .intro-wrap {
+                width: 100% !important;
+                max-width: 100vw !important;
+                overflow: hidden !important;
+            }
+
+            .intro-clouds {
+                width: 100% !important;
+                max-width: 100vw !important;
+            }
+        }
+
+        /* Extra small mobile screens */
+        @media (max-width: 480px) {
+            .section-track {
+                padding: 15px 0 !important;
+                gap: 20px;
+            }
+
+            .ui-text {
+                padding: 0 10px !important;
+                margin-bottom: 15px;
+            }
+
+            .section-slide, .ui-slide {
+                padding: 0 8px !important;
+            }
+
+            .section-slide-wrap {
+                padding: 20px 12px !important;
+            }
+
+            .bento-container {
+                gap: 12px !important;
+            }
+
+            /* Smaller airplane on very small screens */
+            .anim-ball.is-intro {
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .anim-ball-border {
+                width: 70px !important;
+                height: 70px !important;
+            }
+        }
+
+        /* Very small screens (iPhone SE, etc) */
+        @media (max-width: 375px) {
+            .section-track {
+                padding: 10px 0 !important;
+                gap: 15px;
+            }
+
+            .ui-text {
+                padding: 0 8px !important;
+            }
+
+            .section-slide, .ui-slide {
+                padding: 0 5px !important;
+            }
+
+            .section-slide-wrap {
+                padding: 15px 10px !important;
+            }
+
+            .anim-ball.is-intro {
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            .anim-ball-border {
+                width: 60px !important;
+                height: 60px !important;
             }
         }
 
@@ -11631,7 +11734,7 @@
             <div data-w-id="7a61b557-4dcd-92ad-1f18-47267d8315ba" class="div-2">
                 <div class="bg-visual"></div>
                 <div class="bg-wrap is-bottom">
-                    <div class="bg-list is-bottom">
+                    <!-- <div class="bg-list is-bottom">
                         <div class="bg-list-item is-first"
                             style="will-change: transform; transform: translate3d(0px, 3rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                         </div>
@@ -11641,7 +11744,7 @@
                         <div class="bg-list-item is-third"
                             style="will-change: transform; transform: translate3d(0px, 3rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="anim-smoke"></div>
                 <div class="anim-shape is-also">

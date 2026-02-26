@@ -6294,13 +6294,21 @@ textarea.w-select {
   }
 
   .anim-shape.is-your {
-    padding: .08rem .12rem;
+    /* padding: .08rem .12rem;
     font-size: .19rem;
     line-height: .19rem;
     top: 6.03rem;
     bottom: auto;
     left: 1.3rem;
-    right: auto
+    right: auto */
+
+            padding: 0.08rem 0.12rem;
+        font-size: .19rem;
+        line-height: .19rem;
+        top: 6.36rem;
+        bottom: auto;
+        left: 0.98rem;
+        right: auto;
   }
 
   .anim-shape.is-attention {
