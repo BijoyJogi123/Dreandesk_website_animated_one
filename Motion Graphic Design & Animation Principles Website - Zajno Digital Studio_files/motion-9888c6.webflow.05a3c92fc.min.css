@@ -7464,7 +7464,7 @@ MOBILE RESPONSIVE STYLES FOR SECTION SLIDES */
   /* Mobile specific adjustments */
   .section-slide.ui-slide {
     width: 100vw !important;
-    padding: 10px !important;
+    /* padding: 10px !important; */
     min-height: 100vh !important;
   }
 

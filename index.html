@@ -4264,6 +4264,23 @@
                 display: none !important;
             }
 
+            /* Hide bg-list clouds on mobile */
+            .bg-list.is-bottom,
+            .bg-wrap.is-bottom,
+            .bg-list-item {
+                display: none !important;
+            }
+
+            /* Hide animated circles and decorative elements in spinny section on mobile */
+            #spinny-flipz-section .spinny-view::before,
+            #spinny-flipz-section .spinny-view::after,
+            #spinny-flipz-section .sketch-doodle-1,
+            #spinny-flipz-section .sketch-doodle-2,
+            #spinny-flipz-section .sketch-doodle-3,
+            #spinny-flipz-section .sketch-doodle-4 {
+                display: none !important;
+            }
+
             .pin-spacer {
                 height: auto !important;
                 padding: 0 !important;
@@ -11815,7 +11832,7 @@
             <div data-w-id="7a61b557-4dcd-92ad-1f18-47267d8315ba" class="div-2">
                 <div class="bg-visual"></div>
                 <div class="bg-wrap is-bottom">
-                    <!-- <div class="bg-list is-bottom">
+                    <div class="bg-list is-bottom">
                         <div class="bg-list-item is-first"
                             style="will-change: transform; transform: translate3d(0px, 3rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                         </div>
@@ -11825,7 +11842,7 @@
                         <div class="bg-list-item is-third"
                             style="will-change: transform; transform: translate3d(0px, 3rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="anim-smoke"></div>
                 <div class="anim-shape is-also">
