@@ -4213,6 +4213,161 @@
             width: max-content;
         }
 
+        /* Mobile: Convert horizontal scroll to vertical stack */
+        @media (max-width: 768px) {
+            /* Prevent horizontal scrolling */
+            body, html {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+            }
+
+            .pin-spacer {
+                height: auto !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                overflow: hidden !important;
+            }
+
+            .ui, .ui.first {
+                position: relative !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                height: auto !important;
+                max-height: none !important;
+                overflow: hidden !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .ui-wrap {
+                margin-top: 0 !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                overflow: hidden !important;
+                padding: 0 !important;
+            }
+
+            .ui-track {
+                transform: none !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .section-track {
+                width: 100% !important;
+                max-width: 100vw !important;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px 0 !important;
+                overflow: hidden !important;
+                margin: 0 !important;
+            }
+
+            .ui-text {
+                clip-path: none !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                margin-bottom: 30px;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 0 20px !important;
+                box-sizing: border-box !important;
+            }
+
+            .ui-text .text-wrap {
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 0 !important;
+            }
+
+            .ui-text .h6 {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+
+            .section-slider, .ui-slider {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                overflow: hidden !important;
+                padding: 0 !important;
+            }
+
+            .section-slide, .ui-slide {
+                width: 100% !important;
+                max-width: 100vw !important;
+                transform: none !important;
+                clip-path: none !important;
+                -webkit-clip-path: none !important;
+                margin: 0 !important;
+                padding: 0 15px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-sizing: border-box !important;
+            }
+
+            .section-slide-wrap {
+                min-height: auto !important;
+                padding: 30px 20px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                margin: 0 !important;
+            }
+
+            /* Make bento grid single column on mobile */
+            .bento-container {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .bento-main-card,
+            .bento-brain-card,
+            .bento-stats-card,
+            .bento-quote-card {
+                grid-column: 1 !important;
+                grid-row: auto !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* Ensure images don't overflow */
+            .section-slide-wrap img,
+            .section-slide-wrap video {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Remove any default margins/paddings that might cause offset */
+            .section-slide:first-child {
+                margin-top: 0 !important;
+            }
+
+            /* Ensure browser header dots container doesn't cause overflow */
+            .section-slide-wrap > div[style*="position: absolute"] {
+                left: 0 !important;
+                right: 0 !important;
+            }
+        }
+
         .overlay-bg,
         .resources-overlay {
             pointer-events: none;
